@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_launcher_dev.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xxxhdpi/ic_launcher_dev.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_launcher.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xxxhdpi/ic_launcher.png"
+    }
+]

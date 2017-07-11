@@ -1,0 +1,46 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".ui.PinLoginActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/pin_login_logo_with"
+            android:layout_height="@dimen/pin_login_logo_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/intro_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/pin_login_activity_enter_pin"
+            android:textAppearance="@style/NormalBoldText" />
+
+        <com.bachduong.bitwallet.ui.customview.PinEntryView
+            android:id="@+id/pin_entry_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            app:accentType="all"
+            app:digitBackground="@android:color/white"
+            app:digitTextSize="16dp"
+            app:digitElevation="10dp" />
+
+    </LinearLayout>
+</ScrollView>

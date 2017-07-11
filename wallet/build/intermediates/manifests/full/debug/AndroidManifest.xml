@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bachduong.bitwallet"
+    android:installLocation="internalOnly"
+    android:versionCode="56"
+    android:versionName="v1.6.3" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="com.bachduong.bitwallet.WalletApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher_dev"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.bachduong.bitwallet.ui.WalletActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.SendActivity"
+            android:label="@string/send_coins_activity_title"
+            android:theme="@style/AppTheme" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="bitcoin" />
+                <data android:scheme="litecoin" />
+                <data android:scheme="dogecoin" />
+                <data android:scheme="reddcoin" />
+                <data android:scheme="peercoin" />
+                <data android:scheme="dash" />
+                <data android:scheme="nu" />
+                <data android:scheme="namecoin" />
+                <data android:scheme="blackcoin" />
+                <data android:scheme="monacoin" />
+                <data android:scheme="feathercoin" />
+                <data android:scheme="rubycoin" />
+                <data android:scheme="digitalcoin" />
+                <data android:scheme="cannacoin" />
+                <data android:scheme="digibyte" />
+                <data android:scheme="neoscoin" />
+                <data android:scheme="vertcoin" />
+                <data android:scheme="jumbucks" />
+                <data android:scheme="vpncoin" />
+                <data android:scheme="novacoin" />
+                <data android:scheme="shadowcash" />
+                <data android:scheme="canadaecoin" />
+                <data android:scheme="parkbyte" />
+                <data android:scheme="verge" />
+                <data android:scheme="clams" />
+                <data android:scheme="gcr" />
+                <data android:scheme="potcoin" />
+                <data android:scheme="gulden" />
+                <data android:scheme="auroracoin" />
+                <data android:scheme="bata" />
+                <data android:scheme="okcash" />
+                <data android:scheme="asiacoin" />
+                <data android:scheme="egulden" />
+                <data android:scheme="clubcoin" />
+                <data android:scheme="richcoin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.IntroActivity"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.PasswordConfirmationActivity"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.SignTransactionActivity"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.ScanActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.AddCoinsActivity"
+            android:label="@string/title_activity_add_coins"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.TransactionDetailsActivity"
+            android:label="@string/title_activity_transaction_details"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.ExchangeRatesActivity"
+            android:label="@string/title_activity_exchange_rates"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.PreviousAddressesActivity"
+            android:label="@string/title_activity_previous_addresses"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.ShowSeedActivity"
+            android:label="@string/title_activity_show_seed"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.TradeActivity"
+            android:label="@string/title_activity_trade"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.ExchangeHistoryActivity"
+            android:label="@string/title_activity_exchange_history"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.TradeActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.TradeStatusActivity"
+            android:label="@string/title_activity_exchange_status"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.SignVerifyMessageActivity"
+            android:label="@string/title_activity_sign_verify_message"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.AccountDetailsActivity"
+            android:label="@string/title_activity_account_details"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.SweepWalletActivity"
+            android:label="@string/title_activity_sweep_wallet"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui.FeesSettingsActivity"
+            android:label="@string/title_activity_transaction_fees"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.bachduong.bitwallet.ui.DebuggingActivity"
+            android:label="@string/title_activity_debugging"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bachduong.bitwallet.ui.SettingsActivity" />
+        </activity>
+
+        <provider
+            android:name="com.bachduong.bitwallet.ExchangeRatesProvider"
+            android:authorities="com.bachduong.bitwallet.exchange_rates"
+            android:exported="false" />
+        <provider
+            android:name="com.bachduong.bitwallet.AddressBookProvider"
+            android:authorities="com.bachduong.bitwallet.address_book"
+            android:exported="false" />
+        <provider
+            android:name="com.bachduong.bitwallet.ExchangeHistoryProvider"
+            android:authorities="com.bachduong.bitwallet.exchange_history"
+            android:exported="false" />
+
+        <service
+            android:name="com.bachduong.bitwallet.service.CoinServiceImpl"
+            android:exported="false" />
+
+        <!-- Tung Duong: PIN activity for checking PIN -->
+        <activity
+            android:name="com.bachduong.bitwallet.ui.PinLoginActivity"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.acra.dialog.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <service
+            android:name="org.acra.sender.SenderService"
+            android:exported="false"
+            android:process=":acra" />
+    </application>
+
+</manifest>

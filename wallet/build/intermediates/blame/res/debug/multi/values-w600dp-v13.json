@@ -1,0 +1,64 @@
+[
+    {
+        "outputFile": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w600dp-v13/values-w600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 63,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/values-w600dp-v13/values-w600dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 63,
+                        "endOffset": 114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 119,
+                    "endColumn": 57,
+                    "endOffset": 172
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-w600dp/dimens.xml",
+                    "position": {
+                        "startLine": 1,
+                        "startColumn": 4,
+                        "startOffset": 16,
+                        "endColumn": 57,
+                        "endOffset": 69
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 177,
+                    "endColumn": 54,
+                    "endOffset": 227
+                },
+                "from": {
+                    "file": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/values-w600dp-v13/values-w600dp-v13.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 119,
+                        "endColumn": 54,
+                        "endOffset": 169
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,424 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:2:1-255:12
+	package
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+	android:installLocation
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:4:5-43
+uses-permission#android.permission.INTERNET
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:8:22-77
+uses-permission#android.permission.NFC
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:9:5-62
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:9:22-59
+uses-permission#android.permission.CAMERA
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:10:5-65
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:10:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:11:22-63
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:12:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:13:22-78
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:14:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:15:22-76
+uses-feature#android.hardware.touchscreen
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:17:5-19:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:19:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:18:9-52
+uses-feature#android.hardware.nfc
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:20:5-22:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:22:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:21:9-44
+uses-feature#android.hardware.camera
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:23:5-25:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:25:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:24:9-47
+uses-feature#android.hardware.camera.front
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:26:5-28:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:28:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:27:9-53
+uses-feature#android.hardware.camera.autofocus
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:29:5-31:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:31:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:30:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:34:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:33:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:35:5-37:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:37:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:36:9-57
+uses-feature#android.hardware.bluetooth
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:38:5-40:36
+	android:required
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:40:9-33
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:39:9-50
+supports-screens
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:42:5-47:40
+	android:largeScreens
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:44:9-36
+	android:smallScreens
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:46:9-36
+	android:normalScreens
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:45:9-37
+	android:xlargeScreens
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:47:9-37
+	android:anyDensity
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:43:9-34
+application
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:49:5-253:19
+MERGED from [com.android.support:gridlayout-v7:23.3.0] /Users/duongtung/.android/build-cache/96946fc1401344862472bda702fbb5dccbe8d011/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/4e981089f2cb91d86a24311e6078bc299c02352f/output/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/3d3cd279e13aceafe17417f27c7a5a4165858790/output/AndroidManifest.xml:7:5-20
+MERGED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:39:5-43:19
+MERGED from [com.android.support:support-v4:23.3.0] /Users/duongtung/.android/build-cache/de919753c566a46ab08927f4f3240d9356c72112/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/duongtung/.android/build-cache/0ce9f859f141cf546cc0b20935c3d0e7705f1b67/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:54:9-41
+	android:hardwareAccelerated
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:52:9-43
+	android:allowBackup
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:51:9-36
+	android:icon
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:53:9-49
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:55:9-40
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:50:9-65
+activity#com.bachduong.bitwallet.ui.WalletActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:56:9-62:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:58:13-45
+	android:windowSoftInputMode
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:60:13-55
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:59:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:57:13-69
+activity#com.bachduong.bitwallet.ui.SendActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:63:9-109:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:65:13-62
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:66:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:64:13-67
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:67:13-108:29
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:67:28-60
+action#android.intent.action.VIEW
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:68:17-69
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:68:25-66
+data
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:70:17-50
+	android:scheme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:70:23-47
+category#android.intent.category.DEFAULT
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:106:17-76
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:106:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:107:17-78
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:107:27-75
+activity#com.bachduong.bitwallet.ui.IntroActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:110:9-113:67
+	android:windowSoftInputMode
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:113:13-55
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:112:13-54
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:111:13-68
+activity#com.bachduong.bitwallet.ui.PasswordConfirmationActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:114:9-117:67
+	android:windowSoftInputMode
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:117:13-55
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:116:13-54
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:115:13-83
+activity#com.bachduong.bitwallet.ui.SignTransactionActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:118:9-121:66
+	android:windowSoftInputMode
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:121:13-54
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:120:13-54
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:119:13-78
+activity#com.bachduong.bitwallet.ui.ScanActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:122:9-128:63
+	android:screenOrientation
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:125:13-50
+	android:stateNotNeeded
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:126:13-42
+	android:windowSoftInputMode
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:128:13-60
+	android:configChanges
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:124:13-72
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:127:13-54
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:123:13-67
+activity#com.bachduong.bitwallet.ui.AboutActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:129:9-136:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:131:13-57
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:132:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:130:13-68
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:133:13-135:77
+	android:value
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:135:17-74
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:134:17-63
+activity#com.bachduong.bitwallet.ui.AddCoinsActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:137:9-144:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:139:13-61
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:140:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:138:13-71
+activity#com.bachduong.bitwallet.ui.TransactionDetailsActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:145:9-148:56
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:147:13-71
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:148:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:146:13-81
+activity#com.bachduong.bitwallet.ui.ExchangeRatesActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:149:9-156:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:151:13-66
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:152:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:150:13-76
+activity#com.bachduong.bitwallet.ui.PreviousAddressesActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:157:9-160:56
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:159:13-70
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:160:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:158:13-80
+activity#com.bachduong.bitwallet.ui.SettingsActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:161:9-168:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:163:13-60
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:164:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:162:13-71
+activity#com.bachduong.bitwallet.ui.ShowSeedActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:169:9-176:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:171:13-61
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:172:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:170:13-71
+activity#com.bachduong.bitwallet.ui.TradeActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:177:9-184:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:179:13-57
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:180:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:178:13-68
+activity#com.bachduong.bitwallet.ui.ExchangeHistoryActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:185:9-192:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:187:13-68
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:188:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:186:13-78
+activity#com.bachduong.bitwallet.ui.TradeStatusActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:193:9-196:56
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:195:13-67
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:196:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:194:13-74
+activity#com.bachduong.bitwallet.ui.SignVerifyMessageActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:197:9-200:56
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:199:13-71
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:200:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:198:13-80
+activity#com.bachduong.bitwallet.ui.AccountDetailsActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:201:9-204:56
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:203:13-67
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:204:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:202:13-77
+activity#com.bachduong.bitwallet.ui.SweepWalletActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:205:9-208:56
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:207:13-64
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:208:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:206:13-74
+activity#com.bachduong.bitwallet.ui.FeesSettingsActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:209:9-216:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:211:13-68
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:212:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:210:13-75
+activity#com.bachduong.bitwallet.ui.DebuggingActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:217:9-224:20
+	android:label
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:219:13-61
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:220:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:218:13-72
+provider#com.bachduong.bitwallet.ExchangeRatesProvider
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:226:9-229:40
+	android:authorities
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:228:13-73
+	android:exported
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:229:13-37
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:227:13-73
+provider#com.bachduong.bitwallet.AddressBookProvider
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:230:9-233:40
+	android:authorities
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:232:13-71
+	android:exported
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:233:13-37
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:231:13-71
+provider#com.bachduong.bitwallet.ExchangeHistoryProvider
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:234:9-237:40
+	android:authorities
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:236:13-75
+	android:exported
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:237:13-37
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:235:13-75
+service#com.bachduong.bitwallet.service.CoinServiceImpl
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:239:9-241:40
+	android:exported
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:241:13-37
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:240:13-75
+activity#com.bachduong.bitwallet.ui.PinLoginActivity
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:244:9-252:20
+	android:theme
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:245:13-44
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:244:19-77
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:247:13-251:29
+action#android.intent.action.MAIN
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:248:17-69
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:248:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:250:17-77
+	android:name
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:250:27-74
+uses-sdk
+INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:gridlayout-v7:23.3.0] /Users/duongtung/.android/build-cache/96946fc1401344862472bda702fbb5dccbe8d011/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/4e981089f2cb91d86a24311e6078bc299c02352f/output/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/3d3cd279e13aceafe17417f27c7a5a4165858790/output/AndroidManifest.xml:5:5-43
+MERGED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:37:5-72
+MERGED from [com.android.support:support-v4:23.3.0] /Users/duongtung/.android/build-cache/de919753c566a46ab08927f4f3240d9356c72112/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4-preferencefragment:1.0.0] /Users/duongtung/.android/build-cache/1ec12b5c73ba83d14c1a20e9babbe6c2eca2937c/output/AndroidManifest.xml:15:5-72
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/duongtung/.android/build-cache/0ce9f859f141cf546cc0b20935c3d0e7705f1b67/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] /Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+activity#org.acra.dialog.CrashReportDialog
+ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:40:9-217
+	android:excludeFromRecents
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:40:19-52
+	android:launchMode
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:40:87-122
+	android:finishOnTaskLaunch
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:40:53-86
+	android:theme
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:40:172-215
+	android:name
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:40:123-171
+service#org.acra.sender.SenderService
+ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:42:9-113
+	android:process
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:42:88-111
+	android:exported
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:42:18-42
+	android:name
+		ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:42:43-87

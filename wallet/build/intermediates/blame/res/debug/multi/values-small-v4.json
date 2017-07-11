@@ -1,0 +1,273 @@
+[
+    {
+        "outputFile": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 50,
+                    "endOffset": 101
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 92,
+                        "endColumn": 50,
+                        "endOffset": 138
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 106,
+                    "endColumn": 48,
+                    "endOffset": 150
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 43,
+                        "endColumn": 48,
+                        "endOffset": 87
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 155,
+                    "endColumn": 54,
+                    "endOffset": 205
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 243,
+                        "endColumn": 54,
+                        "endOffset": 293
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 210,
+                    "endColumn": 47,
+                    "endOffset": 253
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 195,
+                        "endColumn": 47,
+                        "endOffset": 238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 258,
+                    "endColumn": 51,
+                    "endOffset": 305
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 143,
+                        "endColumn": 51,
+                        "endOffset": 190
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 310,
+                    "endColumn": 44,
+                    "endOffset": 350
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 748,
+                        "endColumn": 44,
+                        "endOffset": 788
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 355,
+                    "endColumn": 55,
+                    "endOffset": 406
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 298,
+                        "endColumn": 55,
+                        "endOffset": 349
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 411,
+                    "endColumn": 57,
+                    "endOffset": 464
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 661,
+                        "endColumn": 57,
+                        "endOffset": 714
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 469,
+                    "endColumn": 44,
+                    "endOffset": 509
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 894,
+                        "endColumn": 44,
+                        "endOffset": 934
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 514,
+                    "endColumn": 50,
+                    "endOffset": 560
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 820,
+                        "endColumn": 50,
+                        "endOffset": 866
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 565,
+                    "endColumn": 50,
+                    "endOffset": 611
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 578,
+                        "endColumn": 50,
+                        "endOffset": 624
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 616,
+                    "endColumn": 45,
+                    "endOffset": 657
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 532,
+                        "endColumn": 45,
+                        "endOffset": 573
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 662,
+                    "endColumn": 59,
+                    "endOffset": 717
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 386,
+                        "endColumn": 59,
+                        "endOffset": 441
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 722,
+                    "endColumn": 57,
+                    "endOffset": 775
+                },
+                "from": {
+                    "file": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/values-small/dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 446,
+                        "endColumn": 57,
+                        "endOffset": 499
+                    }
+                }
+            }
+        ]
+    }
+]
