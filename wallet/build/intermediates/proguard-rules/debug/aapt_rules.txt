@@ -1,3 +1,6 @@
+# view res/layout/activity_pair_usb_pin.xml #generated:2
+-keep class android.support.constraint.ConstraintLayout { <init>(...); }
+
 # view res/layout/fragment_account.xml #generated:19
 -keep class android.support.v4.view.PagerTabStrip { <init>(...); }
 
@@ -65,98 +68,98 @@
 # view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:32
 -keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
 
-# view AndroidManifest.xml #generated:270
+# view AndroidManifest.xml #generated:271
 -keep class com.android.tools.fd.runtime.InstantRunContentProvider { <init>(...); }
 
-# view AndroidManifest.xml #generated:235
+# view AndroidManifest.xml #generated:234
 -keep class com.bachduong.bitwallet.AddressBookProvider { <init>(...); }
 
-# view AndroidManifest.xml #generated:239
+# view AndroidManifest.xml #generated:238
 -keep class com.bachduong.bitwallet.ExchangeHistoryProvider { <init>(...); }
 
-# view AndroidManifest.xml #generated:231
+# view AndroidManifest.xml #generated:230
 -keep class com.bachduong.bitwallet.ExchangeRatesProvider { <init>(...); }
 
 # view AndroidManifest.xml #generated:55
 -keep class com.bachduong.bitwallet.WalletApplication { <init>(...); }
 
-# view AndroidManifest.xml #generated:244
+# view AndroidManifest.xml #generated:243
 -keep class com.bachduong.bitwallet.service.CoinServiceImpl { <init>(...); }
 
-# view AndroidManifest.xml #generated:134
+# view AndroidManifest.xml #generated:133
 -keep class com.bachduong.bitwallet.ui.AboutActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:206
+# view AndroidManifest.xml #generated:205
 -keep class com.bachduong.bitwallet.ui.AccountDetailsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:142
+# view AndroidManifest.xml #generated:141
 -keep class com.bachduong.bitwallet.ui.AddCoinsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:222
+# view AndroidManifest.xml #generated:221
 -keep class com.bachduong.bitwallet.ui.DebuggingActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:190
+# view AndroidManifest.xml #generated:189
 -keep class com.bachduong.bitwallet.ui.ExchangeHistoryActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:154
+# view AndroidManifest.xml #generated:153
 -keep class com.bachduong.bitwallet.ui.ExchangeRatesActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:214
+# view AndroidManifest.xml #generated:213
 -keep class com.bachduong.bitwallet.ui.FeesSettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:115
+# view AndroidManifest.xml #generated:114
 -keep class com.bachduong.bitwallet.ui.IntroActivity { <init>(...); }
 
 # view res/layout/activity_wallet.xml #generated:23
 -keep class com.bachduong.bitwallet.ui.NavigationDrawerFragment { <init>(...); }
 
-# view AndroidManifest.xml #generated:119
+# view AndroidManifest.xml #generated:258
+-keep class com.bachduong.bitwallet.ui.PairUsbPinActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:118
 -keep class com.bachduong.bitwallet.ui.PasswordConfirmationActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:249
+# view AndroidManifest.xml #generated:248
 -keep class com.bachduong.bitwallet.ui.PinLoginActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:162
+# view AndroidManifest.xml #generated:161
 -keep class com.bachduong.bitwallet.ui.PreviousAddressesActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:127
+# view AndroidManifest.xml #generated:126
 -keep class com.bachduong.bitwallet.ui.ScanActivity { <init>(...); }
 
 # view res/layout/scan_activity.xml #generated:12
 -keep class com.bachduong.bitwallet.ui.ScannerView { <init>(...); }
 
-# view AndroidManifest.xml #generated:68
+# view AndroidManifest.xml #generated:67
 -keep class com.bachduong.bitwallet.ui.SendActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:166
+# view AndroidManifest.xml #generated:165
 -keep class com.bachduong.bitwallet.ui.SettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:174
+# view AndroidManifest.xml #generated:173
 -keep class com.bachduong.bitwallet.ui.ShowSeedActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:123
+# view AndroidManifest.xml #generated:122
 -keep class com.bachduong.bitwallet.ui.SignTransactionActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:202
+# view AndroidManifest.xml #generated:201
 -keep class com.bachduong.bitwallet.ui.SignVerifyMessageActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:210
+# view AndroidManifest.xml #generated:209
 -keep class com.bachduong.bitwallet.ui.SweepWalletActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:182
+# view AndroidManifest.xml #generated:181
 -keep class com.bachduong.bitwallet.ui.TradeActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:198
+# view AndroidManifest.xml #generated:197
 -keep class com.bachduong.bitwallet.ui.TradeStatusActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:150
+# view AndroidManifest.xml #generated:149
 -keep class com.bachduong.bitwallet.ui.TransactionDetailsActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:62
 -keep class com.bachduong.bitwallet.ui.WalletActivity { <init>(...); }
-
-# view res/layout/activity_pin_login.xml #generated:34
--keep class com.bachduong.bitwallet.ui.customview.PinEntryView { <init>(...); }
 
 # view res/layout/exchange_status_row.xml #generated:93
 # view res/layout/fragment_send.xml #generated:77
@@ -203,9 +206,27 @@
 # view res/layout/fragment_make_transaction.xml #generated:34
 -keep class com.bachduong.bitwallet.ui.widget.TransactionAmountVisualizer { <init>(...); }
 
-# view AndroidManifest.xml #generated:258
+# view AndroidManifest.xml #generated:259
 -keep class org.acra.dialog.CrashReportDialog { <init>(...); }
 
-# view AndroidManifest.xml #generated:265
+# view AndroidManifest.xml #generated:266
 -keep class org.acra.sender.SenderService { <init>(...); }
+
+# onClick res/layout/activity_pin_login.xml #generated:105
+# onClick res/layout/activity_pin_login.xml #generated:114
+# onClick res/layout/activity_pin_login.xml #generated:123
+# onClick res/layout/activity_pin_login.xml #generated:137
+# onClick res/layout/activity_pin_login.xml #generated:146
+# onClick res/layout/activity_pin_login.xml #generated:155
+# onClick res/layout/activity_pin_login.xml #generated:178
+# onClick res/layout/activity_pin_login.xml #generated:73
+# onClick res/layout/activity_pin_login.xml #generated:82
+# onClick res/layout/activity_pin_login.xml #generated:91
+-keepclassmembers class * { *** onClick(...); }
+
+# onClick res/layout/activity_pin_login.xml #generated:169
+-keepclassmembers class * { *** onClickBack(...); }
+
+# onClick res/layout/activity_pin_login.xml #generated:191
+-keepclassmembers class * { *** onClickSignIn(...); }
 

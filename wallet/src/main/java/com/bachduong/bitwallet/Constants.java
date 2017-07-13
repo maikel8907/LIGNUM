@@ -71,6 +71,17 @@ public class Constants {
     public static final int SEED_ENTROPY_DEFAULT = 256;
     public static final int SEED_ENTROPY_EXTRA = 352;
 
+    public static final int PIN_DIGIT_0 = R.drawable.ic_pin_digit_0;
+    public static final int PIN_DIGIT_1 = R.drawable.ic_pin_digit_1;
+    public static final int PIN_DIGIT_2 = R.drawable.ic_pin_digit_2;
+    public static final int PIN_DIGIT_3 = R.drawable.ic_pin_digit_3;
+    public static final int PIN_DIGIT_4 = R.drawable.ic_pin_digit_4;
+    public static final int PIN_DIGIT_5 = R.drawable.ic_pin_digit_5;
+    public static final int PIN_DIGIT_6 = R.drawable.ic_pin_digit_6;
+    public static final int PIN_DIGIT_7 = R.drawable.ic_pin_digit_7;
+    public static final int PIN_DIGIT_8 = R.drawable.ic_pin_digit_8;
+    public static final int PIN_DIGIT_9 = R.drawable.ic_pin_digit_9;
+
     public static final String ARG_SEED = "seed";
     public static final String ARG_PASSWORD = "password";
     public static final String ARG_SEED_PASSWORD = "seed_password";

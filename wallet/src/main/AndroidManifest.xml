@@ -47,21 +47,19 @@
         android:xlargeScreens="true" />
 
     <application
-        android:name="com.bachduong.bitwallet.WalletApplication"
+        android:name=".WalletApplication"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher_dev"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.bachduong.bitwallet.ui.WalletActivity"
+            android:name=".ui.WalletActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.SendActivity"
+            android:name=".ui.SendActivity"
             android:label="@string/send_coins_activity_title"
             android:theme="@style/AppTheme">
             <intent-filter android:label="@string/app_name">
@@ -108,26 +106,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.IntroActivity"
+            android:name=".ui.IntroActivity"
             android:theme="@style/AppThemeNoTitleBar"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.PasswordConfirmationActivity"
+            android:name=".ui.PasswordConfirmationActivity"
             android:theme="@style/AppThemeNoTitleBar"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.SignTransactionActivity"
+            android:name=".ui.SignTransactionActivity"
             android:theme="@style/AppThemeNoTitleBar"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.ScanActivity"
+            android:name=".ui.ScanActivity"
             android:configChanges="orientation|keyboard|keyboardHidden"
             android:screenOrientation="landscape"
             android:stateNotNeeded="true"
             android:theme="@style/AppThemeNoTitleBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.AboutActivity"
+            android:name=".ui.AboutActivity"
             android:label="@string/title_activity_about"
             android:theme="@style/AppTheme">
             <meta-data
@@ -135,7 +133,7 @@
                 android:value="com.bachduong.bitwallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.AddCoinsActivity"
+            android:name=".ui.AddCoinsActivity"
             android:label="@string/title_activity_add_coins"
             android:theme="@style/AppTheme">
             <meta-data
@@ -143,11 +141,11 @@
                 android:value="com.bachduong.bitwallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.TransactionDetailsActivity"
+            android:name=".ui.TransactionDetailsActivity"
             android:label="@string/title_activity_transaction_details"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.ExchangeRatesActivity"
+            android:name=".ui.ExchangeRatesActivity"
             android:label="@string/title_activity_exchange_rates"
             android:theme="@style/AppTheme">
             <meta-data
@@ -155,11 +153,11 @@
                 android:value="com.bachduong.bitwallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.PreviousAddressesActivity"
+            android:name=".ui.PreviousAddressesActivity"
             android:label="@string/title_activity_previous_addresses"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.SettingsActivity"
+            android:name=".ui.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme">
             <meta-data
@@ -167,7 +165,7 @@
                 android:value="com.bachduong.bitwallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.ShowSeedActivity"
+            android:name=".ui.ShowSeedActivity"
             android:label="@string/title_activity_show_seed"
             android:theme="@style/AppTheme">
             <meta-data
@@ -175,7 +173,7 @@
                 android:value="com.bachduong.bitwallet.ui.SettingsActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.TradeActivity"
+            android:name=".ui.TradeActivity"
             android:label="@string/title_activity_trade"
             android:theme="@style/AppTheme">
             <meta-data
@@ -183,7 +181,7 @@
                 android:value="com.bachduong.bitwallet.ui.WalletActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.ExchangeHistoryActivity"
+            android:name=".ui.ExchangeHistoryActivity"
             android:label="@string/title_activity_exchange_history"
             android:theme="@style/AppTheme">
             <meta-data
@@ -191,23 +189,23 @@
                 android:value="com.bachduong.bitwallet.ui.TradeActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.TradeStatusActivity"
+            android:name=".ui.TradeStatusActivity"
             android:label="@string/title_activity_exchange_status"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.SignVerifyMessageActivity"
+            android:name=".ui.SignVerifyMessageActivity"
             android:label="@string/title_activity_sign_verify_message"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.AccountDetailsActivity"
+            android:name=".ui.AccountDetailsActivity"
             android:label="@string/title_activity_account_details"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.SweepWalletActivity"
+            android:name=".ui.SweepWalletActivity"
             android:label="@string/title_activity_sweep_wallet"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name="com.bachduong.bitwallet.ui.FeesSettingsActivity"
+            android:name=".ui.FeesSettingsActivity"
             android:label="@string/title_activity_transaction_fees"
             android:theme="@style/AppTheme">
             <meta-data
@@ -215,7 +213,7 @@
                 android:value="com.bachduong.bitwallet.ui.SettingsActivity" />
         </activity>
         <activity
-            android:name="com.bachduong.bitwallet.ui.DebuggingActivity"
+            android:name=".ui.DebuggingActivity"
             android:label="@string/title_activity_debugging"
             android:theme="@style/AppTheme">
             <meta-data
@@ -224,32 +222,34 @@
         </activity>
 
         <provider
-            android:name="com.bachduong.bitwallet.ExchangeRatesProvider"
+            android:name=".ExchangeRatesProvider"
             android:authorities="com.bachduong.bitwallet.exchange_rates"
             android:exported="false" />
         <provider
-            android:name="com.bachduong.bitwallet.AddressBookProvider"
+            android:name=".AddressBookProvider"
             android:authorities="com.bachduong.bitwallet.address_book"
             android:exported="false" />
         <provider
-            android:name="com.bachduong.bitwallet.ExchangeHistoryProvider"
+            android:name=".ExchangeHistoryProvider"
             android:authorities="com.bachduong.bitwallet.exchange_history"
             android:exported="false" />
 
         <service
-            android:name="com.bachduong.bitwallet.service.CoinServiceImpl"
+            android:name=".service.CoinServiceImpl"
             android:exported="false" />
 
-        <!--Tung Duong: PIN activity for checking PIN-->
-        <activity android:name="com.bachduong.bitwallet.ui.PinLoginActivity"
-            android:theme="@style/AppTheme">
-
+        <!-- Tung Duong: PIN activity for checking PIN -->
+        <activity
+            android:name=".ui.PinLoginActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.PairUsbPinActivity"></activity>
     </application>
 
 </manifest>

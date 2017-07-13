@@ -1,20 +1,22 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".ui.PinLoginActivity">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:layout_gravity="center_vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".ui.PinLoginActivity">
+        android:paddingLeft="@dimen/activity_pin_horizontal_margin"
+        android:paddingRight="@dimen/activity_pin_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
         <ImageView
             android:id="@+id/imageView"
@@ -24,6 +26,7 @@
             android:layout_marginBottom="10dp"
             android:src="@drawable/intro_logo" />
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,16 +34,167 @@
             android:text="@string/pin_login_activity_enter_pin"
             android:textAppearance="@style/NormalBoldText" />
 
-        <com.bachduong.bitwallet.ui.customview.PinEntryView
-            android:id="@+id/pin_entry_simple"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            app:accentType="all"
-            app:digitBackground="@android:color/white"
-            app:digitTextSize="16dp"
-            app:digitElevation="10dp" />
+        <!--<com.bachduong.bitwallet.ui.customview.PinEntryView-->
+        <!--android:id="@+id/pin_entry_simple"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--app:numDigits="8"-->
+        <!--app:accentType="all"-->
+        <!--app:digitBackground="@android:color/white"-->
+        <!--app:digitTextSize="16dp"-->
+        <!--app:digitElevation="10dp" />-->
 
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/action_sign_in"
+            android:imeOptions="actionUnspecified"
+            android:inputType="numberPassword"
+            android:focusable="false"
+            android:gravity="center"
+            android:focusableInTouchMode="false" />
     </LinearLayout>
-</ScrollView>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_1"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_1" />
+
+            <Button
+                android:id="@+id/button_2"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_2" />
+
+            <Button
+                android:id="@+id/button_3"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_4"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_4" />
+
+            <Button
+                android:id="@+id/button_5"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_5" />
+
+            <Button
+                android:id="@+id/button_6"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_7"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_7" />
+
+            <Button
+                android:id="@+id/button_8"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_8" />
+
+            <Button
+                android:id="@+id/button_9"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/button_back_space"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:gravity="center"
+                android:onClick="onClickBack"
+                android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+            <Button
+                android:id="@+id/button_0"
+                style="@style/VirtualKeyboardStyle"
+                android:layout_width="@dimen/key_board_size"
+                android:layout_height="@dimen/key_board_size"
+                android:layout_column="1"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/digit_0" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button_sign_in"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickSignIn"
+        android:text="@string/action_sign_in" />
+</LinearLayout>

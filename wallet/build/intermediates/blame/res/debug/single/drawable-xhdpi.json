@@ -1,7 +1,15 @@
 [
     {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_keyboard_backspace_black_24dp.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/generated/res/pngs/debug/drawable-xhdpi/ic_keyboard_backspace_black_24dp.png"
+    },
+    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_5.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_5.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/refresh_menu.png",
@@ -60,12 +68,12 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/feathercoin.png"
     },
     {
-        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/batacoin.png",
-        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/batacoin.png"
-    },
-    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/richcoin.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/richcoin.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/batacoin.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/batacoin.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/blackcoin.png",
@@ -84,12 +92,24 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/delete_menu.png"
     },
     {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_0.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_0.png"
+    },
+    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/auroracoin.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/auroracoin.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/drawer_shadow.9.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/drawer_shadow.9.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_9.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_9.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_6.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_6.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/neoscoin.png",
@@ -104,12 +124,24 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/vertcoin.png"
     },
     {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_3.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_3.png"
+    },
+    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/erase.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/erase.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/clubcoin.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/clubcoin.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_8.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_8.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_2.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_2.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ixcoin.png",
@@ -180,8 +212,20 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/digibyte.png"
     },
     {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_1.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_1.png"
+    },
+    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/monacoin.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/monacoin.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_4.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_4.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_pin_digit_7.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_pin_digit_7.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/edit_menu.png",

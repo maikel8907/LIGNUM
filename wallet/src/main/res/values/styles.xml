@@ -179,4 +179,10 @@
         <item name="android:textSize">@dimen/exchange_row_text_size_amount</item>
     </style>
 
+    <style name="VirtualKeyboardStyle" parent="Base.Widget.AppCompat.Button.Borderless" >
+        <item name="android:background">@drawable/key_board_background</item>
+        <item name="android:textColor">@color/gray_87_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/key_board_text_size</item>
+    </style>
 </resources>
