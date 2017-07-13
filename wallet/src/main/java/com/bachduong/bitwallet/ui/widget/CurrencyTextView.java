@@ -25,12 +25,12 @@ import android.text.style.RelativeSizeSpan;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.coins.ValueType;
-import com.bachduong.core.util.MonetaryFormat;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.util.MonetarySpannable;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.coins.ValueType;
+import com.bachduong.core.util.MonetaryFormat;
 
 import javax.annotation.Nonnull;
 

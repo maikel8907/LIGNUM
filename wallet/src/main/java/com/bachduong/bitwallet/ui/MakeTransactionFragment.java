@@ -22,6 +22,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bachduong.bitwallet.Configuration;
+import com.bachduong.bitwallet.ExchangeHistoryProvider;
+import com.bachduong.bitwallet.ExchangeHistoryProvider.ExchangeEntry;
+import com.bachduong.bitwallet.ExchangeRatesProvider;
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.WalletApplication;
+import com.bachduong.bitwallet.ui.widget.SendOutput;
+import com.bachduong.bitwallet.ui.widget.TransactionAmountVisualizer;
+import com.bachduong.bitwallet.util.Keyboard;
+import com.bachduong.bitwallet.util.WeakHandler;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.exceptions.NoSuchPocketException;
@@ -38,16 +48,6 @@ import com.bachduong.core.wallet.AbstractWallet;
 import com.bachduong.core.wallet.SendRequest;
 import com.bachduong.core.wallet.Wallet;
 import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.bitwallet.Configuration;
-import com.bachduong.bitwallet.ExchangeHistoryProvider;
-import com.bachduong.bitwallet.ExchangeHistoryProvider.ExchangeEntry;
-import com.bachduong.bitwallet.ExchangeRatesProvider;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.WalletApplication;
-import com.bachduong.bitwallet.ui.widget.SendOutput;
-import com.bachduong.bitwallet.ui.widget.TransactionAmountVisualizer;
-import com.bachduong.bitwallet.util.Keyboard;
-import com.bachduong.bitwallet.util.WeakHandler;
 
 import org.bitcoinj.crypto.KeyCrypter;
 import org.bitcoinj.crypto.KeyCrypterException;
@@ -62,8 +62,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.bachduong.core.Preconditions.checkNotNull;
-import static com.bachduong.core.Preconditions.checkState;
 import static com.bachduong.bitwallet.Constants.ARG_ACCOUNT_ID;
 import static com.bachduong.bitwallet.Constants.ARG_EMPTY_WALLET;
 import static com.bachduong.bitwallet.Constants.ARG_SEND_REQUEST;
@@ -72,10 +70,11 @@ import static com.bachduong.bitwallet.Constants.ARG_SEND_TO_ADDRESS;
 import static com.bachduong.bitwallet.Constants.ARG_SEND_VALUE;
 import static com.bachduong.bitwallet.Constants.ARG_TX_MESSAGE;
 import static com.bachduong.bitwallet.ExchangeRatesProvider.getRates;
+import static com.bachduong.core.Preconditions.checkNotNull;
+import static com.bachduong.core.Preconditions.checkState;
 
 /**
  * This fragment displays a busy message and makes the transaction in the background
- *
  */
 public class MakeTransactionFragment extends Fragment {
     private static final Logger log = LoggerFactory.getLogger(MakeTransactionFragment.class);
@@ -100,46 +99,108 @@ public class MakeTransactionFragment extends Fragment {
 
     private static final String PREPARE_TRANSACTION_BUSY_DIALOG_TAG = "prepare_transaction_busy_dialog_tag";
     private static final String SIGNING_TRANSACTION_BUSY_DIALOG_TAG = "signing_transaction_busy_dialog_tag";
-
+    @Nullable
+    AbstractAddress sendToAddress;
+    boolean sendingToAccount;
+    boolean emptyWallet;
+    @Bind(R.id.transaction_info)
+    TextView transactionInfo;
+    @Bind(R.id.password)
+    EditText passwordView;
+    @Bind(R.id.transaction_amount_visualizer)
+    TransactionAmountVisualizer txVisualizer;
+    @Bind(R.id.transaction_trade_withdraw)
+    SendOutput tradeWithdrawSendOutput;
     private Handler handler = new MyHandler(this);
-    @Nullable private String password;
+    @Nullable
+    private String password;
     private Listener listener;
     private ContentResolver contentResolver;
     private SignAndBroadcastTask signAndBroadcastTask;
     private CreateTransactionTask createTransactionTask;
     private WalletApplication application;
     private Configuration config;
-
-    @Nullable AbstractAddress sendToAddress;
-    boolean sendingToAccount;
-    @Nullable private Value sendAmount;
-    boolean emptyWallet;
+    @Nullable
+    private Value sendAmount;
     private CoinType sourceType;
     private SendRequest request;
-    @Nullable private AbstractWallet sourceAccount;
-    @Nullable private ExchangeEntry exchangeEntry;
-    @Nullable private AbstractAddress tradeDepositAddress;
-    @Nullable private Value tradeDepositAmount;
-    @Nullable private AbstractAddress tradeWithdrawAddress;
-    @Nullable private Value tradeWithdrawAmount;
-    @Nullable private TxMessage txMessage;
+    @Nullable
+    private AbstractWallet sourceAccount;
+    @Nullable
+    private ExchangeEntry exchangeEntry;
+    @Nullable
+    private AbstractAddress tradeDepositAddress;
+    @Nullable
+    private Value tradeDepositAmount;
+    @Nullable
+    private AbstractAddress tradeWithdrawAddress;
+    @Nullable
+    private Value tradeWithdrawAmount;
+    @Nullable
+    private TxMessage txMessage;
     private boolean transactionBroadcast = false;
-    @Nullable private Exception error;
+    @Nullable
+    private Exception error;
     private HashMap<String, ExchangeRate> localRates = new HashMap<>();
+    private final LoaderManager.LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
+
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            String localSymbol = config.getExchangeCurrencyCode();
+            return new ExchangeRateLoader(getActivity(), config, localSymbol);
+        }
+
+        @Override
+        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
+            if (data != null && data.getCount() > 0) {
+                HashMap<String, ExchangeRate> rates = new HashMap<>(data.getCount());
+                data.moveToFirst();
+                do {
+                    ExchangeRatesProvider.ExchangeRate rate = ExchangeRatesProvider.getExchangeRate(data);
+                    rates.put(rate.currencyCodeId, rate.rate);
+                } while (data.moveToNext());
+
+                updateLocalRates(rates);
+            }
+        }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> loader) {
+        }
+    };
     private CountDownTimer countDownTimer;
 
-    @Bind(R.id.transaction_info) TextView transactionInfo;
-    @Bind(R.id.password) EditText passwordView;
-    @Bind(R.id.transaction_amount_visualizer) TransactionAmountVisualizer txVisualizer;
-    @Bind(R.id.transaction_trade_withdraw) SendOutput tradeWithdrawSendOutput;
+    public MakeTransactionFragment() {
+        // Required empty public constructor
+    }
 
     public static MakeTransactionFragment newInstance(Bundle args) {
         MakeTransactionFragment fragment = new MakeTransactionFragment();
         fragment.setArguments(args);
         return fragment;
     }
-    public MakeTransactionFragment() {
-        // Required empty public constructor
+
+    /**
+     * Makes a call to ShapeShift about the time left for the trade
+     * <p>
+     * Note: do not call this from the main thread!
+     */
+    @Nullable
+    private static ShapeShiftTime getTimeLeftSync(ShapeShift shapeShift, AbstractAddress address) {
+        // Try 3 times
+        for (int tries = 1; tries <= 3; tries++) {
+            try {
+                log.info("Getting time left for: {}", address);
+                return shapeShift.getTime(address);
+            } catch (Exception e) {
+                log.info("Will retry: {}", e.getMessage());
+                    /* ignore and retry, with linear backoff */
+                try {
+                    Thread.sleep(1000 * tries);
+                } catch (InterruptedException ie) { /*ignored*/ }
+            }
+        }
+        return null;
     }
 
     @Override
@@ -373,7 +434,6 @@ public class MakeTransactionFragment extends Fragment {
         onStopTradeCountDown();
     }
 
-
     void onStartTradeCountDown(int secondsLeft) {
         if (countDownTimer != null) return;
 
@@ -417,7 +477,6 @@ public class MakeTransactionFragment extends Fragment {
         }
     }
 
-
     private void onUpdateTradeCountDown(int secondsRemaining) {
         if (transactionInfo.getVisibility() != View.VISIBLE) {
             transactionInfo.setVisibility(View.VISIBLE);
@@ -441,29 +500,6 @@ public class MakeTransactionFragment extends Fragment {
         transactionInfo.setText(message);
     }
 
-    /**
-     * Makes a call to ShapeShift about the time left for the trade
-     *
-     * Note: do not call this from the main thread!
-     */
-    @Nullable
-    private static ShapeShiftTime getTimeLeftSync(ShapeShift shapeShift, AbstractAddress address) {
-        // Try 3 times
-        for (int tries = 1; tries <= 3; tries++) {
-            try {
-                log.info("Getting time left for: {}", address);
-                return shapeShift.getTime(address);
-            } catch (Exception e) {
-                log.info("Will retry: {}", e.getMessage());
-                    /* ignore and retry, with linear backoff */
-                try {
-                    Thread.sleep(1000 * tries);
-                } catch (InterruptedException ie) { /*ignored*/ }
-            }
-        }
-        return null;
-    }
-
     private void updateLocalRates() {
         if (localRates != null) {
             if (txVisualizer != null && localRates.containsKey(sourceType.getSymbol())) {
@@ -484,43 +520,17 @@ public class MakeTransactionFragment extends Fragment {
         updateLocalRates();
     }
 
-
     public interface Listener {
         void onSignResult(@Nullable Exception error, @Nullable ExchangeEntry exchange);
     }
-
-    private final LoaderManager.LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
-
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            String localSymbol = config.getExchangeCurrencyCode();
-            return new ExchangeRateLoader(getActivity(), config, localSymbol);
-        }
-
-        @Override
-        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
-            if (data != null && data.getCount() > 0) {
-                HashMap<String, ExchangeRate> rates = new HashMap<>(data.getCount());
-                data.moveToFirst();
-                do {
-                    ExchangeRatesProvider.ExchangeRate rate = ExchangeRatesProvider.getExchangeRate(data);
-                    rates.put(rate.currencyCodeId, rate.rate);
-                } while (data.moveToNext());
-
-                updateLocalRates(rates);
-            }
-        }
-
-        @Override
-        public void onLoaderReset(final Loader<Cursor> loader) {
-        }
-    };
 
     /**
      * The fragment handler
      */
     private static class MyHandler extends WeakHandler<MakeTransactionFragment> {
-        public MyHandler(MakeTransactionFragment referencingObject) { super(referencingObject); }
+        public MyHandler(MakeTransactionFragment referencingObject) {
+            super(referencingObject);
+        }
 
         @Override
         protected void weakHandleMessage(MakeTransactionFragment ref, Message msg) {
@@ -593,7 +603,8 @@ public class MakeTransactionFragment extends Fragment {
                             ShapeShiftAmountTx fixedAmountTx =
                                     shapeShift.exchangeForAmount(sendAmount, sendToAddress, refundAddress);
                             // TODO, show a retry message
-                            if (fixedAmountTx.isError) throw new Exception(fixedAmountTx.errorMessage);
+                            if (fixedAmountTx.isError)
+                                throw new Exception(fixedAmountTx.errorMessage);
                             tradeDepositAddress = fixedAmountTx.deposit;
                             tradeDepositAmount = fixedAmountTx.depositAmount;
                             tradeWithdrawAddress = fixedAmountTx.withdrawal;
@@ -623,7 +634,8 @@ public class MakeTransactionFragment extends Fragment {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), PREPARE_TRANSACTION_BUSY_DIALOG_TAG)) return;
+            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), PREPARE_TRANSACTION_BUSY_DIALOG_TAG))
+                return;
 
             if (error != null && listener != null) {
                 listener.onSignResult(error, null);
@@ -682,14 +694,16 @@ public class MakeTransactionFragment extends Fragment {
                     contentResolver.insert(uri, exchangeEntry.getContentValues());
                 }
                 handler.sendEmptyMessage(STOP_TRADE_TIMEOUT);
+            } catch (Exception e) {
+                error = e;
             }
-            catch (Exception e) { error = e; }
 
             return error;
         }
 
         protected void onPostExecute(final Exception e) {
-            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), SIGNING_TRANSACTION_BUSY_DIALOG_TAG)) return;
+            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), SIGNING_TRANSACTION_BUSY_DIALOG_TAG))
+                return;
 
             if (e instanceof KeyCrypterException) {
                 DialogBuilder.warn(getActivity(), R.string.unlocking_wallet_error_title)

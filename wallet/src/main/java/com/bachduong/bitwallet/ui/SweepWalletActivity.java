@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.bachduong.core.wallet.SendRequest;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.ExchangeHistoryProvider;
 import com.bachduong.bitwallet.R;
+import com.bachduong.core.wallet.SendRequest;
 
 import javax.annotation.Nullable;
 

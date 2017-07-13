@@ -9,13 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bachduong.bitwallet.Constants;
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.ui.widget.AddressView;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.exceptions.AddressMalformedException;
 import com.bachduong.core.util.GenericUtils;
 import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.bitwallet.Constants;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.ui.widget.AddressView;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +30,8 @@ public class SelectCoinTypeDialog extends DialogFragment {
     private static final Logger log = LoggerFactory.getLogger(SelectCoinTypeDialog.class);
     private Listener listener;
 
-    public SelectCoinTypeDialog() {}
+    public SelectCoinTypeDialog() {
+    }
 
     public static DialogFragment getInstance(String addressStr) {
         DialogFragment dialog = new SelectCoinTypeDialog();
@@ -55,7 +56,8 @@ public class SelectCoinTypeDialog extends DialogFragment {
         super.onDetach();
     }
 
-    @Override @NonNull
+    @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Bundle args = getArguments();
         DialogBuilder builder = new DialogBuilder(getActivity());

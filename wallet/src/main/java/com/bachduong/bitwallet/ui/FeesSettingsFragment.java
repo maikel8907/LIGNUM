@@ -10,12 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.bachduong.core.coins.Value;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.ui.adaptors.FeesListAdapter;
 import com.bachduong.bitwallet.ui.dialogs.EditFeeDialog;
+import com.bachduong.core.coins.Value;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -27,7 +27,8 @@ import butterknife.OnItemClick;
 public class FeesSettingsFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener {
     private static final String EDIT_FEE_DIALOG = "edit_fee_dialog";
 
-    @Bind(R.id.coins_list) ListView coinList;
+    @Bind(R.id.coins_list)
+    ListView coinList;
 
     private Configuration config;
     private Context context;

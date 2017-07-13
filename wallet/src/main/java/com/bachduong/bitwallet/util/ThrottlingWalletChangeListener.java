@@ -18,9 +18,6 @@ package com.bachduong.bitwallet.util;
  */
 
 
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicLong;
-
 import android.os.Handler;
 
 import com.bachduong.core.coins.Value;
@@ -29,30 +26,36 @@ import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.core.wallet.WalletAccountEventListener;
 import com.bachduong.core.wallet.WalletConnectivityStatus;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicLong;
+
 /**
  * @author Andreas Schildbach
  */
-public abstract class ThrottlingWalletChangeListener implements WalletAccountEventListener
-{
+public abstract class ThrottlingWalletChangeListener implements WalletAccountEventListener {
+    private static final long DEFAULT_THROTTLE_MS = 500;
     private final long throttleMs;
     private final boolean coinsRelevant;
     private final boolean connectivityRelevant;
     private final boolean reorganizeRelevant;
     private final boolean confidenceRelevant;
-
     private final AtomicLong lastMessageTime = new AtomicLong(0);
     private final Handler handler = new Handler();
     private final AtomicBoolean relevant = new AtomicBoolean();
+    private final Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            lastMessageTime.set(System.currentTimeMillis());
 
-    private static final long DEFAULT_THROTTLE_MS = 500;
+            onThrottledWalletChanged();
+        }
+    };
 
-    public ThrottlingWalletChangeListener()
-    {
+    public ThrottlingWalletChangeListener() {
         this(DEFAULT_THROTTLE_MS);
     }
 
-    public ThrottlingWalletChangeListener(final long throttleMs)
-    {
+    public ThrottlingWalletChangeListener(final long throttleMs) {
         this(throttleMs, true, true, true, true);
     }
 
@@ -79,22 +82,13 @@ public abstract class ThrottlingWalletChangeListener implements WalletAccountEve
         }
     }
 
-    private final Runnable runnable = new Runnable()
-    {
-        @Override
-        public void run()
-        {
-            lastMessageTime.set(System.currentTimeMillis());
-
-            onThrottledWalletChanged();
-        }
-    };
-
     public void removeCallbacks() {
         handler.removeCallbacksAndMessages(null);
     }
 
-    /** will be called back on UI thread */
+    /**
+     * will be called back on UI thread
+     */
     public abstract void onThrottledWalletChanged();
 
     @Override

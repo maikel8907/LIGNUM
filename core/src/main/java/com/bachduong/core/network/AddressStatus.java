@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  */
 final public class AddressStatus {
     final AbstractAddress address;
-    @Nullable final String status;
+    @Nullable
+    final String status;
 
     HashSet<HistoryTx> historyTransactions;
     HashSet<UnspentTx> unspentTransactions;
@@ -38,7 +39,8 @@ final public class AddressStatus {
         return address;
     }
 
-    @Nullable public String getStatus() {
+    @Nullable
+    public String getStatus() {
         return status;
     }
 

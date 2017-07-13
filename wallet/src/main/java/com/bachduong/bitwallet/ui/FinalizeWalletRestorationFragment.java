@@ -12,18 +12,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.CoinID;
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.wallet.Wallet;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.service.CoinService;
 import com.bachduong.bitwallet.service.CoinServiceImpl;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.coins.CoinID;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.wallet.Wallet;
 
 import org.bitcoinj.crypto.KeyCrypterScrypt;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -41,13 +40,15 @@ public class FinalizeWalletRestorationFragment extends Fragment {
 
     private static final int RESTORE_STATUS_UPDATE = 0;
     private static final int RESTORE_FINISHED = 1;
-
-    private final Handler handler = new MyHandler(this);
-
     // FIXME: Ugly hack to keep a reference to the task even if the fragment is recreated
     private static WalletFromSeedTask walletFromSeedTask;
+    private final Handler handler = new MyHandler(this);
     private TextView status;
 
+
+    public FinalizeWalletRestorationFragment() {
+        // Required empty public constructor
+    }
 
     /**
      * Get a fragment instance.
@@ -57,10 +58,6 @@ public class FinalizeWalletRestorationFragment extends Fragment {
         fragment.setRetainInstance(true);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public FinalizeWalletRestorationFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -116,15 +113,29 @@ public class FinalizeWalletRestorationFragment extends Fragment {
         return (WalletApplication) getActivity().getApplication();
     }
 
+    public void startWalletActivity() {
+        Intent intent = new Intent(getActivity(), WalletActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        getActivity().finish();
+    }
+
+    private void showErrorAndStartIntroActivity(String errorMessage) {
+        Toast.makeText(getActivity(), errorMessage, Toast.LENGTH_LONG).show();
+        startActivity(new Intent(getActivity(), IntroActivity.class));
+        getActivity().finish();
+    }
+
     static class WalletFromSeedTask extends AsyncTask<Void, String, Wallet> {
-        Wallet wallet;
-        String errorMessage = "";
         private final String seed;
         private final String password;
-        @Nullable private final String seedPassword;
-        Handler handler;
+        @Nullable
+        private final String seedPassword;
         private final WalletApplication walletApplication;
         private final List<CoinType> coinsToCreate;
+        Wallet wallet;
+        String errorMessage = "";
+        Handler handler;
 
         public WalletFromSeedTask(Handler handler, WalletApplication walletApplication, List<CoinType> coinsToCreate, String seed, String password, @Nullable String seedPassword) {
             this.handler = handler;
@@ -182,7 +193,9 @@ public class FinalizeWalletRestorationFragment extends Fragment {
     }
 
     private static class MyHandler extends WeakHandler<FinalizeWalletRestorationFragment> {
-        public MyHandler(FinalizeWalletRestorationFragment ref) { super(ref); }
+        public MyHandler(FinalizeWalletRestorationFragment ref) {
+            super(ref);
+        }
 
         @Override
         protected void weakHandleMessage(FinalizeWalletRestorationFragment ref, Message msg) {
@@ -207,18 +220,5 @@ public class FinalizeWalletRestorationFragment extends Fragment {
                     }
             }
         }
-    }
-
-    public void startWalletActivity() {
-        Intent intent = new Intent(getActivity(), WalletActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        getActivity().finish();
-    }
-
-    private void showErrorAndStartIntroActivity(String errorMessage) {
-        Toast.makeText(getActivity(), errorMessage, Toast.LENGTH_LONG).show();
-        startActivity(new Intent(getActivity(), IntroActivity.class));
-        getActivity().finish();
     }
 }

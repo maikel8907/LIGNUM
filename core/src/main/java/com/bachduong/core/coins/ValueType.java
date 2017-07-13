@@ -11,8 +11,11 @@ import java.io.Serializable;
  */
 public interface ValueType extends Serializable {
     String getId();
+
     String getName();
+
     String getSymbol();
+
     int getUnitExponent();
 
     /**
@@ -30,6 +33,7 @@ public interface ValueType extends Serializable {
     Value value(long units);
 
     MonetaryFormat getMonetaryFormat();
+
     MonetaryFormat getPlainFormat();
 
     boolean equals(ValueType obj);

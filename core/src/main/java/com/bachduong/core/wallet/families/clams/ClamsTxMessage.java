@@ -18,17 +18,15 @@ import static com.bachduong.core.Preconditions.checkArgument;
  * @author John L. Jegutanis
  */
 public class ClamsTxMessage implements TxMessage {
-    private static final Logger log = LoggerFactory.getLogger(ClamsTxMessage.class);
-
     public static final int MAX_MESSAGE_BYTES = 140;
-
+    private static final Logger log = LoggerFactory.getLogger(ClamsTxMessage.class);
+    private transient static ClamsMessageFactory instance = new ClamsMessageFactory();
     private String message;
 
     ClamsTxMessage(String message) {
         setMessage(message);
     }
 
-    private transient static ClamsMessageFactory instance = new ClamsMessageFactory();
     public static MessageFactory getFactory() {
         return instance;
     }
@@ -37,17 +35,8 @@ public class ClamsTxMessage implements TxMessage {
         return new ClamsTxMessage(message);
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        checkArgument(serialize(message).length <= MAX_MESSAGE_BYTES, "Message is too big");
-        this.message = message;
-    }
-
     @Nullable
-    public static ClamsTxMessage parse(AbstractTransaction  tx) {
+    public static ClamsTxMessage parse(AbstractTransaction tx) {
         try {
             Transaction rawTx = ((BitTransaction) tx).getRawTransaction();
             byte[] bytes = rawTx.getExtraBytes();
@@ -61,12 +50,25 @@ public class ClamsTxMessage implements TxMessage {
         }
     }
 
-    public boolean isEmpty() {
-        return isNullOrEmpty(message);
-    }
-
     private static boolean isNullOrEmpty(String str) {
         return str == null || str.trim().isEmpty();
+    }
+
+    static byte[] serialize(String message) {
+        return message.getBytes(Charsets.UTF_8);
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        checkArgument(serialize(message).length <= MAX_MESSAGE_BYTES, "Message is too big");
+        this.message = message;
+    }
+
+    public boolean isEmpty() {
+        return isNullOrEmpty(message);
     }
 
     @Override
@@ -85,10 +87,6 @@ public class ClamsTxMessage implements TxMessage {
             Transaction rawTx = ((BitTransaction) transaction).getRawTransaction();
             rawTx.setExtraBytes(serialize(message));
         }
-    }
-
-    static byte[] serialize(String message) {
-        return message.getBytes(Charsets.UTF_8);
     }
 
     public static class ClamsMessageFactory implements MessageFactory {

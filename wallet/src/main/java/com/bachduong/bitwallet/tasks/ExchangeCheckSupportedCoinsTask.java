@@ -2,9 +2,9 @@ package com.bachduong.bitwallet.tasks;
 
 import android.os.AsyncTask;
 
+import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.core.exchange.shapeshift.data.ShapeShiftCoins;
 import com.bachduong.core.exchange.shapeshift.data.ShapeShiftException;
-import com.bachduong.bitwallet.WalletApplication;
 
 /**
  * @author John L. Jegutanis
@@ -15,16 +15,10 @@ public class ExchangeCheckSupportedCoinsTask extends AsyncTask<Void, Void, Void>
     private Exception error;
     private ShapeShiftCoins shapeShiftCoins;
 
-    public interface Listener {
-        void onExchangeCheckSupportedCoinsTaskStarted();
-        void onExchangeCheckSupportedCoinsTaskFinished(Exception error, ShapeShiftCoins shapeShiftCoins);
-    }
-
     public ExchangeCheckSupportedCoinsTask(Listener listener, WalletApplication application) {
         this.listener = listener;
         this.application = application;
     }
-
 
     @Override
     protected void onPreExecute() {
@@ -48,5 +42,11 @@ public class ExchangeCheckSupportedCoinsTask extends AsyncTask<Void, Void, Void>
     @Override
     protected void onPostExecute(Void v) {
         listener.onExchangeCheckSupportedCoinsTaskFinished(error, shapeShiftCoins);
+    }
+
+    public interface Listener {
+        void onExchangeCheckSupportedCoinsTaskStarted();
+
+        void onExchangeCheckSupportedCoinsTaskFinished(Exception error, ShapeShiftCoins shapeShiftCoins);
     }
 }

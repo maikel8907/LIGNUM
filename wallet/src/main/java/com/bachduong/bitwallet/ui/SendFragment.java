@@ -31,6 +31,18 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bachduong.bitwallet.AddressBookProvider;
+import com.bachduong.bitwallet.Configuration;
+import com.bachduong.bitwallet.Constants;
+import com.bachduong.bitwallet.ExchangeRatesProvider;
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.WalletApplication;
+import com.bachduong.bitwallet.tasks.MarketInfoPollTask;
+import com.bachduong.bitwallet.ui.widget.AddressView;
+import com.bachduong.bitwallet.ui.widget.AmountEditView;
+import com.bachduong.bitwallet.util.ThrottlingWalletChangeListener;
+import com.bachduong.bitwallet.util.UiUtils;
+import com.bachduong.bitwallet.util.WeakHandler;
 import com.bachduong.core.coins.CoinID;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.FiatType;
@@ -49,18 +61,6 @@ import com.bachduong.core.util.ExchangeRate;
 import com.bachduong.core.util.GenericUtils;
 import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.bitwallet.AddressBookProvider;
-import com.bachduong.bitwallet.Configuration;
-import com.bachduong.bitwallet.Constants;
-import com.bachduong.bitwallet.ExchangeRatesProvider;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.WalletApplication;
-import com.bachduong.bitwallet.tasks.MarketInfoPollTask;
-import com.bachduong.bitwallet.ui.widget.AddressView;
-import com.bachduong.bitwallet.ui.widget.AmountEditView;
-import com.bachduong.bitwallet.util.ThrottlingWalletChangeListener;
-import com.bachduong.bitwallet.util.UiUtils;
-import com.bachduong.bitwallet.util.WeakHandler;
 import com.google.common.base.Charsets;
 
 import org.acra.ACRA;
@@ -87,11 +87,11 @@ import butterknife.OnClick;
 import static android.view.View.GONE;
 import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
-import static com.bachduong.core.Preconditions.checkNotNull;
-import static com.bachduong.core.coins.Value.canCompare;
 import static com.bachduong.bitwallet.ExchangeRatesProvider.getRates;
 import static com.bachduong.bitwallet.util.UiUtils.setGone;
 import static com.bachduong.bitwallet.util.UiUtils.setVisible;
+import static com.bachduong.core.Preconditions.checkNotNull;
+import static com.bachduong.core.coins.Value.canCompare;
 
 /**
  * Fragment that prepares a transaction
@@ -101,32 +101,61 @@ import static com.bachduong.bitwallet.util.UiUtils.setVisible;
  */
 public class SendFragment extends WalletFragment {
     private static final Logger log = LoggerFactory.getLogger(SendFragment.class);
-
-    private enum State {
-        INPUT, PREPARATION, SENDING, SENT, FAILED
-    }
-
     // the fragment initialization parameters
     private static final int REQUEST_CODE_SCAN = 0;
     private static final int SIGN_TRANSACTION = 1;
-
     private static final int UPDATE_VIEW = 0;
     private static final int UPDATE_LOCAL_EXCHANGE_RATES = 1;
     private static final int UPDATE_WALLET_CHANGE = 2;
     private static final int UPDATE_MARKET = 3;
     private static final int SET_ADDRESS = 4;
-
     // Loader IDs
     private static final int ID_RATE_LOADER = 0;
     private static final int ID_RECEIVING_ADDRESS_LOADER = 1;
-
     // Saved state
     private static final String STATE_ADDRESS = "address";
     private static final String STATE_ADDRESS_CAN_CHANGE_TYPE = "address_can_change_type";
     private static final String STATE_AMOUNT = "amount";
     private static final String STATE_AMOUNT_TYPE = "amount_type";
-
-    @Nullable private Value lastBalance; // TODO setup wallet watcher for the latest balance
+    @Bind(R.id.send_to_address)
+    AutoCompleteTextView sendToAddressView;
+    @Bind(R.id.send_to_address_static)
+    AddressView sendToStaticAddressView;
+    @Bind(R.id.send_coin_amount)
+    AmountEditView sendCoinAmountView;
+    @Bind(R.id.send_local_amount)
+    AmountEditView sendLocalAmountView;
+    @Bind(R.id.address_error_message)
+    TextView addressError;
+    @Bind(R.id.amount_error_message)
+    TextView amountError;
+    @Bind(R.id.amount_warning_message)
+    TextView amountWarning;
+    @Bind(R.id.scan_qr_code)
+    ImageButton scanQrCodeButton;
+    @Bind(R.id.erase_address)
+    ImageButton eraseAddressButton;
+    @Bind(R.id.tx_message_add_remove)
+    Button txMessageButton;
+    @Bind(R.id.tx_message_label)
+    TextView txMessageLabel;
+    @Bind(R.id.tx_message)
+    EditText txMessageView;
+    @Bind(R.id.tx_message_counter)
+    TextView txMessageCounter;
+    @Bind(R.id.send_confirm)
+    Button sendConfirmButton;
+    @Nullable
+    ReceivingAddressViewAdapter sendToAdapter;
+    CurrencyCalculatorLink amountCalculatorLink;
+    Timer timer;
+    MyMarketInfoPollTask pollTask;
+    ActionMode actionMode;
+    EditViewListener txMessageViewTextChangeListener;
+    Listener listener;
+    ContentResolver resolver;
+    @Nullable
+    private Value lastBalance; // TODO setup wallet watcher for the latest balance
     private State state = State.INPUT;
     private AbstractAddress address;
     private boolean addressTypeCanChange;
@@ -136,36 +165,92 @@ public class SendFragment extends WalletFragment {
     private boolean isTxMessageAdded;
     private boolean isTxMessageValid;
     private WalletAccount account;
-
     private MyHandler handler = new MyHandler(this);
+    private final ThrottlingWalletChangeListener transactionChangeListener = new ThrottlingWalletChangeListener() {
+        @Override
+        public void onThrottledWalletChanged() {
+            handler.sendMessage(handler.obtainMessage(UPDATE_WALLET_CHANGE));
+        }
+    };
     private ContentObserver addressBookObserver = new AddressBookObserver(handler);
     private WalletApplication application;
-    private Configuration config;
-    private Map<String, ExchangeRate> localRates = new HashMap<>();
-    private ShapeShiftMarketInfo marketInfo;
+    private final LoaderCallbacks<Cursor> receivingAddressLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            final String constraint = args != null ? args.getString("constraint") : null;
+            // TODO support addresses from other accounts
+            Uri uri = AddressBookProvider.contentUri(application.getPackageName(), account.getCoinType());
+            return new CursorLoader(application, uri, null, AddressBookProvider.SELECTION_QUERY,
+                    new String[]{constraint != null ? constraint : ""}, null);
+        }
 
-    @Bind(R.id.send_to_address)         AutoCompleteTextView sendToAddressView;
-    @Bind(R.id.send_to_address_static)  AddressView sendToStaticAddressView;
-    @Bind(R.id.send_coin_amount)        AmountEditView sendCoinAmountView;
-    @Bind(R.id.send_local_amount)       AmountEditView sendLocalAmountView;
-    @Bind(R.id.address_error_message)   TextView addressError;
-    @Bind(R.id.amount_error_message)    TextView amountError;
-    @Bind(R.id.amount_warning_message)  TextView amountWarning;
-    @Bind(R.id.scan_qr_code)            ImageButton scanQrCodeButton;
-    @Bind(R.id.erase_address)           ImageButton eraseAddressButton;
-    @Bind(R.id.tx_message_add_remove)   Button txMessageButton;
-    @Bind(R.id.tx_message_label)        TextView txMessageLabel;
-    @Bind(R.id.tx_message)              EditText txMessageView;
-    @Bind(R.id.tx_message_counter)      TextView txMessageCounter;
-    @Bind(R.id.send_confirm)            Button sendConfirmButton;
-    @Nullable ReceivingAddressViewAdapter sendToAdapter;
-    CurrencyCalculatorLink amountCalculatorLink;
-    Timer timer;
-    MyMarketInfoPollTask pollTask;
-    ActionMode actionMode;
-    EditViewListener txMessageViewTextChangeListener;
-    Listener listener;
-    ContentResolver resolver;
+        @Override
+        public void onLoadFinished(final Loader<Cursor> cursor, final Cursor data) {
+            if (sendToAdapter != null) sendToAdapter.swapCursor(data);
+        }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> cursor) {
+            if (sendToAdapter != null) sendToAdapter.swapCursor(null);
+        }
+    };
+    private Configuration config;
+    private final LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            String localSymbol = config.getExchangeCurrencyCode();
+            return new ExchangeRateLoader(getActivity(), config, localSymbol);
+        }
+
+        @Override
+        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
+            if (data != null && data.getCount() > 0) {
+                HashMap<String, com.bachduong.core.util.ExchangeRate> rates = new HashMap<>(data.getCount());
+                data.moveToFirst();
+                do {
+                    ExchangeRatesProvider.ExchangeRate rate = ExchangeRatesProvider.getExchangeRate(data);
+                    rates.put(rate.currencyCodeId, rate.rate);
+                } while (data.moveToNext());
+                handler.sendMessage(handler.obtainMessage(UPDATE_LOCAL_EXCHANGE_RATES, rates));
+            }
+        }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> loader) {
+        }
+    };
+    private Map<String, ExchangeRate> localRates = new HashMap<>();
+    EditViewListener receivingAddressListener = new EditViewListener() {
+        @Override
+        public void onFocusChange(final View v, final boolean hasFocus) {
+            if (!hasFocus) {
+                validateAddress();
+            }
+        }
+
+        @Override
+        public void afterTextChanged(final Editable s) {
+            validateAddress(true);
+        }
+    };
+    private ShapeShiftMarketInfo marketInfo;
+    private final AmountEditView.Listener amountsListener = new AmountEditView.Listener() {
+        @Override
+        public void changed() {
+            validateAmount(true);
+        }
+
+        @Override
+        public void focusChanged(final boolean hasFocus) {
+            if (!hasFocus) {
+                validateAmount();
+            }
+        }
+    };
+
+    public SendFragment() {
+        // Required empty public constructor
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -195,10 +280,6 @@ public class SendFragment extends WalletFragment {
         args.putString(Constants.ARG_URI, uri.toString());
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public SendFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -801,8 +882,6 @@ public class SendFragment extends WalletFragment {
         return min;
     }
 
-
-
     private boolean everythingValid() {
         return state == State.INPUT && isOutputsValid() && isAmountValid() &&
                 (!isTxMessageAdded || isTxMessageValid());
@@ -1064,22 +1143,6 @@ public class SendFragment extends WalletFragment {
         return account;
     }
 
-    public interface Listener {
-        void onTransactionBroadcastSuccess(WalletAccount pocket, Transaction transaction);
-        void onTransactionBroadcastFailure(WalletAccount pocket, Transaction transaction);
-        void showPayToDialog(String addressStr);
-    }
-
-    private abstract class EditViewListener implements View.OnFocusChangeListener, TextWatcher {
-        @Override
-        public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
-        }
-
-        @Override
-        public void onTextChanged(final CharSequence s, final int start, final int before, final int count) {
-        }
-    }
-
     @OnClick(R.id.send_to_address_static)
     void onStaticAddressClick() {
         if (address != null) {
@@ -1121,58 +1184,6 @@ public class SendFragment extends WalletFragment {
         }
     }
 
-    EditViewListener receivingAddressListener = new EditViewListener() {
-        @Override
-        public void onFocusChange(final View v, final boolean hasFocus) {
-            if (!hasFocus) {
-                validateAddress();
-            }
-        }
-
-        @Override
-        public void afterTextChanged(final Editable s) {
-            validateAddress(true);
-        }
-    };
-
-    private final AmountEditView.Listener amountsListener = new AmountEditView.Listener() {
-        @Override
-        public void changed() {
-            validateAmount(true);
-        }
-
-        @Override
-        public void focusChanged(final boolean hasFocus) {
-            if (!hasFocus) {
-                validateAmount();
-            }
-        }
-    };
-
-    private final LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            String localSymbol = config.getExchangeCurrencyCode();
-            return new ExchangeRateLoader(getActivity(), config, localSymbol);
-        }
-
-        @Override
-        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
-            if (data != null && data.getCount() > 0) {
-                HashMap<String, com.bachduong.core.util.ExchangeRate> rates = new HashMap<>(data.getCount());
-                data.moveToFirst();
-                do {
-                    ExchangeRatesProvider.ExchangeRate rate = ExchangeRatesProvider.getExchangeRate(data);
-                    rates.put(rate.currencyCodeId, rate.rate);
-                } while (data.moveToNext());
-                handler.sendMessage(handler.obtainMessage(UPDATE_LOCAL_EXCHANGE_RATES, rates));
-            }
-        }
-
-        @Override
-        public void onLoaderReset(final Loader<Cursor> loader) { }
-    };
-
     private void onLocalExchangeRatesUpdate(HashMap<String, ExchangeRate> rates) {
         localRates = rates;
         if (state == State.INPUT) {
@@ -1200,8 +1211,22 @@ public class SendFragment extends WalletFragment {
         validateAmount();
     }
 
+    private enum State {
+        INPUT, PREPARATION, SENDING, SENT, FAILED
+    }
+
+    public interface Listener {
+        void onTransactionBroadcastSuccess(WalletAccount pocket, Transaction transaction);
+
+        void onTransactionBroadcastFailure(WalletAccount pocket, Transaction transaction);
+
+        void showPayToDialog(String addressStr);
+    }
+
     private static class MyHandler extends WeakHandler<SendFragment> {
-        public MyHandler(SendFragment referencingObject) { super(referencingObject); }
+        public MyHandler(SendFragment referencingObject) {
+            super(referencingObject);
+        }
 
         @Override
         protected void weakHandleMessage(SendFragment ref, Message msg) {
@@ -1225,33 +1250,43 @@ public class SendFragment extends WalletFragment {
         }
     }
 
-    private final ThrottlingWalletChangeListener transactionChangeListener = new ThrottlingWalletChangeListener() {
-        @Override
-        public void onThrottledWalletChanged() {
-            handler.sendMessage(handler.obtainMessage(UPDATE_WALLET_CHANGE));
-        }
-    };
+    private static class MyMarketInfoPollTask extends MarketInfoPollTask {
+        private final Handler handler;
 
-    private final LoaderCallbacks<Cursor> receivingAddressLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            final String constraint = args != null ? args.getString("constraint") : null;
-            // TODO support addresses from other accounts
-            Uri uri = AddressBookProvider.contentUri(application.getPackageName(), account.getCoinType());
-            return new CursorLoader(application, uri, null, AddressBookProvider.SELECTION_QUERY,
-                    new String[]{constraint != null ? constraint : ""}, null);
+        MyMarketInfoPollTask(Handler handler, ShapeShift shapeShift, String pair) {
+            super(shapeShift, pair);
+            this.handler = handler;
         }
 
         @Override
-        public void onLoadFinished(final Loader<Cursor> cursor, final Cursor data) {
-            if (sendToAdapter != null) sendToAdapter.swapCursor(data);
+        public void onHandleMarketInfo(ShapeShiftMarketInfo marketInfo) {
+            handler.sendMessage(handler.obtainMessage(UPDATE_MARKET, marketInfo));
+        }
+    }
+
+    private static class AddressBookObserver extends ContentObserver {
+        private final MyHandler handler;
+
+        public AddressBookObserver(MyHandler handler) {
+            super(handler);
+            this.handler = handler;
         }
 
         @Override
-        public void onLoaderReset(final Loader<Cursor> cursor) {
-            if (sendToAdapter != null) sendToAdapter.swapCursor(null);
+        public void onChange(final boolean selfChange) {
+            handler.sendEmptyMessage(UPDATE_VIEW);
         }
-    };
+    }
+
+    private abstract class EditViewListener implements View.OnFocusChangeListener, TextWatcher {
+        @Override
+        public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
+        }
+
+        @Override
+        public void onTextChanged(final CharSequence s, final int start, final int before, final int count) {
+        }
+    }
 
     private final class ReceivingAddressViewAdapter extends CursorAdapter implements FilterQueryProvider {
         public ReceivingAddressViewAdapter(final Context context) {
@@ -1297,34 +1332,6 @@ public class SendFragment extends WalletFragment {
                 args.putString("constraint", constraint.toString());
             getLoaderManager().restartLoader(ID_RECEIVING_ADDRESS_LOADER, args, receivingAddressLoaderCallbacks);
             return getCursor();
-        }
-    }
-
-    private static class MyMarketInfoPollTask extends MarketInfoPollTask {
-        private final Handler handler;
-
-        MyMarketInfoPollTask(Handler handler, ShapeShift shapeShift, String pair) {
-            super(shapeShift, pair);
-            this.handler = handler;
-        }
-
-        @Override
-        public void onHandleMarketInfo(ShapeShiftMarketInfo marketInfo) {
-            handler.sendMessage(handler.obtainMessage(UPDATE_MARKET, marketInfo));
-        }
-    }
-
-    private static class AddressBookObserver extends ContentObserver {
-        private final MyHandler handler;
-
-        public AddressBookObserver(MyHandler handler) {
-            super(handler);
-            this.handler = handler;
-        }
-
-        @Override
-        public void onChange(final boolean selfChange) {
-            handler.sendEmptyMessage(UPDATE_VIEW);
         }
     }
 }

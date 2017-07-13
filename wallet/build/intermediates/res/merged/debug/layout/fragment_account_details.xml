@@ -40,9 +40,9 @@
                         style="@style/NormalText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/quarter_standard_margin"
                         android:textIsSelectable="true"
                         android:typeface="monospace"
-                        android:layout_marginBottom="@dimen/quarter_standard_margin"
                         tools:text="xpub69NRFqFc4BnWv27US3sLhtiq2F2kbABKWPPynQLBBto9SN7mN3PLZboT74Lnk58Qudmi2hJbiPGVazPMNCsVxvzjJ2onFR23mANKHWy4WgN" />
 
                     <TextView
@@ -65,9 +65,9 @@
                         android:id="@+id/qr_code_public_key"
                         android:layout_width="@dimen/qr_code_size"
                         android:layout_height="@dimen/qr_code_size"
-                        tools:background="@color/gray_87_text"
+                        android:layout_margin="@dimen/qr_code_margin"
                         android:background="@color/qr_code_normal_bg"
-                        android:layout_margin="@dimen/qr_code_margin" />
+                        tools:background="@color/gray_87_text" />
 
                 </LinearLayout>
             </LinearLayout>

@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.CoinID;
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.wallet.Wallet;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.tasks.AddCoinTask;
 import com.bachduong.bitwallet.ui.dialogs.ConfirmAddCoinUnlockWalletDialog;
+import com.bachduong.core.coins.CoinID;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.wallet.Wallet;
+import com.bachduong.core.wallet.WalletAccount;
 
 import org.bitcoinj.crypto.KeyCrypterException;
 
@@ -28,7 +28,8 @@ public class AddCoinsActivity extends BaseWalletActivity
     private static final String ADD_COIN_TASK_BUSY_DIALOG_TAG = "add_coin_task_busy_dialog_tag";
     private static final String ADD_COIN_DIALOG_TAG = "ADD_COIN_DIALOG_TAG";
 
-    @CheckForNull private Wallet wallet;
+    @CheckForNull
+    private Wallet wallet;
     private AddCoinTask addCoinTask;
     private CoinType selectedCoin;
 
@@ -89,7 +90,8 @@ public class AddCoinsActivity extends BaseWalletActivity
 
     @Override
     public void onAddCoinTaskFinished(Exception error, WalletAccount newAccount) {
-        if (Dialogs.dismissAllowingStateLoss(getSupportFragmentManager(), ADD_COIN_TASK_BUSY_DIALOG_TAG)) return;
+        if (Dialogs.dismissAllowingStateLoss(getSupportFragmentManager(), ADD_COIN_TASK_BUSY_DIALOG_TAG))
+            return;
         addCoinTask = null;
         final Intent result = new Intent();
         if (error != null) {

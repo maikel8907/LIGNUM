@@ -8,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bachduong.core.wallet.Wallet;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
+import com.bachduong.core.wallet.Wallet;
 
 import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.crypto.DeterministicKey;
@@ -100,6 +100,22 @@ public class DebuggingFragment extends Fragment {
         }
     }
 
+    private String getFingerprint(byte[] b) {
+        String inputFingerprint;
+        inputFingerprint = Hex.toHexString(Arrays.copyOf(Sha256Hash.create(b).getBytes(), 4));
+        return inputFingerprint;
+    }
+
+    static class UnlockResult {
+        boolean isUnlockSuccess = false;
+        String inputFingerprint;
+        String keyFingerprint;
+        @Nullable
+        String error;
+        @Nullable
+        Protos.ScryptParameters scryptParams;
+    }
+
     private class PasswordTestTask extends AsyncTask<Void, Void, Void> {
         UnlockResult result = new UnlockResult();
 
@@ -138,7 +154,8 @@ public class DebuggingFragment extends Fragment {
 
         protected void onPostExecute(Void aVoid) {
             passwordTestTask = null;
-            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), PROCESSING_DIALOG_TAG)) return;
+            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), PROCESSING_DIALOG_TAG))
+                return;
 
             String yes = getString(R.string.yes);
             String no = getString(R.string.no);
@@ -160,19 +177,5 @@ public class DebuggingFragment extends Fragment {
                     .setMessage(message)
                     .setPositiveButton(R.string.button_ok, null).create().show();
         }
-    }
-
-    private String getFingerprint(byte[] b) {
-        String inputFingerprint;
-        inputFingerprint = Hex.toHexString(Arrays.copyOf(Sha256Hash.create(b).getBytes(), 4));
-        return inputFingerprint;
-    }
-
-    static class UnlockResult {
-        boolean isUnlockSuccess = false;
-        String inputFingerprint;
-        String keyFingerprint;
-        @Nullable String error;
-        @Nullable Protos.ScryptParameters scryptParams;
     }
 }

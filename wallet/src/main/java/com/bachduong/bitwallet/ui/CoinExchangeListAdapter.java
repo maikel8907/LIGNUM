@@ -5,9 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.bachduong.core.coins.CoinType;
 import com.bachduong.bitwallet.ExchangeRatesProvider.ExchangeRate;
 import com.bachduong.bitwallet.ui.widget.CoinListItem;
+import com.bachduong.core.coins.CoinType;
 
 import java.util.HashMap;
 import java.util.List;

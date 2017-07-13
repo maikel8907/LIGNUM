@@ -23,11 +23,11 @@
                 style="@style/FontIconBig"
                 android:layout_width="@dimen/font_icon_bg_size"
                 android:layout_height="@dimen/font_icon_bg_size"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:gravity="center"
                 android:text="@string/font_icon_backup_wallet"
-                tools:text="Ψ"/>
+                tools:text="Ψ" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,24 +106,25 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
                     android:id="@+id/seed_entry_skip"
                     style="@style/BorderlessButtonLink"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_skip"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/button_skip" />
 
                 <Button
                     android:id="@+id/button_next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_next"
-                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_centerVertical="true"
+                    android:text="@string/button_next" />
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

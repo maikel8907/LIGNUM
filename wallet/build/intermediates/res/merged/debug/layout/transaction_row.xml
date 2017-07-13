@@ -4,28 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingTop="@dimen/transaction_row_padding_vertical"
     android:paddingBottom="@dimen/transaction_row_padding_vertical"
     android:paddingEnd="@dimen/transaction_row_padding_horizontal"
     android:paddingLeft="@dimen/transaction_row_padding_horizontal"
     android:paddingRight="@dimen/transaction_row_padding_horizontal"
-    android:paddingStart="@dimen/transaction_row_padding_horizontal" >
+    android:paddingStart="@dimen/transaction_row_padding_horizontal"
+    android:paddingTop="@dimen/transaction_row_padding_vertical">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/transaction_row_direction_font_icon"
             style="@style/TransactionRowDirectionFontIcon"
             android:layout_width="@dimen/transaction_row_direction_bg_size"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/transaction_row_margin_direction"
             android:background="@drawable/transaction_row_circle_bg_pending"
             android:gravity="center"
-            android:layout_margin="@dimen/transaction_row_margin_direction"
             tools:text="[->" />
 
         <TextView
@@ -47,20 +47,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:orientation="horizontal"
-            android:gravity="bottom">
+            android:gravity="bottom"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/transaction_row_message_font_icon"
                 style="@style/TransactionRowMessageFontIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/quarter_standard_margin"
                 android:layout_marginEnd="@dimen/quarter_standard_margin"
+                android:layout_marginRight="@dimen/quarter_standard_margin"
                 android:text="@string/font_icon_mail"
                 android:visibility="gone"
-                tools:visibility="visible"
-                tools:text="M" />
+                tools:text="M"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/transaction_row_direction_text"

@@ -17,17 +17,7 @@
 package com.bachduong.bitwallet.util;
 
 
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.nio.charset.Charset;
-import java.security.SecureRandom;
-import java.util.Arrays;
-
-import javax.annotation.Nonnull;
+import com.google.common.io.BaseEncoding;
 
 import org.spongycastle.crypto.BufferedBlockCipher;
 import org.spongycastle.crypto.CipherParameters;
@@ -40,23 +30,32 @@ import org.spongycastle.crypto.modes.CBCBlockCipher;
 import org.spongycastle.crypto.paddings.PaddedBufferedBlockCipher;
 import org.spongycastle.crypto.params.ParametersWithIV;
 
-import com.google.common.io.BaseEncoding;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.security.SecureRandom;
+import java.util.Arrays;
+
+import javax.annotation.Nonnull;
 
 /**
  * This class encrypts and decrypts a string in a manner that is compatible with OpenSSL.
- *
+ * <p>
  * If you encrypt a string with this class you can decrypt it with the OpenSSL command: openssl enc -d -aes-256-cbc -a
  * -in cipher.txt -out plain.txt -pass pass:aTestPassword
- *
+ * <p>
  * where: cipher.txt = file containing the cipher text plain.txt - where you want the plaintext to be saved
- *
+ * <p>
  * substitute your password for "aTestPassword" or remove the "-pass" parameter to be prompted.
  *
  * @author jim
  * @author Andreas Schildbach
  */
-public class Crypto
-{
+public class Crypto {
     private static final BaseEncoding BASE64 = BaseEncoding.base64().withSeparator("\n", 76);
     private static final Charset UTF_8 = Charset.forName("UTF-8");
 
@@ -89,29 +88,49 @@ public class Crypto
      * OpenSSL salted prefix bytes - also used as magic number for encrypted key file.
      */
     private static final byte[] OPENSSL_SALTED_BYTES = OPENSSL_SALTED_TEXT.getBytes(UTF_8);
-
+    private static final int NUMBER_OF_CHARACTERS_TO_MATCH_IN_OPENSSL_MAGIC_TEXT = 10;
     /**
      * Magic text that appears at the beginning of every OpenSSL encrypted file. Used in identifying encrypted key
      * files.
      */
     private static final String OPENSSL_MAGIC_TEXT = BASE64.encode(Crypto.OPENSSL_SALTED_BYTES).substring(0,
             Crypto.NUMBER_OF_CHARACTERS_TO_MATCH_IN_OPENSSL_MAGIC_TEXT);
+    public final static FileFilter OPENSSL_FILE_FILTER = new FileFilter() {
+        private final char[] buf = new char[OPENSSL_MAGIC_TEXT.length()];
 
-    private static final int NUMBER_OF_CHARACTERS_TO_MATCH_IN_OPENSSL_MAGIC_TEXT = 10;
-
+        @Override
+        public boolean accept(final File file) {
+            Reader in = null;
+            try {
+                in = new InputStreamReader(new FileInputStream(file), UTF_8);
+                if (in.read(buf) == -1)
+                    return false;
+                final String str = new String(buf);
+                if (!str.toString().equals(OPENSSL_MAGIC_TEXT))
+                    return false;
+                return true;
+            } catch (final IOException x) {
+                return false;
+            } finally {
+                if (in != null) {
+                    try {
+                        in.close();
+                    } catch (final IOException x2) {
+                    }
+                }
+            }
+        }
+    };
     private static final SecureRandom secureRandom = new SecureRandom();
 
     /**
      * Get password and generate key and iv.
      *
-     * @param password
-     *            The password to use in key generation
-     * @param salt
-     *            The salt to use in key generation
+     * @param password The password to use in key generation
+     * @param salt     The salt to use in key generation
      * @return The CipherParameters containing the created key
      */
-    private static CipherParameters getAESPasswordKey(final char[] password, final byte[] salt)
-    {
+    private static CipherParameters getAESPasswordKey(final char[] password, final byte[] salt) {
         final PBEParametersGenerator generator = new OpenSSLPBEParametersGenerator();
         generator.init(PBEParametersGenerator.PKCS5PasswordToBytes(password), salt, NUMBER_OF_ITERATIONS);
 
@@ -123,15 +142,12 @@ public class Crypto
     /**
      * Password based encryption using AES - CBC 256 bits.
      *
-     * @param plainText
-     *            The text to encrypt
-     * @param password
-     *            The password to use for encryption
+     * @param plainText The text to encrypt
+     * @param password  The password to use for encryption
      * @return The encrypted string
      * @throws IOException
      */
-    public static String encrypt(@Nonnull final String plainText, @Nonnull final char[] password) throws IOException
-    {
+    public static String encrypt(@Nonnull final String plainText, @Nonnull final char[] password) throws IOException {
         final byte[] plainTextAsBytes = plainText.getBytes(UTF_8);
 
         return encrypt(plainTextAsBytes, password);
@@ -140,15 +156,12 @@ public class Crypto
     /**
      * Password based encryption using AES - CBC 256 bits.
      *
-     * @param plainTextAsBytes
-     *            The bytes to encrypt
-     * @param password
-     *            The password to use for encryption
+     * @param plainTextAsBytes The bytes to encrypt
+     * @param password         The password to use for encryption
      * @return The encrypted string
      * @throws IOException
      */
-    public static String encrypt(@Nonnull final byte[] plainTextAsBytes, @Nonnull final char[] password) throws IOException
-    {
+    public static String encrypt(@Nonnull final byte[] plainTextAsBytes, @Nonnull final char[] password) throws IOException {
         final byte[] encryptedBytes = encryptRaw(plainTextAsBytes, password);
 
         // OpenSSL prefixes the salt bytes + encryptedBytes with Salted___ and then base64 encodes it
@@ -160,17 +173,13 @@ public class Crypto
     /**
      * Password based encryption using AES - CBC 256 bits.
      *
-     * @param plainTextAsBytes
-     *            The bytes to encrypt
-     * @param password
-     *            The password to use for encryption
+     * @param plainTextAsBytes The bytes to encrypt
+     * @param password         The password to use for encryption
      * @return SALT_LENGTH bytes of salt followed by the encrypted bytes.
      * @throws IOException
      */
-    private static byte[] encryptRaw(final byte[] plainTextAsBytes, final char[] password) throws IOException
-    {
-        try
-        {
+    private static byte[] encryptRaw(final byte[] plainTextAsBytes, final char[] password) throws IOException {
+        try {
             // Generate salt - each encryption call has a different salt.
             final byte[] salt = new byte[SALT_LENGTH];
             secureRandom.nextBytes(salt);
@@ -186,13 +195,9 @@ public class Crypto
 
             // The result bytes are the SALT_LENGTH bytes followed by the encrypted bytes.
             return concat(salt, Arrays.copyOf(encryptedBytes, processLen + doFinalLen));
-        }
-        catch (final InvalidCipherTextException x)
-        {
+        } catch (final InvalidCipherTextException x) {
             throw new IOException("Could not encrypt bytes", x);
-        }
-        catch (final DataLengthException x)
-        {
+        } catch (final DataLengthException x) {
             throw new IOException("Could not encrypt bytes", x);
         }
     }
@@ -200,15 +205,12 @@ public class Crypto
     /**
      * Decrypt text previously encrypted with this class.
      *
-     * @param textToDecode
-     *            The code to decrypt
-     * @param password
-     *            password to use for decryption
+     * @param textToDecode The code to decrypt
+     * @param password     password to use for decryption
      * @return The decrypted text
      * @throws IOException
      */
-    public static String decrypt(@Nonnull final String textToDecode, @Nonnull final char[] password) throws IOException
-    {
+    public static String decrypt(@Nonnull final String textToDecode, @Nonnull final char[] password) throws IOException {
         final byte[] decryptedBytes = decryptBytes(textToDecode, password);
 
         return new String(decryptedBytes, UTF_8).trim();
@@ -217,15 +219,12 @@ public class Crypto
     /**
      * Decrypt bytes previously encrypted with this class.
      *
-     * @param textToDecode
-     *            The code to decrypt
-     * @param password
-     *            password to use for decryption
+     * @param textToDecode The code to decrypt
+     * @param password     password to use for decryption
      * @return The decrypted bytes
      * @throws IOException
      */
-    public static byte[] decryptBytes(@Nonnull final String textToDecode, @Nonnull final char[] password) throws IOException
-    {
+    public static byte[] decryptBytes(@Nonnull final String textToDecode, @Nonnull final char[] password) throws IOException {
         final byte[] decodeTextAsBytes = BASE64.decode(textToDecode);
 
         if (decodeTextAsBytes.length < OPENSSL_SALTED_BYTES.length)
@@ -242,17 +241,13 @@ public class Crypto
     /**
      * Decrypt bytes previously encrypted with this class.
      *
-     * @param bytesToDecode
-     *            The bytes to decrypt
-     * @param password
-     *            password to use for decryption
+     * @param bytesToDecode The bytes to decrypt
+     * @param password      password to use for decryption
      * @return The decrypted bytes
      * @throws IOException
      */
-    private static byte[] decryptRaw(final byte[] bytesToDecode, final char[] password) throws IOException
-    {
-        try
-        {
+    private static byte[] decryptRaw(final byte[] bytesToDecode, final char[] password) throws IOException {
+        try {
             // separate the salt and bytes to decrypt
             final byte[] salt = new byte[SALT_LENGTH];
 
@@ -272,13 +267,9 @@ public class Crypto
             final int doFinalLen = cipher.doFinal(decryptedBytes, processLen);
 
             return Arrays.copyOf(decryptedBytes, processLen + doFinalLen);
-        }
-        catch (final InvalidCipherTextException x)
-        {
+        } catch (final InvalidCipherTextException x) {
             throw new IOException("Could not decrypt bytes", x);
-        }
-        catch (final DataLengthException x)
-        {
+        } catch (final DataLengthException x) {
             throw new IOException("Could not decrypt bytes", x);
         }
     }
@@ -286,50 +277,11 @@ public class Crypto
     /**
      * Concatenate two byte arrays.
      */
-    private static byte[] concat(final byte[] arrayA, final byte[] arrayB)
-    {
+    private static byte[] concat(final byte[] arrayA, final byte[] arrayB) {
         final byte[] result = new byte[arrayA.length + arrayB.length];
         System.arraycopy(arrayA, 0, result, 0, arrayA.length);
         System.arraycopy(arrayB, 0, result, arrayA.length, arrayB.length);
 
         return result;
     }
-
-    public final static FileFilter OPENSSL_FILE_FILTER = new FileFilter()
-    {
-        private final char[] buf = new char[OPENSSL_MAGIC_TEXT.length()];
-
-        @Override
-        public boolean accept(final File file)
-        {
-            Reader in = null;
-            try
-            {
-                in = new InputStreamReader(new FileInputStream(file), UTF_8);
-                if (in.read(buf) == -1)
-                    return false;
-                final String str = new String(buf);
-                if (!str.toString().equals(OPENSSL_MAGIC_TEXT))
-                    return false;
-                return true;
-            }
-            catch (final IOException x)
-            {
-                return false;
-            }
-            finally
-            {
-                if (in != null)
-                {
-                    try
-                    {
-                        in.close();
-                    }
-                    catch (final IOException x2)
-                    {
-                    }
-                }
-            }
-        }
-    };
 }

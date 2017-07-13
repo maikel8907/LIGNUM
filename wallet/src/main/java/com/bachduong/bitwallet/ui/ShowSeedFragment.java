@@ -13,12 +13,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bachduong.core.wallet.Wallet;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.util.Fonts;
 import com.bachduong.bitwallet.util.QrUtils;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.wallet.Wallet;
 
 import org.bitcoinj.crypto.DeterministicKey;
 import org.bitcoinj.crypto.HDKeyDerivation;
@@ -42,7 +42,7 @@ public class ShowSeedFragment extends Fragment {
 
     private static final String SEED_PROCESSING_DIALOG_TAG = "seed_processing_dialog_tag";
     private static final String PASSWORD_DIALOG_TAG = "password_dialog_tag";
-
+    private final Handler handler = new MyHandler(this);
     private View seedLayout;
     private View seedEncryptedLayout;
     private TextView seedView;
@@ -50,32 +50,9 @@ public class ShowSeedFragment extends Fragment {
     private ImageView qrView;
     private Listener listener;
     private LoadSeedTask decryptSeedTask;
-
     private Wallet wallet;
     private CharSequence password;
     private SeedInfo seedInfo;
-
-    private final Handler handler = new MyHandler(this);
-
-    private static class MyHandler extends WeakHandler<ShowSeedFragment> {
-        public MyHandler(ShowSeedFragment ref) { super(ref); }
-
-        @Override
-        protected void weakHandleMessage(ShowSeedFragment ref, Message msg) {
-            switch (msg.what) {
-                case SET_SEED:
-                    ref.seedInfo = (SeedInfo) msg.obj;
-                    ref.updateView();
-                    break;
-                case SET_PASSWORD:
-                    ref.setPassword((CharSequence) msg.obj);
-                    break;
-                case UPDATE_VIEW:
-                    ref.updateView();
-                    break;
-            }
-        }
-    }
 
     public void setPassword(CharSequence password) {
         this.password = password;
@@ -176,6 +153,37 @@ public class ShowSeedFragment extends Fragment {
         }
     }
 
+    public interface Listener extends UnlockWalletDialog.Listener {
+        void onSeedNotAvailable();
+    }
+
+    private static class MyHandler extends WeakHandler<ShowSeedFragment> {
+        public MyHandler(ShowSeedFragment ref) {
+            super(ref);
+        }
+
+        @Override
+        protected void weakHandleMessage(ShowSeedFragment ref, Message msg) {
+            switch (msg.what) {
+                case SET_SEED:
+                    ref.seedInfo = (SeedInfo) msg.obj;
+                    ref.updateView();
+                    break;
+                case SET_PASSWORD:
+                    ref.setPassword((CharSequence) msg.obj);
+                    break;
+                case UPDATE_VIEW:
+                    ref.updateView();
+                    break;
+            }
+        }
+    }
+
+    private static class SeedInfo {
+        String seedString;
+        boolean isSeedPasswordProtected;
+    }
+
     private class LoadSeedTask extends AsyncTask<Void, Void, Void> {
         SeedInfo seedInfo = null;
 
@@ -223,7 +231,8 @@ public class ShowSeedFragment extends Fragment {
         protected void onPostExecute(Void aVoid) {
             password = null;
 
-            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), SEED_PROCESSING_DIALOG_TAG)) return;
+            if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), SEED_PROCESSING_DIALOG_TAG))
+                return;
 
             if (seedInfo != null) {
                 handler.sendMessage(handler.obtainMessage(SET_SEED, seedInfo));
@@ -242,14 +251,5 @@ public class ShowSeedFragment extends Fragment {
                         .create().show();
             }
         }
-    }
-
-    private static class SeedInfo {
-        String seedString;
-        boolean isSeedPasswordProtected;
-    }
-
-    public interface Listener extends UnlockWalletDialog.Listener {
-        void onSeedNotAvailable();
     }
 }

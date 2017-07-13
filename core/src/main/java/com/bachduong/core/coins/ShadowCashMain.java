@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author dasource
  */
 public class ShadowCashMain extends PeerFamily {
+    private static ShadowCashMain instance = new ShadowCashMain();
+
     private ShadowCashMain() {
         id = "shadowcash.main";
 
         addressHeader = 63;
         p2shHeader = 125;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 500;
         dumpedPrivateKeyHeader = 191;
 
@@ -27,7 +29,6 @@ public class ShadowCashMain extends PeerFamily {
         signedMessageHeader = toBytes("ShadowCash Signed Message:\n");
     }
 
-    private static ShadowCashMain instance = new ShadowCashMain();
     public static synchronized ShadowCashMain get() {
         return instance;
     }

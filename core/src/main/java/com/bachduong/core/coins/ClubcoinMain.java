@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author John L. Jegutanis
  */
 public class ClubcoinMain extends PeerFamily {
+    private static ClubcoinMain instance = new ClubcoinMain();
+
     private ClubcoinMain() {
         id = "clubcoin.main";
 
         addressHeader = 28;
         p2shHeader = 85;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 500;
         dumpedPrivateKeyHeader = 153;
 
@@ -27,7 +29,6 @@ public class ClubcoinMain extends PeerFamily {
         signedMessageHeader = toBytes("ClubCoin Signed Message:\n");
     }
 
-    private static ClubcoinMain instance = new ClubcoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

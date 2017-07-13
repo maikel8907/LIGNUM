@@ -3,12 +3,11 @@ package com.bachduong.stratumj;
 
 import com.bachduong.stratumj.messages.CallMessage;
 import com.bachduong.stratumj.messages.ResultMessage;
-import org.bitcoinj.utils.BriefLogFormatter;
-
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 
+import org.bitcoinj.utils.BriefLogFormatter;
 import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.Before;
@@ -20,17 +19,17 @@ import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.net.Socket;
 import java.util.Arrays;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.annotation.Nullable;
 
-import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyInt;
-import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.doThrow;
 
 /**
  * @author John L. Jegutanis
@@ -129,7 +128,8 @@ public class CommunicationsTest {
 
         try {
             Thread.sleep(5000);
-        } catch (InterruptedException ignored) { }
+        } catch (InterruptedException ignored) {
+        }
 
         Assert.assertTrue(success.get());
     }

@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class MonacoinMain extends BitFamily {
+    private static MonacoinMain instance = new MonacoinMain();
+
     private MonacoinMain() {
         id = "monacoin.main";
 
         addressHeader = 50;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 178;
 
@@ -27,7 +29,6 @@ public class MonacoinMain extends BitFamily {
         signedMessageHeader = toBytes("Monacoin Signed Message:\n");
     }
 
-    private static MonacoinMain instance = new MonacoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

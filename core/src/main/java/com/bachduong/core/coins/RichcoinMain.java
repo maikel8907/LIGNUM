@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author Ahmed Bodiwala
  */
 public class RichcoinMain extends BitFamily {
+    private static RichcoinMain instance = new RichcoinMain();
+
     private RichcoinMain() {
         id = "richcoin.main";
 
         addressHeader = 61;
         p2shHeader = 9;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 128;
 
@@ -25,10 +27,9 @@ public class RichcoinMain extends BitFamily {
         softDustLimit = value(100000000);
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
         signedMessageHeader = toBytes("Richcoin Signed Message:\n");
-        
+
     }
 
-    private static RichcoinMain instance = new RichcoinMain();
     public static synchronized RichcoinMain get() {
         return instance;
     }

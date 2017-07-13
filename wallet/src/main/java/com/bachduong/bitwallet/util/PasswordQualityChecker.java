@@ -14,15 +14,15 @@ import java.util.Set;
 
 /**
  * @author John L. Jegutanis
- *
- * This class checks the quality of the provided password, for example if it is too common.
- *
- * The common passwords list is provided by Mark Burnett
- * https://xato.net/passwords/more-top-worst-passwords/
+ *         <p>
+ *         This class checks the quality of the provided password, for example if it is too common.
+ *         <p>
+ *         The common passwords list is provided by Mark Burnett
+ *         https://xato.net/passwords/more-top-worst-passwords/
  */
 public class PasswordQualityChecker {
-    private static final Logger log = LoggerFactory.getLogger(PasswordQualityChecker.class);
     public static final int DEFAULT_MIN_PASSWORD_LENGTH = 10;
+    private static final Logger log = LoggerFactory.getLogger(PasswordQualityChecker.class);
     private static final String COMMON_PASSWORDS_TXT = "common_passwords.txt";
     private final HashSet<String> passwordList;
     private final int minPasswordLength;

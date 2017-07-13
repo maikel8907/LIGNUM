@@ -33,19 +33,119 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.Collections;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author John L. Jegutanis
  */
 public class ServerTest {
 
+    public static final String GET_COINS_JSON =
+            "{" +
+                    "BTC: {" +
+                    "name: \"Bitcoin\"," +
+                    "symbol: \"BTC\"," +
+                    "image: \"https://shapeshift.io/images/coins/bitcoin.png\"," +
+                    "status: \"available\"" +
+                    "}," +
+                    "LTC: {" +
+                    "name: \"Litecoin\"," +
+                    "symbol: \"LTC\"," +
+                    "image: \"https://shapeshift.io/images/coins/litecoin.png\"," +
+                    "status: \"unavailable\"" +
+                    "}," +
+                    "UNSUPPORTED: {" +
+                    "name: \"UnsupportedCoin\"," +
+                    "symbol: \"UNSUPPORTED\"," +
+                    "image: \"https://shapeshift.io/images/coins/UnsupportedCoin.png\"," +
+                    "status: \"available\"" +
+                    "}" +
+                    "}";
+    public static final String MARKET_INFO_BTC_NBT_JSON = "{" +
+            "\"pair\" : \"btc_nbt\"," +
+            "\"rate\" : \"100\"," +
+            "\"minerFee\" : \"0.01\"," +
+            "\"limit\" : \"4\"," +
+            "\"minimum\" : 0.00000104" +
+            "}";
+    public static final String GET_RATE_BTC_LTC_JSON = "{" +
+            "\"pair\" : \"btc_ltc\"," +
+            "\"rate\" : \"100\"" +
+            "}";
+    public static final String GET_LIMIT_BTC_LTC_JSON = "{" +
+            "\"pair\" : \"btc_ltc\"," +
+            "\"limit\" : \"5\"," +
+            "\"min\" : 0.00004008" +
+            "}";
+    public static final String GET_TIME_PENDING_JSON = "{" +
+            "status: \"pending\"," +
+            "seconds_remaining: \"100\"" +
+            "}";
+    public static final String GET_TIME_EXPIRED_JSON = "{" +
+            "status: \"expired\"," +
+            "seconds_remaining: \"0\"" +
+            "}";
+    public static final String TX_STATUS_NO_DEPOSIT_JSON = "{" +
+            "status: \"no_deposits\"," +
+            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"" +
+            "}";
+    public static final String TX_STATUS_RECEIVED_JSON = "{" +
+            "status: \"received\"," +
+            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"," +
+            "incomingCoin: 0.00297537," +
+            "incomingType: \"BTC\"" +
+            "}";
+    public static final String TX_STATUS_NEW_STATUS_JSON = "{" +
+            "status: \"some_new_optional_status\"," +
+            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"," +
+            "incomingCoin: 0.00297537," +
+            "incomingType: \"BTC\"" +
+            "}";
+    public static final String TX_STATUS_COMPLETE_JSON = "{" +
+            "status: \"complete\"," +
+            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"," +
+            "withdraw: \"LMmeBWH17TWkQKvK7YFio2oiimPAzrHG6f\"," +
+            "incomingCoin: 0.00297537," +
+            "incomingType: \"BTC\"," +
+            "outgoingCoin: \"0.42000000\"," +
+            "outgoingType: \"LTC\"," +
+            "transaction: \"66fa0b4c11227f9f05efa13d23e58c65b50acbd6395a126b5cd751064e6e79df\"" +
+            "}";
+    public static final String TX_STATUS_FAILED_JSON = "{" +
+            "status: \"failed\"," +
+            "error: \"error\"" +
+            "}";
+    public static final String NORMAL_TRANSACTION_JSON = "{" +
+            "\"deposit\":\"18ETaXCYhJ8sxurh41vpKC3E6Tu7oJ94q8\"," +
+            "\"depositType\":\"BTC\"," +
+            "\"withdrawal\":\"DMHLQYG4j96V8cZX9WSuXxLs5RnZn6ibrV\"," +
+            "\"withdrawalType\":\"DOGE\"" +
+            "}";
+    public static final String FIXED_AMOUNT_TRANSACTION_JSON = "{" +
+            "\"success\":{" +
+            "\"pair\":\"btc_doge\"," +
+            "\"withdrawal\":\"DMHLQYG4j96V8cZX9WSuXxLs5RnZn6ibrV\"," +
+            "\"withdrawalAmount\":\"1000\"," +
+            "\"minerFee\":\"1\"," +
+            "\"deposit\":\"14gQ3xywKEUA6CfH61F8t2c6oB5nLnUjL5\"," +
+            "\"depositAmount\":\"0.00052379\"," +
+            "\"expiration\":1427149038191," +
+            "\"quotedRate\":\"1911057.69230769\"," +
+            "}" +
+            "}";
+    public static final String EMAIL_JSON = "{" +
+            "\"email\":{" +
+            "\"status\":\"success\"," +
+            "\"message\":\"Email receipt sent\"" +
+            "}" +
+            "}";
     final CoinType BTC = BitcoinMain.get();
     final CoinType LTC = LitecoinMain.get();
     final CoinType DOGE = DogecoinMain.get();
     final CoinType NBT = NuBitsMain.get();
-
     private MockWebServer server;
     private ShapeShift shapeShift;
 
@@ -252,7 +352,6 @@ public class ServerTest {
         assertEquals("btc_doge", reqJson.getString("pair"));
     }
 
-
     @Test
     public void testFixedAmountTransaction() throws ShapeShiftException, IOException,
             InterruptedException, JSONException, AddressMalformedException {
@@ -390,104 +489,4 @@ public class ServerTest {
                 DOGE.newAddress("DMHLQYG4j96V8cZX9WSuXxLs5RnZn6ibrV"),
                 BTC.newAddress("1Nz4xHJjNCnZFPjRUq8CN4BZEXTgLZfeUW"));
     }
-
-    public static final String GET_COINS_JSON =
-            "{" +
-            "BTC: {" +
-            "name: \"Bitcoin\"," +
-            "symbol: \"BTC\"," +
-            "image: \"https://shapeshift.io/images/coins/bitcoin.png\"," +
-            "status: \"available\"" +
-            "}," +
-            "LTC: {" +
-            "name: \"Litecoin\"," +
-            "symbol: \"LTC\"," +
-            "image: \"https://shapeshift.io/images/coins/litecoin.png\"," +
-            "status: \"unavailable\"" +
-            "}," +
-            "UNSUPPORTED: {" +
-            "name: \"UnsupportedCoin\"," +
-            "symbol: \"UNSUPPORTED\"," +
-            "image: \"https://shapeshift.io/images/coins/UnsupportedCoin.png\"," +
-            "status: \"available\"" +
-            "}" +
-            "}";
-    public static final String MARKET_INFO_BTC_NBT_JSON = "{" +
-            "\"pair\" : \"btc_nbt\"," +
-            "\"rate\" : \"100\"," +
-            "\"minerFee\" : \"0.01\"," +
-            "\"limit\" : \"4\"," +
-            "\"minimum\" : 0.00000104" +
-            "}";
-    public static final String GET_RATE_BTC_LTC_JSON = "{" +
-            "\"pair\" : \"btc_ltc\"," +
-            "\"rate\" : \"100\"" +
-            "}";
-    public static final String GET_LIMIT_BTC_LTC_JSON = "{" +
-            "\"pair\" : \"btc_ltc\"," +
-            "\"limit\" : \"5\"," +
-            "\"min\" : 0.00004008" +
-            "}";
-    public static final String GET_TIME_PENDING_JSON = "{" +
-            "status: \"pending\"," +
-            "seconds_remaining: \"100\"" +
-            "}";
-    public static final String GET_TIME_EXPIRED_JSON = "{" +
-            "status: \"expired\"," +
-            "seconds_remaining: \"0\"" +
-            "}";
-    public static final String TX_STATUS_NO_DEPOSIT_JSON = "{" +
-            "status: \"no_deposits\"," +
-            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"" +
-            "}";
-    public static final String TX_STATUS_RECEIVED_JSON = "{" +
-            "status: \"received\"," +
-            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"," +
-            "incomingCoin: 0.00297537," +
-            "incomingType: \"BTC\"" +
-            "}";
-    public static final String TX_STATUS_NEW_STATUS_JSON = "{" +
-            "status: \"some_new_optional_status\"," +
-            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"," +
-            "incomingCoin: 0.00297537," +
-            "incomingType: \"BTC\"" +
-            "}";
-    public static final String TX_STATUS_COMPLETE_JSON = "{" +
-            "status: \"complete\"," +
-            "address: \"1NDQPAGamGePkSZXW2CYBzXJEefB7N4bTN\"," +
-            "withdraw: \"LMmeBWH17TWkQKvK7YFio2oiimPAzrHG6f\"," +
-            "incomingCoin: 0.00297537," +
-            "incomingType: \"BTC\"," +
-            "outgoingCoin: \"0.42000000\"," +
-            "outgoingType: \"LTC\"," +
-            "transaction: \"66fa0b4c11227f9f05efa13d23e58c65b50acbd6395a126b5cd751064e6e79df\"" +
-            "}";
-    public static final String TX_STATUS_FAILED_JSON = "{" +
-            "status: \"failed\"," +
-            "error: \"error\"" +
-            "}";
-    public static final String NORMAL_TRANSACTION_JSON = "{" +
-            "\"deposit\":\"18ETaXCYhJ8sxurh41vpKC3E6Tu7oJ94q8\"," +
-            "\"depositType\":\"BTC\"," +
-            "\"withdrawal\":\"DMHLQYG4j96V8cZX9WSuXxLs5RnZn6ibrV\"," +
-            "\"withdrawalType\":\"DOGE\"" +
-            "}";
-    public static final String FIXED_AMOUNT_TRANSACTION_JSON = "{" +
-            "\"success\":{" +
-            "\"pair\":\"btc_doge\"," +
-            "\"withdrawal\":\"DMHLQYG4j96V8cZX9WSuXxLs5RnZn6ibrV\"," +
-            "\"withdrawalAmount\":\"1000\"," +
-            "\"minerFee\":\"1\"," +
-            "\"deposit\":\"14gQ3xywKEUA6CfH61F8t2c6oB5nLnUjL5\"," +
-            "\"depositAmount\":\"0.00052379\"," +
-            "\"expiration\":1427149038191," +
-            "\"quotedRate\":\"1911057.69230769\"," +
-            "}" +
-            "}";
-    public static final String EMAIL_JSON = "{" +
-            "\"email\":{" +
-            "\"status\":\"success\"," +
-            "\"message\":\"Email receipt sent\"" +
-            "}" +
-            "}";
 }

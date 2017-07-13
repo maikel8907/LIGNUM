@@ -34,6 +34,11 @@ public class NavDrawerItemView extends LinearLayout implements Checkable {
     }
 
     @Override
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    @Override
     public void setChecked(boolean checked) {
         isChecked = checked;
 
@@ -42,11 +47,6 @@ public class NavDrawerItemView extends LinearLayout implements Checkable {
         } else {
             view.setBackgroundResource(0);
         }
-    }
-
-    @Override
-    public boolean isChecked() {
-        return isChecked;
     }
 
     @Override

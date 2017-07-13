@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author John L. Jegutanis
  */
 public class NovacoinMain extends PeerFamily {
+    private static NovacoinMain instance = new NovacoinMain();
+
     private NovacoinMain() {
         id = "novacoin.main";
 
         addressHeader = 8;
         p2shHeader = 20;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 520;
         dumpedPrivateKeyHeader = 136;
 
@@ -26,7 +28,6 @@ public class NovacoinMain extends PeerFamily {
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
     }
 
-    private static NovacoinMain instance = new NovacoinMain();
     public static synchronized NovacoinMain get() {
         return instance;
     }

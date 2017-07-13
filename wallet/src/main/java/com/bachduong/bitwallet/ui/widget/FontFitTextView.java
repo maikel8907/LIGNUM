@@ -40,8 +40,7 @@ public class FontFitTextView extends TextView {
     /* Re size the font so the specified text fits in the text box
      * assuming the text box is the specified width.
      */
-    private void refitText(String text, int textWidth)
-    {
+    private void refitText(String text, int textWidth) {
         if (textWidth <= 0)
             return;
         int targetWidth = textWidth - this.getPaddingLeft() - this.getPaddingRight();
@@ -51,10 +50,10 @@ public class FontFitTextView extends TextView {
 
         mTestPaint.set(this.getPaint());
 
-        while((hi - lo) > threshold) {
-            float size = (hi+lo)/2;
+        while ((hi - lo) > threshold) {
+            float size = (hi + lo) / 2;
             mTestPaint.setTextSize(size);
-            if(mTestPaint.measureText(text) >= targetWidth)
+            if (mTestPaint.measureText(text) >= targetWidth)
                 hi = size; // too big
             else
                 lo = size; // too small
@@ -64,8 +63,7 @@ public class FontFitTextView extends TextView {
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
-    {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int parentWidth = MeasureSpec.getSize(widthMeasureSpec);
         int width = getMeasuredWidth();
@@ -103,17 +101,17 @@ public class FontFitTextView extends TextView {
     }
 
     /**
+     * Get the max size (in pixels) of the default text size in this TextView.
+     */
+    public float getMaxTextSize() {
+        return maxTextSize;
+    }
+
+    /**
      * Set the max size (in pixels) of the default text size in this TextView.
      */
     public void setMaxTextSize(float maxTextSize) {
         this.maxTextSize = maxTextSize;
         super.setTextSize(TypedValue.COMPLEX_UNIT_PX, maxTextSize);
-    }
-
-    /**
-     * Get the max size (in pixels) of the default text size in this TextView.
-     */
-    public float getMaxTextSize() {
-        return maxTextSize;
     }
 }

@@ -13,12 +13,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.util.MonetarySpannable;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.coins.ValueType;
 import com.bachduong.core.util.MonetaryFormat;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.util.MonetarySpannable;
 
 import org.bitcoinj.core.Coin;
 
@@ -36,9 +36,8 @@ public class AmountEditView extends LinearLayout {
     private static final String AMOUNT_EDIT_VIEW_TEXT = "amount_edit_view_text";
     private static final String AMOUNT_EDIT_VIEW_AMOUNT_SIGNED = "amount_edit_view_amount_signed";
     private static final String AMOUNT_EDIT_VIEW_FORMAT = "amount_edit_view_format";
-
+    private final TextViewListener amountTextListener = new TextViewListener();
     private Listener listener;
-
     private TextView symbol;
     private EditText amountText;
     private boolean amountSigned = false;
@@ -47,12 +46,6 @@ public class AmountEditView extends LinearLayout {
     @Nullable
     private Value hint;
     private MonetaryFormat format = new MonetaryFormat().noCode();
-    private final TextViewListener amountTextListener = new TextViewListener();
-
-    public interface Listener {
-        void changed();
-        void focusChanged(final boolean hasFocus);
-    }
 
     public AmountEditView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -66,8 +59,7 @@ public class AmountEditView extends LinearLayout {
     }
 
     @Override
-    public Parcelable onSaveInstanceState()
-    {
+    public Parcelable onSaveInstanceState() {
         Bundle bundle = new Bundle();
         bundle.putParcelable(AMOUNT_EDIT_VIEW_SUPER_STATE, super.onSaveInstanceState());
         bundle.putSerializable(AMOUNT_EDIT_VIEW_TYPE, type);
@@ -80,8 +72,7 @@ public class AmountEditView extends LinearLayout {
     }
 
     @Override
-    public void onRestoreInstanceState(Parcelable state)
-    {
+    public void onRestoreInstanceState(Parcelable state) {
         if (state instanceof Bundle) // implicit null check
         {
             Bundle bundle = (Bundle) state;
@@ -199,6 +190,12 @@ public class AmountEditView extends LinearLayout {
         amountText.setHint(hintSpannable);
     }
 
+    public interface Listener {
+        void changed();
+
+        void focusChanged(final boolean hasFocus);
+    }
+
     private final class TextViewListener implements TextWatcher, OnFocusChangeListener {
         private boolean fire = true;
 
@@ -218,7 +215,8 @@ public class AmountEditView extends LinearLayout {
         }
 
         @Override
-        public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) { }
+        public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
+        }
 
         @Override
         public void onTextChanged(final CharSequence s, final int start, final int before, final int count) {

@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.ReddFamily;
  * @author John L. Jegutanis
  */
 public class ReddcoinMain extends ReddFamily {
+    private static ReddcoinMain instance = new ReddcoinMain();
+
     private ReddcoinMain() {
         id = "reddcoin.main";
 
         addressHeader = 61;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 30;
         dumpedPrivateKeyHeader = 189;
         transactionVersion = 2;
@@ -28,7 +30,6 @@ public class ReddcoinMain extends ReddFamily {
         signedMessageHeader = toBytes("Reddcoin Signed Message:\n");
     }
 
-    private static ReddcoinMain instance = new ReddcoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

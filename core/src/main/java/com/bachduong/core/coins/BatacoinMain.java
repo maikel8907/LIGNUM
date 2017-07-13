@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class BatacoinMain extends BitFamily {
+    private static BatacoinMain instance = new BatacoinMain();
+
     private BatacoinMain() {
         id = "bata.main";
 
         addressHeader = 25;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 153;
 
@@ -26,7 +28,6 @@ public class BatacoinMain extends BitFamily {
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
     }
 
-    private static BatacoinMain instance = new BatacoinMain();
     public static synchronized BatacoinMain get() {
         return instance;
     }

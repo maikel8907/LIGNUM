@@ -113,7 +113,8 @@ public class BitWalletSingleKey extends BitWalletBase {
     }
 
     @Override
-    public void markAddressAsUsed(AbstractAddress address) { }
+    public void markAddressAsUsed(AbstractAddress address) {
+    }
 
     @Override
     public boolean isEncryptable() {

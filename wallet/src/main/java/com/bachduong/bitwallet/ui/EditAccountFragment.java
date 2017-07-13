@@ -10,20 +10,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
+import com.bachduong.core.wallet.WalletAccount;
 
 import butterknife.ButterKnife;
 
-import static com.bachduong.core.Preconditions.checkNotNull;
 import static com.bachduong.bitwallet.Constants.ARG_ACCOUNT_ID;
+import static com.bachduong.core.Preconditions.checkNotNull;
 
 /**
  * @author John L. Jegutanis
  */
 public final class EditAccountFragment extends DialogFragment {
     private static final String FRAGMENT_TAG = EditAccountFragment.class.getName();
+    private Context context;
+    private WalletApplication app;
+    private Listener listener;
+
     public static void edit(final FragmentManager fm, WalletAccount account) {
         final DialogFragment newFragment = EditAccountFragment.instance(account);
         newFragment.show(fm, FRAGMENT_TAG);
@@ -38,10 +42,6 @@ public final class EditAccountFragment extends DialogFragment {
 
         return fragment;
     }
-
-    private Context context;
-    private WalletApplication app;
-    private Listener listener;
 
     @Override
     public void onAttach(final Context context) {

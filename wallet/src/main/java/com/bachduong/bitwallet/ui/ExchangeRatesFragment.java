@@ -37,11 +37,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.BitcoinMain;
-import com.bachduong.core.coins.CoinID;
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.util.GenericUtils;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.ExchangeRatesProvider;
@@ -50,6 +45,11 @@ import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.ui.widget.Amount;
 import com.bachduong.bitwallet.util.WalletUtils;
+import com.bachduong.core.coins.BitcoinMain;
+import com.bachduong.core.coins.CoinID;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.util.GenericUtils;
 
 import org.bitcoinj.core.Coin;
 
@@ -61,23 +61,60 @@ import javax.annotation.CheckForNull;
  * @author John L. Jegutanis
  */
 public final class ExchangeRatesFragment extends ListFragment implements OnSharedPreferenceChangeListener {
+    private static final int ID_BALANCE_LOADER = 0;
+    private static final int ID_RATE_LOADER = 1;
+    private static final int ID_BLOCKCHAIN_STATE_LOADER = 2;
     private Context context;
     private WalletApplication application;
     private Configuration config;
     private com.bachduong.core.wallet.Wallet wallet;
     private Uri contentUri;
     private LoaderManager loaderManager;
-
     private ExchangeRatesAdapter adapter;
     private String query = null;
-
     private Coin balance = null;
     @CheckForNull
     private String defaultCurrency = null;
+    private final LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            if (query == null) {
+                return new CursorLoader(context, contentUri, null, null, null, null);
+            } else {
+                return new CursorLoader(context, contentUri, null, null, null, null);
+            }
+        }
 
-    private static final int ID_BALANCE_LOADER = 0;
-    private static final int ID_RATE_LOADER = 1;
-    private static final int ID_BLOCKCHAIN_STATE_LOADER = 2;
+        @Override
+        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
+            final Cursor oldCursor = adapter.swapCursor(data);
+
+            if (data != null && oldCursor == null && defaultCurrency != null) {
+                final int defaultCurrencyPosition = findCurrencyCode(data, defaultCurrency);
+                if (defaultCurrencyPosition >= 0)
+                    getListView().setSelection(defaultCurrencyPosition); // scroll to selection
+            }
+
+            setEmptyText(getString(query != null ? R.string.exchange_rates_empty_search
+                    : R.string.exchange_rates_load_error));
+        }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> loader) {
+        }
+
+        private int findCurrencyCode(final Cursor cursor, final String currencyCode) {
+            final int currencyCodeColumn = cursor.getColumnIndexOrThrow(ExchangeRatesProvider.KEY_CURRENCY_ID);
+
+            cursor.moveToPosition(-1);
+            while (cursor.moveToNext()) {
+                if (cursor.getString(currencyCodeColumn).equals(currencyCode))
+                    return cursor.getPosition();
+            }
+
+            return -1;
+        }
+    };
     private CoinType type;
 
     @Override
@@ -158,7 +195,8 @@ public final class ExchangeRatesFragment extends ListFragment implements OnShare
 
         super.onDestroy();
     }
-//
+
+    //
 //    @Override
 //    public void onCreateOptionsMenu(final Menu menu, final MenuInflater inflater) {
 //        inflater.inflate(R.menu.exchange_rates_fragment_options, menu);
@@ -217,47 +255,6 @@ public final class ExchangeRatesFragment extends ListFragment implements OnShare
             adapter.setRateBase(type.getOneCoin());
         }
     }
-
-    private final LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            if (query == null) {
-                return new CursorLoader(context, contentUri, null, null, null, null);
-            } else {
-                return new CursorLoader(context, contentUri, null, null, null, null);
-            }
-        }
-
-        @Override
-        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
-            final Cursor oldCursor = adapter.swapCursor(data);
-
-            if (data != null && oldCursor == null && defaultCurrency != null) {
-                final int defaultCurrencyPosition = findCurrencyCode(data, defaultCurrency);
-                if (defaultCurrencyPosition >= 0)
-                    getListView().setSelection(defaultCurrencyPosition); // scroll to selection
-            }
-
-            setEmptyText(getString(query != null ? R.string.exchange_rates_empty_search
-                    : R.string.exchange_rates_load_error));
-        }
-
-        @Override
-        public void onLoaderReset(final Loader<Cursor> loader) {
-        }
-
-        private int findCurrencyCode(final Cursor cursor, final String currencyCode) {
-            final int currencyCodeColumn = cursor.getColumnIndexOrThrow(ExchangeRatesProvider.KEY_CURRENCY_ID);
-
-            cursor.moveToPosition(-1);
-            while (cursor.moveToNext()) {
-                if (cursor.getString(currencyCodeColumn).equals(currencyCode))
-                    return cursor.getPosition();
-            }
-
-            return -1;
-        }
-    };
 
     private final class ExchangeRatesAdapter extends ResourceCursorAdapter {
         private Coin rateBase = Coin.COIN;

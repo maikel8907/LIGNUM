@@ -13,14 +13,14 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.text.format.DateUtils;
 
+import com.bachduong.bitwallet.Configuration;
+import com.bachduong.bitwallet.Constants;
+import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.core.network.ConnectivityHelper;
 import com.bachduong.core.network.ServerClients;
 import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.Wallet;
 import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.bitwallet.Configuration;
-import com.bachduong.bitwallet.Constants;
-import com.bachduong.bitwallet.WalletApplication;
 
 import org.bitcoinj.core.Sha256Hash;
 import org.bitcoinj.core.Transaction;
@@ -40,35 +40,48 @@ import javax.annotation.CheckForNull;
  * @author Andreas Schildbach
  */
 public class CoinServiceImpl extends Service implements CoinService {
-    private WalletApplication application;
-    private Configuration config;
-    private ConnectivityHelper connHelper;
-    private BroadcastReceiver connectivityReceiver;
-
-    @CheckForNull
-    private ServerClients clients;
-
-    private String lastAccount;
-
-//    private PowerManager.WakeLock wakeLock;
-
-    private NotificationManager nm;
     private static final int NOTIFICATION_ID_CONNECTED = 0;
     private static final int NOTIFICATION_ID_COINS_RECEIVED = 1;
-
-    private int notificationCount = 0;
-    private BigInteger notificationAccumulatedAmount = BigInteger.ZERO;
-    private final List<AbstractAddress> notificationAddresses = new LinkedList<>();
-    private AtomicInteger transactionsReceived = new AtomicInteger();
-    private long serviceCreatedAt;
-
     private static final int MIN_COLLECT_HISTORY = 2;
     private static final int IDLE_BLOCK_TIMEOUT_MIN = 2;
     private static final int IDLE_TRANSACTION_TIMEOUT_MIN = 9;
     private static final int MAX_HISTORY_SIZE = Math.max(IDLE_TRANSACTION_TIMEOUT_MIN, IDLE_BLOCK_TIMEOUT_MIN);
-    private static final long APPWIDGET_THROTTLE_MS = DateUtils.SECOND_IN_MILLIS;
 
+//    private PowerManager.WakeLock wakeLock;
+    private static final long APPWIDGET_THROTTLE_MS = DateUtils.SECOND_IN_MILLIS;
     private static final Logger log = LoggerFactory.getLogger(CoinService.class);
+    private final List<AbstractAddress> notificationAddresses = new LinkedList<>();
+    private final IBinder mBinder = new LocalBinder();
+    private WalletApplication application;
+    private Configuration config;
+    private ConnectivityHelper connHelper;
+    private BroadcastReceiver connectivityReceiver;
+    @CheckForNull
+    private ServerClients clients;
+    private final BroadcastReceiver tickReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(final Context context, final Intent intent) {
+            log.debug("Received a tick {}", intent);
+
+            if (clients != null) {
+                clients.ping(application.getVersionString());
+            }
+
+            long lastStop = application.getLastStop();
+            if (lastStop > 0) {
+                long secondsIdle = (SystemClock.elapsedRealtime() - lastStop) / 1000;
+
+                if (secondsIdle > Constants.STOP_SERVICE_AFTER_IDLE_SECS) {
+                    log.info("Idling detected, stopping service");
+                    stopSelf();
+                }
+            }
+        }
+    };
+    private String lastAccount;
+    private NotificationManager nm;
+    private int notificationCount = 0;
+    private BigInteger notificationAccumulatedAmount = BigInteger.ZERO;
 
 //    private final WalletEventListener walletEventListener = new ThrottlingWalletChangeListener(APPWIDGET_THROTTLE_MS)
 //    {
@@ -160,80 +173,10 @@ public class CoinServiceImpl extends Service implements CoinService {
 //        nm.notify(NOTIFICATION_ID_COINS_RECEIVED, notification.getNotification());
 //    }
 //
+    private AtomicInteger transactionsReceived = new AtomicInteger();
 
-    private class MyBroadcastReceiver extends BroadcastReceiver {
-        private final ConnectivityManager connectivityManager;
-        private boolean hasConnectivity;
-        private boolean hasStorage = true;
-        private int currentNetworkType = -1;
-
-        public MyBroadcastReceiver(ConnectivityManager connectivityManager) {
-            this.connectivityManager = connectivityManager;
-            checkNetworkType();
-        }
-
-        @Override
-        public void onReceive(final Context context, final Intent intent) {
-            final String action = intent.getAction();
-
-            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
-                hasConnectivity = !intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY, false);
-
-                boolean isNetworkChanged = checkNetworkType();
-                log.info("network is " + (hasConnectivity ? "up" : "down"));
-                log.info("network type " + (isNetworkChanged ? "changed" : "didn't change"));
-
-                check(isNetworkChanged);
-            } else if (Intent.ACTION_DEVICE_STORAGE_LOW.equals(action)) {
-                hasStorage = false;
-                log.info("device storage low");
-
-                check(false);
-            } else if (Intent.ACTION_DEVICE_STORAGE_OK.equals(action)) {
-                hasStorage = true;
-                log.info("device storage ok");
-
-                check(false);
-            }
-        }
-
-        private boolean checkNetworkType() {
-            boolean isNetworkChanged;
-            NetworkInfo activeInfo = connectivityManager.getActiveNetworkInfo();
-            if (activeInfo != null && activeInfo.isConnected()) {
-                isNetworkChanged = currentNetworkType != activeInfo.getType();
-                currentNetworkType = activeInfo.getType();
-            } else {
-                isNetworkChanged = false;
-                currentNetworkType = -1;
-            }
-            return isNetworkChanged;
-        }
-
-        //        @SuppressLint("Wakelock")
-        private void check(boolean isNetworkChanged) {
-            Wallet wallet = application.getWallet();
-            final boolean hasEverything = hasConnectivity && hasStorage && (wallet != null);
-
-            if (hasEverything && clients == null) {
-//                log.debug("acquiring wakelock");
-//                wakeLock.acquire();
-
-                log.info("Creating coins clients");
-                clients = getServerClients(wallet);
-//                if (lastAccount != null) clients.startAsync(wallet.getAccount(lastAccount));
-            } else if (hasEverything && isNetworkChanged) {
-                log.info("Restarting coins clients as network changed");
-                clients.resetConnections();
-            } else if (!hasEverything && clients != null) {
-                log.info("stopping stratum clients");
-                disconnectClients();
-
-//                log.debug("releasing wakelock");
-//                wakeLock.release();
-            }
-        }
-    };
+    ;
+    private long serviceCreatedAt;
 
     private ServerClients getServerClients(Wallet wallet) {
         ServerClients newClients = new ServerClients(Constants.DEFAULT_COINS_SERVERS, connHelper);
@@ -242,35 +185,6 @@ public class CoinServiceImpl extends Service implements CoinService {
         }
         return newClients;
     }
-
-    private final BroadcastReceiver tickReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(final Context context, final Intent intent) {
-            log.debug("Received a tick {}", intent);
-
-            if (clients != null) {
-                clients.ping(application.getVersionString());
-            }
-
-            long lastStop = application.getLastStop();
-            if (lastStop > 0) {
-                long secondsIdle = (SystemClock.elapsedRealtime() - lastStop) / 1000;
-
-                if (secondsIdle > Constants.STOP_SERVICE_AFTER_IDLE_SECS) {
-                    log.info("Idling detected, stopping service");
-                    stopSelf();
-                }
-            }
-        }
-    };
-
-    public class LocalBinder extends Binder {
-        public CoinService getService() {
-            return CoinServiceImpl.this;
-        }
-    }
-
-    private final IBinder mBinder = new LocalBinder();
 
     @Override
     public IBinder onBind(final Intent intent) {
@@ -476,5 +390,85 @@ public class CoinServiceImpl extends Service implements CoinService {
     public void onLowMemory() {
         log.warn("low memory detected, stopping service");
         stopSelf();
+    }
+
+    private class MyBroadcastReceiver extends BroadcastReceiver {
+        private final ConnectivityManager connectivityManager;
+        private boolean hasConnectivity;
+        private boolean hasStorage = true;
+        private int currentNetworkType = -1;
+
+        public MyBroadcastReceiver(ConnectivityManager connectivityManager) {
+            this.connectivityManager = connectivityManager;
+            checkNetworkType();
+        }
+
+        @Override
+        public void onReceive(final Context context, final Intent intent) {
+            final String action = intent.getAction();
+
+            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
+                hasConnectivity = !intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY, false);
+
+                boolean isNetworkChanged = checkNetworkType();
+                log.info("network is " + (hasConnectivity ? "up" : "down"));
+                log.info("network type " + (isNetworkChanged ? "changed" : "didn't change"));
+
+                check(isNetworkChanged);
+            } else if (Intent.ACTION_DEVICE_STORAGE_LOW.equals(action)) {
+                hasStorage = false;
+                log.info("device storage low");
+
+                check(false);
+            } else if (Intent.ACTION_DEVICE_STORAGE_OK.equals(action)) {
+                hasStorage = true;
+                log.info("device storage ok");
+
+                check(false);
+            }
+        }
+
+        private boolean checkNetworkType() {
+            boolean isNetworkChanged;
+            NetworkInfo activeInfo = connectivityManager.getActiveNetworkInfo();
+            if (activeInfo != null && activeInfo.isConnected()) {
+                isNetworkChanged = currentNetworkType != activeInfo.getType();
+                currentNetworkType = activeInfo.getType();
+            } else {
+                isNetworkChanged = false;
+                currentNetworkType = -1;
+            }
+            return isNetworkChanged;
+        }
+
+        //        @SuppressLint("Wakelock")
+        private void check(boolean isNetworkChanged) {
+            Wallet wallet = application.getWallet();
+            final boolean hasEverything = hasConnectivity && hasStorage && (wallet != null);
+
+            if (hasEverything && clients == null) {
+//                log.debug("acquiring wakelock");
+//                wakeLock.acquire();
+
+                log.info("Creating coins clients");
+                clients = getServerClients(wallet);
+//                if (lastAccount != null) clients.startAsync(wallet.getAccount(lastAccount));
+            } else if (hasEverything && isNetworkChanged) {
+                log.info("Restarting coins clients as network changed");
+                clients.resetConnections();
+            } else if (!hasEverything && clients != null) {
+                log.info("stopping stratum clients");
+                disconnectClients();
+
+//                log.debug("releasing wakelock");
+//                wakeLock.release();
+            }
+        }
+    }
+
+    public class LocalBinder extends Binder {
+        public CoinService getService() {
+            return CoinServiceImpl.this;
+        }
     }
 }

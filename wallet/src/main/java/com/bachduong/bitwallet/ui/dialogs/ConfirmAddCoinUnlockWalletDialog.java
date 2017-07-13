@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.bachduong.core.coins.CoinType;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.ui.DialogBuilder;
+import com.bachduong.core.coins.CoinType;
 
 import butterknife.ButterKnife;
 

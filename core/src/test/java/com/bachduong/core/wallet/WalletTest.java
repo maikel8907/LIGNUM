@@ -6,12 +6,12 @@ import com.bachduong.core.coins.DogecoinMain;
 import com.bachduong.core.coins.DogecoinTest;
 import com.bachduong.core.coins.LitecoinMain;
 import com.bachduong.core.protos.Protos;
+import com.google.common.collect.ImmutableList;
+
 import org.bitcoinj.crypto.KeyCrypter;
 import org.bitcoinj.crypto.KeyCrypterScrypt;
 import org.bitcoinj.crypto.MnemonicException;
 import org.bitcoinj.utils.BriefLogFormatter;
-import com.google.common.collect.ImmutableList;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -29,11 +29,11 @@ import static org.junit.Assert.assertNull;
  */
 public class WalletTest {
     static final List<String> MNEMONIC = ImmutableList.of("citizen", "fever", "scale", "nurse", "brief", "round", "ski", "fiction", "car", "fitness", "pluck", "act");
-    CoinType type = DogecoinTest.get();
-    private Wallet wallet;
     static final byte[] aesKeyBytes = {0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7};
+    CoinType type = DogecoinTest.get();
     KeyParameter aesKey = new KeyParameter(aesKeyBytes);
     KeyCrypter crypter = new KeyCrypterScrypt();
+    private Wallet wallet;
 
     @Before
     public void setup() throws IOException, MnemonicException {

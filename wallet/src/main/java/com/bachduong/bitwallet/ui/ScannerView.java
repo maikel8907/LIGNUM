@@ -18,12 +18,6 @@ package com.bachduong.bitwallet.ui;
  */
 
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-import javax.annotation.Nonnull;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -37,11 +31,16 @@ import android.view.View;
 import com.bachduong.bitwallet.R;
 import com.google.zxing.ResultPoint;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
 /**
  * @author Andreas Schildbach
  */
-public class ScannerView extends View
-{
+public class ScannerView extends View {
     private static final long LASER_ANIMATION_DELAY_MS = 100l;
     private static final int DOT_OPACITY = 0xa0;
     private static final int DOT_SIZE = 8;
@@ -50,14 +49,13 @@ public class ScannerView extends View
     private final Paint maskPaint;
     private final Paint laserPaint;
     private final Paint dotPaint;
-    private Bitmap resultBitmap;
     private final int maskColor;
     private final int resultColor;
     private final Map<ResultPoint, Long> dots = new HashMap<ResultPoint, Long>(16);
+    private Bitmap resultBitmap;
     private Rect frame, framePreview;
 
-    public ScannerView(final Context context, final AttributeSet attrs)
-    {
+    public ScannerView(final Context context, final AttributeSet attrs) {
         super(context, attrs);
 
         final Resources res = getResources();
@@ -82,31 +80,27 @@ public class ScannerView extends View
         dotPaint.setAntiAlias(true);
     }
 
-    public void setFraming(@Nonnull final Rect frame, @Nonnull final Rect framePreview)
-    {
+    public void setFraming(@Nonnull final Rect frame, @Nonnull final Rect framePreview) {
         this.frame = frame;
         this.framePreview = framePreview;
 
         invalidate();
     }
 
-    public void drawResultBitmap(@Nonnull final Bitmap bitmap)
-    {
+    public void drawResultBitmap(@Nonnull final Bitmap bitmap) {
         resultBitmap = bitmap;
 
         invalidate();
     }
 
-    public void addDot(@Nonnull final ResultPoint dot)
-    {
+    public void addDot(@Nonnull final ResultPoint dot) {
         dots.put(dot, System.currentTimeMillis());
 
         invalidate();
     }
 
     @Override
-    public void onDraw(final Canvas canvas)
-    {
+    public void onDraw(final Canvas canvas) {
         if (frame == null)
             return;
 
@@ -122,12 +116,9 @@ public class ScannerView extends View
         canvas.drawRect(frame.right + 1, frame.top, width, frame.bottom + 1, maskPaint);
         canvas.drawRect(0, frame.bottom + 1, width, height, maskPaint);
 
-        if (resultBitmap != null)
-        {
+        if (resultBitmap != null) {
             canvas.drawBitmap(resultBitmap, null, frame, maskPaint);
-        }
-        else
-        {
+        } else {
             // draw red "laser scanner" to show decoding is active
             final boolean laserPhase = (now / 600) % 2 == 0;
             laserPaint.setAlpha(laserPhase ? 160 : 255);
@@ -139,19 +130,15 @@ public class ScannerView extends View
             final float scaleX = frame.width() / (float) framePreview.width();
             final float scaleY = frame.height() / (float) framePreview.height();
 
-            for (final Iterator<Map.Entry<ResultPoint, Long>> i = dots.entrySet().iterator(); i.hasNext();)
-            {
+            for (final Iterator<Map.Entry<ResultPoint, Long>> i = dots.entrySet().iterator(); i.hasNext(); ) {
                 final Map.Entry<ResultPoint, Long> entry = i.next();
                 final long age = now - entry.getValue();
-                if (age < DOT_TTL_MS)
-                {
+                if (age < DOT_TTL_MS) {
                     dotPaint.setAlpha((int) ((DOT_TTL_MS - age) * 256 / DOT_TTL_MS));
 
                     final ResultPoint point = entry.getKey();
                     canvas.drawPoint(frameLeft + (int) (point.getX() * scaleX), frameTop + (int) (point.getY() * scaleY), dotPaint);
-                }
-                else
-                {
+                } else {
                     i.remove();
                 }
             }

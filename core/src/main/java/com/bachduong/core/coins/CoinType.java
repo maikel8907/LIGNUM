@@ -27,7 +27,7 @@ abstract public class CoinType extends NetworkParameters implements ValueType, S
     private static final long serialVersionUID = 1L;
 
     private static final String BIP_44_KEY_PATH = "44H/%dH/%dH";
-
+    private static FeeProvider feeProvider = null;
     protected String name;
     protected String symbol;
     protected String uriScheme;
@@ -40,12 +40,17 @@ abstract public class CoinType extends NetworkParameters implements ValueType, S
     protected SoftDustPolicy softDustPolicy;
     protected FeePolicy feePolicy = FeePolicy.FEE_PER_KB;
     protected byte[] signedMessageHeader;
-
     private transient MonetaryFormat friendlyFormat;
     private transient MonetaryFormat plainFormat;
     private transient Value oneCoin;
 
-    private static FeeProvider feeProvider = null;
+    protected static byte[] toBytes(String str) {
+        return str.getBytes(Charsets.UTF_8);
+    }
+
+    public static void setFeeProvider(FeeProvider feeProvider) {
+        CoinType.feeProvider = feeProvider;
+    }
 
     @Override
     public String getName() {
@@ -120,17 +125,13 @@ abstract public class CoinType extends NetworkParameters implements ValueType, S
         return null;
     }
 
-    protected static byte[] toBytes(String str) {
-        return str.getBytes(Charsets.UTF_8);
-    }
-
     public List<ChildNumber> getBip44Path(int account) {
         String path = String.format(BIP_44_KEY_PATH, bip44Index, account);
         return HDUtils.parsePath(path);
     }
 
     /**
-        Return an address prefix like NXT- or BURST-, otherwise and empty string
+     * Return an address prefix like NXT- or BURST-, otherwise and empty string
      */
     public String getAddressPrefix() {
         return checkNotNull(addressPrefix, "A coin failed to set the address prefix");
@@ -220,10 +221,6 @@ abstract public class CoinType extends NetworkParameters implements ValueType, S
     @Override
     public boolean equals(ValueType obj) {
         return super.equals(obj);
-    }
-
-    public static void setFeeProvider(FeeProvider feeProvider) {
-        CoinType.feeProvider = feeProvider;
     }
 
     public interface FeeProvider {

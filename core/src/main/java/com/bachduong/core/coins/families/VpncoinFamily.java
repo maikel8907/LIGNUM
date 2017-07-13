@@ -7,8 +7,8 @@ import javax.annotation.Nullable;
 
 /**
  * @author John L. Jegutanis
- *
- * This family contains Vpncoin
+ *         <p>
+ *         This family contains Vpncoin
  */
 public abstract class VpncoinFamily extends BitFamily {
     {

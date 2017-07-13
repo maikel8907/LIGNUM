@@ -10,10 +10,6 @@ public class ShapeShiftTime extends ShapeShiftBase {
     public final Status status;
     public final int secondsRemaining;
 
-    public static enum Status {
-        PENDING, EXPIRED, UNKNOWN
-    }
-
     public ShapeShiftTime(JSONObject data) throws ShapeShiftException {
         super(data);
         if (!isError) {
@@ -37,6 +33,10 @@ public class ShapeShiftTime extends ShapeShiftBase {
             status = null;
             secondsRemaining = -1;
         }
+    }
+
+    public static enum Status {
+        PENDING, EXPIRED, UNKNOWN
     }
 }
 

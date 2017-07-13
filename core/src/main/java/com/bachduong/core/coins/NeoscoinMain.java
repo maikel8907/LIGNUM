@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class NeoscoinMain extends BitFamily {
+    private static NeoscoinMain instance = new NeoscoinMain();
+
     private NeoscoinMain() {
         id = "neoscoin.main";
 
         addressHeader = 53;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 177;
 
@@ -27,7 +29,6 @@ public class NeoscoinMain extends BitFamily {
         signedMessageHeader = toBytes("NeosCoin Signed Message:\n");
     }
 
-    private static NeoscoinMain instance = new NeoscoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

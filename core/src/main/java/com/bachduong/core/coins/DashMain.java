@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class DashMain extends BitFamily {
+    private static DashMain instance = new DashMain();
+
     private DashMain() {
         id = "dash.main"; // Do not change this id as wallets serialize this string
 
         addressHeader = 76;
         p2shHeader = 16;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 204;
 
@@ -27,7 +29,6 @@ public class DashMain extends BitFamily {
         signedMessageHeader = toBytes("DarkCoin Signed Message:\n");
     }
 
-    private static DashMain instance = new DashMain();
     public static synchronized CoinType get() {
         return instance;
     }

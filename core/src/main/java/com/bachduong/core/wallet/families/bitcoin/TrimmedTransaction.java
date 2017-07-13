@@ -23,9 +23,10 @@ import static com.bachduong.core.Preconditions.checkState;
  */
 public class TrimmedTransaction extends Transaction {
     private final Sha256Hash hash;
-    // Holds the non trimmed outputs, will be null if all original outputs are added
-    @Nullable private HashMap<Integer, TransactionOutput> trimmedOutputs;
     private final int numberOfOutputs;
+    // Holds the non trimmed outputs, will be null if all original outputs are added
+    @Nullable
+    private HashMap<Integer, TransactionOutput> trimmedOutputs;
 
     public TrimmedTransaction(NetworkParameters params, Sha256Hash hash, int numberOfOutputs) {
         super(params);

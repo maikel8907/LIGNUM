@@ -9,16 +9,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/dialog_margin"
         android:paddingLeft="@dimen/dialog_margin"
-        android:paddingRight="@dimen/dialog_margin"
-        android:orientation="vertical" >
+        android:paddingRight="@dimen/dialog_margin">
 
         <TextView
             android:id="@+id/fee_description"
+            style="@style/NormalText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NormalText"
             tools:text="The fee value is per kilobyte of transaction data." />
 
         <com.bachduong.bitwallet.ui.widget.AmountEditView

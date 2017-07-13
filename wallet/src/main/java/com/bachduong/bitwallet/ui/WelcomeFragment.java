@@ -20,7 +20,8 @@ public class WelcomeFragment extends Fragment {
 
     private Listener listener;
 
-    public WelcomeFragment() { }
+    public WelcomeFragment() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,8 +81,11 @@ public class WelcomeFragment extends Fragment {
 
     public interface Listener {
         void onCreateNewWallet();
+
         void onRestoreWallet();
+
         void onSeedCreated(String seed);
+
         void onSeedVerified(Bundle args);
     }
 }

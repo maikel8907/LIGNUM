@@ -56,6 +56,7 @@ public class TransactionTest {
         assertEquals(TX_HASH_2, TX_2.getHashAsString());
         assertEquals(TX_HASH_3, TX_3.getHashAsString());
     }
+
     @Test
     public void messageRegex() {
         String messageString = "@FROM=" + FROM_USER + "@SUBJ=" + SUBJECT + "@MSG=" + MESSAGE;
@@ -76,10 +77,10 @@ public class TransactionTest {
         assertEquals("", factory.createPublicMessage("\n\n").toString());
         assertEquals("", factory.createPublicMessage("   \t \t").toString());
 
-        assertEquals(0, ((VpncoinTxMessage)factory.createPublicMessage("")).serialize().length);
-        assertEquals(0, ((VpncoinTxMessage)factory.createPublicMessage("     ")).serialize().length);
-        assertEquals(0, ((VpncoinTxMessage)factory.createPublicMessage("\n\n")).serialize().length);
-        assertEquals(0, ((VpncoinTxMessage)factory.createPublicMessage("   \t \t")).serialize().length);
+        assertEquals(0, ((VpncoinTxMessage) factory.createPublicMessage("")).serialize().length);
+        assertEquals(0, ((VpncoinTxMessage) factory.createPublicMessage("     ")).serialize().length);
+        assertEquals(0, ((VpncoinTxMessage) factory.createPublicMessage("\n\n")).serialize().length);
+        assertEquals(0, ((VpncoinTxMessage) factory.createPublicMessage("   \t \t")).serialize().length);
     }
 
     @Test
@@ -88,7 +89,7 @@ public class TransactionTest {
         assertEquals(FROM_USER, message.getFrom());
         assertEquals(SUBJECT, message.getSubject());
         assertEquals(MESSAGE, message.getMessage());
-        assertEquals(FROM_USER + "\n\n"+SUBJECT+"\n\n"+MESSAGE, message.toString());
+        assertEquals(FROM_USER + "\n\n" + SUBJECT + "\n\n" + MESSAGE, message.toString());
 
         message = VpncoinTxMessage.parse("@MSG=" + MESSAGE);
         assertNull(message.getFrom());
@@ -100,7 +101,7 @@ public class TransactionTest {
     @Test
     public void messageSerialization() {
         VpncoinTxMessage message = new VpncoinTxMessage(FROM_USER, SUBJECT, MESSAGE);
-        String expected = "@FROM="+FROM_USER+"@SUBJ="+SUBJECT+"@MSG="+MESSAGE;
+        String expected = "@FROM=" + FROM_USER + "@SUBJ=" + SUBJECT + "@MSG=" + MESSAGE;
         assertArrayEquals(expected.getBytes(Charsets.UTF_8), message.serialize());
 
         message = new VpncoinTxMessage(MESSAGE);
@@ -112,7 +113,7 @@ public class TransactionTest {
     @Test
     public void messageToString() {
         VpncoinTxMessage message = new VpncoinTxMessage(FROM_USER, SUBJECT, MESSAGE);
-        assertEquals(FROM_USER + "\n\n"+SUBJECT+"\n\n"+MESSAGE, message.toString());
+        assertEquals(FROM_USER + "\n\n" + SUBJECT + "\n\n" + MESSAGE, message.toString());
 
         message = new VpncoinTxMessage(MESSAGE);
         assertEquals(MESSAGE, message.toString());

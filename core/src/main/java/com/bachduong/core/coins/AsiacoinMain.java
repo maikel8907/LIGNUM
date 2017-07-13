@@ -3,12 +3,14 @@ package com.bachduong.core.coins;
 import com.bachduong.core.coins.families.PeerFamily;
 
 public class AsiacoinMain extends PeerFamily {
+    private static AsiacoinMain instance = new AsiacoinMain();
+
     private AsiacoinMain() {
         id = "asiacoin.main";
 
         addressHeader = 23;
         p2shHeader = 8;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 520;
 
         name = "Asiacoin (beta)";
@@ -22,7 +24,6 @@ public class AsiacoinMain extends PeerFamily {
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
     }
 
-    private static AsiacoinMain instance = new AsiacoinMain();
     public static synchronized AsiacoinMain get() {
         return instance;
     }

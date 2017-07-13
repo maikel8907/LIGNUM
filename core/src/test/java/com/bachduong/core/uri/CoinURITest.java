@@ -46,7 +46,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 public class CoinURITest {
-    private CoinURI testObject = null;
+    private static final String MAINNET_GOOD_ADDRESS = "1KzTSfqjF2iKCduwz59nv2uqh1W2JsTxZH";
     final CoinType BTC = BitcoinMain.get();
     final CoinType BTC_TEST = BitcoinTest.get();
     final CoinType LTC = LitecoinMain.get();
@@ -56,23 +56,21 @@ public class CoinURITest {
     final CoinType NBT = NuBitsMain.get();
     final CoinType NSR = NuSharesMain.get();
     final CoinType NXT = NxtMain.get();
-
-
-    private static final String MAINNET_GOOD_ADDRESS = "1KzTSfqjF2iKCduwz59nv2uqh1W2JsTxZH";
+    private CoinURI testObject = null;
 
     @Test
     public void testConvertToCoinURI() throws Exception {
         BitAddress goodAddress = BitAddress.from(BitcoinMain.get(), MAINNET_GOOD_ADDRESS);
-        
+
         // simple example
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage", CoinURI.convertToCoinURI(goodAddress, BTC.value("12.34"), "Hello", "AMessage"));
-        
+
         // example with spaces, ampersand and plus
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello%20World&message=Mess%20%26%20age%20%2B%20hope", CoinURI.convertToCoinURI(goodAddress, BTC.value("12.34"), "Hello World", "Mess & age + hope"));
 
         // no amount, label present, message present
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?label=Hello&message=glory", CoinURI.convertToCoinURI(goodAddress, null, "Hello", "glory"));
-        
+
         // amount present, no label, message present
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", CoinURI.convertToCoinURI(goodAddress, BTC.value("0.1"), null, "glory"));
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", CoinURI.convertToCoinURI(goodAddress, BTC.value("0.1"), "", "glory"));
@@ -80,18 +78,18 @@ public class CoinURITest {
         // amount present, label present, no message
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", CoinURI.convertToCoinURI(goodAddress, BTC.value("12.34"), "Hello", null));
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", CoinURI.convertToCoinURI(goodAddress, BTC.value("12.34"), "Hello", ""));
-              
+
         // amount present, no label, no message
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=1000", CoinURI.convertToCoinURI(goodAddress, BTC.value("1000"), null, null));
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?amount=1000", CoinURI.convertToCoinURI(goodAddress, BTC.value("1000"), "", ""));
-        
+
         // no amount, label present, no message
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?label=Hello", CoinURI.convertToCoinURI(goodAddress, null, "Hello", null));
-        
+
         // no amount, no label, message present
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?message=Agatha", CoinURI.convertToCoinURI(goodAddress, null, null, "Agatha"));
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS + "?message=Agatha", CoinURI.convertToCoinURI(goodAddress, null, "", "Agatha"));
-      
+
         // no amount, no label, no message
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS, CoinURI.convertToCoinURI(goodAddress, null, null, null));
         assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS, CoinURI.convertToCoinURI(goodAddress, null, "", ""));
@@ -128,7 +126,7 @@ public class CoinURITest {
         byte[] pubkey = Hex.decode(pubkeyStr);
         NxtAddress nxtGoodAddress = new NxtAddress(NXT, pubkey);
         goodAddressStr = nxtGoodAddress.toString();
-        assertEquals("nxt:" + goodAddressStr + "?amount=12.34&label=Hello&message=AMessage&pubkey="+pubkeyStr,
+        assertEquals("nxt:" + goodAddressStr + "?amount=12.34&label=Hello&message=AMessage&pubkey=" + pubkeyStr,
                 CoinURI.convertToCoinURI(nxtGoodAddress, NXT.value("12.34"), "Hello", "AMessage", pubkeyStr));
     }
 
@@ -269,9 +267,8 @@ public class CoinURITest {
 
     /**
      * Handles a simple amount
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testGood_Amount() throws CoinURIParseException {
@@ -293,9 +290,8 @@ public class CoinURITest {
 
     /**
      * Handles a simple label
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testGood_Label() throws CoinURIParseException {
@@ -306,10 +302,9 @@ public class CoinURITest {
 
     /**
      * Handles a simple label with an embedded ampersand and plus
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
-     * @throws UnsupportedEncodingException 
+     *
+     * @throws CoinURIParseException        If something goes wrong
+     * @throws UnsupportedEncodingException
      */
     @Test
     public void testGood_LabelWithAmpersandAndPlus() throws Exception {
@@ -322,16 +317,15 @@ public class CoinURITest {
 
     /**
      * Handles a Russian label (Unicode test)
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
-     * @throws UnsupportedEncodingException 
+     *
+     * @throws CoinURIParseException        If something goes wrong
+     * @throws UnsupportedEncodingException
      */
     @Test
     public void testGood_LabelWithRussian() throws Exception {
         // Moscow in Russian in Cyrillic
         String moscowString = "\u041c\u043e\u0441\u043a\u0432\u0430";
-        String encodedLabel = CoinURI.encodeURLString(moscowString); 
+        String encodedLabel = CoinURI.encodeURLString(moscowString);
         testObject = new CoinURI(BitcoinMain.get(), BitcoinMain.get().getUriScheme() + ":" + MAINNET_GOOD_ADDRESS + "?label="
                 + encodedLabel);
         assertEquals(moscowString, testObject.getLabel());
@@ -339,9 +333,8 @@ public class CoinURITest {
 
     /**
      * Handles a simple message
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testGood_Message() throws CoinURIParseException {
@@ -352,9 +345,8 @@ public class CoinURITest {
 
     /**
      * Handles various well-formed combinations
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testGood_Combinations() throws CoinURIParseException {
@@ -367,9 +359,8 @@ public class CoinURITest {
 
     /**
      * Handles a badly formatted amount field
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testBad_Amount() throws CoinURIParseException {
@@ -406,9 +397,8 @@ public class CoinURITest {
 
     /**
      * Handles duplicated fields (sneaky address overwrite attack)
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testBad_Duplicated() throws CoinURIParseException {
@@ -429,9 +419,8 @@ public class CoinURITest {
 
     /**
      * Handles case when there are too many question marks
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testBad_TooManyQuestionMarks() throws CoinURIParseException {
@@ -443,12 +432,11 @@ public class CoinURITest {
             assertTrue(e.getMessage().contains("Too many question marks"));
         }
     }
-    
+
     /**
      * Handles unknown fields (required and not required)
-     * 
-     * @throws CoinURIParseException
-     *             If something goes wrong
+     *
+     * @throws CoinURIParseException If something goes wrong
      */
     @Test
     public void testUnknown() throws CoinURIParseException {

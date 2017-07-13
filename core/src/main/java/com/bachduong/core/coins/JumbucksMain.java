@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author Julian Yap
  */
 public class JumbucksMain extends PeerFamily {
+    private static JumbucksMain instance = new JumbucksMain();
+
     private JumbucksMain() {
         id = "jumbucks.main";
 
         addressHeader = 43;
         p2shHeader = 105;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 500;
         dumpedPrivateKeyHeader = 171;
 
@@ -27,7 +29,6 @@ public class JumbucksMain extends PeerFamily {
         signedMessageHeader = toBytes("Jumbucks Signed Message:\n");
     }
 
-    private static JumbucksMain instance = new JumbucksMain();
     public static synchronized CoinType get() {
         return instance;
     }

@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author Digibyte
  */
 public class DigibyteMain extends BitFamily {
+    private static DigibyteMain instance = new DigibyteMain();
+
     private DigibyteMain() {
         id = "digibyte.main";
 
         addressHeader = 30;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 128;
 
@@ -27,7 +29,6 @@ public class DigibyteMain extends BitFamily {
         signedMessageHeader = toBytes("DigiByte Signed Message:\n");
     }
 
-    private static DigibyteMain instance = new DigibyteMain();
     public static synchronized CoinType get() {
         return instance;
     }

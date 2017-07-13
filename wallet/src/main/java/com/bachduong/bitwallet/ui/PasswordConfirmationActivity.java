@@ -10,7 +10,7 @@ import com.bachduong.bitwallet.R;
  * @author John L. Jegutanis
  */
 public class PasswordConfirmationActivity extends AbstractWalletFragmentActivity
-        implements PasswordConfirmationFragment.Listener{
+        implements PasswordConfirmationFragment.Listener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author Myckel Habets / Auroracoin dev team
  */
 public class AuroracoinMain extends BitFamily {
+    private static AuroracoinMain instance = new AuroracoinMain();
+
     private AuroracoinMain() {
         id = "auroracoin.main";
 
         addressHeader = 23;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 80;
         //dumpedPrivateKeyHeader = 176; // FIXME: do we need this?
 
@@ -27,7 +29,6 @@ public class AuroracoinMain extends BitFamily {
         signedMessageHeader = toBytes("Auroracoin Signed Message:\n");
     }
 
-    private static AuroracoinMain instance = new AuroracoinMain();
     public static synchronized AuroracoinMain get() {
         return instance;
     }

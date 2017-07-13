@@ -20,12 +20,12 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_row.xml"
     },
     {
-        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_account.xml",
-        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_account.xml"
-    },
-    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_fees_settings_list.xml",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_fees_settings_list.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_account.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_account.xml"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_password_confirmation.xml",
@@ -100,12 +100,12 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_account_details.xml"
     },
     {
-        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_multichoice_material.xml"
-    },
-    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/address.xml",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/address.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",

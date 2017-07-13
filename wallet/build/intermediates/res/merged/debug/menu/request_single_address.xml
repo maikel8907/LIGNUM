@@ -1,20 +1,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".SendFragment" >
+    tools:context=".SendFragment">
 
-    <item android:id="@+id/action_share"
-        android:title="@string/action_share"
+    <item
+        android:id="@+id/action_share"
         android:icon="@drawable/abc_ic_menu_share_mtrl_alpha"
+        android:title="@string/action_share"
         app:showAsAction="ifRoom" />
 
-    <item android:id="@+id/action_copy"
-        android:title="@string/action_copy"
+    <item
+        android:id="@+id/action_copy"
         android:icon="@drawable/abc_ic_menu_copy_mtrl_am_alpha"
+        android:title="@string/action_copy"
         app:showAsAction="ifRoom" />
 
-    <item android:id="@+id/action_edit_label"
-        android:title="@string/action_edit_label"
+    <item
+        android:id="@+id/action_edit_label"
         android:icon="@drawable/edit_menu"
+        android:title="@string/action_edit_label"
         app:showAsAction="ifRoom" />
 </menu>

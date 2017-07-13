@@ -4,8 +4,8 @@ import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.nxt.Account;
 import com.bachduong.core.coins.nxt.Convert;
 import com.bachduong.core.coins.nxt.Crypto;
-import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.exceptions.AddressMalformedException;
+import com.bachduong.core.wallet.AbstractAddress;
 
 import javax.annotation.Nullable;
 

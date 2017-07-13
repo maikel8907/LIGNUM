@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class CanadaeCoinMain extends BitFamily {
+    private static CanadaeCoinMain instance = new CanadaeCoinMain();
+
     private CanadaeCoinMain() {
         id = "CanadaeCoin.main";
 
         addressHeader = 28;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 120; // COINBASE_MATURITY_NEW
         dumpedPrivateKeyHeader = 156;
 
@@ -26,7 +28,6 @@ public class CanadaeCoinMain extends BitFamily {
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
     }
 
-    private static CanadaeCoinMain instance = new CanadaeCoinMain();
     public static synchronized CanadaeCoinMain get() {
         return instance;
     }

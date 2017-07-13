@@ -5,10 +5,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.coins.Value;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.ui.widget.CoinListItem;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
 
 import java.util.ArrayList;
 import java.util.List;

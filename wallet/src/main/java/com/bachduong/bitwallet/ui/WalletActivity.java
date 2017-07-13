@@ -19,6 +19,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.bachduong.bitwallet.Constants;
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.service.CoinService;
+import com.bachduong.bitwallet.service.CoinServiceImpl;
+import com.bachduong.bitwallet.ui.dialogs.TermsOfUseDialog;
+import com.bachduong.bitwallet.util.SystemUtils;
+import com.bachduong.bitwallet.util.WeakHandler;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.exceptions.AddressMalformedException;
 import com.bachduong.core.uri.CoinURI;
@@ -27,13 +34,6 @@ import com.bachduong.core.util.GenericUtils;
 import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.SerializedKey;
 import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.bitwallet.Constants;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.service.CoinService;
-import com.bachduong.bitwallet.service.CoinServiceImpl;
-import com.bachduong.bitwallet.ui.dialogs.TermsOfUseDialog;
-import com.bachduong.bitwallet.util.SystemUtils;
-import com.bachduong.bitwallet.util.WeakHandler;
 
 import org.bitcoinj.core.Transaction;
 import org.slf4j.Logger;
@@ -80,28 +80,28 @@ final public class WalletActivity extends BaseWalletActivity implements
 
     // Saved state variables
     private static final String OVERVIEW_VISIBLE = "overview_visible";
-
+    private final Handler handler = new MyHandler(this);
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence title;
-
-    @Nullable private String lastAccountId;
+    @Nullable
+    private String lastAccountId;
     private Intent connectCoinIntent;
     private Intent connectAllCoinIntent;
     private List<NavDrawerItem> navDrawerItems = new ArrayList<>();
     private ActionMode lastActionMode;
-    private final Handler handler = new MyHandler(this);
     private boolean isOverviewVisible;
     private OverviewFragment overviewFragment;
-    @Nullable private AccountFragment accountFragment;
+    @Nullable
+    private AccountFragment accountFragment;
 
-    public WalletActivity() {}
+    public WalletActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +119,7 @@ final public class WalletActivity extends BaseWalletActivity implements
         }
 
         lastAccountId = getWalletApplication().getConfiguration().getLastAccountId();
-        
+
         // Create the overview and account fragments
         FragmentTransaction tr = getFM().beginTransaction();
         if (savedInstanceState == null) {
@@ -430,8 +430,7 @@ final public class WalletActivity extends BaseWalletActivity implements
 //            });
 //        }
 
-        if (pm.resolveActivity(binaryIntent, 0) != null)
-        {
+        if (pm.resolveActivity(binaryIntent, 0) != null) {
             builder.setPositiveButton(R.string.button_download, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(final DialogInterface dialog, final int id) {
@@ -543,7 +542,7 @@ final public class WalletActivity extends BaseWalletActivity implements
                     break;
                 }
             }
-            if (addressOfAccount != null){
+            if (addressOfAccount != null) {
                 // If address is from an account don't show a dialog.
                 processUri(CoinURI.convertToCoinURI(addressOfAccount, null, null, null));
             } else {
@@ -804,7 +803,9 @@ final public class WalletActivity extends BaseWalletActivity implements
     }
 
     private static class MyHandler extends WeakHandler<WalletActivity> {
-        public MyHandler(WalletActivity ref) { super(ref); }
+        public MyHandler(WalletActivity ref) {
+            super(ref);
+        }
 
         @Override
         protected void weakHandleMessage(WalletActivity ref, Message msg) {

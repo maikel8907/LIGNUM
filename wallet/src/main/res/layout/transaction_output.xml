@@ -2,7 +2,8 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <TextView
@@ -16,15 +17,16 @@
         tools:text="Send" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="true">
+        android:baselineAligned="true"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/amount"
@@ -32,8 +34,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="2dp"
                 android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
                 tools:text="100.1223" />
 
             <TextView
@@ -42,24 +44,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                tools:text="SYMBOL"
-                android:paddingBottom="2dp"/>
+                android:paddingBottom="2dp"
+                tools:text="SYMBOL" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="2dp"
-            android:layout_gravity="bottom">
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp">
+
             <TextView
                 android:id="@+id/local_amount"
                 style="@style/Amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="2dp"
                 android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
                 tools:text="101.12" />
 
             <TextView
@@ -67,8 +70,7 @@
                 style="@style/AmountSymbol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="SYMBOL"
-                 />
+                tools:text="SYMBOL" />
         </LinearLayout>
     </LinearLayout>
 

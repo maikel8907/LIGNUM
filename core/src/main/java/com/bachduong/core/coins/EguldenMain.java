@@ -3,12 +3,14 @@ package com.bachduong.core.coins;
 import com.bachduong.core.coins.families.BitFamily;
 
 public class EguldenMain extends BitFamily {
+    private static EguldenMain instance = new EguldenMain();
+
     private EguldenMain() {
         id = "egulden.main";
 
         addressHeader = 48;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 176;
 
@@ -24,7 +26,6 @@ public class EguldenMain extends BitFamily {
         signedMessageHeader = toBytes("e-Gulden Signed Message:\n");
     }
 
-    private static EguldenMain instance = new EguldenMain();
     public static synchronized EguldenMain get() {
         return instance;
     }

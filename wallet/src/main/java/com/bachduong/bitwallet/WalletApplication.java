@@ -14,6 +14,11 @@ import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
+import com.bachduong.bitwallet.service.CoinService;
+import com.bachduong.bitwallet.service.CoinServiceImpl;
+import com.bachduong.bitwallet.util.Fonts;
+import com.bachduong.bitwallet.util.LinuxSecureRandom;
+import com.bachduong.bitwallet.util.NetworkUtils;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.exchange.shapeshift.ShapeShift;
@@ -22,11 +27,6 @@ import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.Wallet;
 import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.core.wallet.WalletProtobufSerializer;
-import com.bachduong.bitwallet.service.CoinService;
-import com.bachduong.bitwallet.service.CoinServiceImpl;
-import com.bachduong.bitwallet.util.Fonts;
-import com.bachduong.bitwallet.util.LinuxSecureRandom;
-import com.bachduong.bitwallet.util.NetworkUtils;
 import com.google.common.collect.ImmutableList;
 
 import org.acra.ACRA;
@@ -76,6 +76,14 @@ public class WalletApplication extends Application {
     private ConnectivityManager connManager;
     private ShapeShift shapeShift;
     private File txCachePath;
+
+    public static PackageInfo packageInfoFromContext(final Context context) {
+        try {
+            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+        } catch (final PackageManager.NameNotFoundException x) {
+            throw new RuntimeException(x);
+        }
+    }
 
     @Override
     public void onCreate() {
@@ -252,7 +260,6 @@ public class WalletApplication extends Application {
 //        log.setLevel(Level.INFO);
     }
 
-
     public Configuration getConfiguration() {
         return config;
     }
@@ -263,6 +270,19 @@ public class WalletApplication extends Application {
     @Nullable
     public Wallet getWallet() {
         return wallet;
+    }
+
+    public void setWallet(@Nullable Wallet wallet) {
+        // Disable auto-save of the previous wallet if exists, so it doesn't override the new one
+        if (this.wallet != null) {
+            this.wallet.shutdownAutosaveAndWait();
+        }
+
+        this.wallet = wallet;
+        if (this.wallet != null) {
+            this.wallet.autosaveToFile(walletFile, Constants.WALLET_WRITE_DELAY,
+                    Constants.WALLET_WRITE_DELAY_UNIT, null);
+        }
     }
 
     @Nullable
@@ -281,7 +301,6 @@ public class WalletApplication extends Application {
             return ImmutableList.of();
         }
     }
-
 
     public List<WalletAccount> getAccounts(List<CoinType> types) {
         if (wallet != null) {
@@ -329,19 +348,6 @@ public class WalletApplication extends Application {
         setWallet(null);
     }
 
-    public void setWallet(@Nullable Wallet wallet) {
-        // Disable auto-save of the previous wallet if exists, so it doesn't override the new one
-        if (this.wallet != null) {
-            this.wallet.shutdownAutosaveAndWait();
-        }
-
-        this.wallet = wallet;
-        if (this.wallet != null) {
-            this.wallet.autosaveToFile(walletFile, Constants.WALLET_WRITE_DELAY,
-                    Constants.WALLET_WRITE_DELAY_UNIT, null);
-        }
-    }
-
     private void loadWallet() {
         if (walletFile.exists()) {
             final long start = System.currentTimeMillis();
@@ -370,7 +376,6 @@ public class WalletApplication extends Application {
         }
     }
 
-
     public void saveWalletNow() {
         if (wallet != null) {
             wallet.saveNow();
@@ -397,15 +402,6 @@ public class WalletApplication extends Application {
 
     public void stopBlockchainService() {
         stopService(coinServiceIntent);
-    }
-
-
-    public static PackageInfo packageInfoFromContext(final Context context) {
-        try {
-            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
-        } catch (final PackageManager.NameNotFoundException x) {
-            throw new RuntimeException(x);
-        }
     }
 
     public PackageInfo packageInfo() {

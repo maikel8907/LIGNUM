@@ -6,7 +6,7 @@ package com.bachduong.core.uri;
  * to this version of the client in which case it should fail for security reasons.</p>
  *
  * @since 0.3.0
- *         
+ *  
  */
 public class RequiredFieldValidationException extends CoinURIParseException {
 

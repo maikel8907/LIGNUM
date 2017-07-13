@@ -57,6 +57,36 @@ final public class NxtFamilyKey implements EncryptableKeyChain, KeyBag, Serializ
 
     }
 
+    /**
+     * Returns the key chain found in the given list of keys. Used for unencrypted chains
+     */
+    public static NxtFamilyKey fromProtobuf(List<Protos.Key> keys) throws UnreadableWalletException {
+        return fromProtobuf(keys, null);
+    }
+
+    /**
+     * Returns the key chain found in the given list of keys.
+     */
+    public static NxtFamilyKey fromProtobuf(List<Protos.Key> keys, @Nullable KeyCrypter crypter)
+            throws UnreadableWalletException {
+        if (keys.size() != 2) {
+            throw new UnreadableWalletException("Expected 2 keys, NXT secret and Curve25519 " +
+                    "pub/priv pair, instead got: " + keys.size());
+        }
+
+        Protos.Key entropyProto = keys.get(0);
+        DeterministicKey entropyKey = KeyUtils.getDeterministicKey(entropyProto, null, crypter);
+
+        Protos.Key publicKeyProto = keys.get(1);
+        if (publicKeyProto.getType() != Protos.Key.Type.ORIGINAL) {
+            throw new UnreadableWalletException("Unexpected type for NXT public key: " +
+                    publicKeyProto.getType());
+        }
+        byte[] publicKeyBytes = publicKeyProto.getPublicKey().toByteArray();
+
+        return new NxtFamilyKey(entropyKey, publicKeyBytes);
+    }
+
     public boolean isEncrypted() {
         return entropy.isEncrypted();
     }
@@ -107,6 +137,12 @@ final public class NxtFamilyKey implements EncryptableKeyChain, KeyBag, Serializ
         throw new RuntimeException("Not implemented");
     }
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Serialization support
+    //
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     @Override
     public void addEventListener(KeyChainEventListener listener, Executor executor) {
         throw new RuntimeException("Not implemented");
@@ -116,12 +152,6 @@ final public class NxtFamilyKey implements EncryptableKeyChain, KeyBag, Serializ
     public boolean removeEventListener(KeyChainEventListener listener) {
         throw new RuntimeException("Not implemented");
     }
-
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Serialization support
-    //
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @Override
     public List<org.bitcoinj.wallet.Protos.Key> serializeToProtobuf() {
@@ -157,36 +187,6 @@ final public class NxtFamilyKey implements EncryptableKeyChain, KeyBag, Serializ
         entries.add(publicKeyProto);
 
         return entries;
-    }
-
-    /**
-     * Returns the key chain found in the given list of keys. Used for unencrypted chains
-     */
-    public static NxtFamilyKey fromProtobuf(List<Protos.Key> keys) throws UnreadableWalletException {
-        return fromProtobuf(keys, null);
-    }
-
-    /**
-     * Returns the key chain found in the given list of keys.
-     */
-    public static NxtFamilyKey fromProtobuf(List<Protos.Key> keys, @Nullable KeyCrypter crypter)
-            throws UnreadableWalletException {
-        if (keys.size() != 2) {
-            throw new UnreadableWalletException("Expected 2 keys, NXT secret and Curve25519 " +
-                    "pub/priv pair, instead got: " + keys.size());
-        }
-
-        Protos.Key entropyProto = keys.get(0);
-        DeterministicKey entropyKey = KeyUtils.getDeterministicKey(entropyProto, null, crypter);
-
-        Protos.Key publicKeyProto = keys.get(1);
-        if (publicKeyProto.getType() != Protos.Key.Type.ORIGINAL) {
-            throw new UnreadableWalletException("Unexpected type for NXT public key: " +
-                    publicKeyProto.getType());
-        }
-        byte[] publicKeyBytes = publicKeyProto.getPublicKey().toByteArray();
-
-        return new NxtFamilyKey(entropyKey, publicKeyBytes);
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////

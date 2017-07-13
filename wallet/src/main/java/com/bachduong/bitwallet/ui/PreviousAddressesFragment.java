@@ -14,15 +14,15 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.core.wallet.WalletPocketHD;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.util.ThrottlingWalletChangeListener;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.wallet.AbstractAddress;
+import com.bachduong.core.wallet.WalletPocketHD;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,34 +34,29 @@ public class PreviousAddressesFragment extends Fragment {
     private static final Logger log = LoggerFactory.getLogger(PreviousAddressesFragment.class);
 
     private static final int UPDATE_VIEW = 0;
-
+    private final Handler handler = new MyHandler(this);
+    private final ThrottlingWalletChangeListener walletListener = new ThrottlingWalletChangeListener() {
+        @Override
+        public void onThrottledWalletChanged() {
+            handler.sendMessage(handler.obtainMessage(UPDATE_VIEW));
+        }
+    };
     private Listener listener;
-
     private CoinType type;
     private String accountId;
     private WalletPocketHD pocket;
     private AddressesListAdapter adapter;
-    private ContentResolver resolver;
-
-    private final Handler handler = new MyHandler(this);
-    private static class MyHandler extends WeakHandler<PreviousAddressesFragment> {
-        public MyHandler(PreviousAddressesFragment ref) { super(ref); }
-
-        @Override
-        protected void weakHandleMessage(PreviousAddressesFragment ref, Message msg) {
-            switch (msg.what) {
-                case UPDATE_VIEW:
-                    ref.updateView();
-            }
-        }
-    }
-
     private final ContentObserver addressBookObserver = new ContentObserver(handler) {
         @Override
         public void onChange(final boolean selfChange) {
             adapter.clearLabelCache();
         }
     };
+    private ContentResolver resolver;
+
+    public PreviousAddressesFragment() {
+        // Required empty public constructor
+    }
 
     public static PreviousAddressesFragment newInstance(String accountId) {
         PreviousAddressesFragment fragment = new PreviousAddressesFragment();
@@ -69,9 +64,6 @@ public class PreviousAddressesFragment extends Fragment {
         args.putString(Constants.ARG_ACCOUNT_ID, accountId);
         fragment.setArguments(args);
         return fragment;
-    }
-    public PreviousAddressesFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -163,13 +155,6 @@ public class PreviousAddressesFragment extends Fragment {
         adapter.replace(pocket.getIssuedReceiveAddresses(), pocket.getUsedAddresses());
     }
 
-    private final ThrottlingWalletChangeListener walletListener = new ThrottlingWalletChangeListener() {
-        @Override
-        public void onThrottledWalletChanged() {
-            handler.sendMessage(handler.obtainMessage(UPDATE_VIEW));
-        }
-    };
-
     @Override
     public void onAttach(final Context context) {
         super.onAttach(context);
@@ -189,5 +174,19 @@ public class PreviousAddressesFragment extends Fragment {
 
     public interface Listener {
         void onAddressSelected(Bundle args);
+    }
+
+    private static class MyHandler extends WeakHandler<PreviousAddressesFragment> {
+        public MyHandler(PreviousAddressesFragment ref) {
+            super(ref);
+        }
+
+        @Override
+        protected void weakHandleMessage(PreviousAddressesFragment ref, Message msg) {
+            switch (msg.what) {
+                case UPDATE_VIEW:
+                    ref.updateView();
+            }
+        }
     }
 }

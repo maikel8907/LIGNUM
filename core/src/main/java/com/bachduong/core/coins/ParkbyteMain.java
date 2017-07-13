@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author John L. Jegutanis
  */
 public class ParkbyteMain extends PeerFamily {
+    private static ParkbyteMain instance = new ParkbyteMain();
+
     private ParkbyteMain() {
         id = "parkbyte.main";
 
         addressHeader = 55;
         p2shHeader = 28;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 5;
         dumpedPrivateKeyHeader = 183;
 
@@ -27,7 +29,6 @@ public class ParkbyteMain extends PeerFamily {
         signedMessageHeader = toBytes("ParkByte Signed Message:\n");
     }
 
-    private static ParkbyteMain instance = new ParkbyteMain();
     public static synchronized ParkbyteMain get() {
         return instance;
     }

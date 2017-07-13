@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.bachduong.bitwallet.ui.FeesSettingsFragment" >
+    tools:context="com.bachduong.bitwallet.ui.FeesSettingsFragment">
 
     <ListView
         android:id="@+id/coins_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="@dimen/half_standard_margin"
-        android:paddingBottom="@dimen/half_standard_margin"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:drawSelectorOnTop="false" />
+        android:drawSelectorOnTop="false"
+        android:paddingBottom="@dimen/half_standard_margin"
+        android:paddingTop="@dimen/half_standard_margin" />
 
 </LinearLayout>

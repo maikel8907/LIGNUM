@@ -6,8 +6,8 @@ import com.bachduong.core.wallet.families.bitcoin.BitAddress;
 
 /**
  * @author John L. Jegutanis
- *
- * This is the classical Bitcoin family that includes Litecoin, Dogecoin, Dash, etc
+ *         <p>
+ *         This is the classical Bitcoin family that includes Litecoin, Dogecoin, Dash, etc
  */
 public abstract class BitFamily extends CoinType {
     {

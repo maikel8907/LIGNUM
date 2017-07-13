@@ -10,12 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.util.QrUtils;
 import com.bachduong.bitwallet.util.UiUtils;
+import com.bachduong.core.wallet.WalletAccount;
 
 import static com.bachduong.core.Preconditions.checkNotNull;
 
@@ -25,6 +25,9 @@ import static com.bachduong.core.Preconditions.checkNotNull;
 public class AccountDetailsFragment extends Fragment {
     private String publicKeySerialized;
 
+    public AccountDetailsFragment() {
+    }
+
     public static AccountDetailsFragment newInstance(WalletAccount account) {
         AccountDetailsFragment fragment = new AccountDetailsFragment();
         Bundle args = new Bundle();
@@ -32,8 +35,6 @@ public class AccountDetailsFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
-    public AccountDetailsFragment() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

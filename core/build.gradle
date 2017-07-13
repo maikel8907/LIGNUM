@@ -35,7 +35,7 @@ sourceSets {
 }
 
 // add the unitTest task
-task unitTest(type:Test, dependsOn: assemble) {
+task unitTest(type: Test, dependsOn: assemble) {
     description = "run unit tests"
     testClassesDir = project.sourceSets.unitTest.output.classesDir
     classpath = project.sourceSets.unitTest.runtimeClasspath

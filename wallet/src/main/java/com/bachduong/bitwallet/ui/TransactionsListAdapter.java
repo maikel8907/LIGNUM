@@ -28,6 +28,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.bachduong.bitwallet.AddressBookProvider;
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.ui.widget.CurrencyTextView;
+import com.bachduong.bitwallet.util.Fonts;
+import com.bachduong.bitwallet.util.TimeUtils;
+import com.bachduong.bitwallet.util.WalletUtils;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.coins.families.Families;
@@ -35,12 +41,6 @@ import com.bachduong.core.util.GenericUtils;
 import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.AbstractTransaction;
 import com.bachduong.core.wallet.AbstractWallet;
-import com.bachduong.bitwallet.AddressBookProvider;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.ui.widget.CurrencyTextView;
-import com.bachduong.bitwallet.util.Fonts;
-import com.bachduong.bitwallet.util.TimeUtils;
-import com.bachduong.bitwallet.util.WalletUtils;
 
 import org.bitcoinj.core.TransactionConfidence;
 import org.bitcoinj.core.TransactionConfidence.ConfidenceType;
@@ -57,16 +57,15 @@ import javax.annotation.Nonnull;
  * @author Andreas Schildbach
  */
 public class TransactionsListAdapter extends BaseAdapter {
+    private final static Object CACHE_NULL_MARKER = "";
+    private static final String CONFIDENCE_SYMBOL_DEAD = "\u271D"; // latin cross
+    private static final String CONFIDENCE_SYMBOL_UNKNOWN = "?";
+    private static final int VIEW_TYPE_TRANSACTION = 0;
     private final Context context;
     private final LayoutInflater inflater;
     private final AbstractWallet walletPocket;
-
     private final List<AbstractTransaction> transactions = new ArrayList<>();
     private final Resources res;
-    private int precision = 0;
-    private int shift = 0;
-    private boolean showEmptyText = false;
-
     private final int colorSignificant;
     private final int colorLessSignificant;
     private final int colorInsignificant;
@@ -79,14 +78,10 @@ public class TransactionsListAdapter extends BaseAdapter {
     private final String receivedWithTitle;
     private final String receivedFromTitle;
     private final String fontIconReceivedWith;
-
     private final Map<AbstractAddress, String> labelCache = new HashMap<>();
-    private final static Object CACHE_NULL_MARKER = "";
-
-    private static final String CONFIDENCE_SYMBOL_DEAD = "\u271D"; // latin cross
-    private static final String CONFIDENCE_SYMBOL_UNKNOWN = "?";
-
-    private static final int VIEW_TYPE_TRANSACTION = 0;
+    private int precision = 0;
+    private int shift = 0;
+    private boolean showEmptyText = false;
 
     @Deprecated // TODO change AbstractWallet to WalletAccount
     public TransactionsListAdapter(final Context context, @Nonnull final AbstractWallet walletPocket) {
@@ -370,8 +365,7 @@ public class TransactionsListAdapter extends BaseAdapter {
             }*/
             if (tx.getMessage() == null) {
                 rowMessageFontIcon.setVisibility(View.GONE);
-            }
-            else {
+            } else {
                 rowMessageFontIcon.setVisibility(View.VISIBLE);
             }
         } else {
@@ -386,7 +380,7 @@ public class TransactionsListAdapter extends BaseAdapter {
             if (label != null) {
                 labelCache.put(address, label);
             } else {
-                labelCache.put(address, (String)CACHE_NULL_MARKER);
+                labelCache.put(address, (String) CACHE_NULL_MARKER);
             }
             return label;
         } else {

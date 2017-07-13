@@ -60,9 +60,10 @@ public class TransactionCreator {
         softDustLimit = coinType.getSoftDustLimit().toCoin();
     }
 
-    private static class FeeCalculation {
-        CoinSelection bestCoinSelection;
-        TransactionOutput bestChangeOutput;
+    private static void resetTxInputs(Transaction tx, List<TransactionInput> originalInputs) {
+        tx.clearInputs();
+        for (TransactionInput input : originalInputs)
+            tx.addInput(input);
     }
 
     /**
@@ -250,6 +251,7 @@ public class TransactionCreator {
      * Returns a list of all possible outputs we could possibly spend, potentially even including immature coinbases
      * (which the protocol may forbid us from spending). In other words, return all outputs that this wallet holds
      * keys for and which are not already marked as spent.
+     *
      * @param req
      */
     LinkedList<OutPointOutput> calculateAllSpendCandidates(BitSendRequest req) {
@@ -558,9 +560,8 @@ public class TransactionCreator {
         return size;
     }
 
-    private static void resetTxInputs(Transaction tx, List<TransactionInput> originalInputs) {
-        tx.clearInputs();
-        for (TransactionInput input : originalInputs)
-            tx.addInput(input);
+    private static class FeeCalculation {
+        CoinSelection bestCoinSelection;
+        TransactionOutput bestChangeOutput;
     }
 }

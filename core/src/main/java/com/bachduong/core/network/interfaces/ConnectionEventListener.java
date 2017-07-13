@@ -5,5 +5,6 @@ package com.bachduong.core.network.interfaces;
  */
 public interface ConnectionEventListener {
     void onConnection(BlockchainConnection blockchainConnection);
+
     void onDisconnect();
 }

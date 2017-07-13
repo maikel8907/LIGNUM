@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.VpncoinFamily;
  * @author John L. Jegutanis
  */
 public class VpncoinMain extends VpncoinFamily {
+    private static VpncoinMain instance = new VpncoinMain();
+
     private VpncoinMain() {
         id = "vpncoin.main";
 
         addressHeader = 71;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 199;
 
@@ -27,7 +29,6 @@ public class VpncoinMain extends VpncoinFamily {
         signedMessageHeader = toBytes("VpnCoin Signed Message:\n");
     }
 
-    private static VpncoinMain instance = new VpncoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

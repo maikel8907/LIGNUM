@@ -17,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.bachduong.core.coins.CoinType;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.ExchangeHistoryProvider;
@@ -27,6 +26,7 @@ import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.ui.widget.AddressView;
 import com.bachduong.bitwallet.ui.widget.Amount;
 import com.bachduong.bitwallet.util.Fonts;
+import com.bachduong.core.coins.CoinType;
 
 import org.bitcoinj.core.Coin;
 
@@ -37,21 +37,35 @@ import javax.annotation.CheckForNull;
  * @author John L. Jegutanis
  */
 public final class ExchangeHistoryFragment extends ListFragment {
+    private static final int ID_EXCHANGES_LOADER = 0;
     private Context activity;
     private WalletApplication application;
     private Configuration config;
     private com.bachduong.core.wallet.Wallet wallet;
     private Uri contentUri;
     private LoaderManager loaderManager;
-
     private ExchangeEntryAdapter adapter;
-    private String query = null;
+    private final LoaderCallbacks<Cursor> exchangesLoaderCallbacks = new LoaderCallbacks<Cursor>() {
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            return new CursorLoader(activity, contentUri, null, null, null,
+                    ExchangeHistoryProvider.KEY_ROWID + " DESC");
+        }
 
+        @Override
+        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
+            adapter.swapCursor(data);
+            setEmptyText(getString(R.string.exchange_history_empty));
+        }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> loader) {
+        }
+    };
+    private String query = null;
     private Coin balance = null;
     @CheckForNull
     private String defaultCurrency = null;
-
-    private static final int ID_EXCHANGES_LOADER = 0;
     private CoinType type;
 
     @Override
@@ -104,23 +118,6 @@ public final class ExchangeHistoryFragment extends ListFragment {
         intent.putExtra(Constants.ARG_EXCHANGE_ENTRY, entry);
         startActivity(intent);
     }
-
-    private final LoaderCallbacks<Cursor> exchangesLoaderCallbacks = new LoaderCallbacks<Cursor>() {
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            return new CursorLoader(activity, contentUri, null, null, null,
-                    ExchangeHistoryProvider.KEY_ROWID + " DESC");
-        }
-
-        @Override
-        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
-            adapter.swapCursor(data);
-            setEmptyText(getString(R.string.exchange_history_empty));
-        }
-
-        @Override
-        public void onLoaderReset(final Loader<Cursor> loader) {}
-    };
 
     private final class ExchangeEntryAdapter extends ResourceCursorAdapter {
         private ExchangeEntryAdapter(final Context context) {

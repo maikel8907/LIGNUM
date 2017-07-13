@@ -19,10 +19,10 @@ package com.bachduong.bitwallet.ui;
 
 import android.view.View;
 
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.util.ExchangeRate;
 import com.bachduong.bitwallet.ui.widget.AmountEditView;
 import com.bachduong.bitwallet.ui.widget.AmountEditView.Listener;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.util.ExchangeRate;
 
 import org.bitcoinj.core.Coin;
 
@@ -41,7 +41,8 @@ public final class CurrencyCalculatorLink {
     private Listener listener = null;
     private boolean enabled = true;
     private ExchangeRate exchangeRate = null;
-    @Nullable private boolean exchangeDirection = true;
+    @Nullable
+    private boolean exchangeDirection = true;
 
     private final AmountEditView.Listener coinAmountViewListener = new AmountEditView.Listener() {
         @Override
@@ -130,6 +131,15 @@ public final class CurrencyCalculatorLink {
         }
     }
 
+    public void setPrimaryAmount(@Nullable final Value amount) {
+        final Listener listener = this.listener;
+        this.listener = null;
+
+        coinAmountView.setAmount(amount, true);
+
+        this.listener = listener;
+    }
+
     @Nullable
     public Value getSecondaryAmount() {
         if (exchangeRate == null) return null;
@@ -206,14 +216,14 @@ public final class CurrencyCalculatorLink {
         }
     }
 
+    public boolean getExchangeDirection() {
+        return exchangeDirection;
+    }
+
     public void setExchangeDirection(final boolean exchangeDirection) {
         this.exchangeDirection = exchangeDirection;
 
         update();
-    }
-
-    public boolean getExchangeDirection() {
-        return exchangeDirection;
     }
 
     public View activeTextView() {
@@ -232,15 +242,6 @@ public final class CurrencyCalculatorLink {
             coinAmountView.setHint(primaryAmount);
             localAmountView.setHint(convertSafe(primaryAmount));
         }
-    }
-
-    public void setPrimaryAmount(@Nullable final Value amount) {
-        final Listener listener = this.listener;
-        this.listener = null;
-
-        coinAmountView.setAmount(amount, true);
-
-        this.listener = listener;
     }
 
     public boolean isEmpty() {

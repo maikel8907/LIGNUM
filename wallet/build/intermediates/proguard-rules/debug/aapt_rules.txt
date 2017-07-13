@@ -1,10 +1,10 @@
 # view res/layout/activity_pair_usb_pin.xml #generated:2
 -keep class android.support.constraint.ConstraintLayout { <init>(...); }
 
-# view res/layout/fragment_account.xml #generated:19
+# view res/layout/fragment_account.xml #generated:17
 -keep class android.support.v4.view.PagerTabStrip { <init>(...); }
 
-# view res/layout/fragment_account.xml #generated:10
+# view res/layout/fragment_account.xml #generated:8
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
 # view res/layout/activity_wallet.xml #generated:2
@@ -110,7 +110,7 @@
 # view AndroidManifest.xml #generated:114
 -keep class com.bachduong.bitwallet.ui.IntroActivity { <init>(...); }
 
-# view res/layout/activity_wallet.xml #generated:23
+# view res/layout/activity_wallet.xml #generated:21
 -keep class com.bachduong.bitwallet.ui.NavigationDrawerFragment { <init>(...); }
 
 # view AndroidManifest.xml #generated:258
@@ -161,28 +161,28 @@
 # view AndroidManifest.xml #generated:62
 -keep class com.bachduong.bitwallet.ui.WalletActivity { <init>(...); }
 
-# view res/layout/exchange_status_row.xml #generated:93
-# view res/layout/fragment_send.xml #generated:77
+# view res/layout/exchange_status_row.xml #generated:95
+# view res/layout/fragment_send.xml #generated:78
 -keep class com.bachduong.bitwallet.ui.widget.AddressView { <init>(...); }
 
 # view res/layout/account_row.xml #generated:52
 # view res/layout/account_row.xml #generated:67
 # view res/layout/account_row.xml #generated:73
 # view res/layout/coin_list_row.xml #generated:36
-# view res/layout/exchange_rate_row.xml #generated:50
-# view res/layout/exchange_rate_row.xml #generated:63
-# view res/layout/exchange_status_row.xml #generated:71
-# view res/layout/exchange_status_row.xml #generated:86
-# view res/layout/fragment_balance_header.xml #generated:22
-# view res/layout/fragment_balance_header.xml #generated:28
-# view res/layout/fragment_overview_header.xml #generated:23
+# view res/layout/exchange_rate_row.xml #generated:51
+# view res/layout/exchange_rate_row.xml #generated:64
+# view res/layout/exchange_status_row.xml #generated:73
+# view res/layout/exchange_status_row.xml #generated:88
+# view res/layout/fragment_balance_header.xml #generated:21
+# view res/layout/fragment_balance_header.xml #generated:27
+# view res/layout/fragment_overview_header.xml #generated:22
 -keep class com.bachduong.bitwallet.ui.widget.Amount { <init>(...); }
 
 # view res/layout/edit_fee_dialog.xml #generated:24
 # view res/layout/fragment_request.xml #generated:115
 # view res/layout/fragment_request.xml #generated:121
-# view res/layout/fragment_send.xml #generated:126
-# view res/layout/fragment_send.xml #generated:132
+# view res/layout/fragment_send.xml #generated:128
+# view res/layout/fragment_send.xml #generated:134
 # view res/layout/fragment_trade_select.xml #generated:118
 # view res/layout/fragment_trade_select.xml #generated:124
 -keep class com.bachduong.bitwallet.ui.widget.AmountEditView { <init>(...); }
@@ -190,13 +190,13 @@
 # view res/layout/transaction_row.xml #generated:102
 -keep class com.bachduong.bitwallet.ui.widget.CurrencyTextView { <init>(...); }
 
-# view res/layout/amount.xml #generated:18
+# view res/layout/amount.xml #generated:17
 -keep class com.bachduong.bitwallet.ui.widget.FontFitTextView { <init>(...); }
 
 # view res/layout/fragment_make_transaction.xml #generated:41
 # view res/layout/transaction_amount_visualizer.xml #generated:16
 # view res/layout/transaction_amount_visualizer.xml #generated:9
-# view res/layout/transaction_details_output_row.xml #generated:12
+# view res/layout/transaction_details_output_row.xml #generated:6
 -keep class com.bachduong.bitwallet.ui.widget.SendOutput { <init>(...); }
 
 # view res/layout/fragment_balance.xml #generated:7

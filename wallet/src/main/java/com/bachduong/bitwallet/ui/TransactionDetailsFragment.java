@@ -15,11 +15,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.messages.TxMessage;
-import com.bachduong.core.wallet.AbstractTransaction;
-import com.bachduong.core.wallet.AbstractTransaction.AbstractOutput;
-import com.bachduong.core.wallet.AbstractWallet;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
@@ -27,6 +22,11 @@ import com.bachduong.bitwallet.util.ThrottlingWalletChangeListener;
 import com.bachduong.bitwallet.util.TimeUtils;
 import com.bachduong.bitwallet.util.UiUtils;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.messages.TxMessage;
+import com.bachduong.core.wallet.AbstractTransaction;
+import com.bachduong.core.wallet.AbstractTransaction.AbstractOutput;
+import com.bachduong.core.wallet.AbstractWallet;
 
 import org.acra.ACRA;
 import org.slf4j.Logger;
@@ -40,12 +40,17 @@ public class TransactionDetailsFragment extends Fragment {
     private static final Logger log = LoggerFactory.getLogger(TransactionDetailsFragment.class);
 
     private static final int UPDATE_VIEW = 0;
-
+    private final Handler handler = new MyHandler(this);
+    private final ThrottlingWalletChangeListener walletListener = new ThrottlingWalletChangeListener() {
+        @Override
+        public void onThrottledWalletChanged() {
+            handler.sendMessage(handler.obtainMessage(UPDATE_VIEW));
+        }
+    };
     private String txId;
     private String accountId;
     private AbstractWallet pocket;
     private CoinType type;
-
     private ListView outputRows;
     private TransactionAmountVisualizerAdapter adapter;
     private TextView txStatusView;
@@ -55,20 +60,6 @@ public class TransactionDetailsFragment extends Fragment {
     private TextView txMessageLabel;
     private TextView txMessage;
     private TextView blockExplorerLink;
-
-    private final Handler handler = new MyHandler(this);
-
-    private static class MyHandler extends WeakHandler<TransactionDetailsFragment> {
-        public MyHandler(TransactionDetailsFragment ref) { super(ref); }
-
-        @Override
-        protected void weakHandleMessage(TransactionDetailsFragment ref, Message msg) {
-            switch (msg.what) {
-                case UPDATE_VIEW:
-                    ref.updateView();
-            }
-        }
-    }
 
     public TransactionDetailsFragment() {
         // Required empty public constructor
@@ -233,10 +224,17 @@ public class TransactionDetailsFragment extends Fragment {
         return (WalletApplication) getActivity().getApplication();
     }
 
-    private final ThrottlingWalletChangeListener walletListener = new ThrottlingWalletChangeListener() {
-        @Override
-        public void onThrottledWalletChanged() {
-            handler.sendMessage(handler.obtainMessage(UPDATE_VIEW));
+    private static class MyHandler extends WeakHandler<TransactionDetailsFragment> {
+        public MyHandler(TransactionDetailsFragment ref) {
+            super(ref);
         }
-    };
+
+        @Override
+        protected void weakHandleMessage(TransactionDetailsFragment ref, Message msg) {
+            switch (msg.what) {
+                case UPDATE_VIEW:
+                    ref.updateView();
+            }
+        }
+    }
 }

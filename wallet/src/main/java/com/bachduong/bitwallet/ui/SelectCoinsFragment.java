@@ -16,7 +16,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.bachduong.core.coins.CoinType;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.ExchangeRatesProvider;
@@ -24,6 +23,7 @@ import com.bachduong.bitwallet.ExchangeRatesProvider.ExchangeRate;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.ui.widget.HeaderWithFontIcon;
+import com.bachduong.core.coins.CoinType;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 
@@ -39,18 +39,46 @@ import static com.bachduong.bitwallet.ExchangeRatesProvider.getRates;
  */
 public class SelectCoinsFragment extends Fragment {
     private static final Logger log = LoggerFactory.getLogger(SelectCoinsFragment.class);
+    private static final int ID_RATE_LOADER = 0;
     private Listener listener;
     private String message;
     private boolean isMultipleChoice;
     private ListView coinList;
     private Button nextButton;
-
     private Configuration config;
     private Context context;
     private CoinExchangeListAdapter adapter;
+    private final LoaderManager.LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            String localCurrency = config.getExchangeCurrencyCode();
+            return new ExchangeRateLoader(getActivity(), config, localCurrency);
+        }
+
+        @Override
+        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
+            if (data != null && data.getCount() > 0) {
+                ImmutableMap.Builder<String, ExchangeRate> builder = ImmutableMap.builder();
+
+                data.moveToFirst();
+                do {
+                    ExchangeRate exchangeRate = ExchangeRatesProvider.getExchangeRate(data);
+                    builder.put(exchangeRate.currencyCodeId, exchangeRate);
+                } while (data.moveToNext());
+
+                adapter.setExchangeRates(builder.build());
+            }
+        }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> loader) {
+        }
+    };
     private LoaderManager loaderManager;
 
-    private static final int ID_RATE_LOADER = 0;
+    public SelectCoinsFragment() {
+        // Required empty public constructor
+    }
 
     public static Fragment newInstance(Bundle args) {
         SelectCoinsFragment fragment = new SelectCoinsFragment();
@@ -63,10 +91,6 @@ public class SelectCoinsFragment extends Fragment {
         args.putString(Constants.ARG_MESSAGE, message);
         args.putBoolean(Constants.ARG_MULTIPLE_CHOICE, isMultipleChoice);
         return newInstance(args);
-    }
-
-    public SelectCoinsFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -199,29 +223,4 @@ public class SelectCoinsFragment extends Fragment {
     public interface Listener {
         void onCoinSelection(Bundle args);
     }
-
-    private final LoaderManager.LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            String localCurrency = config.getExchangeCurrencyCode();
-            return new ExchangeRateLoader(getActivity(), config, localCurrency);
-        }
-
-        @Override
-        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
-            if (data != null && data.getCount() > 0) {
-                ImmutableMap.Builder<String, ExchangeRate> builder = ImmutableMap.builder();
-
-                data.moveToFirst();
-                do {
-                    ExchangeRate exchangeRate = ExchangeRatesProvider.getExchangeRate(data);
-                    builder.put(exchangeRate.currencyCodeId, exchangeRate);
-                } while (data.moveToNext());
-
-                adapter.setExchangeRates(builder.build());
-            }
-        }
-
-        @Override public void onLoaderReset(final Loader<Cursor> loader) { }
-    };
 }

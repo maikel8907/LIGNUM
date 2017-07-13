@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class PrimecoinMain extends BitFamily {
+    private static PrimecoinMain instance = new PrimecoinMain();
+
     private PrimecoinMain() {
         id = "primecoin.main";
 
         addressHeader = 23;
         p2shHeader = 83;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 3000;
         dumpedPrivateKeyHeader = 151;
 
@@ -27,7 +29,6 @@ public class PrimecoinMain extends BitFamily {
         signedMessageHeader = toBytes("Primecoin Signed Message:\n");
     }
 
-    private static PrimecoinMain instance = new PrimecoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

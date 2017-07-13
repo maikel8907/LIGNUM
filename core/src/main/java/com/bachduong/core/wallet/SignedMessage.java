@@ -8,16 +8,10 @@ import static com.bachduong.core.Preconditions.checkNotNull;
  * @author John L. Jegutanis
  */
 final public class SignedMessage {
-    public enum Status {
-        SignedOK, VerifiedOK, Unknown, AddressMalformed, KeyIsEncrypted, MissingPrivateKey,
-        InvalidSigningAddress, InvalidMessageSignature
-    }
-
     final String message;
     final String address;
     String signature;
     Status status = Status.Unknown;
-
     public SignedMessage(String address, String message, String signature) {
         this.address = checkNotNull(address);
         this.message = checkNotNull(message);
@@ -50,5 +44,10 @@ final public class SignedMessage {
 
     public Status getStatus() {
         return status;
+    }
+
+    public enum Status {
+        SignedOK, VerifiedOK, Unknown, AddressMalformed, KeyIsEncrypted, MissingPrivateKey,
+        InvalidSigningAddress, InvalidMessageSignature
     }
 }

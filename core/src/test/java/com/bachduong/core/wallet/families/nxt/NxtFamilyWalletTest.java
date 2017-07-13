@@ -37,15 +37,14 @@ import static org.junit.Assert.assertEquals;
  * @author John L. Jegutanis
  */
 public class NxtFamilyWalletTest {
+    static final byte[] aesKeyBytes = {0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7};
     CoinType NXT = NxtMain.get();
     String recoveryPhrase = "heavy virus hollow shrug shadow double dwarf affair novel weird image prize frame anxiety wait";
     byte[] nxtPrivateKey = Hex.decode("200a8ead018adb6c78f2c821500ad13f5f24d101ed8431adcfb315ca58468553");
     byte[] nxtPublicKey = Hex.decode("163c6583ed489414f27e73a74f72080b478a55dfce4a086ded2990976e8bb81e");
     String nxtRsAddress = "NXT-CGNQ-8WBM-3P2F-AVH9J";
     long nxtAccountId = Convert.parseAccountId(NxtMain.get(), "9808271777446836886");
-
     DeterministicHierarchy hierarchy;
-    static final byte[] aesKeyBytes = {0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7};
     KeyParameter aesKey = new KeyParameter(aesKeyBytes);
     KeyCrypter crypter = new KeyCrypterScrypt();
     Wallet wallet;
@@ -58,7 +57,7 @@ public class NxtFamilyWalletTest {
         DeterministicKey masterKey = HDKeyDerivation.createMasterPrivateKey(seed.getSeedBytes());
         hierarchy = new DeterministicHierarchy(masterKey);
         wallet = new Wallet(recoveryPhrase);
-        nxtAccount = (NxtFamilyWallet)wallet.createAccount(NXT, null);
+        nxtAccount = (NxtFamilyWallet) wallet.createAccount(NXT, null);
         otherAccount = new NxtFamilyWallet(hierarchy.get(NXT.getBip44Path(1), false, true), NXT);
     }
 
@@ -126,8 +125,7 @@ public class NxtFamilyWalletTest {
     }
 
     @Test
-    public void testSerializeKeychainToProtobuf() throws UnreadableWalletException
-    {
+    public void testSerializeKeychainToProtobuf() throws UnreadableWalletException {
         List<Protos.Key> keys = nxtAccount.serializeKeychainToProtobuf();
 
         NxtFamilyKey newKey = NxtFamilyKey.fromProtobuf(keys);
@@ -141,8 +139,7 @@ public class NxtFamilyWalletTest {
     }
 
     @Test
-    public void testEncryptedNxtFamilyKey() throws UnreadableWalletException
-    {
+    public void testEncryptedNxtFamilyKey() throws UnreadableWalletException {
         nxtAccount.encrypt(crypter, aesKey);
 
         List<Protos.Key> keys = nxtAccount.serializeKeychainToProtobuf();

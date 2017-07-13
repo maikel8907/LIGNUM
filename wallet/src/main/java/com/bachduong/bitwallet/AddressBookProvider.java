@@ -38,16 +38,15 @@ import javax.annotation.Nonnull;
  * @author John L. Jegutanis
  */
 public class AddressBookProvider extends ContentProvider {
-    private static final String DATABASE_TABLE = "address_book";
-
     public static final String KEY_ROWID = "_id";
     public static final String KEY_COIN_ID = "coin_id";
     public static final String KEY_ADDRESS = "address";
     public static final String KEY_LABEL = "label";
-
     public static final String SELECTION_QUERY = "q";
     public static final String SELECTION_IN = "in";
     public static final String SELECTION_NOTIN = "notin";
+    private static final String DATABASE_TABLE = "address_book";
+    private Helper helper;
 
     public static Uri contentUri(@Nonnull final String packageName) {
         return contentUri(packageName, "");
@@ -81,7 +80,13 @@ public class AddressBookProvider extends ContentProvider {
         return label;
     }
 
-    private Helper helper;
+    private static void appendAddresses(@Nonnull final SQLiteQueryBuilder qb, @Nonnull final String[] addresses) {
+        for (final String address : addresses) {
+            qb.appendWhereEscapeString(address.trim());
+            if (!address.equals(addresses[addresses.length - 1]))
+                qb.appendWhere(",");
+        }
+    }
 
     @Override
     public boolean onCreate() {
@@ -199,14 +204,6 @@ public class AddressBookProvider extends ContentProvider {
         cursor.setNotificationUri(getContext().getContentResolver(), uri);
 
         return cursor;
-    }
-
-    private static void appendAddresses(@Nonnull final SQLiteQueryBuilder qb, @Nonnull final String[] addresses) {
-        for (final String address : addresses) {
-            qb.appendWhereEscapeString(address.trim());
-            if (!address.equals(addresses[addresses.length - 1]))
-                qb.appendWhere(",");
-        }
     }
 
     private static class Helper extends SQLiteOpenHelper {

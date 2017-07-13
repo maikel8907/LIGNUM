@@ -12,6 +12,35 @@ import java.nio.ByteBuffer;
 
 public interface Attachment extends Appendix {
 
+    public final static EmptyAttachment ORDINARY_PAYMENT = new EmptyAttachment() {
+
+        @Override
+        String getAppendixName() {
+            return "OrdinaryPayment";
+        }
+
+        @Override
+        public TransactionType getTransactionType() {
+            return TransactionType.Payment.ORDINARY;
+        }
+
+
+    };
+    // the message payload is in the Appendix
+    public final static EmptyAttachment ARBITRARY_MESSAGE = new EmptyAttachment() {
+
+        @Override
+        String getAppendixName() {
+            return "ArbitraryMessage";
+        }
+
+        @Override
+        public TransactionType getTransactionType() {
+            return TransactionType.Messaging.ARBITRARY_MESSAGE;
+        }
+
+    };
+
     TransactionType getTransactionType();
 
     abstract static class AbstractAttachment extends AbstractAppendix implements Attachment {
@@ -28,7 +57,8 @@ public interface Attachment extends Appendix {
             super(version);
         }
 
-        private AbstractAttachment() {}
+        private AbstractAttachment() {
+        }
 
 
     }
@@ -59,36 +89,6 @@ public interface Attachment extends Appendix {
 
     }
 
-    public final static EmptyAttachment ORDINARY_PAYMENT = new EmptyAttachment() {
-
-        @Override
-        String getAppendixName() {
-            return "OrdinaryPayment";
-        }
-
-        @Override
-        public TransactionType getTransactionType() {
-            return TransactionType.Payment.ORDINARY;
-        }
-
-
-    };
-
-    // the message payload is in the Appendix
-    public final static EmptyAttachment ARBITRARY_MESSAGE = new EmptyAttachment() {
-
-        @Override
-        String getAppendixName() {
-            return "ArbitraryMessage";
-        }
-
-        @Override
-        public TransactionType getTransactionType() {
-            return TransactionType.Messaging.ARBITRARY_MESSAGE;
-        }
-
-    };
-
     /*public static final EmptyAttachment AT_PAYMENT = new EmptyAttachment() {
 
         @Override
@@ -103,7 +103,7 @@ public interface Attachment extends Appendix {
 
 
     };*/
-    
+
     public final static class MessagingAliasAssignment extends AbstractAttachment {
 
         private final String aliasName;
@@ -140,7 +140,7 @@ public interface Attachment extends Appendix {
         void putMyBytes(ByteBuffer buffer) {
             byte[] alias = Convert.toBytes(this.aliasName);
             byte[] uri = Convert.toBytes(this.aliasURI);
-            buffer.put((byte)alias.length);
+            buffer.put((byte) alias.length);
             buffer.put(alias);
             buffer.putShort((short) uri.length);
             buffer.put(uri);
@@ -206,7 +206,7 @@ public interface Attachment extends Appendix {
         @Override
         void putMyBytes(ByteBuffer buffer) {
             byte[] aliasBytes = Convert.toBytes(aliasName);
-            buffer.put((byte)aliasBytes.length);
+            buffer.put((byte) aliasBytes.length);
             buffer.put(aliasBytes);
             buffer.putLong(priceNQT);
         }
@@ -217,11 +217,11 @@ public interface Attachment extends Appendix {
             attachment.put("priceNQT", priceNQT);
         }*/
 
-        public String getAliasName(){
+        public String getAliasName() {
             return aliasName;
         }
 
-        public long getPriceNQT(){
+        public long getPriceNQT() {
             return priceNQT;
         }
     }
@@ -271,7 +271,7 @@ public interface Attachment extends Appendix {
             attachment.put("alias", aliasName);
         }*/
 
-        public String getAliasName(){
+        public String getAliasName() {
             return aliasName;
         }
     }
@@ -336,7 +336,7 @@ public interface Attachment extends Appendix {
             for (String pollOption : pollOptions) {
                 size += 2 + Convert.toBytes(pollOption).length;
             }
-            size +=  1 + 1 + 1;
+            size += 1 + 1 + 1;
             return size;
         }
 
@@ -348,9 +348,9 @@ public interface Attachment extends Appendix {
             for (int i = 0; i < this.pollOptions.length; i++) {
                 options[i] = Convert.toBytes(this.pollOptions[i]);
             }
-            buffer.putShort((short)name.length);
+            buffer.putShort((short) name.length);
             buffer.put(name);
-            buffer.putShort((short)description.length);
+            buffer.putShort((short) description.length);
             buffer.put(description);
             buffer.put((byte) options.length);
             for (byte[] option : options) {
@@ -359,7 +359,7 @@ public interface Attachment extends Appendix {
             }
             buffer.put(this.minNumberOfOptions);
             buffer.put(this.maxNumberOfOptions);
-            buffer.put(this.optionsAreBinary ? (byte)1 : (byte)0);
+            buffer.put(this.optionsAreBinary ? (byte) 1 : (byte) 0);
         }
 
         /*@Override
@@ -381,17 +381,29 @@ public interface Attachment extends Appendix {
             return TransactionType.Messaging.POLL_CREATION;
         }
 
-        public String getPollName() { return pollName; }
+        public String getPollName() {
+            return pollName;
+        }
 
-        public String getPollDescription() { return pollDescription; }
+        public String getPollDescription() {
+            return pollDescription;
+        }
 
-        public String[] getPollOptions() { return pollOptions; }
+        public String[] getPollOptions() {
+            return pollOptions;
+        }
 
-        public byte getMinNumberOfOptions() { return minNumberOfOptions; }
+        public byte getMinNumberOfOptions() {
+            return minNumberOfOptions;
+        }
 
-        public byte getMaxNumberOfOptions() { return maxNumberOfOptions; }
+        public byte getMaxNumberOfOptions() {
+            return maxNumberOfOptions;
+        }
 
-        public boolean isOptionsAreBinary() { return optionsAreBinary; }
+        public boolean isOptionsAreBinary() {
+            return optionsAreBinary;
+        }
 
     }
 
@@ -413,8 +425,8 @@ public interface Attachment extends Appendix {
 
         MessagingVoteCasting(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.pollId = Convert.parseUnsignedLong((String)attachmentData.get("pollId"));
-            JSONArray vote = (JSONArray)attachmentData.get("vote");
+            this.pollId = Convert.parseUnsignedLong((String) attachmentData.get("pollId"));
+            JSONArray vote = (JSONArray) attachmentData.get("vote");
             this.pollVote = new byte[vote.length()];
             for (int i = 0; i < pollVote.length; i++) {
                 pollVote[i] = ((Long) vote.get(i)).byteValue();
@@ -461,9 +473,13 @@ public interface Attachment extends Appendix {
             return TransactionType.Messaging.VOTE_CASTING;
         }
 
-        public long getPollId() { return pollId; }
+        public long getPollId() {
+            return pollId;
+        }
 
-        public byte[] getPollVote() { return pollVote; }
+        public byte[] getPollVote() {
+            return pollVote;
+        }
 
     }
 
@@ -524,7 +540,7 @@ public interface Attachment extends Appendix {
             buffer.put((byte) uris.length);
             for (String uri : uris) {
                 byte[] uriBytes = Convert.toBytes(uri);
-                buffer.putShort((short)uriBytes.length);
+                buffer.putShort((short) uriBytes.length);
                 buffer.put(uriBytes);
             }
         }
@@ -588,7 +604,7 @@ public interface Attachment extends Appendix {
         void putMyBytes(ByteBuffer buffer) {
             byte[] name = Convert.toBytes(this.name);
             byte[] description = Convert.toBytes(this.description);
-            buffer.put((byte)name.length);
+            buffer.put((byte) name.length);
             buffer.put(name);
             buffer.putShort((short) description.length);
             buffer.put(description);
@@ -659,7 +675,7 @@ public interface Attachment extends Appendix {
         void putMyBytes(ByteBuffer buffer) {
             byte[] name = Convert.toBytes(this.name);
             byte[] description = Convert.toBytes(this.description);
-            buffer.put((byte)name.length);
+            buffer.put((byte) name.length);
             buffer.put(name);
             buffer.putShort((short) description.length);
             buffer.put(description);
@@ -1014,7 +1030,7 @@ public interface Attachment extends Appendix {
         @Override
         int getMySize() {
             return 2 + Convert.toBytes(name).length + 2 + Convert.toBytes(description).length + 2
-                        + Convert.toBytes(tags).length + 4 + 8;
+                    + Convert.toBytes(tags).length + 4 + 8;
         }
 
         @Override
@@ -1046,15 +1062,25 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.LISTING;
         }
 
-        public String getName() { return name; }
+        public String getName() {
+            return name;
+        }
 
-        public String getDescription() { return description; }
+        public String getDescription() {
+            return description;
+        }
 
-        public String getTags() { return tags; }
+        public String getTags() {
+            return tags;
+        }
 
-        public int getQuantity() { return quantity; }
+        public int getQuantity() {
+            return quantity;
+        }
 
-        public long getPriceNQT() { return priceNQT; }
+        public long getPriceNQT() {
+            return priceNQT;
+        }
 
     }
 
@@ -1069,7 +1095,7 @@ public interface Attachment extends Appendix {
 
         DigitalGoodsDelisting(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.goodsId = Convert.parseUnsignedLong((String)attachmentData.get("goods"));
+            this.goodsId = Convert.parseUnsignedLong((String) attachmentData.get("goods"));
         }
 
         public DigitalGoodsDelisting(long goodsId) {
@@ -1101,7 +1127,9 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.DELISTING;
         }
 
-        public long getGoodsId() { return goodsId; }
+        public long getGoodsId() {
+            return goodsId;
+        }
 
     }
 
@@ -1118,7 +1146,7 @@ public interface Attachment extends Appendix {
 
         DigitalGoodsPriceChange(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.goodsId = Convert.parseUnsignedLong((String)attachmentData.get("goods"));
+            this.goodsId = Convert.parseUnsignedLong((String) attachmentData.get("goods"));
             this.priceNQT = Convert.parseLong(attachmentData.get("priceNQT"));
         }
 
@@ -1154,9 +1182,13 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.PRICE_CHANGE;
         }
 
-        public long getGoodsId() { return goodsId; }
+        public long getGoodsId() {
+            return goodsId;
+        }
 
-        public long getPriceNQT() { return priceNQT; }
+        public long getPriceNQT() {
+            return priceNQT;
+        }
 
     }
 
@@ -1173,8 +1205,8 @@ public interface Attachment extends Appendix {
 
         DigitalGoodsQuantityChange(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.goodsId = Convert.parseUnsignedLong((String)attachmentData.get("goods"));
-            this.deltaQuantity = ((Long)attachmentData.get("deltaQuantity")).intValue();
+            this.goodsId = Convert.parseUnsignedLong((String) attachmentData.get("goods"));
+            this.deltaQuantity = ((Long) attachmentData.get("deltaQuantity")).intValue();
         }
 
         public DigitalGoodsQuantityChange(long goodsId, int deltaQuantity) {
@@ -1209,9 +1241,13 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.QUANTITY_CHANGE;
         }
 
-        public long getGoodsId() { return goodsId; }
+        public long getGoodsId() {
+            return goodsId;
+        }
 
-        public int getDeltaQuantity() { return deltaQuantity; }
+        public int getDeltaQuantity() {
+            return deltaQuantity;
+        }
 
     }
 
@@ -1232,10 +1268,10 @@ public interface Attachment extends Appendix {
 
         DigitalGoodsPurchase(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.goodsId = Convert.parseUnsignedLong((String)attachmentData.get("goods"));
-            this.quantity = ((Long)attachmentData.get("quantity")).intValue();
+            this.goodsId = Convert.parseUnsignedLong((String) attachmentData.get("goods"));
+            this.quantity = ((Long) attachmentData.get("quantity")).intValue();
             this.priceNQT = Convert.parseLong(attachmentData.get("priceNQT"));
-            this.deliveryDeadlineTimestamp = ((Long)attachmentData.get("deliveryDeadlineTimestamp")).intValue();
+            this.deliveryDeadlineTimestamp = ((Long) attachmentData.get("deliveryDeadlineTimestamp")).intValue();
         }
 
         public DigitalGoodsPurchase(long goodsId, int quantity, long priceNQT, int deliveryDeadlineTimestamp) {
@@ -1276,13 +1312,21 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.PURCHASE;
         }
 
-        public long getGoodsId() { return goodsId; }
+        public long getGoodsId() {
+            return goodsId;
+        }
 
-        public int getQuantity() { return quantity; }
+        public int getQuantity() {
+            return quantity;
+        }
 
-        public long getPriceNQT() { return priceNQT; }
+        public long getPriceNQT() {
+            return priceNQT;
+        }
 
-        public int getDeliveryDeadlineTimestamp() { return deliveryDeadlineTimestamp; }
+        public int getDeliveryDeadlineTimestamp() {
+            return deliveryDeadlineTimestamp;
+        }
 
     }
 
@@ -1307,9 +1351,9 @@ public interface Attachment extends Appendix {
 
         DigitalGoodsDelivery(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.purchaseId = Convert.parseUnsignedLong((String)attachmentData.get("purchase"));
-            this.goods = new EncryptedData(Convert.parseHexString((String)attachmentData.get("goodsData")),
-                    Convert.parseHexString((String)attachmentData.get("goodsNonce")));
+            this.purchaseId = Convert.parseUnsignedLong((String) attachmentData.get("purchase"));
+            this.goods = new EncryptedData(Convert.parseHexString((String) attachmentData.get("goodsData")),
+                    Convert.parseHexString((String) attachmentData.get("goodsNonce")));
             this.discountNQT = Convert.parseLong(attachmentData.get("discountNQT"));
             this.goodsIsText = Boolean.TRUE.equals(attachmentData.get("goodsIsText"));
         }
@@ -1354,11 +1398,17 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.DELIVERY;
         }
 
-        public long getPurchaseId() { return purchaseId; }
+        public long getPurchaseId() {
+            return purchaseId;
+        }
 
-        public EncryptedData getGoods() { return goods; }
+        public EncryptedData getGoods() {
+            return goods;
+        }
 
-        public long getDiscountNQT() { return discountNQT; }
+        public long getDiscountNQT() {
+            return discountNQT;
+        }
 
         public boolean goodsIsText() {
             return goodsIsText;
@@ -1377,7 +1427,7 @@ public interface Attachment extends Appendix {
 
         DigitalGoodsFeedback(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.purchaseId = Convert.parseUnsignedLong((String)attachmentData.get("purchase"));
+            this.purchaseId = Convert.parseUnsignedLong((String) attachmentData.get("purchase"));
         }
 
         public DigitalGoodsFeedback(long purchaseId) {
@@ -1409,7 +1459,9 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.FEEDBACK;
         }
 
-        public long getPurchaseId() { return purchaseId; }
+        public long getPurchaseId() {
+            return purchaseId;
+        }
 
     }
 
@@ -1426,7 +1478,7 @@ public interface Attachment extends Appendix {
 
         DigitalGoodsRefund(JSONObject attachmentData) throws JSONException {
             super(attachmentData);
-            this.purchaseId = Convert.parseUnsignedLong((String)attachmentData.get("purchase"));
+            this.purchaseId = Convert.parseUnsignedLong((String) attachmentData.get("purchase"));
             this.refundNQT = Convert.parseLong(attachmentData.get("refundNQT"));
         }
 
@@ -1462,9 +1514,13 @@ public interface Attachment extends Appendix {
             return TransactionType.DigitalGoods.REFUND;
         }
 
-        public long getPurchaseId() { return purchaseId; }
+        public long getPurchaseId() {
+            return purchaseId;
+        }
 
-        public long getRefundNQT() { return refundNQT; }
+        public long getRefundNQT() {
+            return refundNQT;
+        }
 
     }
 
@@ -1553,7 +1609,6 @@ public interface Attachment extends Appendix {
             return TransactionType.BurstMining.REWARD_RECIPIENT_ASSIGNMENT;
         }
     }*/
-    
-    
+
 
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bachduong.bitwallet.R;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.messages.TxMessage;
@@ -16,7 +17,6 @@ import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.AbstractTransaction;
 import com.bachduong.core.wallet.AbstractTransaction.AbstractOutput;
 import com.bachduong.core.wallet.AbstractWallet;
-import com.bachduong.bitwallet.R;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;
@@ -25,8 +25,8 @@ import javax.annotation.Nullable;
 
 /**
  * @author John L. Jegutanis
- *
- * TODO TransactionAmountVisualizerAdapter does a similar function, keep only one
+ *         <p>
+ *         TODO TransactionAmountVisualizerAdapter does a similar function, keep only one
  */
 public class TransactionAmountVisualizer extends LinearLayout {
 

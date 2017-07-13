@@ -21,11 +21,11 @@ import android.widget.ImageButton;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
 
-import com.bachduong.core.CoreUtils;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.util.Fonts;
 import com.bachduong.bitwallet.util.Keyboard;
+import com.bachduong.core.CoreUtils;
 
 import org.bitcoinj.crypto.MnemonicCode;
 import org.bitcoinj.crypto.MnemonicException;
@@ -38,20 +38,23 @@ import javax.annotation.Nullable;
 
 /**
  * A simple {@link Fragment} subclass.
- *
  */
 public class RestoreFragment extends Fragment {
     private static final Logger log = LoggerFactory.getLogger(RestoreFragment.class);
     private static final int REQUEST_CODE_SCAN = 0;
 
     private MultiAutoCompleteTextView mnemonicTextView;
-    @Nullable private String seed;
+    @Nullable
+    private String seed;
     private boolean isNewSeed;
     private TextView errorMnemonicΜessage;
     private WelcomeFragment.Listener listener;
     private boolean isSeedProtected = false;
     private EditText bip39Passphrase;
     private Button skipButton;
+
+    public RestoreFragment() {
+    }
 
     public static RestoreFragment newInstance() {
         return newInstance(null);
@@ -66,8 +69,6 @@ public class RestoreFragment extends Fragment {
         }
         return fragment;
     }
-
-    public RestoreFragment() { }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -237,6 +238,37 @@ public class RestoreFragment extends Fragment {
         return isSeedValid;
     }
 
+    private void setError(TextView errorView, int messageId, Object... formatArgs) {
+        setError(errorView, getResources().getString(messageId, formatArgs));
+    }
+
+    private void setError(TextView errorView, String message) {
+        errorView.setText(message);
+        showError(errorView);
+    }
+
+    private void showError(TextView errorView) {
+        errorView.setVisibility(View.VISIBLE);
+    }
+
+    private void clearError(TextView errorView) {
+        errorView.setVisibility(View.GONE);
+    }
+
+    private void handleScan() {
+        startActivityForResult(new Intent(getActivity(), ScanActivity.class), REQUEST_CODE_SCAN);
+    }
+
+    @Override
+    public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
+        if (requestCode == REQUEST_CODE_SCAN) {
+            if (resultCode == Activity.RESULT_OK) {
+                mnemonicTextView.setText(intent.getStringExtra(ScanActivity.INTENT_EXTRA_RESULT));
+                verifyMnemonic();
+            }
+        }
+    }
+
     public static class SkipDialogFragment extends DialogFragment {
 
         private WelcomeFragment.Listener mListener;
@@ -274,52 +306,21 @@ public class RestoreFragment extends Fragment {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle(R.string.restore_skip_title)
 //                   .setView(dialogView) FIXME
-                   .setMessage(dialogMessage)
-                   .setPositiveButton(R.string.button_skip, new DialogInterface.OnClickListener() {
-                       @Override
-                       public void onClick(DialogInterface dialog, int which) {
-                           if (mListener != null) mListener.onSeedVerified(getArguments());
-                       }
-                   })
-                   .setNegativeButton(R.string.button_cancel, new DialogInterface.OnClickListener() {
-                       @Override
-                       public void onClick(DialogInterface dialog, int which) {
-                           dismiss();
-                       }
-                   });
+                    .setMessage(dialogMessage)
+                    .setPositiveButton(R.string.button_skip, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            if (mListener != null) mListener.onSeedVerified(getArguments());
+                        }
+                    })
+                    .setNegativeButton(R.string.button_cancel, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dismiss();
+                        }
+                    });
 
             return builder.create();
-        }
-    }
-
-    private void setError(TextView errorView, int messageId, Object... formatArgs) {
-        setError(errorView, getResources().getString(messageId, formatArgs));
-    }
-
-    private void setError(TextView errorView, String message) {
-        errorView.setText(message);
-        showError(errorView);
-    }
-
-    private void showError(TextView errorView) {
-        errorView.setVisibility(View.VISIBLE);
-    }
-
-    private void clearError(TextView errorView) {
-        errorView.setVisibility(View.GONE);
-    }
-
-    private void handleScan() {
-        startActivityForResult(new Intent(getActivity(), ScanActivity.class), REQUEST_CODE_SCAN);
-    }
-
-    @Override
-    public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
-        if (requestCode == REQUEST_CODE_SCAN) {
-            if (resultCode == Activity.RESULT_OK) {
-                mnemonicTextView.setText(intent.getStringExtra(ScanActivity.INTENT_EXTRA_RESULT));
-                verifyMnemonic();
-            }
         }
     }
 

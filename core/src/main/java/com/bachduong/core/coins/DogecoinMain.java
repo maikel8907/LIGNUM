@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class DogecoinMain extends BitFamily {
+    private static DogecoinMain instance = new DogecoinMain();
+
     private DogecoinMain() {
         id = "dogecoin.main";
 
         addressHeader = 30;
         p2shHeader = 22;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 240; // COINBASE_MATURITY_NEW
         dumpedPrivateKeyHeader = 158;
 
@@ -27,7 +29,6 @@ public class DogecoinMain extends BitFamily {
         signedMessageHeader = toBytes("Dogecoin Signed Message:\n");
     }
 
-    private static DogecoinMain instance = new DogecoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

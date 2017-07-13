@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.ClamsFamily;
  * @author John L. Jegutanis
  */
 public class ClamsMain extends ClamsFamily {
+    private static ClamsMain instance = new ClamsMain();
+
     private ClamsMain() {
         id = "clams.main";
 
         addressHeader = 137;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 500;
         transactionVersion = 2;
         dumpedPrivateKeyHeader = 133;
@@ -28,7 +30,6 @@ public class ClamsMain extends ClamsFamily {
         signedMessageHeader = toBytes("Clam Signed Message:\n");
     }
 
-    private static ClamsMain instance = new ClamsMain();
     public static synchronized ClamsMain get() {
         return instance;
     }

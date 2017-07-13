@@ -46,22 +46,24 @@
 
                     <LinearLayout
                         android:id="@+id/seed_password_protected"
-                        android:orientation="horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
                         <TextView
                             android:id="@+id/seed_password_protected_lock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/font_icon_lock_bip39"
                             android:layout_marginEnd="4dp"
                             android:layout_marginRight="4dp"
+                            android:text="@string/font_icon_lock_bip39"
                             tools:text="CD" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/seed_password_protected"/>
+                            android:text="@string/seed_password_protected" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -79,9 +81,9 @@
                         android:id="@+id/qr_code_seed"
                         android:layout_width="@dimen/qr_code_size"
                         android:layout_height="@dimen/qr_code_size"
-                        tools:background="@color/gray_87_text"
+                        android:layout_margin="@dimen/qr_code_margin"
                         android:background="@color/qr_code_normal_bg"
-                        android:layout_margin="@dimen/qr_code_margin" />
+                        tools:background="@color/gray_87_text" />
 
 
                 </LinearLayout>
@@ -91,13 +93,13 @@
                 android:id="@+id/seed_encrypted_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
                 <TextView
+                    style="@style/NormalText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/NormalText"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/wallet_locked_message" />
 
@@ -107,8 +109,8 @@
                     android:layout_width="@dimen/font_icon_bg_size"
                     android:layout_height="@dimen/font_icon_bg_size"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:gravity="center"
                     android:text="@string/font_icon_lock_wallet"
                     tools:text="CD" />

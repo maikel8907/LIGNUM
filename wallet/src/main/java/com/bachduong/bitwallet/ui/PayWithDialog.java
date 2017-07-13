@@ -11,15 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.uri.CoinURI;
-import com.bachduong.core.uri.CoinURIParseException;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.ui.widget.CoinListItem;
 import com.bachduong.bitwallet.util.UiUtils;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.uri.CoinURI;
+import com.bachduong.core.uri.CoinURIParseException;
+import com.bachduong.core.wallet.WalletAccount;
 
 /**
  * @author John L. Jegutanis
@@ -27,7 +27,8 @@ import com.bachduong.bitwallet.util.UiUtils;
 public class PayWithDialog extends DialogFragment {
     private Listener listener;
 
-    public PayWithDialog() {}
+    public PayWithDialog() {
+    }
 
     public static DialogFragment getInstance(CoinURI uri) {
         DialogFragment dialog = new PayWithDialog();
@@ -52,7 +53,8 @@ public class PayWithDialog extends DialogFragment {
         super.onDetach();
     }
 
-    @Override @NonNull
+    @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final WalletApplication app = (WalletApplication) getActivity().getApplication();
         final LayoutInflater inflater = LayoutInflater.from(getActivity());

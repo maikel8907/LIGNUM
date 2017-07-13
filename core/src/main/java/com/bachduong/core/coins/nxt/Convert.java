@@ -38,17 +38,16 @@ import static com.google.common.base.Preconditions.checkArgument;
 
 public final class Convert {
 
-    private static final char[] hexChars = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f' };
-    private static final long[] multipliers = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000};
-
     public static final BigInteger two64 = new BigInteger("18446744073709551616");
     public static final long[] EMPTY_LONG = new long[0];
     public static final byte[] EMPTY_BYTE = new byte[0];
     public static final byte[][] EMPTY_BYTES = new byte[0][];
     public static final String[] EMPTY_STRING = new String[0];
+    private static final char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+    private static final long[] multipliers = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000};
 
-    private Convert() {} //never
-
+    private Convert() {
+    } //never
 
 
     public static byte[] parseHexString(String hex) {
@@ -64,7 +63,7 @@ public final class Convert {
             if (char1 < 0 || char2 < 0 || char1 > 15 || char2 > 15) {
                 throw new NumberFormatException("Invalid hex number: " + hex);
             }
-            bytes[i] = (byte)((char1 << 4) + char2);
+            bytes[i] = (byte) ((char1 << 4) + char2);
         }
         return bytes;
     }
@@ -104,9 +103,9 @@ public final class Convert {
         if (o == null) {
             return 0;
         } else if (o instanceof Long) {
-            return ((Long)o);
+            return ((Long) o);
         } else if (o instanceof String) {
-            return Long.parseLong((String)o);
+            return Long.parseLong((String) o);
         } else {
             throw new IllegalArgumentException("Not a long: " + o);
         }
@@ -136,7 +135,7 @@ public final class Convert {
         if (hash == null || hash.length < 8) {
             throw new IllegalArgumentException("Invalid hash: " + Arrays.toString(hash));
         }
-        BigInteger bigInteger = new BigInteger(1, new byte[] {hash[7], hash[6], hash[5], hash[4], hash[3], hash[2], hash[1], hash[0]});
+        BigInteger bigInteger = new BigInteger(1, new byte[]{hash[7], hash[6], hash[5], hash[4], hash[3], hash[2], hash[1], hash[0]});
         return bigInteger.longValue();
     }
 
@@ -149,11 +148,11 @@ public final class Convert {
     }
 
     public static int toNxtEpochTime(long currentTime) {
-        return (int)((currentTime - Constants.NXT_EPOCH_BEGINNING + 500) / 1000);
+        return (int) ((currentTime - Constants.NXT_EPOCH_BEGINNING + 500) / 1000);
     }
 
     public static int toBurstEpochTime(long currentTime) {
-        return (int)((currentTime - Constants.BURST_EPOCH_BEGINNING + 500) / 1000);
+        return (int) ((currentTime - Constants.BURST_EPOCH_BEGINNING + 500) / 1000);
     }
 
     public static String emptyToNull(String s) {
@@ -304,12 +303,12 @@ public final class Convert {
 
     public static long safeMultiply(long left, long right)
             throws ArithmeticException {
-        if (right > 0 ? left > Long.MAX_VALUE/right
-                || left < Long.MIN_VALUE/right
-                : (right < -1 ? left > Long.MIN_VALUE/right
-                || left < Long.MAX_VALUE/right
+        if (right > 0 ? left > Long.MAX_VALUE / right
+                || left < Long.MIN_VALUE / right
+                : (right < -1 ? left > Long.MIN_VALUE / right
+                || left < Long.MAX_VALUE / right
                 : right == -1
-                && left == Long.MIN_VALUE) ) {
+                && left == Long.MIN_VALUE)) {
             throw new ArithmeticException("Integer overflow");
         }
         return left * right;

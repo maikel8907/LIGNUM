@@ -23,11 +23,14 @@ import javax.annotation.Nullable;
  * to handle interaction events.
  * Use the {@link PasswordConfirmationFragment#newInstance} factory method to
  * create an instance of this fragment.
- *
  */
 public class PasswordConfirmationFragment extends Fragment {
-    @Nullable private String message;
+    @Nullable
+    private String message;
     private Listener listener;
+
+    public PasswordConfirmationFragment() {
+    }
 
     static PasswordConfirmationFragment newInstance(String message) {
         return newInstance(message, null);
@@ -39,8 +42,6 @@ public class PasswordConfirmationFragment extends Fragment {
         fragment.getArguments().putString(Constants.ARG_MESSAGE, message);
         return fragment;
     }
-
-    public PasswordConfirmationFragment() { }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

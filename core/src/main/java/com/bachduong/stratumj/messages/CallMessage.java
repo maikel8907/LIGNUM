@@ -84,10 +84,6 @@ public class CallMessage extends BaseMessage {
         }
     }
 
-    public void setParam(String param) {
-        setParams(Arrays.asList(param));
-    }
-
     public void setParams(@Nullable Collection params) {
         if (params == null) return;
         try {
@@ -96,6 +92,10 @@ public class CallMessage extends BaseMessage {
             // Should never happen because "params" is a valid JSON name
             throw new RuntimeException(e);
         }
+    }
+
+    public void setParam(String param) {
+        setParams(Arrays.asList(param));
     }
 //
 //    public void addParams(Collection params) {

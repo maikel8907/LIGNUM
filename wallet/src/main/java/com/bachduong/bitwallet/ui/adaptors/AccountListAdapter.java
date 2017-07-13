@@ -9,14 +9,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.util.GenericUtils;
-import com.bachduong.core.wallet.Wallet;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.ExchangeRatesProvider;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.ui.widget.Amount;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.wallet.Wallet;
+import com.bachduong.core.wallet.WalletAccount;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -112,7 +112,7 @@ public class AccountListAdapter extends BaseAdapter {
         final Amount rowBalanceRateValue = (Amount) row.findViewById(R.id.account_balance_rate);
         if (rate != null && account.getCoinType() != null) {
             Value localAmount = rate.rate.convert(account.getBalance());
-            GenericUtils.formatCoinValue(localAmount.type, localAmount,true);
+            GenericUtils.formatCoinValue(localAmount.type, localAmount, true);
             rowBalanceRateValue.setAmount(GenericUtils.formatFiatValue(localAmount, 2, 0));
             rowBalanceRateValue.setSymbol(localAmount.type.getSymbol());
             rowBalanceRateValue.setVisibility(View.VISIBLE);

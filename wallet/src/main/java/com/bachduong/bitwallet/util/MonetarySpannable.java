@@ -24,8 +24,8 @@ import android.text.SpannableString;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 
-import com.bachduong.core.util.MonetaryFormat;
 import com.bachduong.bitwallet.Constants;
+import com.bachduong.core.util.MonetaryFormat;
 
 import org.bitcoinj.core.Monetary;
 
@@ -40,6 +40,9 @@ import static com.google.common.base.Preconditions.checkArgument;
  * @author Andreas Schildbach
  */
 public final class MonetarySpannable extends SpannableString {
+    public static final Object BOLD_SPAN = new StyleSpan(Typeface.BOLD);
+    public static final RelativeSizeSpan SMALLER_SPAN = new RelativeSizeSpan(0.85f);
+
     public MonetarySpannable(final MonetaryFormat format, final boolean signed, @Nullable final Monetary value) {
         super(format(format, signed, value));
     }
@@ -62,15 +65,6 @@ public final class MonetarySpannable extends SpannableString {
         else
             return format.format(value, smallestUnitExponent);
     }
-
-    public MonetarySpannable applyMarkup(@Nullable final Object prefixSpan1, @Nullable final Object prefixSpan2,
-                                         @Nullable final Object insignificantSpan) {
-        applyMarkup(this, prefixSpan1, prefixSpan2, BOLD_SPAN, insignificantSpan);
-        return this;
-    }
-
-    public static final Object BOLD_SPAN = new StyleSpan(Typeface.BOLD);
-    public static final RelativeSizeSpan SMALLER_SPAN = new RelativeSizeSpan(0.85f);
 
     public static void applyMarkup(@Nonnull final Spannable spannable, @Nullable final Object prefixSpan1, @Nullable final Object prefixSpan2,
                                    @Nullable final Object significantSpan, @Nullable final Object insignificantSpan) {
@@ -110,5 +104,11 @@ public final class MonetarySpannable extends SpannableString {
                 i = end;
             }
         }
+    }
+
+    public MonetarySpannable applyMarkup(@Nullable final Object prefixSpan1, @Nullable final Object prefixSpan2,
+                                         @Nullable final Object insignificantSpan) {
+        applyMarkup(this, prefixSpan1, prefixSpan2, BOLD_SPAN, insignificantSpan);
+        return this;
     }
 }

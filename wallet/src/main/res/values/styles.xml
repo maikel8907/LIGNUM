@@ -107,23 +107,29 @@
     <style name="Amount" parent="NormalText">
         <item name="android:singleLine">true</item>
     </style>
+
     <style name="AmountBig" parent="Amount">
         <item name="android:textSize">@dimen/amount_text_size_big</item>
     </style>
+
     <style name="AmountSmall" parent="Amount">
         <item name="android:textSize">@dimen/amount_text_size_small</item>
     </style>
+
     <style name="AmountPending" parent="Amount">
         <item name="android:textSize">@dimen/amount_pending_text_size</item>
         <item name="android:textColor">@color/gray_26_hint_text</item>
     </style>
+
     <style name="AmountSymbol" parent="SecondaryText">
         <item name="android:singleLine">true</item>
     </style>
+
     <style name="AmountSymbolBig" parent="AmountSymbol">
         <item name="android:textSize">@dimen/amount_symbol_text_size</item>
         <item name="android:singleLine">true</item>
     </style>
+
     <style name="AmountSymbolSmall" parent="AmountSymbol">
         <item name="android:textSize">@dimen/amount_text_size_small</item>
         <item name="android:singleLine">true</item>
@@ -133,6 +139,7 @@
     <style name="SendOutputTypeText" parent="NormalText">
         <item name="android:textColor">@color/primary_500</item>
     </style>
+
     <style name="SendOutputAmount" parent="NormalText">
         <item name="android:textSize">@dimen/send_output_amount_text_size</item>
         <item name="android:singleLine">true</item>
@@ -142,21 +149,27 @@
     <style name="TransactionRowDirectionFontIcon" parent="SecondaryText">
         <item name="android:textSize">@dimen/transaction_row_direction_font_icon_size</item>
     </style>
+
     <style name="TransactionRowConfidenceFontIcon" parent="SecondaryText">
         <item name="android:textSize">@dimen/transaction_row_confirmations_font_icon_size</item>
     </style>
+
     <style name="TransactionRowMessageFontIcon" parent="SecondaryText">
         <item name="android:textSize">@dimen/transaction_row_message_font_icon_size</item>
     </style>
+
     <style name="TransactionRowDirectionText" parent="SecondaryText">
         <item name="android:textSize">@dimen/transaction_row_text_size_direction_text</item>
     </style>
+
     <style name="TransactionRowDate" parent="SecondaryText">
         <item name="android:textSize">@dimen/transaction_row_text_size_date</item>
     </style>
+
     <style name="AddressRowLabel" parent="NormalText">
         <item name="android:textSize">@dimen/row_text_size_label</item>
     </style>
+
     <style name="TransactionRowAmount" parent="Amount">
         <item name="android:textSize">@dimen/transaction_row_text_size_amount</item>
         <item name="android:textStyle">bold</item>
@@ -172,14 +185,16 @@
         <item name="android:textSize">@dimen/exchange_row_symbol_text_size</item>
         <item name="android:singleLine">true</item>
     </style>
+
     <style name="ExchangeRowLabel" parent="NormalText">
         <item name="android:textSize">@dimen/exchange_row_text_size_label</item>
     </style>
+
     <style name="ExchangeRowAmount" parent="Amount">
         <item name="android:textSize">@dimen/exchange_row_text_size_amount</item>
     </style>
 
-    <style name="VirtualKeyboardStyle" parent="Base.Widget.AppCompat.Button.Borderless" >
+    <style name="VirtualKeyboardStyle" parent="Base.Widget.AppCompat.Button.Borderless">
         <item name="android:background">@drawable/key_board_background</item>
         <item name="android:textColor">@color/gray_87_text</item>
         <item name="android:gravity">center</item>

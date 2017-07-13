@@ -63,7 +63,7 @@ public class QrUtils {
     }
 
     public static Bitmap create(final String content, final int darkColor, final int lightColor,
-                                   final int marginSize) {
+                                final int marginSize) {
         try {
             QRCode code = Encoder.encode(content, ERROR_CORRECTION_LEVEL, null);
             int size = code.getMatrix().getWidth();

@@ -7,12 +7,14 @@ import com.bachduong.core.coins.families.ReddFamily;
  */
 public class PotcoinMain extends ReddFamily {
 
+    private static PotcoinMain instance = new PotcoinMain();
+
     private PotcoinMain() {
         id = "potcoin.main";
 
         addressHeader = 55;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         transactionVersion = 4;
         dumpedPrivateKeyHeader = 189;
@@ -28,7 +30,6 @@ public class PotcoinMain extends ReddFamily {
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
     }
 
-    private static PotcoinMain instance = new PotcoinMain();
     public static synchronized PotcoinMain get() {
         return instance;
     }

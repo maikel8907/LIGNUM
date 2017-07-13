@@ -15,16 +15,6 @@ public class Fonts {
 
     private final static HashMap<Font, Typeface> typefaces = new HashMap<Font, Typeface>();
 
-    public enum Font {
-        COINOMI_FONT_ICONS("fonts/coinomi-font-icons.ttf");
-
-        private final String fontPath;
-
-        private Font(final String path) {
-            this.fontPath = path;
-        }
-    }
-
     public static synchronized void initFonts(AssetManager assets) {
         if (!typefaces.isEmpty()) return; // already initialized
 
@@ -36,11 +26,21 @@ public class Fonts {
 
     public static synchronized void setTypeface(View textView, Font font) {
         if (typefaces.containsKey(font) && textView instanceof TextView) {
-            ((TextView)textView).setTypeface(typefaces.get(font));
+            ((TextView) textView).setTypeface(typefaces.get(font));
         }
     }
 
     public static void strikeThrough(TextView textView) {
         textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+    }
+
+    public enum Font {
+        COINOMI_FONT_ICONS("fonts/coinomi-font-icons.ttf");
+
+        private final String fontPath;
+
+        private Font(final String path) {
+            this.fontPath = path;
+        }
     }
 }

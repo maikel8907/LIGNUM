@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class FeathercoinMain extends BitFamily {
+    private static FeathercoinMain instance = new FeathercoinMain();
+
     private FeathercoinMain() {
         id = "feathercoin.main";
 
         addressHeader = 14;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 142;
 
@@ -27,7 +29,6 @@ public class FeathercoinMain extends BitFamily {
         signedMessageHeader = toBytes("Feathercoin Signed Message:\n");
     }
 
-    private static FeathercoinMain instance = new FeathercoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

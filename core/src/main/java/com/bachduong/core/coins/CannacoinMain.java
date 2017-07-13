@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.ReddFamily;
  * @author FuzzyHobbit
  */
 public class CannacoinMain extends ReddFamily {
+    private static CannacoinMain instance = new CannacoinMain();
+
     private CannacoinMain() {
         id = "cannacoin.main";
 
         addressHeader = 28;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 50;
         dumpedPrivateKeyHeader = 189;
         transactionVersion = 2;
@@ -28,7 +30,6 @@ public class CannacoinMain extends ReddFamily {
         signedMessageHeader = toBytes("Cannacoin Signed Message:\n");
     }
 
-    private static CannacoinMain instance = new CannacoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

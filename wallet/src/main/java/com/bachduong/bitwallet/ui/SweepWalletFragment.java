@@ -18,6 +18,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bachduong.bitwallet.Constants;
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.WalletApplication;
+import com.bachduong.bitwallet.util.Keyboard;
+import com.bachduong.bitwallet.util.WeakHandler;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.network.ConnectivityHelper;
@@ -27,11 +32,6 @@ import com.bachduong.core.wallet.SendRequest;
 import com.bachduong.core.wallet.SerializedKey;
 import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.core.wallet.families.bitcoin.BitTransaction;
-import com.bachduong.bitwallet.Constants;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.WalletApplication;
-import com.bachduong.bitwallet.util.Keyboard;
-import com.bachduong.bitwallet.util.WeakHandler;
 
 import org.bitcoinj.core.TransactionInput;
 import org.bitcoinj.core.TransactionOutPoint;
@@ -47,14 +47,13 @@ import butterknife.OnFocusChange;
 import butterknife.OnTextChanged;
 
 import static butterknife.OnTextChanged.Callback.AFTER_TEXT_CHANGED;
-import static com.bachduong.core.Preconditions.checkNotNull;
 import static com.bachduong.bitwallet.util.UiUtils.setGone;
 import static com.bachduong.bitwallet.util.UiUtils.setVisible;
+import static com.bachduong.core.Preconditions.checkNotNull;
 
 
 /**
  * A simple {@link Fragment} subclass.
- *
  */
 public class SweepWalletFragment extends Fragment {
     private static final Logger log = LoggerFactory.getLogger(SweepWalletFragment.class);
@@ -63,31 +62,33 @@ public class SweepWalletFragment extends Fragment {
 
     private static final String ERROR = "error";
     private static final String STATUS = "status";
-
-    enum Error {NONE, BAD_FORMAT, BAD_COIN_TYPE, BAD_PASSWORD, ZERO_COINS, NO_CONNECTION, GENERIC_ERROR}
-    enum TxStatus {INITIAL, DECODING, LOADING, SIGNING}
-
     // FIXME: Improve this: a reference to the task even if the fragment is recreated
     static SweepWalletTask sweepWalletTask;
-
     private final Handler handler = new MyHandler(this);
+    @Bind(R.id.private_key_input)
+    View privateKeyInputView;
+    @Bind(R.id.sweep_wallet_key)
+    EditText privateKeyText;
+    @Bind(R.id.passwordView)
+    View passwordView;
+    @Bind(R.id.sweep_error)
+    TextView errorΜessage;
+    @Bind(R.id.passwordInput)
+    EditText password;
+    @Bind(R.id.sweep_loading)
+    View sweepLoadingView;
+    @Bind(R.id.sweeping_status)
+    TextView sweepStatus;
+    @Bind(R.id.button_next)
+    Button nextButton;
     private Listener listener;
     private ServerClients serverClients;
     private WalletAccount account;
     private SerializedKey serializedKey;
     private Error error = Error.NONE;
     private TxStatus status = TxStatus.INITIAL;
-
-    @Bind(R.id.private_key_input) View privateKeyInputView;
-    @Bind(R.id.sweep_wallet_key) EditText privateKeyText;
-    @Bind(R.id.passwordView) View passwordView;
-    @Bind(R.id.sweep_error) TextView errorΜessage;
-    @Bind(R.id.passwordInput) EditText password;
-    @Bind(R.id.sweep_loading) View sweepLoadingView;
-    @Bind(R.id.sweeping_status) TextView sweepStatus;
-    @Bind(R.id.button_next) Button nextButton;
-
-    public SweepWalletFragment() { }
+    public SweepWalletFragment() {
+    }
 
     public static SweepWalletFragment newInstance() {
         clearTasks();
@@ -298,6 +299,7 @@ public class SweepWalletFragment extends Fragment {
             setGone(privateKeyInputView);
         }
     }
+
     private void onTransactionPrepared(SendRequest request) {
         sweepWalletTask = null;
         error = Error.NONE;
@@ -360,15 +362,24 @@ public class SweepWalletFragment extends Fragment {
         return serializedKey != null;
     }
 
+    enum Error {NONE, BAD_FORMAT, BAD_COIN_TYPE, BAD_PASSWORD, ZERO_COINS, NO_CONNECTION, GENERIC_ERROR}
+
+    enum TxStatus {INITIAL, DECODING, LOADING, SIGNING}
+
+    public interface Listener {
+        void onSendTransaction(SendRequest request);
+    }
+
     static class SweepWalletTask extends AsyncTask<Void, TxStatus, Void> {
-        Handler handler;
-        Error error = Error.NONE;
-        SendRequest request = null;
         final WalletAccount sendToAccount;
         final CoinType type;
         final ServerClients serverClients;
         final SerializedKey key;
-        @Nullable final String keyPassword;
+        @Nullable
+        final String keyPassword;
+        Handler handler;
+        Error error = Error.NONE;
+        SendRequest request = null;
 
         public SweepWalletTask(Handler handler, ServerClients serverClients,
                                WalletAccount sendToAccount, SerializedKey key,
@@ -416,7 +427,7 @@ public class SweepWalletFragment extends Fragment {
 
             int maxWaitMs = Constants.NETWORK_TIMEOUT_MS;
             log.info("Waiting wallet to connect...");
-            while(!sweepWallet.isConnected() && maxWaitMs > 0) {
+            while (!sweepWallet.isConnected() && maxWaitMs > 0) {
                 try {
                     Thread.sleep(100);
                     maxWaitMs -= 100;
@@ -431,7 +442,7 @@ public class SweepWalletFragment extends Fragment {
             }
 
             log.info("Waiting wallet to load...");
-            while(sweepWallet.isLoading()) {
+            while (sweepWallet.isLoading()) {
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -487,7 +498,9 @@ public class SweepWalletFragment extends Fragment {
         static final int TX_PREPARATION_FINISHED = 1;
         static final int TX_PREPARATION_ERROR = 2;
 
-        public MyHandler(SweepWalletFragment ref) { super(ref); }
+        public MyHandler(SweepWalletFragment ref) {
+            super(ref);
+        }
 
         @Override
         protected void weakHandleMessage(SweepWalletFragment ref, Message msg) {
@@ -503,10 +516,6 @@ public class SweepWalletFragment extends Fragment {
                     break;
             }
         }
-    }
-
-    public interface Listener {
-        void onSendTransaction(SendRequest request);
     }
 
 }

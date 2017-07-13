@@ -16,14 +16,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.bachduong.core.uri.CoinURI;
-import com.bachduong.core.uri.CoinURIParseException;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.util.Keyboard;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.uri.CoinURI;
+import com.bachduong.core.uri.CoinURIParseException;
+import com.bachduong.core.wallet.WalletAccount;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,14 +54,15 @@ public class AccountFragment extends Fragment {
 
     // Handler ids
     private static final int SEND_TO_URI = 0;
-
-    private int currentScreen;
-    @Bind(R.id.pager) ViewPager viewPager;
+    private final MyHandler handler = new MyHandler(this);
+    @Bind(R.id.pager)
+    ViewPager viewPager;
     NavigationDrawerFragment mNavigationDrawerFragment;
-    @Nullable private WalletAccount account;
+    private int currentScreen;
+    @Nullable
+    private WalletAccount account;
     private Listener listener;
     private WalletApplication application;
-    private final MyHandler handler = new MyHandler(this);
 
     public static AccountFragment getInstance() {
         AccountFragment fragment = new AccountFragment();
@@ -73,6 +74,43 @@ public class AccountFragment extends Fragment {
         AccountFragment fragment = getInstance();
         fragment.setupArgs(accountId);
         return fragment;
+    }
+
+    @Nullable
+    private static Fragment getFragment(FragmentManager fm, int item) {
+        if (fm.getFragments() == null) return null;
+
+        for (Fragment f : fm.getFragments()) {
+            switch (item) {
+                case RECEIVE:
+                    if (f instanceof AddressRequestFragment) return f;
+                    break;
+                case BALANCE:
+                    if (f instanceof BalanceFragment) return f;
+                    break;
+                case SEND:
+                    if (f instanceof SendFragment) return f;
+                    break;
+                default:
+                    throw new RuntimeException("Cannot get fragment, unknown screen item: " + item);
+            }
+        }
+        return null;
+    }
+
+    @SuppressWarnings({"unchecked"})
+    private static <T extends Fragment> T createFragment(WalletAccount account, int item) {
+        String accountId = account.getId();
+        switch (item) {
+            case RECEIVE:
+                return (T) AddressRequestFragment.newInstance(accountId);
+            case BALANCE:
+                return (T) BalanceFragment.newInstance(accountId);
+            case SEND:
+                return (T) SendFragment.newInstance(accountId);
+            default:
+                throw new RuntimeException("Cannot create fragment, unknown screen item: " + item);
+        }
     }
 
     private void setupArgs(String accountId) {
@@ -119,8 +157,13 @@ public class AccountFragment extends Fragment {
                 }
             }
 
-            @Override public void onPageScrolled(int pos, float posOffset, int posOffsetPixels) { }
-            @Override public void onPageScrollStateChanged(int state) { }
+            @Override
+            public void onPageScrolled(int pos, float posOffset, int posOffsetPixels) {
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
         });
 
         viewPager.setAdapter(
@@ -236,43 +279,6 @@ public class AccountFragment extends Fragment {
         return (SendFragment) getFragment(getChildFragmentManager(), SEND);
     }
 
-    @Nullable
-    private static Fragment getFragment(FragmentManager fm, int item) {
-        if (fm.getFragments() == null) return null;
-
-        for (Fragment f : fm.getFragments()) {
-            switch (item) {
-                case RECEIVE:
-                    if (f instanceof AddressRequestFragment) return f;
-                    break;
-                case BALANCE:
-                    if (f instanceof BalanceFragment) return f;
-                    break;
-                case SEND:
-                    if (f instanceof SendFragment) return f;
-                    break;
-                default:
-                    throw new RuntimeException("Cannot get fragment, unknown screen item: " + item);
-            }
-        }
-        return null;
-    }
-
-    @SuppressWarnings({ "unchecked"})
-    private static <T extends Fragment> T createFragment(WalletAccount account, int item) {
-        String accountId = account.getId();
-        switch (item) {
-            case RECEIVE:
-                return (T) AddressRequestFragment.newInstance(accountId);
-            case BALANCE:
-                return (T) BalanceFragment.newInstance(accountId);
-            case SEND:
-                return (T) SendFragment.newInstance(accountId);
-            default:
-                throw new RuntimeException("Cannot create fragment, unknown screen item: " + item);
-        }
-    }
-
     public boolean goToReceive(boolean smoothScroll) {
         return goToItem(RECEIVE, smoothScroll);
     }
@@ -300,6 +306,17 @@ public class AccountFragment extends Fragment {
             return true;
         }
         return false;
+    }
+
+    public interface Listener extends BalanceFragment.Listener, SendFragment.Listener {
+        // TODO make an external interface so that SendFragment and AddressRequestFragment can use.
+        void registerActionMode(ActionMode actionMode);
+
+        void onReceiveSelected();
+
+        void onBalanceSelected();
+
+        void onSendSelected();
     }
 
     private static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
@@ -347,16 +364,22 @@ public class AccountFragment extends Fragment {
         @Override
         public CharSequence getPageTitle(int i) {
             switch (i) {
-                case RECEIVE: return receiveTitle;
-                case SEND: return sendTitle;
-                case BALANCE: return balanceTitle;
-                default: throw new RuntimeException("Cannot get item, unknown screen item: " + i);
+                case RECEIVE:
+                    return receiveTitle;
+                case SEND:
+                    return sendTitle;
+                case BALANCE:
+                    return balanceTitle;
+                default:
+                    throw new RuntimeException("Cannot get item, unknown screen item: " + i);
             }
         }
     }
 
     private static class MyHandler extends WeakHandler<AccountFragment> {
-        public MyHandler(AccountFragment ref) { super(ref); }
+        public MyHandler(AccountFragment ref) {
+            super(ref);
+        }
 
         @Override
         protected void weakHandleMessage(AccountFragment ref, Message msg) {
@@ -366,13 +389,5 @@ public class AccountFragment extends Fragment {
                     break;
             }
         }
-    }
-
-    public interface Listener extends BalanceFragment.Listener, SendFragment.Listener {
-        // TODO make an external interface so that SendFragment and AddressRequestFragment can use.
-        void registerActionMode(ActionMode actionMode);
-        void onReceiveSelected();
-        void onBalanceSelected();
-        void onSendSelected();
     }
 }

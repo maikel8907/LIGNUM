@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author Ahmed Bodiwala
  */
 public class IxcoinMain extends BitFamily {
+    private static IxcoinMain instance = new IxcoinMain();
+
     private IxcoinMain() {
         id = "ixcoin.main";
 
         addressHeader = 138;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 120; // COINBASE_MATURITY_NEW
 
         name = "IXCoin";
@@ -26,7 +28,6 @@ public class IxcoinMain extends BitFamily {
         signedMessageHeader = toBytes("Ixcoin Signed Message:\n");
     }
 
-    private static IxcoinMain instance = new IxcoinMain();
     public static synchronized IxcoinMain get() {
         return instance;
     }

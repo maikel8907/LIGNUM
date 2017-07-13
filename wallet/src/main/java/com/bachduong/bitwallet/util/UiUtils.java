@@ -17,18 +17,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.bachduong.core.uri.CoinURI;
-import com.bachduong.core.uri.CoinURIParseException;
-import com.bachduong.core.util.GenericUtils;
-import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.core.wallet.Wallet;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.ui.AccountDetailsActivity;
 import com.bachduong.bitwallet.ui.EditAccountFragment;
 import com.bachduong.bitwallet.ui.EditAddressBookEntryFragment;
+import com.bachduong.core.uri.CoinURI;
+import com.bachduong.core.uri.CoinURIParseException;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.wallet.AbstractAddress;
+import com.bachduong.core.wallet.Wallet;
+import com.bachduong.core.wallet.WalletAccount;
 
 import org.acra.ACRA;
 import org.slf4j.Logger;
@@ -156,7 +156,9 @@ public class UiUtils {
         }
 
         @Override
-        public boolean onPrepareActionMode(ActionMode mode, Menu menu) { return false; }
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            return false;
+        }
 
         @Override
         public boolean onActionItemClicked(ActionMode mode, MenuItem menuItem) {
@@ -174,7 +176,9 @@ public class UiUtils {
             return false;
         }
 
-        @Override public void onDestroyActionMode(ActionMode actionMode) { }
+        @Override
+        public void onDestroyActionMode(ActionMode actionMode) {
+        }
     }
 
     public static class CopyShareActionModeCallback implements ActionMode.Callback {
@@ -182,7 +186,7 @@ public class UiUtils {
         private final Activity activity;
 
         public CopyShareActionModeCallback(final String string,
-                                         final Activity activity) {
+                                           final Activity activity) {
             this.string = string;
             this.activity = activity;
         }
@@ -214,7 +218,9 @@ public class UiUtils {
             return false;
         }
 
-        @Override public void onDestroyActionMode(ActionMode actionMode) { }
+        @Override
+        public void onDestroyActionMode(ActionMode actionMode) {
+        }
     }
 
     public static class AccountActionModeCallback implements ActionMode.Callback {
@@ -238,7 +244,9 @@ public class UiUtils {
         }
 
         @Override
-        public boolean onPrepareActionMode(ActionMode mode, Menu menu) { return false; }
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            return false;
+        }
 
         @Override
         public boolean onActionItemClicked(ActionMode mode, MenuItem menuItem) {
@@ -278,6 +286,8 @@ public class UiUtils {
             return false;
         }
 
-        @Override public void onDestroyActionMode(ActionMode actionMode) { }
+        @Override
+        public void onDestroyActionMode(ActionMode actionMode) {
+        }
     }
 }

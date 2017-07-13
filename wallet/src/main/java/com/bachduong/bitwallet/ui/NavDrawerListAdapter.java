@@ -89,7 +89,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
 
         switch (item.itemType) {
             case ITEM_SECTION_TITLE:
-                if (row instanceof TextView) ((TextView)row).setText(item.title);
+                if (row instanceof TextView) ((TextView) row).setText(item.title);
                 break;
             case ITEM_COIN:
             case ITEM_OVERVIEW:

@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.ui.widget.SendOutput;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.coins.families.NxtFamily;
@@ -13,8 +15,6 @@ import com.bachduong.core.util.GenericUtils;
 import com.bachduong.core.wallet.AbstractTransaction;
 import com.bachduong.core.wallet.AbstractTransaction.AbstractOutput;
 import com.bachduong.core.wallet.AbstractWallet;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.ui.widget.SendOutput;
 
 import java.util.ArrayList;
 import java.util.List;

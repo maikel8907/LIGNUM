@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author FuzzyHobbit
  */
 public class RubycoinMain extends PeerFamily {
+    private static RubycoinMain instance = new RubycoinMain();
+
     private RubycoinMain() {
         id = "rubycoin.main";
 
         addressHeader = 60;
         p2shHeader = 85;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 50;
         dumpedPrivateKeyHeader = 188;
 
@@ -27,7 +29,6 @@ public class RubycoinMain extends PeerFamily {
         signedMessageHeader = toBytes("Rubycoin Signed Message:\n");
     }
 
-    private static RubycoinMain instance = new RubycoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

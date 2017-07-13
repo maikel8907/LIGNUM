@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.NuFamily;
  * @author John L. Jegutanis
  */
 public class NuSharesMain extends NuFamily {
+    private static NuSharesMain instance = new NuSharesMain();
+
     private NuSharesMain() {
         id = "nushares.main";
 
         addressHeader = 63;
         p2shHeader = 64;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         dumpedPrivateKeyHeader = 149;
         tokenId = 0x53;
 
@@ -27,7 +29,6 @@ public class NuSharesMain extends NuFamily {
         signedMessageHeader = toBytes("Nu Signed Message:\n");
     }
 
-    private static NuSharesMain instance = new NuSharesMain();
     public static synchronized CoinType get() {
         return instance;
     }

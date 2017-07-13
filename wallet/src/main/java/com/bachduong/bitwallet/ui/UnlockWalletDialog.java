@@ -16,8 +16,21 @@ import com.bachduong.bitwallet.R;
  * @author John L. Jegutanis
  */
 public class UnlockWalletDialog extends DialogFragment {
+    DialogInterface.OnClickListener dismissListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            dismissAllowingStateLoss();
+        }
+    };
     private TextView passwordView;
     private Listener listener;
+    DialogInterface.OnClickListener okListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            if (listener != null) listener.onPassword(passwordView.getText());
+            dismissAllowingStateLoss();
+        }
+    };
 
     public static DialogFragment getInstance() {
         return new UnlockWalletDialog();
@@ -54,21 +67,6 @@ public class UnlockWalletDialog extends DialogFragment {
                 .setCancelable(false)
                 .create();
     }
-
-    DialogInterface.OnClickListener okListener = new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            if (listener != null) listener.onPassword(passwordView.getText());
-            dismissAllowingStateLoss();
-        }
-    };
-
-    DialogInterface.OnClickListener dismissListener = new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            dismissAllowingStateLoss();
-        }
-    };
 
     public interface Listener {
         void onPassword(CharSequence password);

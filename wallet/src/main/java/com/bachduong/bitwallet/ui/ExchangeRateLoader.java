@@ -17,17 +17,17 @@ package com.bachduong.bitwallet.ui;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import com.bachduong.bitwallet.Configuration;
-import com.bachduong.bitwallet.ExchangeRatesProvider;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.support.v4.content.CursorLoader;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.net.ConnectivityManager;
+import android.support.v4.content.CursorLoader;
+
+import com.bachduong.bitwallet.Configuration;
+import com.bachduong.bitwallet.ExchangeRatesProvider;
 
 /**
  * @author Andreas Schildbach
@@ -37,6 +37,23 @@ public final class ExchangeRateLoader extends CursorLoader implements OnSharedPr
     private final Configuration config;
     private final String packageName;
     private final Context context;
+    private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        private boolean hasConnectivity = true;
+
+        @Override
+        public void onReceive(final Context context, final Intent intent) {
+            final String action = intent.getAction();
+
+            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
+                hasConnectivity = !intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY, false);
+                if (hasConnectivity) {
+                    forceLoad();
+                }
+            } else if (Intent.ACTION_TIME_TICK.equals(action) && hasConnectivity) {
+                forceLoad();
+            }
+        }
+    };
     private String localCurrency;
 
     public ExchangeRateLoader(final Context context, final Configuration config,
@@ -104,22 +121,4 @@ public final class ExchangeRateLoader extends CursorLoader implements OnSharedPr
             setUri(ExchangeRatesProvider.contentUriToCrypto(packageName, localCurrency, false));
         }
     }
-
-    private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        private boolean hasConnectivity = true;
-
-        @Override
-        public void onReceive(final Context context, final Intent intent) {
-            final String action = intent.getAction();
-
-            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
-                hasConnectivity = !intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY, false);
-                if (hasConnectivity) {
-                    forceLoad();
-                }
-            } else if (Intent.ACTION_TIME_TICK.equals(action) && hasConnectivity) {
-                forceLoad();
-            }
-        }
-    };
 }

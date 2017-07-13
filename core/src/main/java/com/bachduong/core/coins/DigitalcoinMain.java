@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author FuzzyHobbit
  */
 public class DigitalcoinMain extends BitFamily {
+    private static DigitalcoinMain instance = new DigitalcoinMain();
+
     private DigitalcoinMain() {
         id = "digitalcoin.main";
 
         addressHeader = 30;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 5;
         dumpedPrivateKeyHeader = 158;
 
@@ -28,7 +30,6 @@ public class DigitalcoinMain extends BitFamily {
         signedMessageHeader = toBytes("Digitalcoin Signed Message:\n");
     }
 
-    private static DigitalcoinMain instance = new DigitalcoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

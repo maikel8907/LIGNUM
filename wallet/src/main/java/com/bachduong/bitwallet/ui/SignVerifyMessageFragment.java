@@ -12,15 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.core.wallet.SignedMessage;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.tasks.SignVerifyMessageTask;
 import com.bachduong.bitwallet.util.Keyboard;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.wallet.AbstractAddress;
+import com.bachduong.core.wallet.SignedMessage;
+import com.bachduong.core.wallet.WalletAccount;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,6 +54,10 @@ public class SignVerifyMessageFragment extends Fragment {
     private WalletApplication application;
     private SignVerifyMessageTask signVerifyMessageTask;
 
+    public SignVerifyMessageFragment() {
+        // Required empty public constructor
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using a URI.
@@ -67,12 +71,6 @@ public class SignVerifyMessageFragment extends Fragment {
         args.putString(Constants.ARG_ADDRESS_STRING, address);
         fragment.setArguments(args);
         return fragment;
-    }
-
-
-
-    public SignVerifyMessageFragment() {
-        // Required empty public constructor
     }
 
     @Override

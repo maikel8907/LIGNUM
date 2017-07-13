@@ -1,13 +1,12 @@
 package com.bachduong.bitwallet.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 
-import static android.R.attr.max;
 import static org.bitcoinj.core.TransactionBroadcast.random;
 
 public class PairUsbPinActivity extends AppCompatActivity {

@@ -14,15 +14,15 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.exceptions.Bip44KeyLookAheadExceededException;
-import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.core.wallet.WalletPocketHD;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.ui.DialogBuilder;
+import com.bachduong.core.exceptions.Bip44KeyLookAheadExceededException;
+import com.bachduong.core.wallet.AbstractAddress;
+import com.bachduong.core.wallet.WalletAccount;
+import com.bachduong.core.wallet.WalletPocketHD;
 
 import javax.annotation.Nullable;
 
@@ -31,7 +31,11 @@ import javax.annotation.Nullable;
  */
 public class CreateNewAddressDialog extends DialogFragment {
     private WalletApplication app;
-    @Nullable private ContentResolver resolver;
+    @Nullable
+    private ContentResolver resolver;
+
+    public CreateNewAddressDialog() {
+    }
 
     public static DialogFragment getInstance(WalletAccount account) {
         DialogFragment dialog = new CreateNewAddressDialog();
@@ -39,8 +43,6 @@ public class CreateNewAddressDialog extends DialogFragment {
         dialog.getArguments().putString(Constants.ARG_ACCOUNT_ID, account.getId());
         return dialog;
     }
-
-    public CreateNewAddressDialog() { }
 
     @Override
     public void onAttach(Activity activity) {

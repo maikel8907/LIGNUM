@@ -1,5 +1,4 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -82,9 +81,9 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/SecondaryText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="@style/SecondaryText"
                         android:text="@string/enter_password" />
 
                     <EditText
@@ -100,7 +99,7 @@
                     android:id="@+id/sweep_error"
                     style="@style/ErrorText"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -108,8 +107,8 @@
                 android:id="@+id/sweep_loading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -117,9 +116,9 @@
                     android:text="@string/sweep_wallet_key_wait" />
 
                 <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.ProgressBar"
                     android:layout_margin="@dimen/standard_margin" />
 
                 <TextView
@@ -139,10 +138,10 @@
                 android:id="@+id/button_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_next"
-                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_centerVertical="true"
+                android:text="@string/button_next" />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>

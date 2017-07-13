@@ -12,8 +12,8 @@ import javax.annotation.Nullable;
 
 /**
  * @author John L. Jegutanis
- *
- * Coins that belong to this family are: NXT, Burst, etc
+ *         <p>
+ *         Coins that belong to this family are: NXT, Burst, etc
  */
 public abstract class NxtFamily extends CoinType {
     public static final short DEFAULT_DEADLINE = 1440;

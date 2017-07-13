@@ -21,14 +21,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.exchange.shapeshift.ShapeShift;
-import com.bachduong.core.exchange.shapeshift.data.ShapeShiftCoins;
-import com.bachduong.core.exchange.shapeshift.data.ShapeShiftMarketInfo;
-import com.bachduong.core.util.ExchangeRate;
-import com.bachduong.core.wallet.Wallet;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
@@ -41,6 +33,14 @@ import com.bachduong.bitwallet.ui.widget.AmountEditView;
 import com.bachduong.bitwallet.util.Keyboard;
 import com.bachduong.bitwallet.util.ThrottlingWalletChangeListener;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.exchange.shapeshift.ShapeShift;
+import com.bachduong.core.exchange.shapeshift.data.ShapeShiftCoins;
+import com.bachduong.core.exchange.shapeshift.data.ShapeShiftMarketInfo;
+import com.bachduong.core.util.ExchangeRate;
+import com.bachduong.core.wallet.Wallet;
+import com.bachduong.core.wallet.WalletAccount;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
@@ -74,15 +74,16 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
     private static final String INITIAL_TASK_BUSY_DIALOG_TAG = "initial_task_busy_dialog_tag";
     private static final String ADD_COIN_TASK_BUSY_DIALOG_TAG = "add_coin_task_busy_dialog_tag";
     private static final String ADD_COIN_DIALOG_TAG = "add_coin_dialog_tag";
-
-    // UI & misc
-    private WalletApplication application;
-    private Wallet wallet;
     private final Handler handler = new MyHandler(this);
     private final AmountListener amountsListener = new AmountListener(handler);
     private final AccountListener sourceAccountListener = new AccountListener(handler);
-    @Nullable private Listener listener;
-    @Nullable private MenuItem actionSwapMenu;
+    // UI & misc
+    private WalletApplication application;
+    private Wallet wallet;
+    @Nullable
+    private Listener listener;
+    @Nullable
+    private MenuItem actionSwapMenu;
     private Spinner sourceSpinner;
     private Spinner destinationSpinner;
     private AvailableAccountsAdaptor sourceAdapter;
@@ -103,17 +104,26 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
 
     // State
     private WalletAccount sourceAccount;
-    @Nullable private WalletAccount destinationAccount;
+    @Nullable
+    private WalletAccount destinationAccount;
     private CoinType destinationType;
-    @Nullable private Value sendAmount;
-    @Nullable private Value maximumDeposit;
-    @Nullable private Value minimumDeposit;
-    @Nullable private Value lastBalance;
-    @Nullable private ExchangeRate lastRate;
+    @Nullable
+    private Value sendAmount;
+    @Nullable
+    private Value maximumDeposit;
+    @Nullable
+    private Value minimumDeposit;
+    @Nullable
+    private Value lastBalance;
+    @Nullable
+    private ExchangeRate lastRate;
 
 
-    /** Required empty public constructor */
-    public TradeSelectFragment() {}
+    /**
+     * Required empty public constructor
+     */
+    public TradeSelectFragment() {
+    }
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -354,7 +364,8 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
 
     @Override
     public void onAddCoinTaskFinished(Exception error, WalletAccount newAccount) {
-        if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), ADD_COIN_TASK_BUSY_DIALOG_TAG)) return;
+        if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), ADD_COIN_TASK_BUSY_DIALOG_TAG))
+            return;
 
         if (error != null) {
             if (error instanceof KeyCrypterException) {
@@ -526,7 +537,8 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
 
     @Override
     public void onExchangeCheckSupportedCoinsTaskFinished(Exception error, ShapeShiftCoins shapeShiftCoins) {
-        if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), INITIAL_TASK_BUSY_DIALOG_TAG)) return;
+        if (Dialogs.dismissAllowingStateLoss(getFragmentManager(), INITIAL_TASK_BUSY_DIALOG_TAG))
+            return;
 
         if (error != null) {
             log.warn("Could not get ShapeShift coins", error);
@@ -544,8 +556,8 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
     /**
      * Starts a new task to query about the market of the currently selected pair.
      * Notes:
-     *  - If a task is already running, this call will cancel it.
-     *  - If the fragment is detached, it will not run.
+     * - If a task is already running, this call will cancel it.
+     * - If the fragment is detached, it will not run.
      */
     private void startMarketInfoTask() {
         if (marketTask != null) {
@@ -621,7 +633,9 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
                 }
             }
 
-            @Override public void onNothingSelected(AdapterView<?> parent) {}
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         };
     }
 
@@ -655,7 +669,9 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
                 }
             }
 
-            @Override public void onNothingSelected(AdapterView<?> parent) {}
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         };
     }
 
@@ -891,7 +907,7 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
             amountWarning.setVisibility(View.GONE);
             sendAmount = null;
             boolean showErrors = shouldShowErrors(isTyping, depositAmount) ||
-                                 shouldShowErrors(isTyping, withdrawAmount);
+                    shouldShowErrors(isTyping, withdrawAmount);
             // ignore printing errors for null and zero amounts
             if (showErrors) {
                 if (depositAmount == null || withdrawAmount == null) {
@@ -972,14 +988,27 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // Public classes and interfaces
 
-    public interface Listener {
-        void onMakeTrade(WalletAccount fromAccount, WalletAccount toAccount, Value amount);
+    private void showPasswordRetryDialog() {
+        DialogBuilder.warn(getActivity(), R.string.unlocking_wallet_error_title)
+                .setMessage(R.string.unlocking_wallet_error_detail)
+                .setNegativeButton(R.string.button_cancel, null)
+                .setPositiveButton(R.string.button_retry, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        createToAccountAndProceed();
+                    }
+                })
+                .create().show();
     }
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // Private classes
 
+
+    public interface Listener {
+        void onMakeTrade(WalletAccount fromAccount, WalletAccount toAccount, Value amount);
+    }
 
     private static class AmountListener implements AmountEditView.Listener {
         private final Handler handler;
@@ -1018,7 +1047,9 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
      * The fragment handler
      */
     private static class MyHandler extends WeakHandler<TradeSelectFragment> {
-        public MyHandler(TradeSelectFragment referencingObject) { super(referencingObject); }
+        public MyHandler(TradeSelectFragment referencingObject) {
+            super(referencingObject);
+        }
 
         @Override
         protected void weakHandleMessage(TradeSelectFragment ref, Message msg) {
@@ -1090,18 +1121,5 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
         public void onHandleMarketInfo(ShapeShiftMarketInfo marketInfo) {
             handler.sendMessage(handler.obtainMessage(UPDATE_MARKET, marketInfo));
         }
-    }
-
-    private void showPasswordRetryDialog() {
-        DialogBuilder.warn(getActivity(), R.string.unlocking_wallet_error_title)
-                .setMessage(R.string.unlocking_wallet_error_detail)
-                .setNegativeButton(R.string.button_cancel, null)
-                .setPositiveButton(R.string.button_retry, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        createToAccountAndProceed();
-                    }
-                })
-                .create().show();
     }
 }

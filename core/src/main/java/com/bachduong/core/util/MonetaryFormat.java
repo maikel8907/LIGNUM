@@ -23,11 +23,7 @@ import com.bachduong.core.coins.FiatValue;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.coins.ValueType;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkState;
-import static com.google.common.math.LongMath.checkedMultiply;
-import static com.google.common.math.LongMath.checkedPow;
-import static com.google.common.math.LongMath.divide;
+import org.bitcoinj.core.Monetary;
 
 import java.io.Serializable;
 import java.math.RoundingMode;
@@ -38,13 +34,17 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import org.bitcoinj.core.Monetary;
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkState;
+import static com.google.common.math.LongMath.checkedMultiply;
+import static com.google.common.math.LongMath.checkedPow;
+import static com.google.common.math.LongMath.divide;
 
 /**
  * <p>
  * Utility for formatting and parsing coin values to and from human readable form.
  * </p>
- *
+ * <p>
  * <p>
  * MonetaryFormat instances are immutable. Invoking a configuration method has no effect on the receiving instance; you
  * must store and use the new instance it returns, instead. Instances are thread safe, so they may be stored safely as
@@ -53,21 +53,35 @@ import org.bitcoinj.core.Monetary;
  */
 public final class MonetaryFormat implements Serializable {
 
-    /** Standard format for the BTC denomination. */
+    /**
+     * Standard format for the BTC denomination.
+     */
     public static final MonetaryFormat BTC = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 3);
-    /** Standard format for the mBTC denomination. */
+    /**
+     * Standard format for the mBTC denomination.
+     */
     public static final MonetaryFormat MBTC = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(2);
-    /** Standard format for the µBTC denomination. */
+    /**
+     * Standard format for the µBTC denomination.
+     */
     public static final MonetaryFormat UBTC = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(2);
-    /** Standard format for fiat amounts. */
+    /**
+     * Standard format for fiat amounts.
+     */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
-    /** Currency code for base 1 Bitcoin. */
+    /**
+     * Currency code for base 1 Bitcoin.
+     */
     public static final String CODE_BTC = "BTC";
-    /** Currency code for base 1/1000 Bitcoin. */
+    /**
+     * Currency code for base 1/1000 Bitcoin.
+     */
     public static final String CODE_MBTC = "mBTC";
-    /** Currency code for base 1/1000000 Bitcoin. */
+    /**
+     * Currency code for base 1/1000000 Bitcoin.
+     */
     public static final String CODE_UBTC = "µBTC";
-
+    private static final String DECIMALS_PADDING = "0000000000000000"; // a few more than necessary for Bitcoin
     private final char negativeSign;
     private final char positiveSign;
     private final char zeroDigit;
@@ -80,7 +94,39 @@ public final class MonetaryFormat implements Serializable {
     private final char codeSeparator;
     private final boolean codePrefixed;
 
-    private static final String DECIMALS_PADDING = "0000000000000000"; // a few more than necessary for Bitcoin
+    public MonetaryFormat() {
+        // defaults
+        this.negativeSign = '-';
+        this.positiveSign = 0; // none
+        this.zeroDigit = '0';
+        this.decimalMark = '.';
+        this.minDecimals = 2;
+        this.decimalGroups = null;
+        this.shift = 0;
+        this.roundingMode = RoundingMode.HALF_UP;
+        this.codes = new HashMap<Integer, String>();
+        this.codes.put(0, CODE_BTC);
+        this.codes.put(3, CODE_MBTC);
+        this.codes.put(6, CODE_UBTC);
+        this.codeSeparator = ' ';
+        this.codePrefixed = true;
+    }
+
+    private MonetaryFormat(char negativeSign, char positiveSign, char zeroDigit, char decimalMark, int minDecimals,
+                           List<Integer> decimalGroups, int shift, RoundingMode roundingMode, Map<Integer, String> codes,
+                           char codeSeparator, boolean codePrefixed) {
+        this.negativeSign = negativeSign;
+        this.positiveSign = positiveSign;
+        this.zeroDigit = zeroDigit;
+        this.decimalMark = decimalMark;
+        this.minDecimals = minDecimals;
+        this.decimalGroups = decimalGroups;
+        this.shift = shift;
+        this.roundingMode = roundingMode;
+        this.codes = codes;
+        this.codeSeparator = codeSeparator;
+        this.codePrefixed = codePrefixed;
+    }
 
     /**
      * Set character to prefix negative values.
@@ -153,14 +199,13 @@ public final class MonetaryFormat implements Serializable {
      * Each value is a number of decimals in that group. If the value precision exceeds all decimals specified
      * (including minimum decimals), the value will be rounded. This configuration is not relevant for parsing.
      * </p>
-     *
+     * <p>
      * <p>
      * For example, if you pass <tt>4,2</tt> it will add four decimals to your formatted string if needed, and then add
      * another two decimals if needed. At this point, rather than adding further decimals the value will be rounded.
      * </p>
      *
-     * @param groups
-     *            any number numbers of decimals, one for each group
+     * @param groups any number numbers of decimals, one for each group
      */
     public MonetaryFormat optionalDecimals(int... groups) {
         List<Integer> decimalGroups = new ArrayList<Integer>(groups.length);
@@ -176,16 +221,14 @@ public final class MonetaryFormat implements Serializable {
      * precision. If the value precision exceeds all decimals specified (including minimum decimals), the value will be
      * rounded. This configuration is not relevant for parsing.
      * </p>
-     *
+     * <p>
      * <p>
      * For example, if you pass <tt>1,8</tt> it will up to eight decimals to your formatted string if needed. After
      * these have been used up, rather than adding further decimals the value will be rounded.
      * </p>
      *
-     * @param decimals
-     *            value of the group to be repeated
-     * @param repetitions
-     *            number of repetitions
+     * @param decimals    value of the group to be repeated
+     * @param repetitions number of repetitions
      */
     public MonetaryFormat repeatOptionalDecimals(int decimals, int repetitions) {
         checkArgument(repetitions >= 0);
@@ -233,10 +276,8 @@ public final class MonetaryFormat implements Serializable {
     /**
      * Configure currency code for given decimal separator shift. This configuration is not relevant for parsing.
      *
-     * @param codeShift
-     *            decimal separator shift
-     * @param code
-     *            currency code
+     * @param codeShift decimal separator shift
+     * @param code      currency code
      */
     public MonetaryFormat code(int codeShift, String code) {
         checkArgument(codeShift >= 0);
@@ -293,40 +334,6 @@ public final class MonetaryFormat implements Serializable {
         char decimalMark = dfs.getMonetaryDecimalSeparator();
         return new MonetaryFormat(negativeSign, positiveSign, zeroDigit, decimalMark, minDecimals, decimalGroups,
                 shift, roundingMode, codes, codeSeparator, codePrefixed);
-    }
-
-    public MonetaryFormat() {
-        // defaults
-        this.negativeSign = '-';
-        this.positiveSign = 0; // none
-        this.zeroDigit = '0';
-        this.decimalMark = '.';
-        this.minDecimals = 2;
-        this.decimalGroups = null;
-        this.shift = 0;
-        this.roundingMode = RoundingMode.HALF_UP;
-        this.codes = new HashMap<Integer, String>();
-        this.codes.put(0, CODE_BTC);
-        this.codes.put(3, CODE_MBTC);
-        this.codes.put(6, CODE_UBTC);
-        this.codeSeparator = ' ';
-        this.codePrefixed = true;
-    }
-
-    private MonetaryFormat(char negativeSign, char positiveSign, char zeroDigit, char decimalMark, int minDecimals,
-                           List<Integer> decimalGroups, int shift, RoundingMode roundingMode, Map<Integer, String> codes,
-                           char codeSeparator, boolean codePrefixed) {
-        this.negativeSign = negativeSign;
-        this.positiveSign = positiveSign;
-        this.zeroDigit = zeroDigit;
-        this.decimalMark = decimalMark;
-        this.minDecimals = minDecimals;
-        this.decimalGroups = decimalGroups;
-        this.shift = shift;
-        this.roundingMode = roundingMode;
-        this.codes = codes;
-        this.codeSeparator = codeSeparator;
-        this.codePrefixed = codePrefixed;
     }
 
     /**
@@ -425,8 +432,7 @@ public final class MonetaryFormat implements Serializable {
     /**
      * Parse a human readable coin value to a {@link org.bitcoinj.core.Coin} instance.
      *
-     * @throws NumberFormatException
-     *             if the string cannot be parsed for some reason
+     * @throws NumberFormatException if the string cannot be parsed for some reason
      */
     public Value parse(ValueType type, String str) throws NumberFormatException {
         return Value.valueOf(type, parseValue(str, type.getUnitExponent()));
@@ -435,8 +441,7 @@ public final class MonetaryFormat implements Serializable {
     /**
      * Parse a human readable fiat value to a {@link com.bachduong.core.coins.Value} instance.
      *
-     * @throws NumberFormatException
-     *             if the string cannot be parsed for some reason
+     * @throws NumberFormatException if the string cannot be parsed for some reason
      */
     public Value parseFiat(String currencyCode, String str) throws NumberFormatException {
         return FiatValue.valueOf(currencyCode, parseValue(str, FiatType.SMALLEST_UNIT_EXPONENT));

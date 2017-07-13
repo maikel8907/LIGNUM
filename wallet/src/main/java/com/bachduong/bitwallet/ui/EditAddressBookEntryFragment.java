@@ -30,12 +30,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bachduong.bitwallet.AddressBookProvider;
+import com.bachduong.bitwallet.R;
 import com.bachduong.core.coins.CoinID;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.util.GenericUtils;
 import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.bitwallet.AddressBookProvider;
-import com.bachduong.bitwallet.R;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -50,6 +50,8 @@ public final class EditAddressBookEntryFragment extends DialogFragment {
     private static final String KEY_COIN_ID = "coin_id";
     private static final String KEY_ADDRESS = "address";
     private static final String KEY_SUGGESTED_ADDRESS_LABEL = "suggested_address_label";
+    private Context context;
+    private ContentResolver contentResolver;
 
     public static void edit(final FragmentManager fm, @Nonnull final AbstractAddress address) {
         edit(fm, address.getType(), address, null);
@@ -81,9 +83,6 @@ public final class EditAddressBookEntryFragment extends DialogFragment {
 
         return fragment;
     }
-
-    private Context context;
-    private ContentResolver contentResolver;
 
     @Override
     public void onAttach(final Context context) {

@@ -2,8 +2,8 @@ package com.bachduong.core.coins.families;
 
 /**
  * @author John L. Jegutanis
- *
- * This family contains NuBits, NuShares, BlockShares, etc
+ *         <p>
+ *         This family contains NuBits, NuShares, BlockShares, etc
  */
 public abstract class NuFamily extends BitFamily {
     {

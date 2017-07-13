@@ -10,6 +10,7 @@ import com.bachduong.bitwallet.R;
 
 /**
  * Activity that displays a list of previously used addresses.
+ *
  * @author John L. Jegutanis
  */
 public class PreviousAddressesActivity extends BaseWalletActivity implements

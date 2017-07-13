@@ -3,12 +3,14 @@ package com.bachduong.core.coins;
 import com.bachduong.core.coins.families.PeerFamily;
 
 public class GcrMain extends PeerFamily {
+    private static GcrMain instance = new GcrMain();
+
     private GcrMain() {
         id = "gcr.main";
 
         addressHeader = 38;
         p2shHeader = 97;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 30;
         dumpedPrivateKeyHeader = 154;
 
@@ -24,7 +26,6 @@ public class GcrMain extends PeerFamily {
         signedMessageHeader = toBytes("GCR Signed Message:\n");
     }
 
-    private static GcrMain instance = new GcrMain();
     public static synchronized GcrMain get() {
         return instance;
     }

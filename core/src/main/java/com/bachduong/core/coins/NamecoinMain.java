@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class NamecoinMain extends BitFamily {
+    private static NamecoinMain instance = new NamecoinMain();
+
     private NamecoinMain() {
         id = "namecoin.main";
 
         addressHeader = 52;
         // Namecoin does not have p2sh addresses
-        acceptableAddressCodes = new int[] { addressHeader};
+        acceptableAddressCodes = new int[]{addressHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 128;
 
@@ -27,7 +29,6 @@ public class NamecoinMain extends BitFamily {
         signedMessageHeader = toBytes("Bitcoin Signed Message:\n");
     }
 
-    private static NamecoinMain instance = new NamecoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

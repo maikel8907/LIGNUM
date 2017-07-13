@@ -27,8 +27,6 @@ import static com.bachduong.core.Preconditions.checkNotNull;
  * @author John L. Jegutanis
  */
 public class ExchangeHistoryProvider extends ContentProvider {
-    private static final String DATABASE_TABLE = "exchange_history";
-
     public static final String KEY_ROWID = "_id";
     public static final String KEY_STATUS = "status";
     public static final String KEY_DEPOSIT_TXID = "deposit_txid";
@@ -39,7 +37,7 @@ public class ExchangeHistoryProvider extends ContentProvider {
     public static final String KEY_WITHDRAW_ADDRESS = "withdraw_address";
     public static final String KEY_WITHDRAW_COIN_ID = "withdraw_coin_id";
     public static final String KEY_WITHDRAW_AMOUNT_UNIT = "withdraw_amount_unit";
-
+    private static final String DATABASE_TABLE = "exchange_history";
     private Helper helper;
 
     public static Uri contentUri(@Nonnull final String packageName, @Nonnull final AbstractAddress deposit) {
@@ -291,6 +289,22 @@ public class ExchangeHistoryProvider extends ContentProvider {
             this.withdrawTransactionId = txStatus.transactionId;
         }
 
+        public static int convertStatus(ShapeShiftTxStatus.Status shapeShiftStatus) {
+            switch (shapeShiftStatus) {
+                case NO_DEPOSITS:
+                    return STATUS_INITIAL;
+                case RECEIVED:
+                    return STATUS_PROCESSING;
+                case COMPLETE:
+                    return STATUS_COMPLETE;
+                case FAILED:
+                    return STATUS_FAILED;
+                case UNKNOWN:
+                default:
+                    return STATUS_UNKNOWN;
+            }
+        }
+
         public ContentValues getContentValues() {
             ContentValues values = new ContentValues();
             values.put(KEY_STATUS, status);
@@ -298,8 +312,10 @@ public class ExchangeHistoryProvider extends ContentProvider {
             values.put(KEY_DEPOSIT_COIN_ID, depositAddress.getType().getId());
             values.put(KEY_DEPOSIT_AMOUNT_UNIT, depositAmount.value);
             values.put(KEY_DEPOSIT_TXID, depositTransactionId);
-            if (withdrawAddress != null) values.put(KEY_WITHDRAW_ADDRESS, withdrawAddress.toString());
-            if (withdrawAddress != null) values.put(KEY_WITHDRAW_COIN_ID, withdrawAddress.getType().getId());
+            if (withdrawAddress != null)
+                values.put(KEY_WITHDRAW_ADDRESS, withdrawAddress.toString());
+            if (withdrawAddress != null)
+                values.put(KEY_WITHDRAW_COIN_ID, withdrawAddress.getType().getId());
             if (withdrawAmount != null) values.put(KEY_WITHDRAW_AMOUNT_UNIT, withdrawAmount.value);
             if (withdrawTransactionId != null) values.put(KEY_WITHDRAW_TXID, withdrawTransactionId);
             return values;
@@ -327,22 +343,6 @@ public class ExchangeHistoryProvider extends ContentProvider {
 
             return new ShapeShiftTxStatus(shapeShiftStatus, depositAddress, withdrawAddress,
                     depositAmount, withdrawAmount, withdrawTransactionId);
-        }
-
-        public static int convertStatus(ShapeShiftTxStatus.Status shapeShiftStatus) {
-            switch (shapeShiftStatus) {
-                case NO_DEPOSITS:
-                    return STATUS_INITIAL;
-                case RECEIVED:
-                    return STATUS_PROCESSING;
-                case COMPLETE:
-                    return STATUS_COMPLETE;
-                case FAILED:
-                    return STATUS_FAILED;
-                case UNKNOWN:
-                default:
-                    return STATUS_UNKNOWN;
-            }
         }
     }
 }

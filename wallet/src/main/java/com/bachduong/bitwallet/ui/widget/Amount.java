@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public class Amount extends LinearLayout {
     private final FontFitTextView amountView;
     private final TextView symbolView;
-//    private final TextView amountPending;
+    //    private final TextView amountPending;
     boolean isBig = false;
     boolean isSmall = false;
     boolean isSingleLine = false;
@@ -76,9 +76,9 @@ public class Amount extends LinearLayout {
     public void setSingleLine(boolean isSingleLine) {
         this.isSingleLine = isSingleLine;
         if (isSingleLine) {
-            ((LinearLayout)findViewById(R.id.amount_layout)).setOrientation(HORIZONTAL);
+            ((LinearLayout) findViewById(R.id.amount_layout)).setOrientation(HORIZONTAL);
         } else {
-            ((LinearLayout)findViewById(R.id.amount_layout)).setOrientation(VERTICAL);
+            ((LinearLayout) findViewById(R.id.amount_layout)).setOrientation(VERTICAL);
         }
     }
 

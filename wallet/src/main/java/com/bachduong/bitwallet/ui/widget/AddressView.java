@@ -10,11 +10,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bachduong.core.util.GenericUtils;
-import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.util.WalletUtils;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.wallet.AbstractAddress;
 
 /**
  * @author John L. Jegutanis

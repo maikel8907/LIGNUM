@@ -24,24 +24,10 @@ public abstract class MarketInfoPollTask extends TimerTask {
         this.pair = pair;
     }
 
-    abstract public void onHandleMarketInfo(ShapeShiftMarketInfo marketInfo);
-
-    public void updatePair(String newPair) {
-        this.pair = newPair;
-    }
-
-    @Override
-    public void run() {
-        ShapeShiftMarketInfo marketInfo = getMarketInfoSync(shapeShift, pair);
-        if (marketInfo != null) {
-            onHandleMarketInfo(marketInfo);
-        }
-    }
-
     /**
      * Makes a call to ShapeShift about the market info of a pair. If case of a problem, it will
      * retry 3 times and return null if there was an error.
-     *
+     * <p>
      * Note: do not call this from the main thread!
      */
     @Nullable
@@ -60,5 +46,19 @@ public abstract class MarketInfoPollTask extends TimerTask {
             }
         }
         return null;
+    }
+
+    abstract public void onHandleMarketInfo(ShapeShiftMarketInfo marketInfo);
+
+    public void updatePair(String newPair) {
+        this.pair = newPair;
+    }
+
+    @Override
+    public void run() {
+        ShapeShiftMarketInfo marketInfo = getMarketInfoSync(shapeShift, pair);
+        if (marketInfo != null) {
+            onHandleMarketInfo(marketInfo);
+        }
     }
 }

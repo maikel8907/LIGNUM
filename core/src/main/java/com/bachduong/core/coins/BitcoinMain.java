@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class BitcoinMain extends BitFamily {
+    private static BitcoinMain instance = new BitcoinMain();
+
     private BitcoinMain() {
         id = "bitcoin.main";
 
         addressHeader = 0;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 128;
 
@@ -27,7 +29,6 @@ public class BitcoinMain extends BitFamily {
         signedMessageHeader = toBytes("Bitcoin Signed Message:\n");
     }
 
-    private static BitcoinMain instance = new BitcoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

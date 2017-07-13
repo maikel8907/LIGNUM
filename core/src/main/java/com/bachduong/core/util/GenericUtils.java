@@ -235,14 +235,18 @@ public class GenericUtils {
 
     /**
      * Tries to parse the addressStr as a Bitcoin style address and find potential compatible coin types
+     *
      * @param addressStr possible bitcoin type address
-     * @param builder for the types list
+     * @param builder    for the types list
      */
     private static void tryBitcoinFamilyAddresses(final String addressStr, ImmutableList.Builder<CoinType> builder) {
         VersionedChecksummedBytes parsed;
         try {
-            parsed = new VersionedChecksummedBytes(addressStr) { };
-        } catch (AddressFormatException e) { return; }
+            parsed = new VersionedChecksummedBytes(addressStr) {
+            };
+        } catch (AddressFormatException e) {
+            return;
+        }
         int version = parsed.getVersion();
         for (CoinType type : CoinID.getSupportedCoins()) {
             if (type.getAcceptableAddressCodes() == null) continue;

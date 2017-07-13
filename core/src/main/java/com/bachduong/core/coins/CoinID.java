@@ -63,8 +63,7 @@ public enum CoinID {
     EGULDEN_MAIN(EguldenMain.get()),
     CLUBCOIN_MAIN(ClubcoinMain.get()),
     RICHCOIN_MAIN(RichcoinMain.get()),
-    IXCOIN_MAIN(IxcoinMain.get()),
-    ;
+    IXCOIN_MAIN(IxcoinMain.get()),;
 
     private static List<CoinType> types;
     private static HashMap<String, CoinType> idLookup = new HashMap<>();
@@ -114,15 +113,6 @@ public enum CoinID {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return type.getId();
-    }
-
-    public CoinType getCoinType() {
-        return type;
-    }
-
     public static List<CoinType> getSupportedCoins() {
         return types;
     }
@@ -168,5 +158,14 @@ public enum CoinID {
         } else {
             throw new IllegalArgumentException("Unsupported coin symbol: " + symbol);
         }
+    }
+
+    @Override
+    public String toString() {
+        return type.getId();
+    }
+
+    public CoinType getCoinType() {
+        return type;
     }
 }

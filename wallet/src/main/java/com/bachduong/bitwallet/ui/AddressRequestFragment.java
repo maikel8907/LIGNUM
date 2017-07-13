@@ -21,17 +21,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.coins.FiatType;
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.coins.families.BitFamily;
-import com.bachduong.core.coins.families.NxtFamily;
-import com.bachduong.core.exceptions.UnsupportedCoinTypeException;
-import com.bachduong.core.uri.CoinURI;
-import com.bachduong.core.util.ExchangeRate;
-import com.bachduong.core.util.GenericUtils;
-import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.Constants;
@@ -44,6 +33,17 @@ import com.bachduong.bitwallet.util.QrUtils;
 import com.bachduong.bitwallet.util.ThrottlingWalletChangeListener;
 import com.bachduong.bitwallet.util.UiUtils;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.FiatType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.coins.families.BitFamily;
+import com.bachduong.core.coins.families.NxtFamily;
+import com.bachduong.core.exceptions.UnsupportedCoinTypeException;
+import com.bachduong.core.uri.CoinURI;
+import com.bachduong.core.util.ExchangeRate;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.wallet.AbstractAddress;
+import com.bachduong.core.wallet.WalletAccount;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,8 +55,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.bachduong.core.Preconditions.checkNotNull;
 import static com.bachduong.bitwallet.ExchangeRatesProvider.getRate;
+import static com.bachduong.core.Preconditions.checkNotNull;
 
 /**
  *
@@ -72,57 +72,89 @@ public class AddressRequestFragment extends WalletFragment {
 
     // Fragment tags
     private static final String NEW_ADDRESS_TAG = "new_address_tag";
-
+    private final MyHandler handler = new MyHandler(this);
+    private final ContentObserver addressBookObserver = new AddressBookObserver(handler);
+    private final ThrottlingWalletChangeListener walletListener = new ThrottlingWalletChangeListener() {
+        @Override
+        public void onThrottledWalletChanged() {
+            handler.sendEmptyMessage(UPDATE_VIEW);
+        }
+    };
+    @Bind(R.id.request_address_label)
+    TextView addressLabelView;
+    @Bind(R.id.request_address)
+    TextView addressView;
+    @Bind(R.id.request_coin_amount)
+    AmountEditView sendCoinAmountView;
+    @Bind(R.id.view_previous_addresses)
+    View previousAddressesLink;
+    @Bind(R.id.qr_code)
+    ImageView qrView;
+    String lastQrContent;
+    CurrencyCalculatorLink amountCalculatorLink;
+    ContentResolver resolver;
     private CoinType type;
-    @Nullable private AbstractAddress showAddress;
+    @Nullable
+    private AbstractAddress showAddress;
     private AbstractAddress receiveAddress;
     private Value amount;
     private String label;
     private String accountId;
     private WalletAccount account;
     private String message;
+    private final AmountEditView.Listener amountsListener = new AmountEditView.Listener() {
+        boolean isValid(Value amount) {
+            return amount != null && amount.isPositive()
+                    && amount.compareTo(type.getMinNonDust()) >= 0;
+        }
 
-    @Bind(R.id.request_address_label) TextView addressLabelView;
-    @Bind(R.id.request_address) TextView addressView;
-    @Bind(R.id.request_coin_amount) AmountEditView sendCoinAmountView;
-    @Bind(R.id.view_previous_addresses) View previousAddressesLink;
-    @Bind(R.id.qr_code) ImageView qrView;
-    String lastQrContent;
-    CurrencyCalculatorLink amountCalculatorLink;
-    ContentResolver resolver;
-
-    private final MyHandler handler = new MyHandler(this);
-    private final ContentObserver addressBookObserver = new AddressBookObserver(handler);
-    private Configuration config;
-
-    private static class MyHandler extends WeakHandler<AddressRequestFragment> {
-        public MyHandler(AddressRequestFragment ref) { super(ref); }
+        void checkAndUpdateAmount() {
+            Value amountParsed = amountCalculatorLink.getPrimaryAmount();
+            if (isValid(amountParsed)) {
+                amount = amountParsed;
+            } else {
+                amount = null;
+            }
+            updateView();
+        }
 
         @Override
-        protected void weakHandleMessage(AddressRequestFragment ref, Message msg) {
-            switch (msg.what) {
-                case UPDATE_VIEW:
-                    ref.updateView();
-                    break;
-                case UPDATE_EXCHANGE_RATE:
-                    ref.updateExchangeRate((ExchangeRate) msg.obj);
-                    break;
+        public void changed() {
+            checkAndUpdateAmount();
+        }
+
+        @Override
+        public void focusChanged(final boolean hasFocus) {
+            if (!hasFocus) {
+                checkAndUpdateAmount();
             }
         }
-    }
-
-    static class AddressBookObserver extends ContentObserver {
-        private final MyHandler handler;
-
-        public AddressBookObserver(MyHandler handler) {
-            super(handler);
-            this.handler = handler;
+    };
+    private Configuration config;
+    private final LoaderManager.LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            String localSymbol = config.getExchangeCurrencyCode();
+            String coinSymbol = type.getSymbol();
+            return new ExchangeRateLoader(getActivity(), config, localSymbol, coinSymbol);
         }
 
         @Override
-        public void onChange(final boolean selfChange) {
-            handler.sendEmptyMessage(UPDATE_VIEW);
+        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
+            if (data != null && data.getCount() > 0) {
+                data.moveToFirst();
+                final ExchangeRatesProvider.ExchangeRate exchangeRate = ExchangeRatesProvider.getExchangeRate(data);
+                handler.sendMessage(handler.obtainMessage(UPDATE_EXCHANGE_RATE, exchangeRate.rate));
+            }
         }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> loader) {
+        }
+    };
+
+    public AddressRequestFragment() {
+        // Required empty public constructor
     }
 
     public static AddressRequestFragment newInstance(Bundle args) {
@@ -143,9 +175,6 @@ public class AddressRequestFragment extends WalletFragment {
             args.putSerializable(Constants.ARG_ADDRESS, showAddress);
         }
         return newInstance(args);
-    }
-    public AddressRequestFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -209,7 +238,7 @@ public class AddressRequestFragment extends WalletFragment {
     @OnClick(R.id.request_address_view)
     public void onAddressClick() {
         if (showAddress != null) {
-            receiveAddress =  showAddress;
+            receiveAddress = showAddress;
         }
         Activity activity = getActivity();
         ActionMode actionMode = UiUtils.startAddressActionMode(receiveAddress, activity,
@@ -271,7 +300,7 @@ public class AddressRequestFragment extends WalletFragment {
     }
 
     @Override
-    public void onAttach(final Context  context) {
+    public void onAttach(final Context context) {
         super.onAttach(context);
         this.resolver = context.getContentResolver();
         this.config = ((WalletApplication) context.getApplicationContext()).getConfiguration();
@@ -306,7 +335,7 @@ public class AddressRequestFragment extends WalletFragment {
         if (isRemoving() || isDetached()) return;
         receiveAddress = null;
         if (showAddress != null) {
-            receiveAddress =  showAddress;
+            receiveAddress = showAddress;
         } else {
             receiveAddress = account.getReceiveAddress();
         }
@@ -328,7 +357,7 @@ public class AddressRequestFragment extends WalletFragment {
     private String getUri() {
         if (type instanceof BitFamily) {
             return CoinURI.convertToCoinURI(receiveAddress, amount, label, message);
-        } else if (type instanceof NxtFamily){
+        } else if (type instanceof NxtFamily) {
             return CoinURI.convertToCoinURI(receiveAddress, amount, label, message,
                     account.getPublicKeySerialized());
         } else {
@@ -362,13 +391,6 @@ public class AddressRequestFragment extends WalletFragment {
         }
     }
 
-    private final ThrottlingWalletChangeListener walletListener = new ThrottlingWalletChangeListener() {
-        @Override
-        public void onThrottledWalletChanged() {
-            handler.sendEmptyMessage(UPDATE_VIEW);
-        }
-    };
-
     private String resolveLabel(@Nonnull final AbstractAddress address) {
         return AddressBookProvider.resolveLabel(getActivity(), address);
     }
@@ -378,54 +400,35 @@ public class AddressRequestFragment extends WalletFragment {
         return account;
     }
 
-    private final LoaderManager.LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            String localSymbol = config.getExchangeCurrencyCode();
-            String coinSymbol = type.getSymbol();
-            return new ExchangeRateLoader(getActivity(), config, localSymbol, coinSymbol);
+    private static class MyHandler extends WeakHandler<AddressRequestFragment> {
+        public MyHandler(AddressRequestFragment ref) {
+            super(ref);
         }
 
         @Override
-        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
-            if (data != null && data.getCount() > 0) {
-                data.moveToFirst();
-                final ExchangeRatesProvider.ExchangeRate exchangeRate = ExchangeRatesProvider.getExchangeRate(data);
-                handler.sendMessage(handler.obtainMessage(UPDATE_EXCHANGE_RATE, exchangeRate.rate));
+        protected void weakHandleMessage(AddressRequestFragment ref, Message msg) {
+            switch (msg.what) {
+                case UPDATE_VIEW:
+                    ref.updateView();
+                    break;
+                case UPDATE_EXCHANGE_RATE:
+                    ref.updateExchangeRate((ExchangeRate) msg.obj);
+                    break;
             }
         }
+    }
 
-        @Override
-        public void onLoaderReset(final Loader<Cursor> loader) {
-        }
-    };
+    static class AddressBookObserver extends ContentObserver {
+        private final MyHandler handler;
 
-    private final AmountEditView.Listener amountsListener = new AmountEditView.Listener() {
-        boolean isValid(Value amount) {
-            return amount != null && amount.isPositive()
-                    && amount.compareTo(type.getMinNonDust()) >= 0;
-        }
-
-        void checkAndUpdateAmount() {
-            Value amountParsed = amountCalculatorLink.getPrimaryAmount();
-            if (isValid(amountParsed)) {
-                amount = amountParsed;
-            } else {
-                amount = null;
-            }
-            updateView();
+        public AddressBookObserver(MyHandler handler) {
+            super(handler);
+            this.handler = handler;
         }
 
         @Override
-        public void changed() {
-            checkAndUpdateAmount();
+        public void onChange(final boolean selfChange) {
+            handler.sendEmptyMessage(UPDATE_VIEW);
         }
-
-        @Override
-        public void focusChanged(final boolean hasFocus) {
-            if (!hasFocus) {
-                checkAndUpdateAmount();
-            }
-        }
-    };
+    }
 }

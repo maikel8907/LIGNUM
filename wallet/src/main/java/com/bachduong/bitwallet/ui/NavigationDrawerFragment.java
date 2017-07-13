@@ -83,7 +83,7 @@ public class NavigationDrawerFragment extends Fragment {
 
 
     @Override
-    public void onActivityCreated (Bundle savedInstanceState) {
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         // Indicate that this fragment would like to influence the set of actions in the action bar.
         setHasOptionsMenu(true);
@@ -91,7 +91,7 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
 
         mDrawerListView = (ListView) view.findViewById(R.id.coins_list);
@@ -124,8 +124,9 @@ public class NavigationDrawerFragment extends Fragment {
 
     /**
      * Users of this fragment must call this method to set up the navigation drawer interactions.
-     * @param fragmentId   The android:id of this fragment in its activity's layout.
-     * @param drawerLayout The DrawerLayout containing this fragment's UI.
+     *
+     * @param fragmentId     The android:id of this fragment in its activity's layout.
+     * @param drawerLayout   The DrawerLayout containing this fragment's UI.
      * @param navDrawerItems The items contained in the drawer
      */
     public void setUp(int fragmentId, DrawerLayout drawerLayout, List<NavDrawerItem> navDrawerItems) {
@@ -313,8 +314,11 @@ public class NavigationDrawerFragment extends Fragment {
      */
     public interface Listener {
         void onAccountSelected(String accountId);
+
         void onAddCoinsSelected();
+
         void onTradeSelected();
+
         void onOverviewSelected();
     }
 }

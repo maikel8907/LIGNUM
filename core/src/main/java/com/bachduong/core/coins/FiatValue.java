@@ -2,8 +2,6 @@ package com.bachduong.core.coins;
 
 import org.bitcoinj.utils.Fiat;
 
-import static com.google.common.base.Preconditions.checkArgument;
-
 /**
  * @author John L. Jegutanis
  */

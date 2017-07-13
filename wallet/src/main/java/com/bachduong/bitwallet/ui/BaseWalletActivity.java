@@ -5,11 +5,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
+import com.bachduong.bitwallet.Configuration;
+import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.wallet.Wallet;
 import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.bitwallet.Configuration;
-import com.bachduong.bitwallet.WalletApplication;
 
 import java.util.List;
 

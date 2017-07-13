@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author John L. Jegutanis
  */
 public class VertcoinMain extends BitFamily {
+    private static VertcoinMain instance = new VertcoinMain();
+
     private VertcoinMain() {
         id = "vertcoin.main";
 
         addressHeader = 71;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 199;
 
@@ -27,7 +29,6 @@ public class VertcoinMain extends BitFamily {
         signedMessageHeader = toBytes("Vertcoin Signed Message:\n");
     }
 
-    private static VertcoinMain instance = new VertcoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

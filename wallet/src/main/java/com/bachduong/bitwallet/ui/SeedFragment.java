@@ -13,10 +13,10 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.wallet.Wallet;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.util.Fonts;
+import com.bachduong.core.wallet.Wallet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

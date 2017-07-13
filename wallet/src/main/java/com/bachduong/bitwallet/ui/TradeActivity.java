@@ -3,13 +3,13 @@ package com.bachduong.bitwallet.ui;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.wallet.WalletAccount;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.ExchangeHistoryProvider.ExchangeEntry;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.ui.dialogs.ConfirmAddCoinUnlockWalletDialog;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.wallet.WalletAccount;
 
 import org.bitcoinj.crypto.KeyCrypterException;
 

@@ -15,6 +15,7 @@ public class TimeUtils {
 
     /**
      * Show time in a human friendly format
+     *
      * @param seconds timestamp in seconds since epoch
      */
     public static CharSequence toRelativeTimeString(long seconds) {
@@ -35,6 +36,7 @@ public class TimeUtils {
 
     /**
      * Show time in a human friendly format
+     *
      * @param seconds timestamp in seconds since epoch
      */
     public static CharSequence toTimeString(Context context, long seconds) {

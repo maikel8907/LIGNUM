@@ -9,12 +9,10 @@ import org.json.JSONObject;
 
 import java.math.RoundingMode;
 
-import static com.bachduong.core.Preconditions.checkState;
-
 /**
  * @author John L. Jegutanis
  */
-public class ShapeShiftMarketInfo  extends ShapeShiftPairBase {
+public class ShapeShiftMarketInfo extends ShapeShiftPairBase {
     public final ShapeShiftExchangeRate rate;
     public final Value limit;
     public final Value minimum;

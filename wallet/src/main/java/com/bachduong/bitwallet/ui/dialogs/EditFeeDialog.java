@@ -9,16 +9,16 @@ import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.TextView;
 
-import com.bachduong.core.coins.CoinID;
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.coins.ValueType;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.ui.DialogBuilder;
 import com.bachduong.bitwallet.ui.widget.AmountEditView;
+import com.bachduong.core.coins.CoinID;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.coins.ValueType;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

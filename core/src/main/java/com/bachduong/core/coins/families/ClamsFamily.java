@@ -7,8 +7,8 @@ import javax.annotation.Nullable;
 
 /**
  * @author John L. Jegutanis
- *
- * This family contains Clams
+ *         <p>
+ *         This family contains Clams
  */
 public class ClamsFamily extends BitFamily {
     {

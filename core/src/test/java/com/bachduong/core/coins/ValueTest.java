@@ -3,13 +3,13 @@ package com.bachduong.core.coins;
 /**
  * Copyright 2014 Andreas Schildbach
  * Copyright 2015 John L. Jegutanis
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -18,18 +18,18 @@ package com.bachduong.core.coins;
  */
 
 
-import static com.bachduong.core.coins.Value.*;
-
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.fail;
-
 import org.bitcoinj.core.Coin;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+
+import static com.bachduong.core.coins.Value.parse;
+import static com.bachduong.core.coins.Value.valueOf;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 public class ValueTest {
     final CoinType BTC = BitcoinMain.get();
@@ -85,7 +85,8 @@ public class ValueTest {
         try {
             parse(type, "2E-20");
             org.junit.Assert.fail("should not have accepted fractional satoshis");
-        } catch (ArithmeticException e) {}
+        } catch (ArithmeticException e) {
+        }
     }
 
 
@@ -106,7 +107,8 @@ public class ValueTest {
         try {
             parse(type, new BigDecimal("2E-20"));
             org.junit.Assert.fail("should not have accepted fractional satoshis");
-        } catch (ArithmeticException e) {}
+        } catch (ArithmeticException e) {
+        }
     }
 
     @Test
@@ -120,11 +122,13 @@ public class ValueTest {
         try {
             valueOf(type, 1, -1);
             fail();
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
         try {
             valueOf(type, -1, 0);
             fail();
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
     }
 
     @Test

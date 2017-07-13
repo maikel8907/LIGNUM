@@ -2,8 +2,8 @@ package com.bachduong.core.coins.families;
 
 /**
  * @author John L. Jegutanis
- *
- * This family contains Reddcoin, Cannacoin, etc
+ *         <p>
+ *         This family contains Reddcoin, Cannacoin, etc
  */
 public abstract class ReddFamily extends BitFamily {
     {

@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author Malcolm MacLeod
  */
 public class GuldenMain extends BitFamily {
+    private static GuldenMain instance = new GuldenMain();
+
     private GuldenMain() {
         id = "gulden.main";
 
         addressHeader = 38;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 100;
         dumpedPrivateKeyHeader = 166;
 
@@ -27,7 +29,6 @@ public class GuldenMain extends BitFamily {
         signedMessageHeader = toBytes("Gulden Signed Message:\n");
     }
 
-    private static GuldenMain instance = new GuldenMain();
     public static synchronized GuldenMain get() {
         return instance;
     }

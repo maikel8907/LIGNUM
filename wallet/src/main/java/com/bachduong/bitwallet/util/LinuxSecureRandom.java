@@ -16,10 +16,17 @@
 
 package com.bachduong.bitwallet.util;
 
-import org.slf4j.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.security.*;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.security.Provider;
+import java.security.SecureRandomSpi;
+import java.security.Security;
 
 /**
  * A SecureRandom implementation that is able to override the standard JVM provided implementation, and which simply
@@ -29,14 +36,6 @@ import java.security.*;
  */
 public class LinuxSecureRandom extends SecureRandomSpi {
     private static final FileInputStream urandom;
-
-    private static class LinuxSecureRandomProvider extends Provider {
-        public LinuxSecureRandomProvider() {
-            super("LinuxSecureRandom", 1.0, "A Linux specific random number provider that uses /dev/urandom");
-            put("SecureRandom.LinuxSecureRandom", LinuxSecureRandom.class.getName());
-        }
-    }
-
     private static final Logger log = LoggerFactory.getLogger(LinuxSecureRandom.class);
 
     static {
@@ -89,5 +88,12 @@ public class LinuxSecureRandom extends SecureRandomSpi {
         byte[] bits = new byte[i];
         engineNextBytes(bits);
         return bits;
+    }
+
+    private static class LinuxSecureRandomProvider extends Provider {
+        public LinuxSecureRandomProvider() {
+            super("LinuxSecureRandom", 1.0, "A Linux specific random number provider that uses /dev/urandom");
+            put("SecureRandom.LinuxSecureRandom", LinuxSecureRandom.class.getName());
+        }
     }
 }

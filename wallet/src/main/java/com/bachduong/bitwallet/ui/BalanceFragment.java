@@ -18,13 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bachduong.core.coins.CoinType;
-import com.bachduong.core.coins.Value;
-import com.bachduong.core.util.GenericUtils;
-import com.bachduong.core.wallet.AbstractTransaction;
-import com.bachduong.core.wallet.AbstractWallet;
-import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.core.wallet.WalletConnectivityStatus;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.Configuration;
 import com.bachduong.bitwallet.Constants;
@@ -36,6 +29,13 @@ import com.bachduong.bitwallet.ui.widget.Amount;
 import com.bachduong.bitwallet.ui.widget.SwipeRefreshLayout;
 import com.bachduong.bitwallet.util.ThrottlingWalletChangeListener;
 import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.wallet.AbstractTransaction;
+import com.bachduong.core.wallet.AbstractWallet;
+import com.bachduong.core.wallet.WalletAccount;
+import com.bachduong.core.wallet.WalletConnectivityStatus;
 import com.google.common.collect.Lists;
 
 import org.bitcoinj.core.Coin;
@@ -75,28 +75,72 @@ public class BalanceFragment extends WalletFragment implements LoaderCallbacks<L
 
     private static final int ID_TRANSACTION_LOADER = 0;
     private static final int ID_RATE_LOADER = 1;
-
+    private final MyHandler handler = new MyHandler(this);
+    private final ContentObserver addressBookObserver = new AddressBookObserver(handler);
+    @Bind(R.id.transaction_rows)
+    ListView transactionRows;
+    @Bind(R.id.swipeContainer)
+    SwipeRefreshLayout swipeContainer;
+    @Bind(R.id.history_empty)
+    View emptyPocketMessage;
+    @Bind(R.id.account_balance)
+    Amount accountBalance;
+    @Bind(R.id.account_exchanged_balance)
+    Amount accountExchangedBalance;
+    @Bind(R.id.connection_label)
+    TextView connectionLabel;
     private String accountId;
     private WalletAccount pocket;
     private CoinType type;
     private Coin currentBalance;
     private ExchangeRate exchangeRate;
-
     private boolean isFullAmount = false;
     private WalletApplication application;
     private Configuration config;
-    private final MyHandler handler = new MyHandler(this);
-    private final ContentObserver addressBookObserver = new AddressBookObserver(handler);
+    private final LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
+        @Override
+        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+            String localSymbol = config.getExchangeCurrencyCode();
+            String coinSymbol = type.getSymbol();
+            return new ExchangeRateLoader(getActivity(), config, localSymbol, coinSymbol);
+        }
 
-            @Bind(R.id.transaction_rows) ListView transactionRows;
-    @Bind(R.id.swipeContainer) SwipeRefreshLayout swipeContainer;
-    @Bind(R.id.history_empty) View emptyPocketMessage;
-    @Bind(R.id.account_balance) Amount accountBalance;
-    @Bind(R.id.account_exchanged_balance) Amount accountExchangedBalance;
-    @Bind(R.id.connection_label) TextView connectionLabel;
+        @Override
+        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
+            if (data != null && data.getCount() > 0) {
+                data.moveToFirst();
+                exchangeRate = ExchangeRatesProvider.getExchangeRate(data);
+                handler.sendEmptyMessage(UPDATE_VIEW);
+                if (log.isInfoEnabled()) {
+                    try {
+                        log.info("Got exchange rate: {}",
+                                exchangeRate.rate.convert(type.oneCoin()).toFriendlyString());
+                    } catch (Exception e) {
+                        log.warn(e.getMessage());
+                    }
+                }
+            }
+        }
+
+        @Override
+        public void onLoaderReset(final Loader<Cursor> loader) {
+        }
+    };
     private TransactionsListAdapter adapter;
+    private final ThrottlingWalletChangeListener walletChangeListener = new ThrottlingWalletChangeListener() {
+
+        @Override
+        public void onThrottledWalletChanged() {
+            if (adapter != null) adapter.notifyDataSetChanged();
+            handler.sendMessage(handler.obtainMessage(WALLET_CHANGED));
+        }
+    };
     private Listener listener;
     private ContentResolver resolver;
+
+    public BalanceFragment() {
+        // Required empty public constructor
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -111,10 +155,6 @@ public class BalanceFragment extends WalletFragment implements LoaderCallbacks<L
         args.putSerializable(Constants.ARG_ACCOUNT_ID, accountId);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public BalanceFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -298,15 +338,6 @@ public class BalanceFragment extends WalletFragment implements LoaderCallbacks<L
         }
     }
 
-    private final ThrottlingWalletChangeListener walletChangeListener = new ThrottlingWalletChangeListener() {
-
-        @Override
-        public void onThrottledWalletChanged() {
-            if (adapter != null) adapter.notifyDataSetChanged();
-            handler.sendMessage(handler.obtainMessage(WALLET_CHANGED));
-        }
-    };
-
     @Override
     public void onAttach(final Context context) {
         super.onAttach(context);
@@ -383,10 +414,72 @@ public class BalanceFragment extends WalletFragment implements LoaderCallbacks<L
         return pocket;
     }
 
+    @Override
+    public void updateView() {
+        if (isRemoving() || isDetached()) return;
+
+        if (currentBalance != null) {
+            String newBalanceStr = GenericUtils.formatCoinValue(type, currentBalance,
+                    isFullAmount ? AMOUNT_FULL_PRECISION : AMOUNT_SHORT_PRECISION, AMOUNT_SHIFT);
+            accountBalance.setAmount(newBalanceStr);
+        }
+
+        if (currentBalance != null && exchangeRate != null && getView() != null) {
+            try {
+                Value fiatAmount = exchangeRate.rate.convert(type, currentBalance);
+                accountExchangedBalance.setAmount(GenericUtils.formatFiatValue(fiatAmount));
+                accountExchangedBalance.setSymbol(fiatAmount.type.getSymbol());
+            } catch (Exception e) {
+                // Should not happen
+                accountExchangedBalance.setAmount("");
+                accountExchangedBalance.setSymbol("ERROR");
+            }
+        }
+
+        swipeContainer.setRefreshing(pocket.isLoading());
+
+        if (adapter != null) adapter.clearLabelCache();
+    }
+
+    private void clearLabelCache() {
+        if (adapter != null) adapter.clearLabelCache();
+    }
+
+    public interface Listener {
+        void onLocalAmountClick();
+
+        void onRefresh();
+    }
+
     private static class AbstractTransactionsLoader extends AsyncTaskLoader<List<AbstractTransaction>> {
+        private static final Comparator<AbstractTransaction> TRANSACTION_COMPARATOR = new Comparator<AbstractTransaction>() {
+            @Override
+            public int compare(final AbstractTransaction tx1, final AbstractTransaction tx2) {
+                final boolean pending1 = tx1.getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING;
+                final boolean pending2 = tx2.getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING;
+
+                if (pending1 != pending2)
+                    return pending1 ? -1 : 1;
+
+                // TODO use dates once implemented
+//                final Date updateTime1 = tx1.getUpdateTime();
+//                final long time1 = updateTime1 != null ? updateTime1.getTime() : 0;
+//                final Date updateTime2 = tx2.getUpdateTime();
+//                final long time2 = updateTime2 != null ? updateTime2.getTime() : 0;
+
+                // If both not pending
+                if (!pending1 && !pending2) {
+                    final int time1 = tx1.getAppearedAtChainHeight();
+                    final int time2 = tx2.getAppearedAtChainHeight();
+                    if (time1 != time2)
+                        return time1 > time2 ? -1 : 1;
+                }
+
+                return Arrays.equals(tx1.getHashBytes(), tx2.getHashBytes()) ? 1 : -1;
+            }
+        };
         private final WalletAccount account;
         private final ThrottlingWalletChangeListener transactionAddRemoveListener;
-
 
         private AbstractTransactionsLoader(final Context context, @Nonnull final WalletAccount account) {
             super(context);
@@ -430,97 +523,12 @@ public class BalanceFragment extends WalletFragment implements LoaderCallbacks<L
 
             return filteredAbstractTransactions;
         }
-
-        private static final Comparator<AbstractTransaction> TRANSACTION_COMPARATOR = new Comparator<AbstractTransaction>() {
-            @Override
-            public int compare(final AbstractTransaction tx1, final AbstractTransaction tx2) {
-                final boolean pending1 = tx1.getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING;
-                final boolean pending2 = tx2.getConfidenceType() == TransactionConfidence.ConfidenceType.PENDING;
-
-                if (pending1 != pending2)
-                    return pending1 ? -1 : 1;
-
-                // TODO use dates once implemented
-//                final Date updateTime1 = tx1.getUpdateTime();
-//                final long time1 = updateTime1 != null ? updateTime1.getTime() : 0;
-//                final Date updateTime2 = tx2.getUpdateTime();
-//                final long time2 = updateTime2 != null ? updateTime2.getTime() : 0;
-
-                // If both not pending
-                if (!pending1 && !pending2) {
-                    final int time1 = tx1.getAppearedAtChainHeight();
-                    final int time2 = tx2.getAppearedAtChainHeight();
-                    if (time1 != time2)
-                        return time1 > time2 ? -1 : 1;
-                }
-
-                return Arrays.equals(tx1.getHashBytes(),tx2.getHashBytes()) ? 1 : -1;
-            }
-        };
-    }
-
-    private final LoaderCallbacks<Cursor> rateLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
-        @Override
-        public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
-            String localSymbol = config.getExchangeCurrencyCode();
-            String coinSymbol = type.getSymbol();
-            return new ExchangeRateLoader(getActivity(), config, localSymbol, coinSymbol);
-        }
-
-        @Override
-        public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
-            if (data != null && data.getCount() > 0) {
-                data.moveToFirst();
-                exchangeRate = ExchangeRatesProvider.getExchangeRate(data);
-                handler.sendEmptyMessage(UPDATE_VIEW);
-                if (log.isInfoEnabled()) {
-                    try {
-                        log.info("Got exchange rate: {}",
-                                exchangeRate.rate.convert(type.oneCoin()).toFriendlyString());
-                    } catch (Exception e) {
-                        log.warn(e.getMessage());
-                    }
-                }
-            }
-        }
-
-        @Override
-        public void onLoaderReset(final Loader<Cursor> loader) { }
-    };
-
-    @Override
-    public void updateView() {
-        if (isRemoving() || isDetached()) return;
-
-        if (currentBalance != null) {
-            String newBalanceStr = GenericUtils.formatCoinValue(type, currentBalance,
-                    isFullAmount ? AMOUNT_FULL_PRECISION : AMOUNT_SHORT_PRECISION, AMOUNT_SHIFT);
-            accountBalance.setAmount(newBalanceStr);
-        }
-
-        if (currentBalance != null && exchangeRate != null && getView() != null) {
-            try {
-                Value fiatAmount = exchangeRate.rate.convert(type, currentBalance);
-                accountExchangedBalance.setAmount(GenericUtils.formatFiatValue(fiatAmount));
-                accountExchangedBalance.setSymbol(fiatAmount.type.getSymbol());
-            } catch (Exception e) {
-                // Should not happen
-                accountExchangedBalance.setAmount("");
-                accountExchangedBalance.setSymbol("ERROR");
-            }
-        }
-
-        swipeContainer.setRefreshing(pocket.isLoading());
-
-        if (adapter != null) adapter.clearLabelCache();
-    }
-
-    private void clearLabelCache() {
-        if (adapter != null) adapter.clearLabelCache();
     }
 
     private static class MyHandler extends WeakHandler<BalanceFragment> {
-        public MyHandler(BalanceFragment ref) { super(ref); }
+        public MyHandler(BalanceFragment ref) {
+            super(ref);
+        }
 
         @Override
         protected void weakHandleMessage(BalanceFragment ref, Message msg) {
@@ -552,10 +560,5 @@ public class BalanceFragment extends WalletFragment implements LoaderCallbacks<L
         public void onChange(final boolean selfChange) {
             handler.sendEmptyMessage(CLEAR_LABEL_CACHE);
         }
-    }
-
-    public interface Listener {
-        void onLocalAmountClick();
-        void onRefresh();
     }
 }

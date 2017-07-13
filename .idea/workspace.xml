@@ -13,7 +13,456 @@
     <bookmark url="file://$PROJECT_DIR$/../../iwebercreative/BibleNote/app/src/main/java/com/baiyang/biblenote/data/DatabaseHandler.java" description="        Log.d(LOG_TAG, &quot;child list length &quot; + note..." line="212" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf65973-8d90-4989-b277-39bc1716b2c6" name="Default" comment="" />
+    <list default="true" id="bdf65973-8d90-4989-b277-39bc1716b2c6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build.gradle" afterPath="$PROJECT_DIR$/core/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/Preconditions.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/Preconditions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/AsiacoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/AsiacoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/AuroracoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/AuroracoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BatacoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BatacoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BitcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BitcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BitcoinTest.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BitcoinTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BlackcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BlackcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BurstMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BurstMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CanadaeCoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CanadaeCoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CannacoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CannacoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ClamsMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ClamsMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ClubcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ClubcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CoinID.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CoinID.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CoinType.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/CoinType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DashMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DashMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DigibyteMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DigibyteMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DigitalcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DigitalcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DogecoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DogecoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DogecoinTest.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/DogecoinTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/EguldenMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/EguldenMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/FeathercoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/FeathercoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/FiatValue.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/FiatValue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/GcrMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/GcrMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/GuldenMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/GuldenMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/IxcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/IxcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/JumbucksMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/JumbucksMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/LitecoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/LitecoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/LitecoinTest.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/LitecoinTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/MonacoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/MonacoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NamecoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NamecoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NeoscoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NeoscoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NeoscoinTest.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NeoscoinTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NovacoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NovacoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NuBitsMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NuBitsMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NuSharesMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NuSharesMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NxtMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/NxtMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/OKCashMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/OKCashMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ParkbyteMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ParkbyteMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PeercoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PeercoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PeercoinTest.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PeercoinTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PotcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PotcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PrimecoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/PrimecoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ReddcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ReddcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/RichcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/RichcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/RubycoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/RubycoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ShadowCashMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ShadowCashMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/UroMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/UroMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/Value.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/Value.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ValueType.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/ValueType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/VergeMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/VergeMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/VertcoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/VertcoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/VpncoinMain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/VpncoinMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/BitFamily.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/BitFamily.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/ClamsFamily.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/ClamsFamily.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/Families.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/Families.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/NuFamily.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/NuFamily.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/NxtFamily.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/NxtFamily.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/PeerFamily.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/PeerFamily.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/ReddFamily.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/ReddFamily.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/VpncoinFamily.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/families/VpncoinFamily.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Appendix.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Appendix.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Attachment.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Attachment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Constants.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Convert.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Convert.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Crypto.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Crypto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Curve25519.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Curve25519.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/EncryptedData.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/EncryptedData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/ReedSolomon.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/ReedSolomon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Transaction.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/Transaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/TransactionImpl.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/TransactionImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/TransactionType.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/nxt/TransactionType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/ShapeShift.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/ShapeShift.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftEmail.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftEmail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftExchangeRate.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftExchangeRate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftMarketInfo.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftMarketInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftTime.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftTime.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftTxStatus.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/data/ShapeShiftTxStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/messages/TxMessage.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/messages/TxMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/AddressStatus.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/AddressStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/BlockHeader.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/BlockHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/NxtServerClient.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/NxtServerClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/ServerClient.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/ServerClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/ServerClients.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/ServerClients.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/interfaces/ConnectionEventListener.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/interfaces/ConnectionEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/protos/Protos.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/protos/Protos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/uri/CoinURI.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/uri/CoinURI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/uri/OptionalFieldValidationException.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/uri/OptionalFieldValidationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/uri/RequiredFieldValidationException.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/uri/RequiredFieldValidationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/ExchangeRate.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/ExchangeRate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/ExchangeRateBase.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/ExchangeRateBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/GenericUtils.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/GenericUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/MonetaryFormat.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/MonetaryFormat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/TypeUtils.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/util/TypeUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractAddress.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractAddress.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractTransaction.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractTransaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractWallet.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractWallet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/BitWalletBase.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/BitWalletBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/BitWalletSingleKey.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/BitWalletSingleKey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SendRequest.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SendRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SerializedKey.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SerializedKey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SignedMessage.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SignedMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SimpleHDKeyChain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SimpleHDKeyChain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SimpleKeyChain.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/SimpleKeyChain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/TransactionCreator.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/TransactionCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/TransactionWatcherWallet.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/TransactionWatcherWallet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/Wallet.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/Wallet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletAccount.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletAccount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletCoinSelector.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletCoinSelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletFiles.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletFiles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletPocketHD.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletPocketHD.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletPocketProtobufSerializer.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletPocketProtobufSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletProtobufSerializer.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletProtobufSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletTransaction.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletTransaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/BitSendRequest.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/BitSendRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/BitTransaction.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/BitTransaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/EmptyTransactionOutput.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/EmptyTransactionOutput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/OutPointOutput.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/OutPointOutput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/TrimmedTransaction.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/bitcoin/TrimmedTransaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/clams/ClamsTxMessage.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/clams/ClamsTxMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtAddress.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtAddress.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtFamilyKey.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtFamilyKey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtFamilyWallet.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtFamilyWallet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtFamilyWalletProtobufSerializer.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtFamilyWalletProtobufSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtTransaction.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtTransaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtTxMessage.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/nxt/NxtTxMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/vpncoin/VpncoinTxMessage.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/families/vpncoin/VpncoinTxMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/stratumj/StratumClient.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/stratumj/StratumClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/stratumj/messages/BaseMessage.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/stratumj/messages/BaseMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/bachduong/stratumj/messages/CallMessage.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/bachduong/stratumj/messages/CallMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/coins/ValueTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/coins/ValueTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/exchange/shapeshift/MessagesTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/exchange/shapeshift/MessagesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/exchange/shapeshift/ServerTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/exchange/shapeshift/ServerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/uri/CoinURITest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/uri/CoinURITest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/util/MonetaryFormatTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/util/MonetaryFormatTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/SimpleHDKeyChainTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/SimpleHDKeyChainTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/WalletPocketHDTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/WalletPocketHDTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/WalletTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/WalletTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/families/bitcoin/BitAddressTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/families/bitcoin/BitAddressTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/families/nxt/NxtFamilyWalletTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/families/nxt/NxtFamilyWalletTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/families/vpncoin/TransactionTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/families/vpncoin/TransactionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/test/java/com/bachduong/stratumj/CommunicationsTest.java" afterPath="$PROJECT_DIR$/core/src/test/java/com/bachduong/stratumj/CommunicationsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font-icons/demo.html" afterPath="$PROJECT_DIR$/font-icons/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font-icons/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/font-icons/fonts/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font-icons/selection.json" afterPath="$PROJECT_DIR$/font-icons/selection.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_keyboard_backspace_black_24dp.xml" afterPath="$PROJECT_DIR$/wallet/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_keyboard_backspace_black_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values-v16.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values-v16.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values-v21.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values-v21.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-hdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-hdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-ldpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-ldpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/dependencies/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/dependencies/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/manifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/manifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_1/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_1/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_2/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_2/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_3/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_3/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_4/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_4/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_5/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_5/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_6/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_6/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_7/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_7/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_8/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_8/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_9/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/slice_9/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/proguard-rules/debug/aapt_rules.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/proguard-rules/debug/aapt_rules.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_keyboard_backspace_black_24dp.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_keyboard_backspace_black_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/address_row_circle_bg_unused.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/address_row_circle_bg_unused.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/address_row_circle_bg_used.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/address_row_circle_bg_used.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/font_icon_bg.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/font_icon_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/generic_green_circle.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/generic_green_circle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/generic_red_circle.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/generic_red_circle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/key_board_background.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/key_board_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/transaction_row_circle_bg_pending.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/transaction_row_circle_bg_pending.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/transaction_row_circle_bg_receive.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/transaction_row_circle_bg_receive.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/transaction_row_circle_bg_send.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/transaction_row_circle_bg_send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/account_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/account_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_about.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_about.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_fragment_wrapper.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_fragment_wrapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_pair_usb_pin.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_pair_usb_pin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_pin_login.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_pin_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_wallet.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/activity_wallet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/add_account_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/add_account_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/address.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/address_book_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/address_book_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/address_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/address_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/amount.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/amount.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/amount_edit.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/amount_edit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/coin_list_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/coin_list_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/dialog_title.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/dialog_title.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/edit_account_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/edit_account_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/edit_address_book_entry_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/edit_address_book_entry_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/edit_fee_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/edit_fee_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/email_receipt_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/email_receipt_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/exchange_rate_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/exchange_rate_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/exchange_rates_content.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/exchange_rates_content.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/exchange_status_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/exchange_status_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_account.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_account.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_account_details.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_account_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_balance_header.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_balance_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_debugging.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_debugging.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_history.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_history.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_rates.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_rates.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_fees_settings_list.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_fees_settings_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_finalize_wallet_restoration.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_finalize_wallet_restoration.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_overview_header.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_overview_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_password_confirmation.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_password_confirmation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_request.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_request.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_restore.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_restore.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_seed.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_seed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_select_coins_list.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_select_coins_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_send.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_sign_message.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_sign_message.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_sweep.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_sweep.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_select.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_select.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_status.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_status.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_footer.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_footer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_header.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/get_password_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/get_password_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/header_with_font_icon.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/header_with_font_icon.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/item_simple.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/item_simple.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_item.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_section_title.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_section_title.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/new_address_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/new_address_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/powered_by_shapeshift.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/powered_by_shapeshift.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/scan_activity.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/scan_activity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/select_coin_for_address.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/select_coin_for_address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/select_pay_with.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/select_pay_with.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/skip_seed_dialog.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/skip_seed_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_amount_visualizer.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_amount_visualizer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_details_output_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_details_output_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_output.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_output.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/transaction_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/account_options.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/account_options.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/address_options.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/address_options.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/address_options_extra.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/address_options_extra.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/balance.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/balance.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/copy_share_options.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/copy_share_options.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/exchange_status.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/exchange_status.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/global.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/global.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/overview.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/overview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/request.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/request.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/request_single_address.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/request_single_address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/send.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/trade.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/menu/trade.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/xml/preferences.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/xml/preferences.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/restart-dex/debug/build-info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/AddressBookProvider.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/AddressBookProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Configuration.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Constants.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ExchangeHistoryProvider.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ExchangeHistoryProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ExchangeRatesProvider.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ExchangeRatesProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/WalletApplication.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/WalletApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/camera/CameraManager.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/camera/CameraManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/CoinServiceImpl.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/CoinServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/AddCoinTask.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/AddCoinTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/ExchangeCheckSupportedCoinsTask.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/ExchangeCheckSupportedCoinsTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/MarketInfoPollTask.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/MarketInfoPollTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/SignVerifyMessageTask.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/SignVerifyMessageTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AccountDetailsFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AccountDetailsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AccountFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AccountFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AddCoinsActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AddCoinsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AddressRequestFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AddressRequestFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AddressesListAdapter.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/AddressesListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/BalanceFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/BalanceFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/BaseWalletActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/BaseWalletActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/CoinExchangeListAdapter.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/CoinExchangeListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/CurrencyCalculatorLink.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/CurrencyCalculatorLink.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/DebuggingFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/DebuggingFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/DialogBuilder.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/DialogBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/Dialogs.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/Dialogs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/EditAccountFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/EditAccountFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/EditAddressBookEntryFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/EditAddressBookEntryFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ExchangeHistoryFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ExchangeHistoryFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ExchangeRateLoader.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ExchangeRateLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ExchangeRatesFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ExchangeRatesFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/FeesSettingsFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/FeesSettingsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/FinalizeWalletRestorationFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/FinalizeWalletRestorationFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/MakeTransactionFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/MakeTransactionFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/NavDrawerListAdapter.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/NavDrawerListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/NavigationDrawerFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/NavigationDrawerFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/OverviewFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/OverviewFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PairUsbPinActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PairUsbPinActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PasswordConfirmationActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PasswordConfirmationActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PayWithDialog.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PayWithDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PinLoginActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PinLoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PreviousAddressesActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PreviousAddressesActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PreviousAddressesFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PreviousAddressesFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/RestoreFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/RestoreFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ScanActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ScanActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ScannerView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ScannerView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SeedFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SeedFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SelectCoinsFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SelectCoinsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SendFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SendFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SetPasswordFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SetPasswordFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ShowSeedFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/ShowSeedFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SweepWalletActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SweepWalletActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SweepWalletFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SweepWalletFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TradeActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TradeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TradeSelectFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TradeSelectFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TradeStatusFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TradeStatusFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TransactionDetailsFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TransactionDetailsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TransactionsListAdapter.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/TransactionsListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/UnlockWalletDialog.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/UnlockWalletDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/WalletActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/WalletActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/WelcomeFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/WelcomeFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/adaptors/AccountListAdapter.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/adaptors/AccountListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/adaptors/AvailableAccountsAdaptor.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/adaptors/AvailableAccountsAdaptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/adaptors/FeesListAdapter.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/adaptors/FeesListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/customview/AccentType.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/customview/AccentType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/customview/PinEntryView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/customview/PinEntryView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/ConfirmAddCoinUnlockWalletDialog.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/ConfirmAddCoinUnlockWalletDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AddressView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AddressView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/Amount.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/Amount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AmountEditView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AmountEditView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/BakedBezierInterpolator.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/BakedBezierInterpolator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/CoinListItem.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/CoinListItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/CurrencyTextView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/CurrencyTextView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/FontFitTextView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/FontFitTextView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SendOutput.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SendOutput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SwipeProgressBar.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SwipeProgressBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SwipeRefreshLayout.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SwipeRefreshLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Base43.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Base43.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Crypto.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Crypto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Fonts.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Fonts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Formats.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Formats.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Io.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Io.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/LinuxSecureRandom.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/LinuxSecureRandom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/MonetarySpannable.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/MonetarySpannable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/PasswordQualityChecker.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/PasswordQualityChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/QrUtils.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/QrUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/ThrottlingWalletChangeListener.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/ThrottlingWalletChangeListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/TimeUtils.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/TimeUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/UiUtils.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/UiUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WeakHandler.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WeakHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/address_row_circle_bg_unused.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/address_row_circle_bg_unused.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/address_row_circle_bg_used.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/address_row_circle_bg_used.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/font_icon_bg.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/font_icon_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/generic_green_circle.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/generic_green_circle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/generic_red_circle.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/generic_red_circle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/ic_keyboard_backspace_black_24dp.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/ic_keyboard_backspace_black_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/transaction_row_circle_bg_pending.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/transaction_row_circle_bg_pending.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/transaction_row_circle_bg_receive.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/transaction_row_circle_bg_receive.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/transaction_row_circle_bg_send.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/transaction_row_circle_bg_send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/account_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/account_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_about.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_about.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_fragment_wrapper.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_fragment_wrapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_pair_usb_pin.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_pair_usb_pin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_pin_login.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_pin_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_wallet.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/activity_wallet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/add_account_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/add_account_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/address.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/address_book_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/address_book_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/address_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/address_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/amount.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/amount.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/amount_edit.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/amount_edit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/coin_list_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/coin_list_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/dialog_title.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/dialog_title.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/edit_account_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/edit_account_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/edit_address_book_entry_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/edit_address_book_entry_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/edit_fee_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/edit_fee_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/email_receipt_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/email_receipt_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/exchange_rate_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/exchange_rate_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/exchange_rates_content.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/exchange_rates_content.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/exchange_status_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/exchange_status_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_account.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_account.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_account_details.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_account_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance_header.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_debugging.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_debugging.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_exchange_history.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_exchange_history.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_exchange_rates.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_exchange_rates.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_fees_settings_list.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_fees_settings_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_finalize_wallet_restoration.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_finalize_wallet_restoration.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview_header.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_password_confirmation.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_password_confirmation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_request.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_request.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_restore.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_restore.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_seed.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_seed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_select_coins_list.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_select_coins_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_send.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_sign_message.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_sign_message.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_sweep.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_sweep.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_trade_select.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_trade_select.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_trade_status.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_trade_status.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_transaction_details_footer.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_transaction_details_footer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_transaction_details_header.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_transaction_details_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/get_password_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/get_password_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/header_with_font_icon.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/header_with_font_icon.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/item_simple.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/item_simple.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/nav_drawer_item.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/nav_drawer_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/nav_drawer_section_title.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/nav_drawer_section_title.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/new_address_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/new_address_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/powered_by_shapeshift.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/powered_by_shapeshift.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/scan_activity.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/scan_activity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/select_coin_for_address.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/select_coin_for_address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/select_pay_with.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/select_pay_with.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/skip_seed_dialog.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/skip_seed_dialog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_amount_visualizer.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_amount_visualizer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_details_output_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_details_output_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_output.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_output.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/transaction_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/account_options.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/account_options.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/address_options.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/address_options.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/address_options_extra.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/address_options_extra.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/balance.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/balance.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/copy_share_options.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/copy_share_options.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/exchange_status.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/exchange_status.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/global.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/global.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/overview.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/overview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/request.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/request.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/request_single_address.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/request_single_address.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/send.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/menu/trade.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/menu/trade.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values-v16/styles.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values-v16/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values-v21/styles.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values-v21/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/attrs.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/xml/preferences.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/xml/preferences.xml" />
+    </list>
     <ignored path="coinomi-android.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -62,7 +511,7 @@
         <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2730">
-              <caret line="182" column="8" selection-start-line="182" selection-start-column="8" selection-end-line="182" selection-end-column="77" />
+              <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -92,7 +541,7 @@
         <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PairUsbPinActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -116,11 +565,11 @@
       <file leaf-file-name="PinLoginActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PinLoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="87" column="118" selection-start-line="87" selection-start-column="118" selection-end-line="87" selection-end-column="118" />
+            <state relative-caret-position="270">
+              <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
               <folding>
-                <element signature="e#1170#1531#0" expanded="true" />
-                <element signature="e#1530#1531#0" expanded="true" />
+                <element signature="e#1047#1408#0" expanded="true" />
+                <element signature="e#1407#1408#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1790,7 +2239,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5998222964000" />
+        <entry key="$PROJECT_DIR$" value="5998779625000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2793,12 +3242,12 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32708934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4279539" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4279539" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2806,6 +3255,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2819,7 +3269,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2886,7 +3335,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PinLoginActivity.java</url>
-          <line>104</line>
+          <line>101</line>
           <properties />
         </line-breakpoint>
       </breakpoints>
@@ -3015,6 +3464,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3095,6 +3545,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3330">
           <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3139,7 +3590,7 @@
         <state relative-caret-position="-25">
           <caret line="120" column="14" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3238,6 +3689,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9465">
           <caret line="681" column="17" selection-start-line="681" selection-start-column="17" selection-end-line="681" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#14036#14037#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3247,8 +3702,8 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#10849#10850#0" expanded="false" />
-            <element signature="e#10900#10901#0" expanded="false" />
+            <element signature="e#18895#18896#0" expanded="false" />
+            <element signature="e#18946#18947#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3272,7 +3727,7 @@
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PairUsbPinActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -3320,7 +3775,7 @@
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2730">
-          <caret line="182" column="8" selection-start-line="182" selection-start-column="8" selection-end-line="182" selection-end-column="77" />
+          <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -3354,11 +3809,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PinLoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="87" column="118" selection-start-line="87" selection-start-column="118" selection-end-line="87" selection-end-column="118" />
+        <state relative-caret-position="270">
+          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
           <folding>
-            <element signature="e#1170#1531#0" expanded="true" />
-            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1047#1408#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
           </folding>
         </state>
       </provider>

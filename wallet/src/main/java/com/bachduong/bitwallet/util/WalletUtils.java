@@ -24,6 +24,7 @@ import android.text.Spannable;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 
+import com.bachduong.bitwallet.Constants;
 import com.bachduong.core.coins.CoinID;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.families.NxtFamily;
@@ -33,7 +34,6 @@ import com.bachduong.core.wallet.AbstractTransaction;
 import com.bachduong.core.wallet.AbstractTransaction.AbstractOutput;
 import com.bachduong.core.wallet.AbstractWallet;
 import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.bitwallet.Constants;
 
 import org.bitcoinj.core.Sha256Hash;
 
@@ -55,6 +55,10 @@ import static com.bachduong.core.Preconditions.checkState;
  * @author John L. Jegutanis
  */
 public class WalletUtils {
+    public static final RelativeSizeSpan SMALLER_SPAN = new RelativeSizeSpan(0.85f);
+    private static final Pattern P_SIGNIFICANT = Pattern.compile("^([-+]" + Constants.CHAR_THIN_SPACE + ")?\\d*(\\.\\d{0,2})?");
+    private static final Object SIGNIFICANT_SPAN = new StyleSpan(Typeface.BOLD);
+
     public static int getIconRes(CoinType type) {
         return Constants.COINS_ICONS.get(type);
     }
@@ -71,7 +75,7 @@ public class WalletUtils {
         int len = bytes.length;
         checkState(len >= 8);
 
-        return   (bytes[len - 1] & 0xFFl) |
+        return (bytes[len - 1] & 0xFFl) |
                 ((bytes[len - 2] & 0xFFl) << 8) |
                 ((bytes[len - 3] & 0xFFl) << 16) |
                 ((bytes[len - 4] & 0xFFl) << 24) |
@@ -86,7 +90,6 @@ public class WalletUtils {
                                                          @Nonnull final AbstractWallet pocket) {
         return getToAddresses(tx, pocket, false);
     }
-
 
     @CheckForNull
     public static List<AbstractAddress> getReceivedWithOrFrom(@Nonnull final AbstractTransaction tx,
@@ -114,19 +117,13 @@ public class WalletUtils {
         return addresses;
     }
 
-    private static final Pattern P_SIGNIFICANT = Pattern.compile("^([-+]" + Constants.CHAR_THIN_SPACE + ")?\\d*(\\.\\d{0,2})?");
-    private static final Object SIGNIFICANT_SPAN = new StyleSpan(Typeface.BOLD);
-    public static final RelativeSizeSpan SMALLER_SPAN = new RelativeSizeSpan(0.85f);
-
-    public static void formatSignificant(@Nonnull final Spannable spannable, @Nullable final RelativeSizeSpan insignificantRelativeSizeSpan)
-    {
+    public static void formatSignificant(@Nonnull final Spannable spannable, @Nullable final RelativeSizeSpan insignificantRelativeSizeSpan) {
         spannable.removeSpan(SIGNIFICANT_SPAN);
         if (insignificantRelativeSizeSpan != null)
             spannable.removeSpan(insignificantRelativeSizeSpan);
 
         final Matcher m = P_SIGNIFICANT.matcher(spannable);
-        if (m.find())
-        {
+        if (m.find()) {
             final int pivot = m.group().length();
             if (pivot > 0)
                 spannable.setSpan(SIGNIFICANT_SPAN, 0, pivot, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);

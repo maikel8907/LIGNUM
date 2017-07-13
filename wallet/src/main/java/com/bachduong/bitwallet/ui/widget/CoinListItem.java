@@ -8,13 +8,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bachduong.bitwallet.ExchangeRatesProvider.ExchangeRate;
+import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.util.WalletUtils;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.util.GenericUtils;
 import com.bachduong.core.wallet.WalletAccount;
-import com.bachduong.bitwallet.ExchangeRatesProvider.ExchangeRate;
-import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.util.WalletUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,9 +24,12 @@ import butterknife.ButterKnife;
  */
 public class CoinListItem extends LinearLayout implements Checkable {
     final View view;
-    @Bind(R.id.item_icon) ImageView icon;
-    @Bind(R.id.item_text) TextView title;
-    @Bind(R.id.amount) Amount amount;
+    @Bind(R.id.item_icon)
+    ImageView icon;
+    @Bind(R.id.item_text)
+    TextView title;
+    @Bind(R.id.amount)
+    Amount amount;
 
     private boolean isChecked = false;
     private CoinType type;
@@ -76,6 +79,11 @@ public class CoinListItem extends LinearLayout implements Checkable {
     }
 
     @Override
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    @Override
     public void setChecked(boolean checked) {
         isChecked = checked;
 
@@ -84,11 +92,6 @@ public class CoinListItem extends LinearLayout implements Checkable {
         } else {
             view.setBackgroundResource(0);
         }
-    }
-
-    @Override
-    public boolean isChecked() {
-        return isChecked;
     }
 
     @Override

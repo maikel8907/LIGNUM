@@ -27,12 +27,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.bachduong.core.util.GenericUtils;
-import com.bachduong.core.wallet.AbstractAddress;
-import com.bachduong.core.wallet.AbstractWallet;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.util.Fonts;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.wallet.AbstractAddress;
+import com.bachduong.core.wallet.AbstractWallet;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -49,16 +49,14 @@ import javax.annotation.Nonnull;
  * @author John L. Jegutanis
  */
 public class AddressesListAdapter extends BaseAdapter {
+    private final static Object CACHE_NULL_MARKER = "";
     private final Context context;
     private final LayoutInflater inflater;
     private final Resources res;
-
     private final AbstractWallet pocket;
     private final List<AbstractAddress> addresses = new ArrayList<>();
     private final Set<AbstractAddress> usedAddresses = new HashSet<>();
-
     private final Map<AbstractAddress, String> labelCache = new HashMap<>();
-    private final static Object CACHE_NULL_MARKER = "";
 
     public AddressesListAdapter(final Context context, @Nonnull final AbstractWallet walletPocket) {
         this.context = context;
@@ -168,7 +166,7 @@ public class AddressesListAdapter extends BaseAdapter {
             if (label != null) {
                 labelCache.put(address, label);
             } else {
-                labelCache.put(address, (String)CACHE_NULL_MARKER);
+                labelCache.put(address, (String) CACHE_NULL_MARKER);
             }
             return label;
         } else {

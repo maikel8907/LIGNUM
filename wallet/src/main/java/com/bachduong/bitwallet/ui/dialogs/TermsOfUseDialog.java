@@ -9,8 +9,6 @@ import android.support.v4.app.DialogFragment;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.ui.DialogBuilder;
 
-import static com.bachduong.core.Preconditions.checkState;
-
 /**
  * @author John L. Jegutanis
  */
@@ -62,6 +60,7 @@ public class TermsOfUseDialog extends DialogFragment {
 
     public interface Listener {
         void onTermsAgree();
+
         void onTermsDisagree();
     }
 }

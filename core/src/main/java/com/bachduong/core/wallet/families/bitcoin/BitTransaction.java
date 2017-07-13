@@ -44,7 +44,8 @@ public final class BitTransaction implements AbstractTransaction {
     final Value valueSent;
     final Value valueReceived;
     final Value value;
-    @Nullable final Value fee;
+    @Nullable
+    final Value fee;
 
     public BitTransaction(Sha256Hash transactionId, Transaction transaction, boolean isTrimmed,
                           Value valueSent, Value valueReceived, @Nullable Value fee) {

@@ -32,6 +32,7 @@ public class Dialogs {
 
     /**
      * Dismiss a dialog fragment
+     *
      * @return true if fragment is detached, useful for halting async task's onPostExecute.
      */
     public static boolean dismissAllowingStateLoss(@Nullable FragmentManager fm, String tag) {

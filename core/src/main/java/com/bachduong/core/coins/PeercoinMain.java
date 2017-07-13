@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author John L. Jegutanis
  */
 public class PeercoinMain extends PeerFamily {
+    private static PeercoinMain instance = new PeercoinMain();
+
     private PeercoinMain() {
         id = "peercoin.main";
 
         addressHeader = 55;
         p2shHeader = 117;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 500;
         dumpedPrivateKeyHeader = 183;
 
@@ -27,7 +29,6 @@ public class PeercoinMain extends PeerFamily {
         signedMessageHeader = toBytes("PPCoin Signed Message:\n");
     }
 
-    private static PeercoinMain instance = new PeercoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

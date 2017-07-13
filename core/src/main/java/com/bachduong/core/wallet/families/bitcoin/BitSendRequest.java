@@ -22,7 +22,7 @@ public class BitSendRequest extends SendRequest<BitTransaction> {
 
     /**
      * <p>Creates a new SendRequest to the given address for the given value.</p>
-     *
+     * <p>
      * <p>Be very careful when value is smaller than {@link Transaction#MIN_NONDUST_OUTPUT} as the transaction will
      * likely be rejected by the network in this case.</p>
      */

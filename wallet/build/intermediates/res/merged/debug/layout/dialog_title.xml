@@ -7,7 +7,7 @@
     android:paddingBottom="@dimen/dialog_title_margin_bottom"
     android:paddingLeft="@dimen/dialog_margin"
     android:paddingRight="@dimen/dialog_margin"
-    android:paddingTop="@dimen/dialog_margin" >
+    android:paddingTop="@dimen/dialog_margin">
 
     <ImageView
         android:id="@android:id/icon"
@@ -26,6 +26,6 @@
         android:layout_marginBottom="1dp"
         android:layout_weight="1"
         android:textStyle="bold"
-        tools:text="Dialog title"/>
+        tools:text="Dialog title" />
 
 </LinearLayout>

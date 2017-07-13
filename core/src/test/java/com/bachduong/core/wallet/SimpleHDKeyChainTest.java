@@ -40,256 +40,6 @@ import static org.junit.Assert.assertTrue;
  * @author John L. Jegutanis
  */
 public class SimpleHDKeyChainTest {
-    SimpleHDKeyChain chain;
-    DeterministicKey masterKey;
-    byte[] ENTROPY = Sha256Hash.create("don't use a string seed like this in real life".getBytes()).getBytes();
-
-    @Before
-    public void setup() {
-        BriefLogFormatter.init();
-
-        DeterministicSeed seed = new DeterministicSeed(ENTROPY, "", 0);
-        masterKey = HDKeyDerivation.createMasterPrivateKey(seed.getSeedBytes());
-        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
-        DeterministicKey rootKey = hierarchy.get(ImmutableList.of(ChildNumber.ZERO_HARDENED), false, true);
-        chain = new SimpleHDKeyChain(rootKey);
-        chain.setLookaheadSize(10);
-    }
-
-    @Test
-    public void derive() throws Exception {
-        ECKey key1 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
-        ECKey key2 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
-
-        final Address address = new Address(UnitTestParams.get(), "n1bQNoEx8uhmCzzA5JPG6sFdtsUQhwiQJV");
-        assertEquals(address, key1.toAddress(UnitTestParams.get()));
-        assertEquals("mnHUcqUVvrfi5kAaXJDQzBb9HsWs78b42R", key2.toAddress(UnitTestParams.get()).toString());
-        assertEquals(key1, chain.findKeyFromPubHash(address.getHash160()));
-        assertEquals(key2, chain.findKeyFromPubKey(key2.getPubKey()));
-
-        key1.sign(Sha256Hash.ZERO_HASH);
-
-        ECKey key3 = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
-        assertEquals("mqumHgVDqNzuXNrszBmi7A2UpmwaPMx4HQ", key3.toAddress(UnitTestParams.get()).toString());
-        key3.sign(Sha256Hash.ZERO_HASH);
-    }
-
-    @Test
-    public void deriveCoin() throws Exception {
-        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
-        DeterministicKey rootKey = hierarchy.get(BitcoinMain.get().getBip44Path(0), false, true);
-        chain = new SimpleHDKeyChain(rootKey);
-
-        ECKey key1 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
-        ECKey key2 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
-
-        final Address address = new Address(BitcoinMain.get(), "1Fp7CA7ZVqZNFVNQ9TpeqWUas7K28K9zig");
-        assertEquals(address, key1.toAddress(BitcoinMain.get()));
-        assertEquals("1AKqkQM4VqyVis6hscj8695WHPCCzgHNY3", key2.toAddress(BitcoinMain.get()).toString());
-        assertEquals(key1, chain.findKeyFromPubHash(address.getHash160()));
-        assertEquals(key2, chain.findKeyFromPubKey(key2.getPubKey()));
-
-        key1.sign(Sha256Hash.ZERO_HASH);
-
-        ECKey key3 = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
-        assertEquals("18YvGiRqXKxrzB72ckfrRSizWeHgwRP94V", key3.toAddress(BitcoinMain.get()).toString());
-        key3.sign(Sha256Hash.ZERO_HASH);
-
-        ECKey key4 = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
-        assertEquals("1861TX2MbyPEUrxDQVWgV4Tp9991bK1zpy", key4.toAddress(BitcoinMain.get()).toString());
-        key4.sign(Sha256Hash.ZERO_HASH);
-    }
-
-    @Test
-    public void getLastIssuedKey() {
-        assertNull(chain.getLastIssuedKey(KeyChain.KeyPurpose.RECEIVE_FUNDS));
-        assertNull(chain.getLastIssuedKey(KeyChain.KeyPurpose.CHANGE));
-        DeterministicKey extKey = chain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-        DeterministicKey intKey = chain.getKey(KeyChain.KeyPurpose.CHANGE);
-        assertEquals(extKey, chain.getLastIssuedKey(KeyChain.KeyPurpose.RECEIVE_FUNDS));
-        assertEquals(intKey, chain.getLastIssuedKey(KeyChain.KeyPurpose.CHANGE));
-    }
-
-    @Test
-    public void externalKeyCheck() {
-        assertFalse(chain.isExternal(chain.getKey(KeyChain.KeyPurpose.CHANGE)));
-        assertTrue(chain.isExternal(chain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS)));
-    }
-
-    @Test
-    public void events() throws Exception {
-        // Check that we get the right events at the right time.
-        final List<List<ECKey>> listenerKeys = Lists.newArrayList();
-        long secs = 1389353062L;
-        chain.addEventListener(new AbstractKeyChainEventListener() {
-            @Override
-            public void onKeysAdded(List<ECKey> keys) {
-                listenerKeys.add(keys);
-            }
-        }, Threading.SAME_THREAD);
-        assertEquals(0, listenerKeys.size());
-        chain.setLookaheadSize(5);
-        assertEquals(0, listenerKeys.size());
-        ECKey key = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
-        assertEquals(1, listenerKeys.size());  // 1 event
-        final List<ECKey> firstEvent = listenerKeys.get(0);
-        assertEquals(1, firstEvent.size());
-        assertTrue(firstEvent.contains(key));   // order is not specified.
-        listenerKeys.clear();
-
-        chain.maybeLookAhead();
-        final List<ECKey> secondEvent = listenerKeys.get(0);
-        assertEquals(12, secondEvent.size());  // (5 lookahead keys, +1 lookahead threshold) * 2 chains
-        listenerKeys.clear();
-
-        chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
-        // At this point we've entered the threshold zone so more keys won't immediately trigger more generations.
-        assertEquals(0, listenerKeys.size());  // 1 event
-        final int lookaheadThreshold = chain.getLookaheadThreshold() + chain.getLookaheadSize();
-        for (int i = 0; i < lookaheadThreshold; i++)
-            chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
-        assertEquals(1, listenerKeys.size());  // 1 event
-        assertEquals(1, listenerKeys.get(0).size());  // 1 key.
-    }
-
-    @Test
-    public void serializeUnencryptedNormal() throws UnreadableWalletException {
-        serializeUnencrypted(chain, DETERMINISTIC_WALLET_SERIALIZATION_TXT_MASTER_KEY);
-    }
-
-    @Test
-    public void serializeUnencryptedChildRoot() throws UnreadableWalletException {
-        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
-        DeterministicKey rootKey = hierarchy.get(BitcoinTest.get().getBip44Path(0), false, true);
-        SimpleHDKeyChain newChain = new SimpleHDKeyChain(rootKey);
-        serializeUnencrypted(newChain, DETERMINISTIC_WALLET_SERIALIZATION_TXT_CHILD_ROOT_KEY);
-    }
-
-
-    public void serializeUnencrypted(SimpleHDKeyChain keyChain, String expectedSerialization) throws UnreadableWalletException {
-        keyChain.setLookaheadSize(10);
-
-        keyChain.maybeLookAhead();
-        DeterministicKey key1 = keyChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-        DeterministicKey key2 = keyChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-        DeterministicKey key3 = keyChain.getKey(KeyChain.KeyPurpose.CHANGE);
-        List<Protos.Key> keys = keyChain.toProtobuf();
-        // 1 master key, 1 account key, 2 internal keys, 3 derived, 20 lookahead and 5 lookahead threshold.
-        int numItems =
-                          1  // master key/account key
-                        + 2  // ext/int parent keys
-                        + (keyChain.getLookaheadSize() + keyChain.getLookaheadThreshold()) * 2   // lookahead zone on each chain
-                ;
-        assertEquals(numItems, keys.size());
-
-        // Get another key that will be lost during round-tripping, to ensure we can derive it again.
-        DeterministicKey key4 = keyChain.getKey(KeyChain.KeyPurpose.CHANGE);
-
-        String sb = protoToString(keys);
-        assertEquals(expectedSerialization, sb);
-
-        // Round trip the data back and forth to check it is preserved.
-        int oldLookaheadSize = keyChain.getLookaheadSize();
-        keyChain = SimpleHDKeyChain.fromProtobuf(keys, null);
-        assertEquals(expectedSerialization, protoToString(keyChain.toProtobuf()));
-        assertEquals(key1, keyChain.findKeyFromPubHash(key1.getPubKeyHash()));
-        assertEquals(key2, keyChain.findKeyFromPubHash(key2.getPubKeyHash()));
-        assertEquals(key3, keyChain.findKeyFromPubHash(key3.getPubKeyHash()));
-        assertEquals(key4, keyChain.getKey(KeyChain.KeyPurpose.CHANGE));
-        key1.sign(Sha256Hash.ZERO_HASH);
-        key2.sign(Sha256Hash.ZERO_HASH);
-        key3.sign(Sha256Hash.ZERO_HASH);
-        key4.sign(Sha256Hash.ZERO_HASH);
-        assertEquals(oldLookaheadSize, keyChain.getLookaheadSize());
-    }
-
-    private String protoToString(List<Protos.Key> keys) {
-        StringBuilder sb = new StringBuilder();
-        for (Protos.Key key : keys) {
-            sb.append(key.toString());
-            sb.append("\n");
-        }
-        return sb.toString().trim();
-    }
-
-    private String checkSerialization(List<Protos.Key> keys, String filename) {
-        try {
-            String sb = protoToString(keys);
-            String expected = Resources.toString(getClass().getResource(filename), Charsets.UTF_8);
-            assertEquals(expected, sb);
-            return expected;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Test(expected = IllegalStateException.class)
-    public void notEncrypted() {
-        chain.toDecrypted("fail");
-    }
-
-    @Test(expected = IllegalStateException.class)
-    public void encryptTwice() {
-        chain = chain.toEncrypted("once");
-        chain = chain.toEncrypted("twice");
-    }
-
-    private void checkEncryptedKeyChain(SimpleHDKeyChain encChain, DeterministicKey key1) {
-        // Check we can look keys up and extend the chain without the AES key being provided.
-        DeterministicKey encKey1 = encChain.findKeyFromPubKey(key1.getPubKey());
-        DeterministicKey encKey2 = encChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-        assertFalse(key1.isEncrypted());
-        assertTrue(encKey1.isEncrypted());
-        assertEquals(encKey1.getPubKeyPoint(), key1.getPubKeyPoint());
-        final KeyParameter aesKey = checkNotNull(encChain.getKeyCrypter()).deriveKey("open secret");
-        encKey1.sign(Sha256Hash.ZERO_HASH, aesKey);
-        encKey2.sign(Sha256Hash.ZERO_HASH, aesKey);
-        assertTrue(encChain.checkAESKey(aesKey));
-        assertFalse(encChain.checkPassword("access denied"));
-        assertTrue(encChain.checkPassword("open secret"));
-    }
-
-    @Test
-    public void encryptionNormal() throws UnreadableWalletException {
-        encryption(chain);
-    }
-
-    @Test
-    public void encryptionChildRoot() throws UnreadableWalletException {
-        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
-        DeterministicKey rootKey = hierarchy.get(BitcoinTest.get().getBip44Path(0), false, true);
-        SimpleHDKeyChain newChain = new SimpleHDKeyChain(rootKey);
-
-        encryption(newChain);
-    }
-
-    public void encryption(SimpleHDKeyChain unencChain) throws UnreadableWalletException {
-        DeterministicKey key1 = unencChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-        SimpleHDKeyChain encChain = unencChain.toEncrypted("open secret");
-        DeterministicKey encKey1 = encChain.findKeyFromPubKey(key1.getPubKey());
-        checkEncryptedKeyChain(encChain, key1);
-
-        // Round-trip to ensure de/serialization works and that we can store two chains and they both deserialize.
-        List<Protos.Key> serialized = encChain.toProtobuf();
-        System.out.println(protoToString(serialized));
-        encChain = SimpleHDKeyChain.fromProtobuf(serialized, encChain.getKeyCrypter());
-        checkEncryptedKeyChain(encChain, unencChain.findKeyFromPubKey(key1.getPubKey()));
-
-        DeterministicKey encKey2 = encChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
-        // Decrypt and check the keys match.
-        SimpleHDKeyChain decChain = encChain.toDecrypted("open secret");
-        DeterministicKey decKey1 = decChain.findKeyFromPubHash(encKey1.getPubKeyHash());
-        DeterministicKey decKey2 = decChain.findKeyFromPubHash(encKey2.getPubKeyHash());
-        assertEquals(decKey1.getPubKeyPoint(), encKey1.getPubKeyPoint());
-        assertEquals(decKey2.getPubKeyPoint(), encKey2.getPubKeyPoint());
-        assertFalse(decKey1.isEncrypted());
-        assertFalse(decKey2.isEncrypted());
-        assertNotEquals(encKey1.getParent(), decKey1.getParent());   // parts of a different hierarchy
-        // Check we can once again derive keys from the decrypted chain.
-        decChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS).sign(Sha256Hash.ZERO_HASH);
-        decChain.getKey(KeyChain.KeyPurpose.CHANGE).sign(Sha256Hash.ZERO_HASH);
-    }
-
     // FIXME For some reason it doesn't read the resource file
     private final static String DETERMINISTIC_WALLET_SERIALIZATION_TXT_CHILD_ROOT_KEY =
             "type: DETERMINISTIC_KEY\n" +
@@ -613,269 +363,516 @@ public class SimpleHDKeyChainTest {
                     "  path: 1\n" +
                     "  path: 12\n" +
                     "}";
-
     private final static String DETERMINISTIC_WALLET_SERIALIZATION_TXT_MASTER_KEY =
             "type: DETERMINISTIC_KEY\n" +
-            "secret_bytes: \"\\354B\\331\\275;\\000\\254?\\3428\\006\\220G\\365\\243\\333s\\260s\\213R\\313\\307\\377f\\331B\\351\\327=\\001\\333\"\n" +
-            "public_key: \"\\002\\357\\\\\\252\\376]\\023\\315\\'\\316`\\317\\362\\032@\\232\\\"\\360\\331\\335\\221] `\\016,\\351<\\b\\300\\225\\032m\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\370\\017\\223\\021O?.@gZ|\\233j\\3437\\317q-\\241!\u007FJ \\323\\'\\264s\\203\\314\\321\\v\\346\"\n" +
-            "  path: 2147483648\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "secret_bytes: \"<M\\020I\\364\\276\\336Z\\255\\341\\330\\257\\337 \\366E_\\027\\2433w\\325\\263\\\"$\\350\\f\\244\\006\\251u\\021\"\n" +
-            "public_key: \"\\002\\361V\\216\\001\\371p\\270\\212\\272\\236%\\216\\356o\\025g\\r\\035>a\\305j\\001P\\217Q\\242\\261.\\353\\367\\315\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\231B\\211S[\\216\\237\\277q{a\\365\\216\\325\\250\\223s\\v\\n(\\364\\257@3c\\312rix\\260c\\217\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  issued_subkeys: 2\n" +
-            "  lookahead_size: 10\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "secret_bytes: \"\\f0\\266\\235\\272\\205\\212:\\265\\372\\214P\\226\\344\\a{S0\\354\\250\\210\\316L\\256;W\\036\\200t\\347\\343\\246\"\n" +
-            "public_key: \"\\0022\\n\\252\\267NDr.7i7\\332\\232x\\367\\204G-|\\204\\301\\333G\\033g\\300O\\241\\006\\217\\366\\370\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\213\\237\\327\\245a\\273\\274\\310\\377\\360\\351\\352<\\211k\\033g\\0251>y\\236\\345Jb\\244[\\b\\fO\\0311\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  issued_subkeys: 1\n" +
-            "  lookahead_size: 10\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002O_Q\\223\\337\\360\\245\\234\\322b_op\\b?\\030\\364\\255l\\206\\344`w\\274\\204\\\"\\257\\235U<}\\377\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\331\\233\\342\\227\\336r\\212>\\021\\022p\\347* +\\220\\021{\\206\\310Z\\314\\335\\322\\230\\331\\365\\221}\\321\\036\\035\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 0\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\270\\311\\006\\363\\375\\002{\\310\\254n\\301\\366\\303\\315\\255\\3462\\004/\\251\\'\\205+\\341~d\\275\\350\\\"\\313\\204\\313\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"5\\037!\\360\\335\\017\\276\\231\\273\\3531\\020\\253\\223 \\312\\240M+\\250\\2520e\\006\\034\\214{\\331\\376\\201\\004\\306\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 1\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\000\\n\\256n\\324$.\\324\\365\\231\\f\\224\\001\\376\\266\\341\\036Q\\212\\374>\\245\\324\\\\8*\\342\\370\\251x\\b-\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"5\\202n|A\\251$y+t\\005\\365\\231\\357\\323\\264E\\266l\\220\\367\\211dA\\306\\370\\247<\\'\\034\\323\\324\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 2\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002\\313/\\026\\020\\254\\240\\3455\\216\\342E\\300\\316\\353m.\\270\\204\\264\\327\\220H\\326E9\\310\\227 \\023~\\204\\215\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\342\\263a\\033~\\374\\234UN\\034\\302\\300\\370\\232\\347B#L\\251\\267\\035\\255\\210\\356\\vE\\264\\210\\317\\030]t\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 3\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002\\217\\n\\021GL\\354\\214\\354WhX\\254\\351\\337w.\\211&q1o\\003\\033\\330\\352**\\351\\356\\210\\264m\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\036\\216\\345\\320e\\267p\\241\\000\\204\\254\\370\\251d\\000\\253\\354\\316RH\\275RS\\221\\016\\343=T\\236\\335\\222P\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 4\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\325\\n\\347\\346\\3273\\312J\\211e\\335?\\227\\236\\304i\\227\\377J\\222;\\253\\017\\213\\371\\235d\\220\\231\\026aV\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"YSn>5\\364i(j\\b\\326\\212,\\f,\\322\\3200\\230\\210)\\366g\\201\\274\\232\\356\\027\\212O\\345\\215\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 5\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\264\\331\\220\\207*\\342T\\277\\323\\363\\210\\266\\335\\300\\245?\\024d\\002\\021\\263|\\253\\035\\253\\244D\\023\\004\\200\\212X\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"yP\\342|\\327\\364\\034\\f\\302}\\236\\032\\031\\t\\345h(q7\\346?wR\\221\\325\\370\\021\\225\\334\\317Bg\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 6\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002HX\\261\\035\\270!\\263\\2232-F\\334\\226n=<\\0178\\270^\\202\\225\\264PF\\v#\\bdP/\\355\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"Z#\\227\\222\\225\\303\\203\\006q\\206\\321\\v\\355\\353\\220#Oh\\360]\\001IQD\\333\\025\\356\\276\\342\\270\\021\\313\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 7\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002\\020C\\2310\\227\\302\\342\\274u\\217\\021h\\270\\235\\356\\326_\\365\\321\\261\\272\\340\\267\\n\\335~\\360\\343\\\"Ow\\b\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\232\\000\\3117\\235\\003`)\\021g}/\\203tk\\201\\021\\364\\247\\245;\\253\\321\\202\\207\\342\\265\\267_<\\206\\224\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 8\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002\\276\\211n\\305\\3339[D\\337+\\034\\263\\267U0\\263\\3039}/\\376\\207\\030\\364K\\335\\301\\245\\311\\241\\3419\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"B\\232\\f\\')\\277\\034\\316HOdn\\213\\b\\204\\361\\030\\357YS \\365zY\\2749e\\260)\\233.-\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 9\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002h\\356\\202\\222P\\204x\\345\\226\\017\\256/E\\304\\273{)\\272\\034\\375\\2451\\321\\257\\233\\372?\\320\\352\\356\\271K\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\035\\222\\325\\fY\\221(\\006\\tf#7\\370\\355el\\377\\276\\245\\354\\002\\327\\320\\247\\315V\\004\\016v\\367\\351\\225\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 10\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002\\325\\313@\\\"\\320\\035\\277(\\245\\222\\342{\\374g\\235\\203\\347\\217\\035\\204j\\027\\034\\244\\021bY0\\247P`\\323\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\226~!\\327\\210.\\033\\214\\251\\2367\\205<\\226`UF\\354\\234/\\365\\267E\\317\\202\\354\\211P\\244\\221\\336\\200\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 11\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\000\\334\\035\\2400n\\26636x\\316\\327\\3666\\271\\375K\\031\\366\\307\\221J@\\331@dL\\232Bv\\324\\262\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\207^n\\317\\370\\t\\207\\341*\\\\\\360\\026iBRTQ#\\252Z\\237\\373{\\315\\333\\004\\340nA9\\252\\352\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 0\n" +
-            "  path: 12\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002\\225b\\3515\\202\\233\\335\\320.7\\265\\274uh\\230N\\242\\254\\317\u007FJ\\364\\331\\2345\\220)\\362\\334\\216\\202\\\\\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\202:\\344\\3109?\\350\\345\\001\\314(\\244q\\370\\233Rk\\261}\\302(\\275\\326\\305R\\342:\\246\\036\\nV\\330\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 0\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003>K!8\\222VEL\\371\\305 z\\aD\u007F8\\020\\233\\330S\\251T\\330\\201V\\026-k2\\227\\266;\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\223\\265.\\200\\316\\361\\241{\\223\\342c\\212\\0213ym+\\032=#\\360\\333X\\003\\2770Z\\311\\335\\267\\342\\313\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 1\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\331t\\251d\\023\\355w\\221\\266\\301\\264\\306T\\252\\350\\200\\260A\\220\\363\\212\\345\\021\\222\\236\\003\\210\\215\\342\\r\\251\\000\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\276\\262\\033\\030\\227\\271&e\\254\\377\\346\\031\\2112\\344[\\234Z\\221-\\033\\306P,Mi\\021\\313r\\031\\317\\341\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 2\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002D\\374\\231\\027\\306\\310\\251\\261\\200\\350@\\ro\\314\\216\\037>rp\\017\\276Q\\203\\027\\016\\213\\320\\206VqO\\237\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"_K4\\n\\356\\235\\036\\243O\\261\\200\\004\\367\\324\\305;1\\247I\\350*\\353`\\204\\004d\\202\\302\\335\\200/#\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 3\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\370\\352\\3530]|\\262\\270]5\\361\\263\\255)\\027f\\342\\262\\272a-\\275\\006\\302\\266\\236\\344\\332\\364\\r\\260\\321\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"o!GH\\357\\030\\264\\003_S\\305\\204\\234wO\\344.\\215\\377\\232\\025\\206\\351\\030\\227,\\303%U2x\\225\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 4\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002\\221\\021\\370a[\\205\\267\\036\\021\\366`\\036\\371\\253Yk\\r\\303\\025\\f\\255\\2768\\310\\212\\234\\221\u007F\\333\\344\\340t\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\370~\\245F\\n\\307\\377Q:\\v\\207\\245\\336F\\376\\2443R\\034\\346\\b\u007F\\372\\b\\\\o\\303\\204D#}\\266\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 5\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002c\\034w@c\\225\\257n~G\\330\\002\\241^\\264\\231\\030\\025\\220gr\\202`u\\b\\262\\361\\312\\246\\202J\\341\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\\\\\2542\\003\\022\\254\\361*\\a/4\u007F\\307\\3430\\322\\303\\v\\205\\351\\027\\260 l\\332\\326\\235<\\363v\\020\\232\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 6\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\\266\\304\\006g\\244l\\271>\\364\\357G8B\\374\\026w\\316\\022\\205\\313\\220\\274\\273>$\\350\\212o!\\rt\\230\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"6]\\325WN\\017o\\255\\314\\213\\344\\201f\\204\\361\\235\\'\\343\\217\\341m\\327\\326=T\\2018g\\324\\261`\\335\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 7\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003X\\331\\344\\227G\\366//<V\\226\\b\\352#\\315\\307j\\263\\232\\273d\\236)\\004\\225fk\\304\\000XM\\305\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"&\\025?\\264\\a\\2334-\\203\\217\\240R\\221[{8)9\\221\\346bv=ut\\346\\226KVj\\2659\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 8\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003\u007F\\307\\273B\\334\\212\\303\\025r\\212\\264|\\250c\\204\\\\=\\360w\\335\\300\\353\\266\\273\\3209\\260nl3\\271+\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\345\\365\\034\\261\\316\\2121R\\226/+\\267K\\326C&\\236\\246],\\224\\001\\220\\347\\334\\351\\223K\\023\\252\\360\\023\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 9\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002+[\\230[E\\225\\225R2\\350X=\\366\\343\\244\\237\\260\\220J\\311\\376\\200@\\\\\\334\\312y\\212\\276\\223\\350\\267\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\250W]}O:@\\t\\016\\311\\016\\335\\016\\271\\260\\327\\261\\237\\030G\\334\\246\\233\\352t\\266\\\\S\\311\\333m*\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 10\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\003-\\221uJ\\237\\240\\320\\025\\031w\\001V\\276\\030j\\217Z\\222 \\330\\253\\332\\330F\\216\\377D\\311\\211\\277\\351\\230\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"\\241\\363\\245\\033W\\f*J\\026\\021\\210Ic\\2318a\\\"\\036\\302\\005+\\220\\003\\3364\\211o\\362\\225R~\\340\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 11\n" +
-            "}\n" +
-            "\n" +
-            "type: DETERMINISTIC_KEY\n" +
-            "public_key: \"\\002V\\3212\\255\\n\\367\\226%]0\\342\\003\\317\\031\\350\\265K\\247\\035\\005}\\004[N\\262\\262\\376Ed\\261j\\377\"\n" +
-            "deterministic_key {\n" +
-            "  chain_code: \"0\\236\\330H\\354\\237\\016\\367-/E\\344\\311\\024\\353\\307\\331\\367n\\017\\250n\\351\\000\\204\\233\\224\\242L\\343&;\"\n" +
-            "  path: 2147483648\n" +
-            "  path: 1\n" +
-            "  path: 12\n" +
-            "}";
+                    "secret_bytes: \"\\354B\\331\\275;\\000\\254?\\3428\\006\\220G\\365\\243\\333s\\260s\\213R\\313\\307\\377f\\331B\\351\\327=\\001\\333\"\n" +
+                    "public_key: \"\\002\\357\\\\\\252\\376]\\023\\315\\'\\316`\\317\\362\\032@\\232\\\"\\360\\331\\335\\221] `\\016,\\351<\\b\\300\\225\\032m\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\370\\017\\223\\021O?.@gZ|\\233j\\3437\\317q-\\241!\u007FJ \\323\\'\\264s\\203\\314\\321\\v\\346\"\n" +
+                    "  path: 2147483648\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "secret_bytes: \"<M\\020I\\364\\276\\336Z\\255\\341\\330\\257\\337 \\366E_\\027\\2433w\\325\\263\\\"$\\350\\f\\244\\006\\251u\\021\"\n" +
+                    "public_key: \"\\002\\361V\\216\\001\\371p\\270\\212\\272\\236%\\216\\356o\\025g\\r\\035>a\\305j\\001P\\217Q\\242\\261.\\353\\367\\315\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\231B\\211S[\\216\\237\\277q{a\\365\\216\\325\\250\\223s\\v\\n(\\364\\257@3c\\312rix\\260c\\217\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  issued_subkeys: 2\n" +
+                    "  lookahead_size: 10\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "secret_bytes: \"\\f0\\266\\235\\272\\205\\212:\\265\\372\\214P\\226\\344\\a{S0\\354\\250\\210\\316L\\256;W\\036\\200t\\347\\343\\246\"\n" +
+                    "public_key: \"\\0022\\n\\252\\267NDr.7i7\\332\\232x\\367\\204G-|\\204\\301\\333G\\033g\\300O\\241\\006\\217\\366\\370\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\213\\237\\327\\245a\\273\\274\\310\\377\\360\\351\\352<\\211k\\033g\\0251>y\\236\\345Jb\\244[\\b\\fO\\0311\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  issued_subkeys: 1\n" +
+                    "  lookahead_size: 10\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002O_Q\\223\\337\\360\\245\\234\\322b_op\\b?\\030\\364\\255l\\206\\344`w\\274\\204\\\"\\257\\235U<}\\377\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\331\\233\\342\\227\\336r\\212>\\021\\022p\\347* +\\220\\021{\\206\\310Z\\314\\335\\322\\230\\331\\365\\221}\\321\\036\\035\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 0\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\270\\311\\006\\363\\375\\002{\\310\\254n\\301\\366\\303\\315\\255\\3462\\004/\\251\\'\\205+\\341~d\\275\\350\\\"\\313\\204\\313\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"5\\037!\\360\\335\\017\\276\\231\\273\\3531\\020\\253\\223 \\312\\240M+\\250\\2520e\\006\\034\\214{\\331\\376\\201\\004\\306\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 1\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\000\\n\\256n\\324$.\\324\\365\\231\\f\\224\\001\\376\\266\\341\\036Q\\212\\374>\\245\\324\\\\8*\\342\\370\\251x\\b-\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"5\\202n|A\\251$y+t\\005\\365\\231\\357\\323\\264E\\266l\\220\\367\\211dA\\306\\370\\247<\\'\\034\\323\\324\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 2\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002\\313/\\026\\020\\254\\240\\3455\\216\\342E\\300\\316\\353m.\\270\\204\\264\\327\\220H\\326E9\\310\\227 \\023~\\204\\215\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\342\\263a\\033~\\374\\234UN\\034\\302\\300\\370\\232\\347B#L\\251\\267\\035\\255\\210\\356\\vE\\264\\210\\317\\030]t\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 3\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002\\217\\n\\021GL\\354\\214\\354WhX\\254\\351\\337w.\\211&q1o\\003\\033\\330\\352**\\351\\356\\210\\264m\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\036\\216\\345\\320e\\267p\\241\\000\\204\\254\\370\\251d\\000\\253\\354\\316RH\\275RS\\221\\016\\343=T\\236\\335\\222P\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 4\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\325\\n\\347\\346\\3273\\312J\\211e\\335?\\227\\236\\304i\\227\\377J\\222;\\253\\017\\213\\371\\235d\\220\\231\\026aV\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"YSn>5\\364i(j\\b\\326\\212,\\f,\\322\\3200\\230\\210)\\366g\\201\\274\\232\\356\\027\\212O\\345\\215\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 5\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\264\\331\\220\\207*\\342T\\277\\323\\363\\210\\266\\335\\300\\245?\\024d\\002\\021\\263|\\253\\035\\253\\244D\\023\\004\\200\\212X\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"yP\\342|\\327\\364\\034\\f\\302}\\236\\032\\031\\t\\345h(q7\\346?wR\\221\\325\\370\\021\\225\\334\\317Bg\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 6\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002HX\\261\\035\\270!\\263\\2232-F\\334\\226n=<\\0178\\270^\\202\\225\\264PF\\v#\\bdP/\\355\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"Z#\\227\\222\\225\\303\\203\\006q\\206\\321\\v\\355\\353\\220#Oh\\360]\\001IQD\\333\\025\\356\\276\\342\\270\\021\\313\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 7\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002\\020C\\2310\\227\\302\\342\\274u\\217\\021h\\270\\235\\356\\326_\\365\\321\\261\\272\\340\\267\\n\\335~\\360\\343\\\"Ow\\b\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\232\\000\\3117\\235\\003`)\\021g}/\\203tk\\201\\021\\364\\247\\245;\\253\\321\\202\\207\\342\\265\\267_<\\206\\224\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 8\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002\\276\\211n\\305\\3339[D\\337+\\034\\263\\267U0\\263\\3039}/\\376\\207\\030\\364K\\335\\301\\245\\311\\241\\3419\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"B\\232\\f\\')\\277\\034\\316HOdn\\213\\b\\204\\361\\030\\357YS \\365zY\\2749e\\260)\\233.-\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 9\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002h\\356\\202\\222P\\204x\\345\\226\\017\\256/E\\304\\273{)\\272\\034\\375\\2451\\321\\257\\233\\372?\\320\\352\\356\\271K\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\035\\222\\325\\fY\\221(\\006\\tf#7\\370\\355el\\377\\276\\245\\354\\002\\327\\320\\247\\315V\\004\\016v\\367\\351\\225\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 10\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002\\325\\313@\\\"\\320\\035\\277(\\245\\222\\342{\\374g\\235\\203\\347\\217\\035\\204j\\027\\034\\244\\021bY0\\247P`\\323\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\226~!\\327\\210.\\033\\214\\251\\2367\\205<\\226`UF\\354\\234/\\365\\267E\\317\\202\\354\\211P\\244\\221\\336\\200\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 11\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\000\\334\\035\\2400n\\26636x\\316\\327\\3666\\271\\375K\\031\\366\\307\\221J@\\331@dL\\232Bv\\324\\262\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\207^n\\317\\370\\t\\207\\341*\\\\\\360\\026iBRTQ#\\252Z\\237\\373{\\315\\333\\004\\340nA9\\252\\352\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 0\n" +
+                    "  path: 12\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002\\225b\\3515\\202\\233\\335\\320.7\\265\\274uh\\230N\\242\\254\\317\u007FJ\\364\\331\\2345\\220)\\362\\334\\216\\202\\\\\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\202:\\344\\3109?\\350\\345\\001\\314(\\244q\\370\\233Rk\\261}\\302(\\275\\326\\305R\\342:\\246\\036\\nV\\330\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 0\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003>K!8\\222VEL\\371\\305 z\\aD\u007F8\\020\\233\\330S\\251T\\330\\201V\\026-k2\\227\\266;\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\223\\265.\\200\\316\\361\\241{\\223\\342c\\212\\0213ym+\\032=#\\360\\333X\\003\\2770Z\\311\\335\\267\\342\\313\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 1\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\331t\\251d\\023\\355w\\221\\266\\301\\264\\306T\\252\\350\\200\\260A\\220\\363\\212\\345\\021\\222\\236\\003\\210\\215\\342\\r\\251\\000\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\276\\262\\033\\030\\227\\271&e\\254\\377\\346\\031\\2112\\344[\\234Z\\221-\\033\\306P,Mi\\021\\313r\\031\\317\\341\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 2\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002D\\374\\231\\027\\306\\310\\251\\261\\200\\350@\\ro\\314\\216\\037>rp\\017\\276Q\\203\\027\\016\\213\\320\\206VqO\\237\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"_K4\\n\\356\\235\\036\\243O\\261\\200\\004\\367\\324\\305;1\\247I\\350*\\353`\\204\\004d\\202\\302\\335\\200/#\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 3\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\370\\352\\3530]|\\262\\270]5\\361\\263\\255)\\027f\\342\\262\\272a-\\275\\006\\302\\266\\236\\344\\332\\364\\r\\260\\321\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"o!GH\\357\\030\\264\\003_S\\305\\204\\234wO\\344.\\215\\377\\232\\025\\206\\351\\030\\227,\\303%U2x\\225\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 4\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002\\221\\021\\370a[\\205\\267\\036\\021\\366`\\036\\371\\253Yk\\r\\303\\025\\f\\255\\2768\\310\\212\\234\\221\u007F\\333\\344\\340t\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\370~\\245F\\n\\307\\377Q:\\v\\207\\245\\336F\\376\\2443R\\034\\346\\b\u007F\\372\\b\\\\o\\303\\204D#}\\266\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 5\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002c\\034w@c\\225\\257n~G\\330\\002\\241^\\264\\231\\030\\025\\220gr\\202`u\\b\\262\\361\\312\\246\\202J\\341\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\\\\\2542\\003\\022\\254\\361*\\a/4\u007F\\307\\3430\\322\\303\\v\\205\\351\\027\\260 l\\332\\326\\235<\\363v\\020\\232\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 6\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\\266\\304\\006g\\244l\\271>\\364\\357G8B\\374\\026w\\316\\022\\205\\313\\220\\274\\273>$\\350\\212o!\\rt\\230\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"6]\\325WN\\017o\\255\\314\\213\\344\\201f\\204\\361\\235\\'\\343\\217\\341m\\327\\326=T\\2018g\\324\\261`\\335\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 7\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003X\\331\\344\\227G\\366//<V\\226\\b\\352#\\315\\307j\\263\\232\\273d\\236)\\004\\225fk\\304\\000XM\\305\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"&\\025?\\264\\a\\2334-\\203\\217\\240R\\221[{8)9\\221\\346bv=ut\\346\\226KVj\\2659\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 8\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003\u007F\\307\\273B\\334\\212\\303\\025r\\212\\264|\\250c\\204\\\\=\\360w\\335\\300\\353\\266\\273\\3209\\260nl3\\271+\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\345\\365\\034\\261\\316\\2121R\\226/+\\267K\\326C&\\236\\246],\\224\\001\\220\\347\\334\\351\\223K\\023\\252\\360\\023\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 9\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002+[\\230[E\\225\\225R2\\350X=\\366\\343\\244\\237\\260\\220J\\311\\376\\200@\\\\\\334\\312y\\212\\276\\223\\350\\267\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\250W]}O:@\\t\\016\\311\\016\\335\\016\\271\\260\\327\\261\\237\\030G\\334\\246\\233\\352t\\266\\\\S\\311\\333m*\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 10\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\003-\\221uJ\\237\\240\\320\\025\\031w\\001V\\276\\030j\\217Z\\222 \\330\\253\\332\\330F\\216\\377D\\311\\211\\277\\351\\230\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"\\241\\363\\245\\033W\\f*J\\026\\021\\210Ic\\2318a\\\"\\036\\302\\005+\\220\\003\\3364\\211o\\362\\225R~\\340\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 11\n" +
+                    "}\n" +
+                    "\n" +
+                    "type: DETERMINISTIC_KEY\n" +
+                    "public_key: \"\\002V\\3212\\255\\n\\367\\226%]0\\342\\003\\317\\031\\350\\265K\\247\\035\\005}\\004[N\\262\\262\\376Ed\\261j\\377\"\n" +
+                    "deterministic_key {\n" +
+                    "  chain_code: \"0\\236\\330H\\354\\237\\016\\367-/E\\344\\311\\024\\353\\307\\331\\367n\\017\\250n\\351\\000\\204\\233\\224\\242L\\343&;\"\n" +
+                    "  path: 2147483648\n" +
+                    "  path: 1\n" +
+                    "  path: 12\n" +
+                    "}";
+    SimpleHDKeyChain chain;
+    DeterministicKey masterKey;
+    byte[] ENTROPY = Sha256Hash.create("don't use a string seed like this in real life".getBytes()).getBytes();
+
+    @Before
+    public void setup() {
+        BriefLogFormatter.init();
+
+        DeterministicSeed seed = new DeterministicSeed(ENTROPY, "", 0);
+        masterKey = HDKeyDerivation.createMasterPrivateKey(seed.getSeedBytes());
+        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
+        DeterministicKey rootKey = hierarchy.get(ImmutableList.of(ChildNumber.ZERO_HARDENED), false, true);
+        chain = new SimpleHDKeyChain(rootKey);
+        chain.setLookaheadSize(10);
+    }
+
+    @Test
+    public void derive() throws Exception {
+        ECKey key1 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
+        ECKey key2 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
+
+        final Address address = new Address(UnitTestParams.get(), "n1bQNoEx8uhmCzzA5JPG6sFdtsUQhwiQJV");
+        assertEquals(address, key1.toAddress(UnitTestParams.get()));
+        assertEquals("mnHUcqUVvrfi5kAaXJDQzBb9HsWs78b42R", key2.toAddress(UnitTestParams.get()).toString());
+        assertEquals(key1, chain.findKeyFromPubHash(address.getHash160()));
+        assertEquals(key2, chain.findKeyFromPubKey(key2.getPubKey()));
+
+        key1.sign(Sha256Hash.ZERO_HASH);
+
+        ECKey key3 = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
+        assertEquals("mqumHgVDqNzuXNrszBmi7A2UpmwaPMx4HQ", key3.toAddress(UnitTestParams.get()).toString());
+        key3.sign(Sha256Hash.ZERO_HASH);
+    }
+
+    @Test
+    public void deriveCoin() throws Exception {
+        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
+        DeterministicKey rootKey = hierarchy.get(BitcoinMain.get().getBip44Path(0), false, true);
+        chain = new SimpleHDKeyChain(rootKey);
+
+        ECKey key1 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
+        ECKey key2 = chain.getKey(SimpleHDKeyChain.KeyPurpose.RECEIVE_FUNDS);
+
+        final Address address = new Address(BitcoinMain.get(), "1Fp7CA7ZVqZNFVNQ9TpeqWUas7K28K9zig");
+        assertEquals(address, key1.toAddress(BitcoinMain.get()));
+        assertEquals("1AKqkQM4VqyVis6hscj8695WHPCCzgHNY3", key2.toAddress(BitcoinMain.get()).toString());
+        assertEquals(key1, chain.findKeyFromPubHash(address.getHash160()));
+        assertEquals(key2, chain.findKeyFromPubKey(key2.getPubKey()));
+
+        key1.sign(Sha256Hash.ZERO_HASH);
+
+        ECKey key3 = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
+        assertEquals("18YvGiRqXKxrzB72ckfrRSizWeHgwRP94V", key3.toAddress(BitcoinMain.get()).toString());
+        key3.sign(Sha256Hash.ZERO_HASH);
+
+        ECKey key4 = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
+        assertEquals("1861TX2MbyPEUrxDQVWgV4Tp9991bK1zpy", key4.toAddress(BitcoinMain.get()).toString());
+        key4.sign(Sha256Hash.ZERO_HASH);
+    }
+
+    @Test
+    public void getLastIssuedKey() {
+        assertNull(chain.getLastIssuedKey(KeyChain.KeyPurpose.RECEIVE_FUNDS));
+        assertNull(chain.getLastIssuedKey(KeyChain.KeyPurpose.CHANGE));
+        DeterministicKey extKey = chain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+        DeterministicKey intKey = chain.getKey(KeyChain.KeyPurpose.CHANGE);
+        assertEquals(extKey, chain.getLastIssuedKey(KeyChain.KeyPurpose.RECEIVE_FUNDS));
+        assertEquals(intKey, chain.getLastIssuedKey(KeyChain.KeyPurpose.CHANGE));
+    }
+
+    @Test
+    public void externalKeyCheck() {
+        assertFalse(chain.isExternal(chain.getKey(KeyChain.KeyPurpose.CHANGE)));
+        assertTrue(chain.isExternal(chain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS)));
+    }
+
+    @Test
+    public void events() throws Exception {
+        // Check that we get the right events at the right time.
+        final List<List<ECKey>> listenerKeys = Lists.newArrayList();
+        long secs = 1389353062L;
+        chain.addEventListener(new AbstractKeyChainEventListener() {
+            @Override
+            public void onKeysAdded(List<ECKey> keys) {
+                listenerKeys.add(keys);
+            }
+        }, Threading.SAME_THREAD);
+        assertEquals(0, listenerKeys.size());
+        chain.setLookaheadSize(5);
+        assertEquals(0, listenerKeys.size());
+        ECKey key = chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
+        assertEquals(1, listenerKeys.size());  // 1 event
+        final List<ECKey> firstEvent = listenerKeys.get(0);
+        assertEquals(1, firstEvent.size());
+        assertTrue(firstEvent.contains(key));   // order is not specified.
+        listenerKeys.clear();
+
+        chain.maybeLookAhead();
+        final List<ECKey> secondEvent = listenerKeys.get(0);
+        assertEquals(12, secondEvent.size());  // (5 lookahead keys, +1 lookahead threshold) * 2 chains
+        listenerKeys.clear();
+
+        chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
+        // At this point we've entered the threshold zone so more keys won't immediately trigger more generations.
+        assertEquals(0, listenerKeys.size());  // 1 event
+        final int lookaheadThreshold = chain.getLookaheadThreshold() + chain.getLookaheadSize();
+        for (int i = 0; i < lookaheadThreshold; i++)
+            chain.getKey(SimpleHDKeyChain.KeyPurpose.CHANGE);
+        assertEquals(1, listenerKeys.size());  // 1 event
+        assertEquals(1, listenerKeys.get(0).size());  // 1 key.
+    }
+
+    @Test
+    public void serializeUnencryptedNormal() throws UnreadableWalletException {
+        serializeUnencrypted(chain, DETERMINISTIC_WALLET_SERIALIZATION_TXT_MASTER_KEY);
+    }
+
+    @Test
+    public void serializeUnencryptedChildRoot() throws UnreadableWalletException {
+        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
+        DeterministicKey rootKey = hierarchy.get(BitcoinTest.get().getBip44Path(0), false, true);
+        SimpleHDKeyChain newChain = new SimpleHDKeyChain(rootKey);
+        serializeUnencrypted(newChain, DETERMINISTIC_WALLET_SERIALIZATION_TXT_CHILD_ROOT_KEY);
+    }
+
+    public void serializeUnencrypted(SimpleHDKeyChain keyChain, String expectedSerialization) throws UnreadableWalletException {
+        keyChain.setLookaheadSize(10);
+
+        keyChain.maybeLookAhead();
+        DeterministicKey key1 = keyChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+        DeterministicKey key2 = keyChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+        DeterministicKey key3 = keyChain.getKey(KeyChain.KeyPurpose.CHANGE);
+        List<Protos.Key> keys = keyChain.toProtobuf();
+        // 1 master key, 1 account key, 2 internal keys, 3 derived, 20 lookahead and 5 lookahead threshold.
+        int numItems =
+                1  // master key/account key
+                        + 2  // ext/int parent keys
+                        + (keyChain.getLookaheadSize() + keyChain.getLookaheadThreshold()) * 2   // lookahead zone on each chain
+                ;
+        assertEquals(numItems, keys.size());
+
+        // Get another key that will be lost during round-tripping, to ensure we can derive it again.
+        DeterministicKey key4 = keyChain.getKey(KeyChain.KeyPurpose.CHANGE);
+
+        String sb = protoToString(keys);
+        assertEquals(expectedSerialization, sb);
+
+        // Round trip the data back and forth to check it is preserved.
+        int oldLookaheadSize = keyChain.getLookaheadSize();
+        keyChain = SimpleHDKeyChain.fromProtobuf(keys, null);
+        assertEquals(expectedSerialization, protoToString(keyChain.toProtobuf()));
+        assertEquals(key1, keyChain.findKeyFromPubHash(key1.getPubKeyHash()));
+        assertEquals(key2, keyChain.findKeyFromPubHash(key2.getPubKeyHash()));
+        assertEquals(key3, keyChain.findKeyFromPubHash(key3.getPubKeyHash()));
+        assertEquals(key4, keyChain.getKey(KeyChain.KeyPurpose.CHANGE));
+        key1.sign(Sha256Hash.ZERO_HASH);
+        key2.sign(Sha256Hash.ZERO_HASH);
+        key3.sign(Sha256Hash.ZERO_HASH);
+        key4.sign(Sha256Hash.ZERO_HASH);
+        assertEquals(oldLookaheadSize, keyChain.getLookaheadSize());
+    }
+
+    private String protoToString(List<Protos.Key> keys) {
+        StringBuilder sb = new StringBuilder();
+        for (Protos.Key key : keys) {
+            sb.append(key.toString());
+            sb.append("\n");
+        }
+        return sb.toString().trim();
+    }
+
+    private String checkSerialization(List<Protos.Key> keys, String filename) {
+        try {
+            String sb = protoToString(keys);
+            String expected = Resources.toString(getClass().getResource(filename), Charsets.UTF_8);
+            assertEquals(expected, sb);
+            return expected;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void notEncrypted() {
+        chain.toDecrypted("fail");
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void encryptTwice() {
+        chain = chain.toEncrypted("once");
+        chain = chain.toEncrypted("twice");
+    }
+
+    private void checkEncryptedKeyChain(SimpleHDKeyChain encChain, DeterministicKey key1) {
+        // Check we can look keys up and extend the chain without the AES key being provided.
+        DeterministicKey encKey1 = encChain.findKeyFromPubKey(key1.getPubKey());
+        DeterministicKey encKey2 = encChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+        assertFalse(key1.isEncrypted());
+        assertTrue(encKey1.isEncrypted());
+        assertEquals(encKey1.getPubKeyPoint(), key1.getPubKeyPoint());
+        final KeyParameter aesKey = checkNotNull(encChain.getKeyCrypter()).deriveKey("open secret");
+        encKey1.sign(Sha256Hash.ZERO_HASH, aesKey);
+        encKey2.sign(Sha256Hash.ZERO_HASH, aesKey);
+        assertTrue(encChain.checkAESKey(aesKey));
+        assertFalse(encChain.checkPassword("access denied"));
+        assertTrue(encChain.checkPassword("open secret"));
+    }
+
+    @Test
+    public void encryptionNormal() throws UnreadableWalletException {
+        encryption(chain);
+    }
+
+    @Test
+    public void encryptionChildRoot() throws UnreadableWalletException {
+        DeterministicHierarchy hierarchy = new DeterministicHierarchy(masterKey);
+        DeterministicKey rootKey = hierarchy.get(BitcoinTest.get().getBip44Path(0), false, true);
+        SimpleHDKeyChain newChain = new SimpleHDKeyChain(rootKey);
+
+        encryption(newChain);
+    }
+
+    public void encryption(SimpleHDKeyChain unencChain) throws UnreadableWalletException {
+        DeterministicKey key1 = unencChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+        SimpleHDKeyChain encChain = unencChain.toEncrypted("open secret");
+        DeterministicKey encKey1 = encChain.findKeyFromPubKey(key1.getPubKey());
+        checkEncryptedKeyChain(encChain, key1);
+
+        // Round-trip to ensure de/serialization works and that we can store two chains and they both deserialize.
+        List<Protos.Key> serialized = encChain.toProtobuf();
+        System.out.println(protoToString(serialized));
+        encChain = SimpleHDKeyChain.fromProtobuf(serialized, encChain.getKeyCrypter());
+        checkEncryptedKeyChain(encChain, unencChain.findKeyFromPubKey(key1.getPubKey()));
+
+        DeterministicKey encKey2 = encChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
+        // Decrypt and check the keys match.
+        SimpleHDKeyChain decChain = encChain.toDecrypted("open secret");
+        DeterministicKey decKey1 = decChain.findKeyFromPubHash(encKey1.getPubKeyHash());
+        DeterministicKey decKey2 = decChain.findKeyFromPubHash(encKey2.getPubKeyHash());
+        assertEquals(decKey1.getPubKeyPoint(), encKey1.getPubKeyPoint());
+        assertEquals(decKey2.getPubKeyPoint(), encKey2.getPubKeyPoint());
+        assertFalse(decKey1.isEncrypted());
+        assertFalse(decKey2.isEncrypted());
+        assertNotEquals(encKey1.getParent(), decKey1.getParent());   // parts of a different hierarchy
+        // Check we can once again derive keys from the decrypted chain.
+        decChain.getKey(KeyChain.KeyPurpose.RECEIVE_FUNDS).sign(Sha256Hash.ZERO_HASH);
+        decChain.getKey(KeyChain.KeyPurpose.CHANGE).sign(Sha256Hash.ZERO_HASH);
+    }
 }

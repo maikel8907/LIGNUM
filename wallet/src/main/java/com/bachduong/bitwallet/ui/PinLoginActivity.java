@@ -1,10 +1,8 @@
 package com.bachduong.bitwallet.ui;
 
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.ui.customview.PinEntryView;
 
 
 public class PinLoginActivity extends AppCompatActivity {
@@ -24,7 +21,7 @@ public class PinLoginActivity extends AppCompatActivity {
     EditText editTextPin;
 
     Button buttonSignIn, button1, button2, button3,
-        button4, button5 , button6, button7, button8, button9, button0;
+            button4, button5, button6, button7, button8, button9, button0;
     ImageButton backSpace;
 
     @Override
@@ -56,28 +53,28 @@ public class PinLoginActivity extends AppCompatActivity {
                 s = "1";
                 break;
             case R.id.button_2:
-                s= "2";
+                s = "2";
                 break;
             case R.id.button_3:
-                s= "3";
+                s = "3";
                 break;
             case R.id.button_4:
-                s= "4";
+                s = "4";
                 break;
             case R.id.button_5:
-                s= "5";
+                s = "5";
                 break;
             case R.id.button_6:
-                s= "6";
+                s = "6";
                 break;
             case R.id.button_7:
-                s= "7";
+                s = "7";
                 break;
             case R.id.button_8:
-                s= "8";
+                s = "8";
                 break;
             case R.id.button_9:
-                s= "9";
+                s = "9";
                 break;
         }
         editTextPin.setText(editTextPin.getText().toString() + s);

@@ -45,7 +45,7 @@ import com.bachduong.bitwallet.R;
 /**
  * A PIN entry view widget for Android based on the Android 5 Material Theme via the AppCompat v7
  * support library.
- *
+ * <p>
  * Tung Duong: from github https://github.com/Philio/PinEntryView
  */
 public class PinEntryView extends ViewGroup {
@@ -464,6 +464,10 @@ public class PinEntryView extends ViewGroup {
         addView(editText);
     }
 
+    public interface OnPinEnteredListener {
+        void onPinEntered(String pin);
+    }
+
     /**
      * Save state of the view
      */
@@ -537,9 +541,5 @@ public class PinEntryView extends ViewGroup {
             }
         }
 
-    }
-
-    public interface OnPinEnteredListener {
-        void onPinEntered(String pin);
     }
 }

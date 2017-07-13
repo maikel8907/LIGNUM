@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author OKtoshi
  */
 public class OKCashMain extends PeerFamily {
+    private static OKCashMain instance = new OKCashMain();
+
     private OKCashMain() {
         id = "okcash.main";
 
         addressHeader = 55;
         p2shHeader = 28;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 500;
 
         name = "OKCash (beta)";
@@ -26,7 +28,6 @@ public class OKCashMain extends PeerFamily {
         signedMessageHeader = toBytes("OKCash Signed Message:\n");
     }
 
-    private static OKCashMain instance = new OKCashMain();
     public static synchronized OKCashMain get() {
         return instance;
     }

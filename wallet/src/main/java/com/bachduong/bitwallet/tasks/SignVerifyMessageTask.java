@@ -17,7 +17,8 @@ import javax.annotation.Nullable;
 public abstract class SignVerifyMessageTask extends AsyncTask<SignedMessage, Void, SignedMessage> {
     private final WalletAccount account;
     private final boolean signMessage;
-    @Nullable private final CharSequence password;
+    @Nullable
+    private final CharSequence password;
 
     public SignVerifyMessageTask(WalletAccount account, boolean signMessage, @Nullable CharSequence password) {
         this.account = account;
@@ -51,5 +52,6 @@ public abstract class SignVerifyMessageTask extends AsyncTask<SignedMessage, Voi
         return message;
     }
 
-    @Override abstract protected void onPostExecute(SignedMessage message);
+    @Override
+    abstract protected void onPostExecute(SignedMessage message);
 }

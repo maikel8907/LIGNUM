@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.PeerFamily;
  * @author John L. Jegutanis
  */
 public class BlackcoinMain extends PeerFamily {
+    private static BlackcoinMain instance = new BlackcoinMain();
+
     private BlackcoinMain() {
         id = "blackcoin.main";
 
         addressHeader = 25;
         p2shHeader = 85;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 500;
         dumpedPrivateKeyHeader = 153;
 
@@ -27,7 +29,6 @@ public class BlackcoinMain extends PeerFamily {
         signedMessageHeader = toBytes("BlackCoin Signed Message:\n");
     }
 
-    private static BlackcoinMain instance = new BlackcoinMain();
     public static synchronized CoinType get() {
         return instance;
     }

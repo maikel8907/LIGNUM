@@ -22,21 +22,21 @@ import com.bachduong.core.coins.FiatValue;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.coins.ValueType;
 
+import org.bitcoinj.core.Coin;
+import org.junit.Test;
+
+import java.util.Locale;
+
 import static org.bitcoinj.core.Coin.CENT;
 import static org.bitcoinj.core.Coin.COIN;
 import static org.bitcoinj.core.Coin.SATOSHI;
 import static org.bitcoinj.core.Coin.ZERO;
 import static org.junit.Assert.assertEquals;
 
-import java.util.Locale;
-
-import org.junit.Test;
-
-import org.bitcoinj.core.Coin;
-
 public class MonetaryFormatTest {
 
     private static final MonetaryFormat NO_CODE = MonetaryFormat.BTC.noCode();
+    private static final Value ONE_EURO = FiatValue.parse("EUR", "1");
 
     @Test
     public void testSigns() throws Exception {
@@ -336,8 +336,6 @@ public class MonetaryFormatTest {
     public void parseInvalidHugeNegativeNumber() throws Exception {
         NO_CODE.parse(BitcoinMain.get(), "-99999999999999999999");
     }
-
-    private static final Value ONE_EURO = FiatValue.parse("EUR", "1");
 
     @Test
     public void fiat() throws Exception {

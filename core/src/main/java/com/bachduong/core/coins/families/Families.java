@@ -12,8 +12,7 @@ public enum Families {
     PEERCOIN("peercoin"),
     REDDCOIN("reddcoin"),
     VPNCOIN("vpncoin"),
-    CLAMS("clams"),
-    ;
+    CLAMS("clams"),;
 
     public final String family;
 

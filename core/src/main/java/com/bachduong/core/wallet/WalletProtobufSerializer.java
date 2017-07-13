@@ -42,7 +42,7 @@ public class WalletProtobufSerializer {
 
     /**
      * Formats the given wallet (transactions and keys) to the given output stream in protocol buffer format.<p>
-     *
+     * <p>
      * Equivalent to <tt>walletToProto(wallet).writeTo(output);</tt>
      */
     public static void writeWallet(Wallet wallet, OutputStream output) throws IOException {
@@ -142,7 +142,7 @@ public class WalletProtobufSerializer {
      * <p>Parses a wallet from the given stream, using the provided Wallet instance to load data into. This is primarily
      * used when you want to register extensions. Data in the proto will be added into the wallet where applicable and
      * overwrite where not.</p>
-     *
+     * <p>
      * <p>A wallet can be unreadable for various reasons, such as inability to open the file, corrupt data, internally
      * inconsistent data, a wallet extension marked as mandatory that cannot be handled and so on. You should always
      * handle {@link UnreadableWalletException} and communicate failure to the user in an appropriate manner.</p>
@@ -162,7 +162,7 @@ public class WalletProtobufSerializer {
      * <p>Loads wallet data from the given protocol buffer and inserts it into the given Wallet object. This is primarily
      * useful when you wish to pre-register extension objects. Note that if loading fails the provided Wallet object
      * may be in an indeterminate state and should be thrown away.</p>
-     *
+     * <p>
      * <p>A wallet can be unreadable for various reasons, such as inability to open the file, corrupt data, internally
      * inconsistent data, a wallet extension marked as mandatory that cannot be handled and so on. You should always
      * handle {@link UnreadableWalletException} and communicate failure to the user in an appropriate manner.</p>
@@ -270,15 +270,12 @@ public class WalletProtobufSerializer {
                 bitcoinjCrypter.setR(encryptionParameters.getR());
 
                 crypter = new KeyCrypterScrypt(bitcoinjCrypter.build());
-            }
-            else if (walletProto.getEncryptionType() == Protos.Wallet.EncryptionType.UNENCRYPTED) {
+            } else if (walletProto.getEncryptionType() == Protos.Wallet.EncryptionType.UNENCRYPTED) {
                 crypter = null;
-            }
-            else {
+            } else {
                 throw new KeyCrypterException("Unsupported encryption: " + walletProto.getEncryptionType().toString());
             }
-        }
-        else {
+        } else {
             crypter = null;
         }
 

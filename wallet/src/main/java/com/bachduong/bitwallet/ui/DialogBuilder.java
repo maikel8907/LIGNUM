@@ -39,19 +39,19 @@ public class DialogBuilder extends AlertDialog.Builder {
     private final ImageView iconView;
     private final TextView titleView;
 
-    public static DialogBuilder warn(final Context context, final int titleResId) {
-        final DialogBuilder builder = new DialogBuilder(context);
-//        builder.setIcon(R.drawable.ic_menu_warning);
-        builder.setTitle(titleResId);
-        return builder;
-    }
-
     public DialogBuilder(final Context context) {
         super(context);
 
         this.customTitle = LayoutInflater.from(context).inflate(R.layout.dialog_title, null);
         this.iconView = (ImageView) customTitle.findViewById(android.R.id.icon);
         this.titleView = (TextView) customTitle.findViewById(android.R.id.title);
+    }
+
+    public static DialogBuilder warn(final Context context, final int titleResId) {
+        final DialogBuilder builder = new DialogBuilder(context);
+//        builder.setIcon(R.drawable.ic_menu_warning);
+        builder.setTitle(titleResId);
+        return builder;
     }
 
     @Override

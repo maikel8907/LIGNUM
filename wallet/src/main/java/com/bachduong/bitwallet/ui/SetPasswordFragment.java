@@ -41,14 +41,14 @@ public class SetPasswordFragment extends Fragment {
     private TextView errorPassword;
     private TextView errorPasswordsMismatch;
 
+    public SetPasswordFragment() {
+        // Required empty public constructor
+    }
+
     public static SetPasswordFragment newInstance(Bundle args) {
         SetPasswordFragment fragment = new SetPasswordFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public SetPasswordFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -159,48 +159,6 @@ public class SetPasswordFragment extends Fragment {
         };
     }
 
-    public static class SkipPasswordDialogFragment extends DialogFragment {
-        private Listener mListener;
-
-        public static SkipPasswordDialogFragment newInstance(Bundle args) {
-            SkipPasswordDialogFragment dialog = new SkipPasswordDialogFragment();
-            dialog.setArguments(args);
-            return dialog;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            try {
-                mListener = (Listener) activity;
-            } catch (ClassCastException e) {
-                throw new ClassCastException(activity.toString()
-                        + " must implement " + Listener.class);
-            }
-        }
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
-                    .setMessage(getResources().getString(R.string.password_skip_warn))
-                    .setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dismiss();
-                            Keyboard.hideKeyboard(getActivity());
-                            getArguments().putString(Constants.ARG_PASSWORD, "");
-                            mListener.onPasswordSet(getArguments());
-                        }
-                    })
-                    .setNegativeButton(R.string.button_cancel, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dismiss();
-                        }
-                    });
-            return builder.create();
-        }
-    }
-
     private void setError(TextView errorView, int messageId, Object... formatArgs) {
         setError(errorView, getResources().getString(messageId, formatArgs));
     }
@@ -236,5 +194,48 @@ public class SetPasswordFragment extends Fragment {
 
     public interface Listener {
         void onPasswordSet(Bundle args);
+    }
+
+    public static class SkipPasswordDialogFragment extends DialogFragment {
+        private Listener mListener;
+
+        public static SkipPasswordDialogFragment newInstance(Bundle args) {
+            SkipPasswordDialogFragment dialog = new SkipPasswordDialogFragment();
+            dialog.setArguments(args);
+            return dialog;
+        }
+
+        @Override
+        public void onAttach(Activity activity) {
+            super.onAttach(activity);
+            try {
+                mListener = (Listener) activity;
+            } catch (ClassCastException e) {
+                throw new ClassCastException(activity.toString()
+                        + " must implement " + Listener.class);
+            }
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
+                    .setMessage(getResources().getString(R.string.password_skip_warn))
+                    .setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dismiss();
+                            Keyboard.hideKeyboard(getActivity());
+                            getArguments().putString(Constants.ARG_PASSWORD, "");
+                            mListener.onPasswordSet(getArguments());
+                        }
+                    })
+                    .setNegativeButton(R.string.button_cancel, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dismiss();
+                        }
+                    });
+            return builder.create();
+        }
     }
 }

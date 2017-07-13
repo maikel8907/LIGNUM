@@ -6,12 +6,14 @@ import com.bachduong.core.coins.families.BitFamily;
  * @author FuzzyHobbit
  */
 public class UroMain extends BitFamily {
+    private static UroMain instance = new UroMain();
+
     private UroMain() {
         id = "uro.main";
 
         addressHeader = 68;
         p2shHeader = 5;
-        acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
+        acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
         spendableCoinbaseDepth = 20;
 
         name = "Uro";
@@ -26,7 +28,6 @@ public class UroMain extends BitFamily {
         signedMessageHeader = toBytes("Uro Signed Message:\n");
     }
 
-    private static UroMain instance = new UroMain();
     public static synchronized CoinType get() {
         return instance;
     }

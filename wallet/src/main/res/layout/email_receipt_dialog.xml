@@ -3,30 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:scrollbars="none" >
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/dialog_margin"
         android:paddingLeft="@dimen/dialog_margin"
-        android:paddingRight="@dimen/dialog_margin"
-        android:orientation="vertical" >
+        android:paddingRight="@dimen/dialog_margin">
 
         <TextView
+            style="@style/NormalText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NormalText"
             android:text="@string/email_receipt_message" />
 
         <EditText
             android:id="@+id/email"
+            style="@style/NormalText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/NormalText"
             android:imeOptions="flagNoExtractUi"
             android:inputType="textEmailAddress"
-            android:singleLine="true" >
+            android:singleLine="true">
+
             <requestFocus />
         </EditText>
     </LinearLayout>

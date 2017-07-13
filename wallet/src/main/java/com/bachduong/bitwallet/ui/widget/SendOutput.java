@@ -9,10 +9,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bachduong.core.util.GenericUtils;
-import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.R;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.wallet.AbstractAddress;
 
 /**
  * @author John L. Jegutanis
@@ -158,6 +158,11 @@ public class SendOutput extends LinearLayout {
         }
     }
 
+    public void setSendLabel(String sendLabel) {
+        this.sendLabel = sendLabel;
+        updateDirectionLabels();
+    }
+
     private String getReceiveLabel() {
         if (receiveLabel == null) {
             return getResources().getString(R.string.receive);
@@ -166,22 +171,17 @@ public class SendOutput extends LinearLayout {
         }
     }
 
+    public void setReceiveLabel(String receiveLabel) {
+        this.receiveLabel = receiveLabel;
+        updateDirectionLabels();
+    }
+
     private String getFeeLabel() {
         if (feeLabel == null) {
             return getResources().getString(R.string.fee);
         } else {
             return feeLabel;
         }
-    }
-
-    public void setSendLabel(String sendLabel) {
-        this.sendLabel = sendLabel;
-        updateDirectionLabels();
-    }
-
-    public void setReceiveLabel(String receiveLabel) {
-        this.receiveLabel = receiveLabel;
-        updateDirectionLabels();
     }
 
     public void setFeeLabel(String feeLabel) {

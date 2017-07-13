@@ -1,16 +1,14 @@
 package com.bachduong.core.wallet;
 
 import com.bachduong.core.protos.Protos;
+import com.bachduong.core.util.KeyUtils;
+
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.crypto.KeyCrypter;
 import org.bitcoinj.wallet.BasicKeyChain;
 
-import com.bachduong.core.util.KeyUtils;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import static com.google.common.base.Preconditions.checkState;
 
 /**
  * @author John L. Jegutanis
