@@ -3,7 +3,7 @@ BitWallet
 ## Building the app
 
 Install [Android Studio](https://developer.android.com/sdk/installing/studio.html). Once it is
-running, import coinomi-android by navigating to where you cloned or downloaded it and selecting
+running, import BitWallet by navigating to where you cloned or downloaded it and selecting
 settings.gradle. When it is finished importing, click on the SDK Manager ![SDK Manager](https://developer.android.com/images/tools/sdk-manager-studio.png). You will need to install SDK version 21.
 
 <br/>
