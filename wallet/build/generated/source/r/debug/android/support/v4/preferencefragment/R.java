@@ -26,6 +26,6 @@ public final class R {
     public static final class string {
         public static final int back_button_label = 0x7f060120;
         public static final int next_button_label = 0x7f06015e;
-        public static final int skip_button_label = 0x7f060166;
+        public static final int skip_button_label = 0x7f060167;
     }
 }

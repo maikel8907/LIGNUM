@@ -108,11 +108,11 @@ final public class WalletActivity extends BaseWalletActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallet);
 
-        if (getWalletApplication().getWallet() == null) {
-            startIntro();
-            finish();
-            return;
-        }
+//        if (getWalletApplication().getWallet() == null) {
+//            startIntro();
+//            finish();
+//            return;
+//        }
 
         if (savedInstanceState == null && !getConfiguration().getTermsAccepted()) {
             TermsOfUseDialog.newInstance().show(getFM(), TERMS_OF_USE_TAG);
@@ -696,10 +696,10 @@ final public class WalletActivity extends BaseWalletActivity implements
         }
     }
 
-    private void startIntro() {
-        Intent introIntent = new Intent(this, IntroActivity.class);
-        startActivity(introIntent);
-    }
+//    private void startIntro() {
+//        Intent introIntent = new Intent(this, IntroActivity.class);
+//        startActivity(introIntent);
+//    }
 
     @Override
     public void onBackPressed() {

@@ -212,21 +212,21 @@
 # view AndroidManifest.xml #generated:266
 -keep class org.acra.sender.SenderService { <init>(...); }
 
-# onClick res/layout/activity_pin_login.xml #generated:105
-# onClick res/layout/activity_pin_login.xml #generated:114
-# onClick res/layout/activity_pin_login.xml #generated:123
-# onClick res/layout/activity_pin_login.xml #generated:137
-# onClick res/layout/activity_pin_login.xml #generated:146
-# onClick res/layout/activity_pin_login.xml #generated:155
-# onClick res/layout/activity_pin_login.xml #generated:178
-# onClick res/layout/activity_pin_login.xml #generated:73
-# onClick res/layout/activity_pin_login.xml #generated:82
-# onClick res/layout/activity_pin_login.xml #generated:91
+# onClick res/layout/activity_pin_login.xml #generated:101
+# onClick res/layout/activity_pin_login.xml #generated:115
+# onClick res/layout/activity_pin_login.xml #generated:124
+# onClick res/layout/activity_pin_login.xml #generated:133
+# onClick res/layout/activity_pin_login.xml #generated:147
+# onClick res/layout/activity_pin_login.xml #generated:156
+# onClick res/layout/activity_pin_login.xml #generated:165
+# onClick res/layout/activity_pin_login.xml #generated:188
+# onClick res/layout/activity_pin_login.xml #generated:83
+# onClick res/layout/activity_pin_login.xml #generated:92
 -keepclassmembers class * { *** onClick(...); }
 
-# onClick res/layout/activity_pin_login.xml #generated:169
+# onClick res/layout/activity_pin_login.xml #generated:179
 -keepclassmembers class * { *** onClickBack(...); }
 
-# onClick res/layout/activity_pin_login.xml #generated:191
+# onClick res/layout/activity_pin_login.xml #generated:201
 -keepclassmembers class * { *** onClickSignIn(...); }
 

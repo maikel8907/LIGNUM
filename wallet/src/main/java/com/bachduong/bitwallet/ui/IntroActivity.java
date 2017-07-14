@@ -6,16 +6,25 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
+import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.service.ServicePrefs;
+import com.bachduong.bitwallet.util.WalletUtils;
+
+import org.bitcoinj.core.WalletExtension;
 
 public class IntroActivity extends AbstractWalletFragmentActivity
         implements WelcomeFragment.Listener, PasswordConfirmationFragment.Listener,
         SetPasswordFragment.Listener, SelectCoinsFragment.Listener {
 
+    private ServicePrefs servicePrefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_wrapper);
+
+        servicePrefs = new ServicePrefs(this);
 
         // If we detected that this device is incompatible
         if (!getWalletApplication().getConfiguration().isDeviceCompatible()) {
@@ -102,11 +111,14 @@ public class IntroActivity extends AbstractWalletFragmentActivity
     @Override
     public void onPasswordConfirmed(Bundle args) {
         selectCoins(args);
+        savePassword(args);
     }
 
     @Override
     public void onPasswordSet(Bundle args) {
+        savePassword(args);
         selectCoins(args);
+        savePassword(args);
     }
 
     private void selectCoins(Bundle args) {
@@ -117,5 +129,12 @@ public class IntroActivity extends AbstractWalletFragmentActivity
     @Override
     public void onCoinSelection(Bundle args) {
         replaceFragment(FinalizeWalletRestorationFragment.newInstance(args));
+    }
+
+
+    // Tung Duong todo: need implement more encrypting function before save pass
+    private boolean savePassword(Bundle args) {
+        String password = args.getString(Constants.ARG_PASSWORD);
+        return WalletUtils.saveWalletPassword(this, password);
     }
 }

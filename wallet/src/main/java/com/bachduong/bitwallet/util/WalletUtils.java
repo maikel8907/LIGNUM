@@ -18,6 +18,7 @@ package com.bachduong.bitwallet.util;
  */
 
 
+import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.text.Spannable;
@@ -25,6 +26,7 @@ import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 
 import com.bachduong.bitwallet.Constants;
+import com.bachduong.bitwallet.service.ServicePrefs;
 import com.bachduong.core.coins.CoinID;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.families.NxtFamily;
@@ -37,6 +39,7 @@ import com.bachduong.core.wallet.WalletAccount;
 
 import org.bitcoinj.core.Sha256Hash;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
@@ -162,5 +165,28 @@ public class WalletUtils {
         }
 
         return currencyName;
+    }
+
+    public static boolean saveWalletPassword(Context context, String password) {
+        try {
+            ServicePrefs servicePrefs = new ServicePrefs(context);
+            password = Crypto.encrypt(password, Constants.ARG_PASSWORD.toCharArray());
+            servicePrefs.setPassword(password);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false; // unsuccess
+        }
+        return true; // Save password success
+    }
+
+    public static boolean checkWalletPassword(Context context, String checkPass) {
+        try {
+            ServicePrefs servicePrefs = new ServicePrefs(context);
+            checkPass = Crypto.encrypt(checkPass, Constants.ARG_PASSWORD.toCharArray());
+            return servicePrefs.getPassword().equals(checkPass);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

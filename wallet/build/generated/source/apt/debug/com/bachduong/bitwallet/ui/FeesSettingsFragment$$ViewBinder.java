@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class FeesSettingsFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.FeesSettingsFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558587, "field 'coinList' and method 'editFee'");
-    target.coinList = finder.castView(view, 2131558587, "field 'coinList'");
+    view = finder.findRequiredView(source, 2131558588, "field 'coinList' and method 'editFee'");
+    target.coinList = finder.castView(view, 2131558588, "field 'coinList'");
     ((android.widget.AdapterView<?>) view).setOnItemClickListener(
       new android.widget.AdapterView.OnItemClickListener() {
         @Override public void onItemClick(

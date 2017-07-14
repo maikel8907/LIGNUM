@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class AccountFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.AccountFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558576, "field 'viewPager'");
-    target.viewPager = finder.castView(view, 2131558576, "field 'viewPager'");
+    view = finder.findRequiredView(source, 2131558577, "field 'viewPager'");
+    target.viewPager = finder.castView(view, 2131558577, "field 'viewPager'");
   }
 
   @Override public void unbind(T target) {

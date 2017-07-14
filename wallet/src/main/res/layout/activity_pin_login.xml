@@ -46,6 +46,16 @@
         <!--app:digitTextSize="16dp"-->
         <!--app:digitElevation="10dp" />-->
 
+        <TextView
+            android:id="@+id/password_error"
+            style="@style/ErrorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/amount_margin_bottom"
+            android:gravity="center"
+            android:text="@string/password_too_short"
+            android:visibility="gone" />
+
         <EditText
             android:id="@+id/edit_text_password"
             android:layout_width="match_parent"
