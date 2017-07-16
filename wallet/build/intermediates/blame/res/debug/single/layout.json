@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_splash.xml"
+    },
+    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
@@ -50,6 +54,10 @@
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
         "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_splash.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_splash.xml"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_rates.xml",
@@ -170,6 +178,10 @@
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_setup.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_setup.xml"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/powered_by_shapeshift.xml",

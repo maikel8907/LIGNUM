@@ -57,7 +57,7 @@
             android:name=".ui.WalletActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.SendActivity"
             android:label="@string/send_coins_activity_title"
@@ -240,16 +240,22 @@
 
         <!-- Tung Duong: PIN activity for checking PIN -->
         <activity
-            android:name=".ui.PinLoginActivity"
+            android:name=".ui2.PinLoginActivity"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden">
+
+        </activity>
+        <activity android:name=".ui.PairUsbPinActivity" />
+        <activity
+            android:name=".ui2.SplashActivity"
+            android:theme="@style/AppThemeNoTitleBar" />
+        <activity android:name=".ui2.SetupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.PairUsbPinActivity"></activity>
     </application>
 
 </manifest>

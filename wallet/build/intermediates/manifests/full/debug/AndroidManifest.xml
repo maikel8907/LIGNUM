@@ -246,16 +246,21 @@
 
         <!-- Tung Duong: PIN activity for checking PIN -->
         <activity
-            android:name="com.bachduong.bitwallet.ui.PinLoginActivity"
+            android:name="com.bachduong.bitwallet.ui2.PinLoginActivity"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity android:name="com.bachduong.bitwallet.ui.PairUsbPinActivity" />
+        <activity
+            android:name="com.bachduong.bitwallet.ui2.SplashActivity"
+            android:theme="@style/AppThemeNoTitleBar" />
+        <activity android:name="com.bachduong.bitwallet.ui2.SetupActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.bachduong.bitwallet.ui.PairUsbPinActivity" />
         <activity
             android:name="org.acra.dialog.CrashReportDialog"
             android:excludeFromRecents="true"

@@ -1,4 +1,4 @@
-package com.bachduong.bitwallet.ui;
+package com.bachduong.bitwallet.ui2;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.ui.BaseWalletActivity;
+import com.bachduong.bitwallet.ui.IntroActivity;
+import com.bachduong.bitwallet.ui.WalletActivity;
 import com.bachduong.bitwallet.util.PasswordQualityChecker;
 import com.bachduong.bitwallet.util.WalletUtils;
 

@@ -68,7 +68,7 @@
 # view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:32
 -keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
 
-# view AndroidManifest.xml #generated:271
+# view AndroidManifest.xml #generated:276
 -keep class com.android.tools.fd.runtime.InstantRunContentProvider { <init>(...); }
 
 # view AndroidManifest.xml #generated:234
@@ -113,14 +113,11 @@
 # view res/layout/activity_wallet.xml #generated:21
 -keep class com.bachduong.bitwallet.ui.NavigationDrawerFragment { <init>(...); }
 
-# view AndroidManifest.xml #generated:258
+# view AndroidManifest.xml #generated:253
 -keep class com.bachduong.bitwallet.ui.PairUsbPinActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:118
 -keep class com.bachduong.bitwallet.ui.PasswordConfirmationActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:248
--keep class com.bachduong.bitwallet.ui.PinLoginActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:161
 -keep class com.bachduong.bitwallet.ui.PreviousAddressesActivity { <init>(...); }
@@ -206,10 +203,19 @@
 # view res/layout/fragment_make_transaction.xml #generated:34
 -keep class com.bachduong.bitwallet.ui.widget.TransactionAmountVisualizer { <init>(...); }
 
-# view AndroidManifest.xml #generated:259
+# view AndroidManifest.xml #generated:248
+-keep class com.bachduong.bitwallet.ui2.PinLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:257
+-keep class com.bachduong.bitwallet.ui2.SetupActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:254
+-keep class com.bachduong.bitwallet.ui2.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:264
 -keep class org.acra.dialog.CrashReportDialog { <init>(...); }
 
-# view AndroidManifest.xml #generated:266
+# view AndroidManifest.xml #generated:271
 -keep class org.acra.sender.SenderService { <init>(...); }
 
 # onClick res/layout/activity_pin_login.xml #generated:101

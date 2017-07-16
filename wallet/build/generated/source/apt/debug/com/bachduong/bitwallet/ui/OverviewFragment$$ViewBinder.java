@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class OverviewFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.OverviewFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558582, "field 'swipeContainer'");
-    target.swipeContainer = finder.castView(view, 2131558582, "field 'swipeContainer'");
-    view = finder.findRequiredView(source, 2131558596, "field 'accountRows', method 'onAmountClick', and method 'onAmountLongClick'");
-    target.accountRows = finder.castView(view, 2131558596, "field 'accountRows'");
+    view = finder.findRequiredView(source, 2131558584, "field 'swipeContainer'");
+    target.swipeContainer = finder.castView(view, 2131558584, "field 'swipeContainer'");
+    view = finder.findRequiredView(source, 2131558598, "field 'accountRows', method 'onAmountClick', and method 'onAmountLongClick'");
+    target.accountRows = finder.castView(view, 2131558598, "field 'accountRows'");
     ((android.widget.AdapterView<?>) view).setOnItemClickListener(
       new android.widget.AdapterView.OnItemClickListener() {
         @Override public void onItemClick(
