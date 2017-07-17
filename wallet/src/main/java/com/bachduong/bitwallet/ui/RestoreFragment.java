@@ -152,7 +152,7 @@ public class RestoreFragment extends Fragment {
         }
 
         // Next button
-        view.findViewById(R.id.button_next).setOnClickListener(getOnNextListener());
+        view.findViewById(R.id.button_confirm).setOnClickListener(getOnNextListener());
 
         return view;
     }

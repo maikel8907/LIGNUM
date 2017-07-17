@@ -123,5 +123,7 @@
     <dimen name="pin_login_logo_height">80dp</dimen>
     <dimen name="activity_pin_horizontal_margin">64dp</dimen>
     <dimen name="key_board_size">50dp</dimen>
-    <dimen name="key_board_text_size">30dp</dimen>
+    <dimen name="key_board_text_size">30sp</dimen>
+    <dimen name="logo_big_width">100dp</dimen>
+    <dimen name="logo_big_height">100dp</dimen>
 </resources>

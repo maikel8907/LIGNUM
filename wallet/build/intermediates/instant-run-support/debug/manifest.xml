@@ -252,9 +252,8 @@
         </activity>
         <activity android:name="com.bachduong.bitwallet.ui.PairUsbPinActivity" />
         <activity
-            android:name="com.bachduong.bitwallet.ui2.SplashActivity"
-            android:theme="@style/AppThemeNoTitleBar" />
-        <activity android:name="com.bachduong.bitwallet.ui2.SetupActivity" >
+            android:name="com.bachduong.bitwallet.ui2.SetupActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

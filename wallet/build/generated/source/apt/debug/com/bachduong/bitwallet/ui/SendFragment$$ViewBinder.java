@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class SendFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.SendFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558631, "field 'sendToAddressView'");
-    target.sendToAddressView = finder.castView(view, 2131558631, "field 'sendToAddressView'");
-    view = finder.findRequiredView(source, 2131558633, "field 'sendToStaticAddressView' and method 'onStaticAddressClick'");
-    target.sendToStaticAddressView = finder.castView(view, 2131558633, "field 'sendToStaticAddressView'");
+    view = finder.findRequiredView(source, 2131558625, "field 'sendToAddressView'");
+    target.sendToAddressView = finder.castView(view, 2131558625, "field 'sendToAddressView'");
+    view = finder.findRequiredView(source, 2131558627, "field 'sendToStaticAddressView' and method 'onStaticAddressClick'");
+    target.sendToStaticAddressView = finder.castView(view, 2131558627, "field 'sendToStaticAddressView'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -20,18 +20,18 @@ public class SendFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.SendF
           target.onStaticAddressClick();
         }
       });
-    view = finder.findRequiredView(source, 2131558637, "field 'sendCoinAmountView'");
-    target.sendCoinAmountView = finder.castView(view, 2131558637, "field 'sendCoinAmountView'");
-    view = finder.findRequiredView(source, 2131558638, "field 'sendLocalAmountView'");
-    target.sendLocalAmountView = finder.castView(view, 2131558638, "field 'sendLocalAmountView'");
-    view = finder.findRequiredView(source, 2131558632, "field 'addressError'");
-    target.addressError = finder.castView(view, 2131558632, "field 'addressError'");
-    view = finder.findRequiredView(source, 2131558639, "field 'amountError'");
-    target.amountError = finder.castView(view, 2131558639, "field 'amountError'");
-    view = finder.findRequiredView(source, 2131558640, "field 'amountWarning'");
-    target.amountWarning = finder.castView(view, 2131558640, "field 'amountWarning'");
-    view = finder.findRequiredView(source, 2131558615, "field 'scanQrCodeButton' and method 'handleScan'");
-    target.scanQrCodeButton = finder.castView(view, 2131558615, "field 'scanQrCodeButton'");
+    view = finder.findRequiredView(source, 2131558631, "field 'sendCoinAmountView'");
+    target.sendCoinAmountView = finder.castView(view, 2131558631, "field 'sendCoinAmountView'");
+    view = finder.findRequiredView(source, 2131558632, "field 'sendLocalAmountView'");
+    target.sendLocalAmountView = finder.castView(view, 2131558632, "field 'sendLocalAmountView'");
+    view = finder.findRequiredView(source, 2131558626, "field 'addressError'");
+    target.addressError = finder.castView(view, 2131558626, "field 'addressError'");
+    view = finder.findRequiredView(source, 2131558633, "field 'amountError'");
+    target.amountError = finder.castView(view, 2131558633, "field 'amountError'");
+    view = finder.findRequiredView(source, 2131558634, "field 'amountWarning'");
+    target.amountWarning = finder.castView(view, 2131558634, "field 'amountWarning'");
+    view = finder.findRequiredView(source, 2131558610, "field 'scanQrCodeButton' and method 'handleScan'");
+    target.scanQrCodeButton = finder.castView(view, 2131558610, "field 'scanQrCodeButton'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -40,8 +40,8 @@ public class SendFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.SendF
           target.handleScan();
         }
       });
-    view = finder.findRequiredView(source, 2131558634, "field 'eraseAddressButton' and method 'onAddressClearClick'");
-    target.eraseAddressButton = finder.castView(view, 2131558634, "field 'eraseAddressButton'");
+    view = finder.findRequiredView(source, 2131558628, "field 'eraseAddressButton' and method 'onAddressClearClick'");
+    target.eraseAddressButton = finder.castView(view, 2131558628, "field 'eraseAddressButton'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -50,16 +50,16 @@ public class SendFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.SendF
           target.onAddressClearClick();
         }
       });
-    view = finder.findRequiredView(source, 2131558641, "field 'txMessageButton'");
-    target.txMessageButton = finder.castView(view, 2131558641, "field 'txMessageButton'");
-    view = finder.findRequiredView(source, 2131558642, "field 'txMessageLabel'");
-    target.txMessageLabel = finder.castView(view, 2131558642, "field 'txMessageLabel'");
-    view = finder.findRequiredView(source, 2131558643, "field 'txMessageView'");
-    target.txMessageView = finder.castView(view, 2131558643, "field 'txMessageView'");
-    view = finder.findRequiredView(source, 2131558644, "field 'txMessageCounter'");
-    target.txMessageCounter = finder.castView(view, 2131558644, "field 'txMessageCounter'");
-    view = finder.findRequiredView(source, 2131558645, "field 'sendConfirmButton' and method 'onSendClick'");
-    target.sendConfirmButton = finder.castView(view, 2131558645, "field 'sendConfirmButton'");
+    view = finder.findRequiredView(source, 2131558635, "field 'txMessageButton'");
+    target.txMessageButton = finder.castView(view, 2131558635, "field 'txMessageButton'");
+    view = finder.findRequiredView(source, 2131558636, "field 'txMessageLabel'");
+    target.txMessageLabel = finder.castView(view, 2131558636, "field 'txMessageLabel'");
+    view = finder.findRequiredView(source, 2131558637, "field 'txMessageView'");
+    target.txMessageView = finder.castView(view, 2131558637, "field 'txMessageView'");
+    view = finder.findRequiredView(source, 2131558638, "field 'txMessageCounter'");
+    target.txMessageCounter = finder.castView(view, 2131558638, "field 'txMessageCounter'");
+    view = finder.findRequiredView(source, 2131558639, "field 'sendConfirmButton' and method 'onSendClick'");
+    target.sendConfirmButton = finder.castView(view, 2131558639, "field 'sendConfirmButton'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

@@ -182,8 +182,12 @@ public class WalletUtils {
     public static boolean checkWalletPassword(Context context, String checkPass) {
         try {
             ServicePrefs servicePrefs = new ServicePrefs(context);
-            checkPass = Crypto.encrypt(checkPass, Constants.ARG_PASSWORD.toCharArray());
-            return servicePrefs.getPassword().equals(checkPass);
+
+            // TODO: 7/17/17  need to change back after test
+            //return servicePrefs.getPassword().equals(checkPass);
+            String originalPass = Crypto.decrypt(servicePrefs.getPassword(), Constants.ARG_PASSWORD.toCharArray());
+            String dummyPass ="2409";
+            return dummyPass.equals(checkPass);
         } catch (IOException e) {
             e.printStackTrace();
             return false;

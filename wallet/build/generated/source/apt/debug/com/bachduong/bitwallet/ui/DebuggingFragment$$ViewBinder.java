@@ -8,7 +8,7 @@ import butterknife.ButterKnife.ViewBinder;
 public class DebuggingFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.DebuggingFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558589, "method 'onExecutePasswordTest'");
+    view = finder.findRequiredView(source, 2131558584, "method 'onExecutePasswordTest'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

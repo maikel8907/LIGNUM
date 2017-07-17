@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:2:1-261:12
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:2:1-259:12
 	package
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:3:5-38
 		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
@@ -116,7 +116,7 @@ ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/Androi
 	android:anyDensity
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:43:9-34
 application
-ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:49:5-259:19
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:49:5-257:19
 MERGED from [com.android.support:gridlayout-v7:23.3.0] /Users/duongtung/.android/build-cache/96946fc1401344862472bda702fbb5dccbe8d011/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/4e981089f2cb91d86a24311e6078bc299c02352f/output/AndroidManifest.xml:7:5-20
@@ -380,26 +380,22 @@ activity#com.bachduong.bitwallet.ui.PairUsbPinActivity
 ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:248:9-59
 	android:name
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:248:19-56
-activity#com.bachduong.bitwallet.ui2.SplashActivity
-ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:249:9-251:57
-	android:theme
-		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:251:13-54
-	android:name
-		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:250:13-47
 activity#com.bachduong.bitwallet.ui2.SetupActivity
-ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:252:9-258:20
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:249:9-256:20
+	android:screenOrientation
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:250:13-49
 	android:name
-		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:252:19-52
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:249:19-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:253:13-257:29
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:251:13-255:29
 action#android.intent.action.MAIN
-ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:254:17-69
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:252:17-69
 	android:name
-		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:254:25-66
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:252:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:256:17-77
+ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:254:17-77
 	android:name
-		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:256:27-74
+		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:254:27-74
 uses-sdk
 INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:gridlayout-v7:23.3.0] /Users/duongtung/.android/build-cache/96946fc1401344862472bda702fbb5dccbe8d011/output/AndroidManifest.xml:20:5-43

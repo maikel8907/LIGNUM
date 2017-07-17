@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -70,134 +71,232 @@
             android:inputType="numberPassword" />
     </LinearLayout>
 
-    <TableLayout
+    <!--<TableLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|center_horizontal"-->
+    <!--android:layout_marginTop="@dimen/activity_vertical_margin">-->
+
+    <!--<TableRow-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_1"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_1" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_2"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_2" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_3"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_3" />-->
+    <!--</TableRow>-->
+
+    <!--<TableRow-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_4"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_4" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_5"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_5" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_6"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_6" />-->
+    <!--</TableRow>-->
+
+    <!--<TableRow-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_7"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_7" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_8"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_8" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_9"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_9" />-->
+    <!--</TableRow>-->
+
+    <!--<TableRow-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/button_back_space"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClickBack"-->
+    <!--android:src="@drawable/ic_keyboard_backspace_black_24dp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_0"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:layout_column="1"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_0" />-->
+    <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+
+    <!--<android.support.v7.widget.GridLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--app:columnCount="3">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_1"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_1" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_2"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_2" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_3"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_3" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_4"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_4" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_5"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_5" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_6"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_6" />-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/button_7"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_7" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_8"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_8" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/button_9"-->
+            <!--style="@style/VirtualKeyboardStyle"-->
+            <!--android:layout_width="@dimen/key_board_size"-->
+            <!--android:layout_height="@dimen/key_board_size"-->
+            <!--android:gravity="center"-->
+            <!--android:onClick="onClick"-->
+            <!--android:text="@string/digit_9" />-->
+
+    <!--</android.support.v7.widget.GridLayout>-->
+
+    <com.bachduong.bitwallet.ui2.customview.PasswordInputView
+        android:id="@+id/password_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginTop="@dimen/activity_vertical_margin">
+        android:layout_gravity="center_horizontal"
+        app:columnCount="3">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button_1"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_1" />
-
-            <Button
-                android:id="@+id/button_2"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_2" />
-
-            <Button
-                android:id="@+id/button_3"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_3" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button_4"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_4" />
-
-            <Button
-                android:id="@+id/button_5"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_5" />
-
-            <Button
-                android:id="@+id/button_6"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_6" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button_7"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_7" />
-
-            <Button
-                android:id="@+id/button_8"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_8" />
-
-            <Button
-                android:id="@+id/button_9"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_9" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/button_back_space"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:gravity="center"
-                android:onClick="onClickBack"
-                android:src="@drawable/ic_keyboard_backspace_black_24dp" />
-
-            <Button
-                android:id="@+id/button_0"
-                style="@style/VirtualKeyboardStyle"
-                android:layout_width="@dimen/key_board_size"
-                android:layout_height="@dimen/key_board_size"
-                android:layout_column="1"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:text="@string/digit_0" />
-        </TableRow>
-
-    </TableLayout>
-
+    </com.bachduong.bitwallet.ui2.customview.PasswordInputView>
     <Button
         android:id="@+id/button_sign_in"
         style="@style/Widget.AppCompat.Button"

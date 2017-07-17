@@ -452,7 +452,12 @@ The user of the wallet agrees to arbitrate any dispute arising from or in connec
 This disclaimer was amended for the last time on January 1st, 2016.</string>
     <string name="pin_login_activity_enter_pin">Enter the PIN</string>
     <string name="pin_login_activity_button_login">Login</string>
+    <string name="pin_login_set_password">1. PIN CODE \n Please enter the new PIN in the web page</string>
+    <string name="pin_login_set_password_re_enter">1. PIN CODE \n Reenter the new PIN in the web page</string>
     <string name="action_sign_in">Sign in</string>
+    <string name="action_next">Next</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_confirm">Confirm</string>
     <string name="digit_1">1</string>
     <string name="digit_2">2</string>
     <string name="digit_3">3</string>
@@ -468,4 +473,12 @@ This disclaimer was amended for the last time on January 1st, 2016.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="seed_show_label">2. Recovery Phrase \n Copy each word in your recovery sheet</string>
+    <string name="seed_show_bottom_label">Do not store your 24 words digitally \n Keep your recovery phrase in a secure place</string>
+    <string name="check_seed_confirm_seed">Confirm the words you write down in the seed</string>
+    <string name="check_seed_enter_here">Enter word here</string>
+    <string name="check_seed_label_number">%s Word</string>
+    <string name="check_seed_false">Wrong word.</string>
+
+    <string name="setup_activity_back_press_toast">Press back again for exit.</string>
 </resources>

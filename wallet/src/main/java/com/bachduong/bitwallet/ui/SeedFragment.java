@@ -44,7 +44,7 @@ public class SeedFragment extends Fragment {
         TextView seedFontIcon = (TextView) view.findViewById(R.id.seed_icon);
         Fonts.setTypeface(seedFontIcon, Fonts.Font.COINOMI_FONT_ICONS);
 
-        final Button buttonNext = (Button) view.findViewById(R.id.button_next);
+        final Button buttonNext = (Button) view.findViewById(R.id.button_confirm);
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

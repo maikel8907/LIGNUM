@@ -21,7 +21,7 @@ import java.util.Set;
  *         https://xato.net/passwords/more-top-worst-passwords/
  */
 public class PasswordQualityChecker {
-    public static final int DEFAULT_MIN_PASSWORD_LENGTH = 6;
+    public static final int DEFAULT_MIN_PASSWORD_LENGTH = 4;
     private static final Logger log = LoggerFactory.getLogger(PasswordQualityChecker.class);
     private static final String COMMON_PASSWORDS_TXT = "common_passwords.txt";
     private final HashSet<String> passwordList;

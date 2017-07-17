@@ -200,7 +200,7 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
             }
         });
 
-        nextButton = (Button) view.findViewById(R.id.button_next);
+        nextButton = (Button) view.findViewById(R.id.button_confirm);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

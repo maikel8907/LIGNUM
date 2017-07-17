@@ -79,7 +79,7 @@ public class SweepWalletFragment extends Fragment {
     View sweepLoadingView;
     @Bind(R.id.sweeping_status)
     TextView sweepStatus;
-    @Bind(R.id.button_next)
+    @Bind(R.id.button_confirm)
     Button nextButton;
     private Listener listener;
     private ServerClients serverClients;
@@ -198,7 +198,7 @@ public class SweepWalletFragment extends Fragment {
         startActivityForResult(new Intent(getActivity(), ScanActivity.class), REQUEST_CODE_SCAN);
     }
 
-    @OnClick(R.id.button_next)
+    @OnClick(R.id.button_confirm)
     void verifyKeyAndProceed() {
         Keyboard.hideKeyboard(getActivity());
         if (validatePrivateKey()) {

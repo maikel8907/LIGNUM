@@ -1,4 +1,4 @@
-#Tue Jul 11 17:21:09 ICT 2017
+#Mon Jul 17 17:19:50 ICT 2017
 file.2=/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3a981cd20200396e1f2aa6b4e8bb1deeb1dffd6a/classes.dex
 base.2=/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3a981cd20200396e1f2aa6b4e8bb1deeb1dffd6a
 file.1=/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_becce9a0fccc8a1258f2a190390181af208cf4ac/classes.dex
