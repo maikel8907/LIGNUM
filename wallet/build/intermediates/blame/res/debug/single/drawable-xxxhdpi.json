@@ -16,6 +16,10 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xxxhdpi/ic_pin_digit_8.png"
     },
     {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_finish_mark.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xxxhdpi/ic_finish_mark.png"
+    },
+    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_keyboard_backspace_black_24dp.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_keyboard_backspace_black_24dp.png"
     },

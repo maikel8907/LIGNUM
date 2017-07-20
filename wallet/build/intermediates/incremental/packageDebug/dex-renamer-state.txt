@@ -1,4 +1,4 @@
-#Mon Jul 17 19:38:51 ICT 2017
+#Thu Jul 20 20:15:12 ICT 2017
 base.0=/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_bcb8d64db67961627041c882ece767fea3981a7d
 renamed.1=classes2.dex
 renamed.0=classes.dex

@@ -1,5 +1,6 @@
 # view res/layout/activity_pair_usb_pin.xml #generated:2
 # view res/layout/fragment_check_seed.xml #generated:8
+# view res/layout/fragment_finish.xml #generated:1
 # view res/layout/fragment_show_seed_ui2.xml #generated:8
 -keep class android.support.constraint.ConstraintLayout { <init>(...); }
 

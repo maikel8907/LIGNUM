@@ -10,8 +10,8 @@ public class OverviewFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.O
     View view;
     view = finder.findRequiredView(source, 2131558572, "field 'swipeContainer'");
     target.swipeContainer = finder.castView(view, 2131558572, "field 'swipeContainer'");
-    view = finder.findRequiredView(source, 2131558592, "field 'accountRows', method 'onAmountClick', and method 'onAmountLongClick'");
-    target.accountRows = finder.castView(view, 2131558592, "field 'accountRows'");
+    view = finder.findRequiredView(source, 2131558595, "field 'accountRows', method 'onAmountClick', and method 'onAmountLongClick'");
+    target.accountRows = finder.castView(view, 2131558595, "field 'accountRows'");
     ((android.widget.AdapterView<?>) view).setOnItemClickListener(
       new android.widget.AdapterView.OnItemClickListener() {
         @Override public void onItemClick(

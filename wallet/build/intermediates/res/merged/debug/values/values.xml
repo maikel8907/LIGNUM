@@ -596,6 +596,7 @@
     <string name="exchange_rates_loading">Loading exchange rates</string>
     <string name="extra_entropy">Extra entropy</string>
     <string name="fee">Transaction fee</string>
+    <string name="finish_fragment_label_finish">Your device is ready \\n\\n Now you can start \\n using Wallet</string>
     <string name="font_icon_arrow_down" translatable="false"></string>
     <string name="font_icon_arrow_left" translatable="false"></string>
     <string name="font_icon_arrow_right" translatable="false"></string>
