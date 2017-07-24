@@ -8,8 +8,8 @@ package android.support.v4.preferencefragment;
 
 public final class R {
     public static final class dimen {
-        public static final int preference_fragment_padding_bottom = 0x7f090081;
-        public static final int preference_fragment_padding_side = 0x7f090082;
+        public static final int preference_fragment_padding_bottom = 0x7f090082;
+        public static final int preference_fragment_padding_side = 0x7f090083;
     }
     public static final class id {
         public static final int back_button = 0x7f0d013f;
@@ -21,11 +21,11 @@ public final class R {
         public static final int preference_fragment_scrollbarStyle = 0x7f0b0004;
     }
     public static final class layout {
-        public static final int preference_list_fragment = 0x7f030063;
+        public static final int preference_list_fragment = 0x7f030064;
     }
     public static final class string {
-        public static final int back_button_label = 0x7f060123;
-        public static final int next_button_label = 0x7f060167;
-        public static final int skip_button_label = 0x7f060175;
+        public static final int back_button_label = 0x7f060124;
+        public static final int next_button_label = 0x7f060168;
+        public static final int skip_button_label = 0x7f060176;
     }
 }

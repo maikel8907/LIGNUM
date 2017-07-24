@@ -119,11 +119,12 @@
     <!-- Address row -->
     <dimen name="address_row_status_bg_size">22dp</dimen>
     <dimen name="address_row_status_text_size">10sp</dimen>
-    <dimen name="pin_login_logo_with">80dp</dimen>
-    <dimen name="pin_login_logo_height">80dp</dimen>
+    <dimen name="pin_login_logo_with">140dp</dimen>
+    <dimen name="pin_login_logo_height">140dp</dimen>
     <dimen name="activity_pin_horizontal_margin">64dp</dimen>
     <dimen name="key_board_size">50dp</dimen>
+    <dimen name="key_board_margin">5dp</dimen>
     <dimen name="key_board_text_size">30sp</dimen>
-    <dimen name="logo_big_width">100dp</dimen>
-    <dimen name="logo_big_height">100dp</dimen>
+    <dimen name="logo_big_width">160dp</dimen>
+    <dimen name="logo_big_height">160dp</dimen>
 </resources>

@@ -165,7 +165,7 @@ public class ShowSeedFragment extends Fragment {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 textview.setTextAppearance(R.style.TextAppearance_AppCompat_Medium);
             }
-            textview.setTextColor(getResources().getColor(R.color.gray_87_text));
+            textview.setTextColor(getResources().getColor(R.color.primary_500));
             textview.setTextSize(TypedValue.COMPLEX_UNIT_SP, 26);
             String s = String.valueOf(i + 1) + ". " + seeds[i];
             textview.setText(s);

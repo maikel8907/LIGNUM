@@ -5,7 +5,7 @@
         <item name="colorPrimary">@color/primary_500</item>
 
         <!-- colorPrimaryDark is used for the status bar -->
-        <item name="colorPrimaryDark">@color/primary_900</item>
+        <item name="colorPrimaryDark">@color/primary_700</item>
 
         <!-- colorAccent is used as the default value for colorControlActivated,
              which is used to tint widgets -->
@@ -17,13 +17,15 @@
         <item name="colorPrimary">@color/primary_500</item>
 
         <!-- colorPrimaryDark is used for the status bar -->
-        <item name="colorPrimaryDark">@color/primary_900</item>
+        <item name="colorPrimaryDark">@color/primary_700</item>
 
         <!-- colorAccent is used as the default value for colorControlActivated,
              which is used to tint widgets -->
         <item name="colorAccent">@color/accent</item>
 
         <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:background">@color/color_background</item>
     </style>
 
     <!-- Special Button styles -->
@@ -47,8 +49,8 @@
 
     <!-- Generic text styles -->
     <style name="NormalText" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/gray_87_text</item>
-        <item name="android:textColorLink">@color/gray_87_text</item>
+        <item name="android:textColor">@color/primary_100</item>
+        <item name="android:textColorLink">@color/primary_100</item>
     </style>
 
     <style name="NormalBoldText" parent="NormalText">
@@ -56,11 +58,11 @@
     </style>
 
     <style name="SecondaryText" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/gray_54_sec_text_icons</item>
+        <item name="android:textColor">@color/primary_100</item>
     </style>
 
     <style name="HintText" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/gray_26_hint_text</item>
+        <item name="android:textColor">@color/primary_500</item>
     </style>
 
     <style name="SmallHelpText" parent="SecondaryText">
@@ -196,7 +198,7 @@
 
     <style name="VirtualKeyboardStyle" parent="Base.Widget.AppCompat.Button.Borderless">
         <item name="android:background">@drawable/key_board_background</item>
-        <item name="android:textColor">@color/gray_87_text</item>
+        <item name="android:textColor">@color/primary_500</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/key_board_text_size</item>
     </style>

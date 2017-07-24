@@ -19,15 +19,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf65973-8d90-4989-b277-39bc1716b2c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-hdpi/ic_finish_mark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xhdpi/ic_finish_mark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xxhdpi/ic_finish_mark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xxxhdpi/ic_finish_mark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/FinishFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/NoticeFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_finish.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_notice.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-hdpi/ic_app_logo_icellet_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-hdpi/ic_logo_icellet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-mdpi/ic_app_logo_icellet_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-mdpi/ic_logo_icellet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xhdpi/ic_app_logo_icellet_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xhdpi/ic_logo_icellet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xxhdpi/ic_app_logo_icellet_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xxhdpi/ic_logo_icellet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xxxhdpi/ic_app_logo_icellet_light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable-xxxhdpi/ic_logo_icellet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_button.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
@@ -35,13 +37,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$string.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v4/preferencefragment/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/Constants.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$integer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$integer.class" />
@@ -53,66 +58,54 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$styleable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$xml.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/R$xml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AboutActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AboutActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AccountFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AddressRequestFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AddressRequestFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AddressesListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/AddressesListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/BalanceFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/BalanceFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/DebuggingFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/DebuggingFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/EditAccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/EditAccountFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/IntroActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/IntroActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/OverviewFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/OverviewFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PayWithDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PayWithDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/RestoreFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/RestoreFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ScanActivity$6.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ScanActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ScanActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SeedFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ScannerView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ScannerView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SendFragment$9.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SendFragment$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SendFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SendFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SetPasswordFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SetPasswordFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SweepWalletFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/SweepWalletFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TradeSelectFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TradeSelectFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TradeStatusFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TradeStatusFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/WalletActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/WalletActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/WelcomeFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/WelcomeFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/CoinListItem.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/CoinListItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/SendOutput.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/SendOutput.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/PinLoginFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/PinLoginFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/SetupActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/SetupActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/SplashFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/SplashFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/QrUtils.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/QrUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/classes/debug/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$string.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v4/preferencefragment/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/Constants.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$integer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$integer.class" />
@@ -124,59 +117,44 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$styleable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$xml.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/R$xml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AboutActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AboutActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AccountFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AddressRequestFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AddressRequestFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AddressesListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/AddressesListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/BalanceFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/BalanceFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/DebuggingFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/DebuggingFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/EditAccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/EditAccountFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/IntroActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/IntroActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/OverviewFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/OverviewFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PayWithDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PayWithDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/RestoreFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/RestoreFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ScanActivity$6.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ScanActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ScanActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SeedFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ScannerView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ScannerView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SendFragment$9.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SendFragment$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SendFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SendFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SetPasswordFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SetPasswordFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SweepWalletFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/SweepWalletFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TradeSelectFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TradeSelectFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TradeStatusFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TradeStatusFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/WalletActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/WalletActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/WelcomeFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/WelcomeFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/CoinListItem.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/CoinListItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/SendOutput.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/SendOutput.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/PinLoginFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/PinLoginFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/SetupActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/SetupActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/SplashFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/SplashFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/QrUtils.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/QrUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental-verifier/debug/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/packageDebug/zip-cache/0LecvVPgPtvUcM5KZ02TSAmos5Y=" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/packageDebug/zip-cache/0LecvVPgPtvUcM5KZ02TSAmos5Y=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/0LecvVPgPtvUcM5KZ02TSAmos5Y=" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/0LecvVPgPtvUcM5KZ02TSAmos5Y=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
@@ -193,13 +171,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$string.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v4/preferencefragment/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/Constants.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$integer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$integer.class" />
@@ -211,64 +192,53 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$styleable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$xml.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/R$xml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AboutActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AboutActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AccountFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AddressRequestFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AddressRequestFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AddressesListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/AddressesListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/BalanceFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/BalanceFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/DebuggingFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/DebuggingFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/EditAccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/EditAccountFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/IntroActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/IntroActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/OverviewFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/OverviewFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PayWithDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PayWithDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/RestoreFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/RestoreFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ScanActivity$6.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ScanActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ScanActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SeedFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ScannerView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ScannerView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SendFragment$9.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SendFragment$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SendFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SendFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SetPasswordFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SetPasswordFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SweepWalletFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/SweepWalletFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TradeSelectFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TradeSelectFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TradeStatusFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TradeStatusFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/WalletActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/WalletActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/WelcomeFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/WelcomeFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/CoinListItem.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/CoinListItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/SendOutput.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/SendOutput.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/PinLoginFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/PinLoginFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/SetupActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/SetupActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/SplashFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/SplashFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/QrUtils.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/QrUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/bachduong/bitwallet/ui2/customview/PasswordInputView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/bachduong/bitwallet/ui2/customview/PasswordInputView$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/bachduong/bitwallet/ui2/customview/PasswordInputView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/bachduong/bitwallet/ui/dialogs/CreateNewAddressDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/bachduong/bitwallet/ui/dialogs/EditFeeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/bachduong/bitwallet/ui/dialogs/TermsOfUseDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/Constants.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$integer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$integer.class" />
@@ -279,75 +249,55 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$style.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$styleable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$xml.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/CoinListItem.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/CoinListItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/CurrencyTextView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/SendOutput.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/SendOutput.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$id.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$dimen.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$dimen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$layout.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$string.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/android/support/v4/preferencefragment/R$string.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AboutActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AboutActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AccountFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AddressRequestFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AddressRequestFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AddressesListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/AddressesListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/BalanceFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/BalanceFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/DebuggingFragment$PasswordTestTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/DebuggingFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/DebuggingFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/EditAccountFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/EditAccountFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/IntroActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/IntroActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/MakeTransactionFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/NavDrawerListAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/NavigationDrawerFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/OverviewFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/OverviewFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PairUsbPinActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PayWithDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PayWithDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/PreviousAddressesFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/RestoreFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/RestoreFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ScanActivity$6.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ScanActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ScanActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ScanActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SeedFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ScannerView.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ScannerView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SelectCoinTypeDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SelectCoinsFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SendFragment$9.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SendFragment$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SendFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SendFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SetPasswordFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SetPasswordFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SignVerifyMessageFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SweepWalletFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/SweepWalletFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TradeSelectFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TradeSelectFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TradeStatusFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TradeStatusFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TransactionAmountVisualizerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TransactionDetailsFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/TransactionsListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/UnlockWalletDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/WalletActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/WalletActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/WelcomeFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui/WelcomeFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/CheckSeedFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/PinLoginFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/PinLoginFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/SetupActivity.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/SetupActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/ShowSeedFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/SplashFragment.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/ui2/SplashFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/QrUtils.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/QrUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/UiUtils$AccountActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/UiUtils$AddressActionModeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/bachduong/bitwallet/util/UiUtils$CopyShareActionModeCallback.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/outputs/apk/wallet-debug.apk" afterPath="$PROJECT_DIR$/wallet/build/outputs/apk/wallet-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/AddressRequestFragment$$ViewBinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/MakeTransactionFragment$$ViewBinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/OverviewFragment$$ViewBinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/SendFragment$$ViewBinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/apt/debug/com/bachduong/bitwallet/ui/SweepWalletFragment$$ViewBinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v4/preferencefragment/R.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v4/preferencefragment/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/com/bachduong/bitwallet/R.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/com/bachduong/bitwallet/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-hdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-hdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xxxhdpi.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/drawable-xxxhdpi.json" />
@@ -365,17 +315,29 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/package_slice_5/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/package_slice_5/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/package_slice_6/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/instant-run-support/debug/package_slice_6/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/proguard-rules/debug/aapt_rules.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/proguard-rules/debug/aapt_rules.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/key_board_background.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/drawable/key_board_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_pin_login.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_pin_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed_ui2.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed_ui2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_splash.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_splash.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/restart-dex/debug/build-info.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/buildId.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/buildId.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/buildId.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/buildId.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/buildId.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/buildId.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_pin_login.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_pin_login.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/wallet.iml" afterPath="$PROJECT_DIR$/wallet/wallet.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/styles.xml" />
     </list>
     <ignored path="coinomi-android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -421,57 +383,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SetupActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SetupActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
+      <file leaf-file-name="fragment_pin_login.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_pin_login.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="1260">
-              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <caret line="84" column="40" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_finish.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_finish.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
+      <file leaf-file-name="fragment_show_seed_ui2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml">
           <provider selected="true" editor-type-id="android-designer2">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_notice.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_notice.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoticeFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/NoticeFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="1860">
+              <caret line="124" column="53" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinishFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/FinishFragment.java">
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="356">
+              <caret line="473" column="48" selection-start-line="473" selection-start-column="48" selection-end-line="473" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowSeedFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2220">
+              <caret line="163" column="51" selection-start-line="163" selection-start-column="51" selection-end-line="163" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1860">
+              <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3045">
+              <caret line="203" column="12" selection-start-line="203" selection-start-column="12" selection-end-line="203" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="key_board_background.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordInputView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -479,54 +471,25 @@
       </file>
       <file leaf-file-name="fragment_splash.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keyboard_button.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_button.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowSeedFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2730">
-              <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7230">
-              <caret line="482" column="77" selection-start-line="482" selection-start-column="77" selection-end-line="482" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PinLoginFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/PinLoginFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-              <folding>
-                <element signature="method#checkPasswordQuality#0;class#PinLoginFragment#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckSeedFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/CheckSeedFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="78" column="26" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="26" />
+            <state relative-caret-position="60">
+              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -538,8 +501,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -2669,8 +2632,6 @@
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/activity_pair_usb_pin.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Constants.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PairUsbPinActivity.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/ServicePrefs.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/IntroActivity.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/WalletActivity.java" />
@@ -2678,31 +2639,35 @@
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/activity_setup.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WalletActivity.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/activity_splash.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SetPasswordFragment.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SplashFragment.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_1.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_one.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_two.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordView.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/activity_pin_login.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/PinLoginActivity.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/PasswordQualityChecker.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/PinLoginFragment.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_pin_login.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_check_seed.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/CheckSeedFragment.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SetupActivity.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/FinishFragment.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_finish.xml" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/NoticeFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_pin_login.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_button.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -2736,8 +2701,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -2745,6 +2708,78 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="bitwallet" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2835,17 +2870,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="device.picker.selection" value="Nexus_5X_API_26_x86" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resource/ic_finish_mark.png" />
-    <property name="lastFolderRoot" value="$PROJECT_DIR$/../resource/ic_finish_mark.png" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resource/icellet_light.png" />
+    <property name="lastFolderRoot" value="$PROJECT_DIR$/../resource/icellet_light.png" />
     <property name="algorithm" value="Scalr" />
     <property name="method" value="Automatic" />
     <property name="sourceResolution" value="XXXHDPI" />
-    <property name="resolutions" value="XXXHDPI&#10;HDPI&#10;XHDPI&#10;XXHDPI" />
+    <property name="resolutions" value="HDPI&#10;XXHDPI&#10;MDPI&#10;XXXHDPI&#10;XHDPI" />
     <property name="format" value="PNG" />
     <property name="VectorAssetImportPath" value="$PROJECT_DIR$/.." />
     <property name="android.project.structure.last.selected" value="wallet" />
@@ -3192,24 +3229,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="809" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1440" height="809" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32611832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42712843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3222,6 +3258,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -3236,15 +3273,15 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32323232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32323232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32611832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -3311,48 +3348,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/network/interfaces/TransactionEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/BitcoinMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/ExchangeCheckSupportedCoinsTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/CheckUpdateTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/exchange/shapeshift/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/Keyboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/PasswordConfirmationFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -3390,58 +3385,39 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/activity_fragment_wrapper.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/activity_setup.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WalletActivity.java" />
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/activity_splash.xml" />
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_welcome.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_1.xml" />
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_two.xml" />
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="197" column="70" selection-start-line="197" selection-start-column="50" selection-end-line="197" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="125" column="41" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/customview/PinEntryView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2014">
@@ -3451,49 +3427,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_one.xml" />
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/activity_pin_login.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="288" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
-          <folding>
-            <element signature="e#382#2981#0" expanded="false" />
-            <marker date="1500262674000" expanded="false" signature="3196:3229" ph="&quot;16dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="3486:3509" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="3543:3566" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="3664:3681" ph="&quot;1&quot;" />
-            <marker date="1500262674000" expanded="false" signature="3822:3845" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="3879:3902" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4000:4017" ph="&quot;2&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4158:4181" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4215:4238" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4336:4353" ph="&quot;3&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4635:4658" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4692:4715" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4813:4830" ph="&quot;4&quot;" />
-            <marker date="1500262674000" expanded="false" signature="4971:4994" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5028:5051" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5149:5166" ph="&quot;5&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5307:5330" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5364:5387" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5485:5502" ph="&quot;6&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5784:5807" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5841:5864" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="5962:5979" ph="&quot;7&quot;" />
-            <marker date="1500262674000" expanded="false" signature="6120:6143" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="6177:6200" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="6298:6315" ph="&quot;8&quot;" />
-            <marker date="1500262674000" expanded="false" signature="6456:6479" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="6513:6536" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="6634:6651" ph="&quot;9&quot;" />
-            <marker date="1500262674000" expanded="false" signature="6947:6970" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="7004:7027" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="7313:7336" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="7370:7393" ph="&quot;50dp&quot;" />
-            <marker date="1500262674000" expanded="false" signature="7528:7545" ph="&quot;0&quot;" />
-          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/RestoreFragment.java">
@@ -3567,165 +3507,232 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="254" column="28" selection-start-line="254" selection-start-column="28" selection-end-line="254" selection-end-column="28" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_set_password.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="123" selection-end-column="50" />
-          <folding>
-            <element signature="e#331#5648#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/SeedFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_pin_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="63" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_check_seed.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7230">
-          <caret line="482" column="77" selection-start-line="482" selection-start-column="77" selection-end-line="482" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/CheckSeedFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="78" column="26" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SetupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
+        <state relative-caret-position="1275">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/PinLoginFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="method#checkPasswordQuality#0;class#PinLoginFragment#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/FinishFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_finish.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="120">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_notice.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_notice.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/NoticeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/PinLoginFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2980#2981#0" expanded="false" />
+            <element signature="e#3037#3038#0" expanded="false" />
+            <element signature="method#checkPasswordQuality#0;class#PinLoginFragment#0" expanded="false" />
+            <element signature="e#8272#8273#0" expanded="false" />
+            <element signature="e#8325#8326#0" expanded="false" />
+            <element signature="e#8376#8377#0" expanded="false" />
+            <element signature="e#8426#8427#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/FinishFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="80" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/CheckSeedFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="55" column="66" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/keyboard_button.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="203" column="12" selection-start-line="203" selection-start-column="12" selection-end-line="203" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_pin_login.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="40" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2220">
+          <caret line="163" column="51" selection-start-line="163" selection-start-column="51" selection-end-line="163" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="124" column="53" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="473" column="48" selection-start-line="473" selection-start-column="48" selection-end-line="473" selection-end-column="48" />
           <folding />
         </state>
       </provider>
