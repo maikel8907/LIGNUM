@@ -522,7 +522,7 @@
     <string name="amount_error_too_small">The minimum amount is at least %1$s</string>
     <string name="amount_to_send_label">Amount</string>
     <string name="amount_warn_fees_apply">Slightly less will be sent because of fees</string>
-    <string name="app_name" translatable="false">Bitwallet (dev)</string>
+    <string name="app_name" translatable="false">ICELLET (dev)</string>
     <string name="app_name_long">Coinomi for Android</string>
     <string name="app_package" translatable="false">com.bachduong.bitwallet</string>
     <string name="back_button_label">Back</string>

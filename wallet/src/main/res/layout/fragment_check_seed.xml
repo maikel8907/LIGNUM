@@ -11,10 +11,10 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/pin_login_logo_with"
+            android:layout_height="@dimen/pin_login_logo_height"
             android:layout_marginTop="16dp"
-            android:src="@drawable/intro_logo"
+            android:src="@drawable/ic_app_logo_icellet_light"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/check_seed_label_number"
             style="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@color/gray_87_text"
+            android:textColor="@color/primary_500"
             app:layout_constraintBottom_toTopOf="@+id/edit_text_word"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"

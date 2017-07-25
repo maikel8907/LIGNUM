@@ -67,11 +67,11 @@ public class ShowSeedFragment extends Fragment {
         // Inflate the layout for this fragment
         convertView = inflater.inflate(R.layout.fragment_show_seed_ui2, container, false);
 
-        buttonCancel = (Button) convertView.findViewById(R.id.button_cancel);
+//        buttonCancel = (Button) convertView.findViewById(R.id.button_cancel);
         buttonPrevious = (Button) convertView.findViewById(R.id.button_prev);
         buttonNext = (Button) convertView.findViewById(R.id.button_confirm);
 
-        buttonCancel.setOnClickListener(getButtonCancelListener());
+//        buttonCancel.setOnClickListener(getButtonCancelListener());
         buttonNext.setOnClickListener(getButtonNextListener());
         buttonPrevious.setOnClickListener(getButtonPreviousListener());
 

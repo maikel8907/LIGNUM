@@ -10,11 +10,26 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.service.Server;
 import com.bachduong.bitwallet.ui.AbstractWalletFragmentActivity;
 
 public class SetupActivity extends AbstractWalletFragmentActivity implements SplashFragment.Listener, PinLoginFragment.Listener, ShowSeedFragment.Listener{
 
     private int backPressedNum;
+    private Server server;
+
+    private Server.TransporterListener transporterListener = new Server.TransporterListener() {
+        @Override
+        public void onReceived(String receive, Server.TransporterListener callback) {
+            receive = "Ping back after received \n" + receive;
+            callback.onResponse(receive);
+        }
+
+        @Override
+        public void onResponse(String response) {
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +50,8 @@ public class SetupActivity extends AbstractWalletFragmentActivity implements Spl
                     .setCancelable(false)
                     .create().show();
         } else {
+            server = new Server();
+            server.addListener(transporterListener);
             if (savedInstanceState == null) {
                 getSupportFragmentManager().beginTransaction()
                         .add(R.id.container, new SplashFragment())
@@ -42,6 +59,15 @@ public class SetupActivity extends AbstractWalletFragmentActivity implements Spl
             }
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (server != null) {
+            server.removeListener(transporterListener);
+        }
+    }
+
     private void replaceFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 

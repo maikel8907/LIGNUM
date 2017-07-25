@@ -8,10 +8,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class SweepWalletFragment$$ViewBinder<T extends com.bachduong.bitwallet.ui.SweepWalletFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558668, "field 'privateKeyInputView'");
+    view = finder.findRequiredView(source, 2131558667, "field 'privateKeyInputView'");
     target.privateKeyInputView = view;
-    view = finder.findRequiredView(source, 2131558669, "field 'privateKeyText', method 'onPrivateKeyInputFocusChange', and method 'onPrivateKeyInputTextChange'");
-    target.privateKeyText = finder.castView(view, 2131558669, "field 'privateKeyText'");
+    view = finder.findRequiredView(source, 2131558668, "field 'privateKeyText', method 'onPrivateKeyInputFocusChange', and method 'onPrivateKeyInputTextChange'");
+    target.privateKeyText = finder.castView(view, 2131558668, "field 'privateKeyText'");
     view.setOnFocusChangeListener(
       new android.view.View.OnFocusChangeListener() {
         @Override public void onFocusChange(
@@ -45,16 +45,16 @@ public class SweepWalletFragment$$ViewBinder<T extends com.bachduong.bitwallet.u
           target.onPrivateKeyInputTextChange();
         }
       });
-    view = finder.findRequiredView(source, 2131558670, "field 'passwordView'");
+    view = finder.findRequiredView(source, 2131558669, "field 'passwordView'");
     target.passwordView = view;
-    view = finder.findRequiredView(source, 2131558672, "field 'errorΜessage'");
-    target.errorΜessage = finder.castView(view, 2131558672, "field 'errorΜessage'");
-    view = finder.findRequiredView(source, 2131558671, "field 'password'");
-    target.password = finder.castView(view, 2131558671, "field 'password'");
-    view = finder.findRequiredView(source, 2131558673, "field 'sweepLoadingView'");
+    view = finder.findRequiredView(source, 2131558671, "field 'errorΜessage'");
+    target.errorΜessage = finder.castView(view, 2131558671, "field 'errorΜessage'");
+    view = finder.findRequiredView(source, 2131558670, "field 'password'");
+    target.password = finder.castView(view, 2131558670, "field 'password'");
+    view = finder.findRequiredView(source, 2131558672, "field 'sweepLoadingView'");
     target.sweepLoadingView = view;
-    view = finder.findRequiredView(source, 2131558674, "field 'sweepStatus'");
-    target.sweepStatus = finder.castView(view, 2131558674, "field 'sweepStatus'");
+    view = finder.findRequiredView(source, 2131558673, "field 'sweepStatus'");
+    target.sweepStatus = finder.castView(view, 2131558673, "field 'sweepStatus'");
     view = finder.findRequiredView(source, 2131558579, "field 'nextButton' and method 'verifyKeyAndProceed'");
     target.nextButton = finder.castView(view, 2131558579, "field 'nextButton'");
     view.setOnClickListener(
