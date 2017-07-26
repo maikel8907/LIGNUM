@@ -11,7 +11,6 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
 
@@ -57,7 +56,7 @@ public class CheckSeedFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         convertView = inflater.inflate(R.layout.fragment_check_seed, container, false);
-        textViewNumber = (TextView) convertView.findViewById(R.id.text_view_number);
+        textViewNumber = (TextView) convertView.findViewById(R.id.text_view_content);
         textViewError = (TextView) convertView.findViewById(R.id.text_view_error);
         editTextWord = (EditText) convertView.findViewById(R.id.edit_text_word);
         buttonConfirm = (Button) convertView.findViewById(R.id.button_confirm);

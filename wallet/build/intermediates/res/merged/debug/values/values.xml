@@ -372,15 +372,15 @@
     <dimen name="key_board_margin">5dp</dimen>
     <dimen name="key_board_size">50dp</dimen>
     <dimen name="key_board_text_size">30sp</dimen>
-    <dimen name="logo_big_height">160dp</dimen>
-    <dimen name="logo_big_width">160dp</dimen>
+    <dimen name="logo_big_height">100dp</dimen>
+    <dimen name="logo_big_width">100dp</dimen>
     <dimen name="navigation_drawer_width">240dp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
     <dimen name="overview_amount_margin_top">20dp</dimen>
-    <dimen name="pin_login_logo_height">140dp</dimen>
-    <dimen name="pin_login_logo_with">140dp</dimen>
+    <dimen name="pin_login_logo_height">90dp</dimen>
+    <dimen name="pin_login_logo_with">90dp</dimen>
     <dimen name="preference_fragment_padding_bottom">0dp</dimen>
     <dimen name="preference_fragment_padding_side">16dp</dimen>
     <dimen name="qr_code_margin">16dp</dimen>
@@ -403,6 +403,7 @@
     <dimen name="send_output_amount_text_size">24sp</dimen>
     <dimen name="send_output_type_text_size">24sp</dimen>
     <dimen name="standard_margin">16dp</dimen>
+    <dimen name="text_padding">16dp</dimen>
     <dimen name="transaction_entry">18sp</dimen>
     <dimen name="transaction_pending">18sp</dimen>
     <dimen name="transaction_row_confirmations_font_icon_size">18sp</dimen>
@@ -599,7 +600,7 @@
     <string name="exchange_rates_loading">Loading exchange rates</string>
     <string name="extra_entropy">Extra entropy</string>
     <string name="fee">Transaction fee</string>
-    <string name="finish_fragment_label_finish">Your device is ready \\n\\n Now you can start \\n using Wallet</string>
+    <string name="finish_fragment_label_finish">Your device is ready \n Now you can start using Wallet</string>
     <string name="font_icon_arrow_down" translatable="false"></string>
     <string name="font_icon_arrow_left" translatable="false"></string>
     <string name="font_icon_arrow_right" translatable="false"></string>
@@ -674,9 +675,9 @@
     <string name="pay_to_label">Pay to</string>
     <string name="pay_with">Send with</string>
     <string name="pin_login_activity_button_login">Login</string>
-    <string name="pin_login_activity_enter_pin">Enter the PIN</string>
-    <string name="pin_login_set_password">1. PIN CODE \n Please enter the new PIN in the web page</string>
-    <string name="pin_login_set_password_re_enter">1. PIN CODE \n Reenter the new PIN in the web page</string>
+    <string name="pin_login_activity_enter_pin">PIN CODE</string>
+    <string name="pin_login_set_password">Configuring Device \n Setting the PIN</string>
+    <string name="pin_login_set_password_re_enter">Configuring Device \n Setting the PIN</string>
     <string name="powered_by">Powered by</string>
     <string name="pref_summary_manual_receiving_addresses">Do not automatically create a new address for every transaction</string>
     <string name="pref_title_exchange_rates">Exchange rates</string>
@@ -708,7 +709,7 @@
     <string name="seed_password_protected">This recovery phrase is protected with a BIP39 passphrase</string>
     <string name="seed_regenerate_title">Touch to generate a new recovery phrase</string>
     <string name="seed_show_bottom_label">Do not store your 24 words digitally \n Keep your recovery phrase in a secure place</string>
-    <string name="seed_show_label"><b>Recovery Phrase</b> \n Copy each word in\n your recovery sheet</string>
+    <string name="seed_show_label"><b>Recovery Phrase</b> \n Copy each word in your recovery sheet</string>
     <string name="seed_title">Your recovery phrase</string>
     <string name="seed_working">Please wait…</string>
     <string name="select_coins">Select the coins you wish to use with your wallet. You can add more later.</string>

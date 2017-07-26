@@ -21,7 +21,7 @@ public final class R {
         public static final int preference_fragment_scrollbarStyle = 0x7f0b0004;
     }
     public static final class layout {
-        public static final int preference_list_fragment = 0x7f030064;
+        public static final int preference_list_fragment = 0x7f030065;
     }
     public static final class string {
         public static final int back_button_label = 0x7f060124;

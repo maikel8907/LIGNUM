@@ -125,34 +125,25 @@ public class Server {
 //				socketIn.close();
 
 				message = "replayed: " + msgReply + " " + total + "\n";
-                for (TransporterListener listener : listeners) {
-                    if (listener != null) {
-                        listener.onReceived(total, new TransporterListener() {
-                            @Override
-                            public void onReceived(String receive, TransporterListener callback) {
+				if ( listeners != null && !listeners.isEmpty()) {
+					for (TransporterListener listener : listeners) {
+						if (listener != null) {
+							listener.onReceived(total, new TransporterListener() {
+								@Override
+								public void onReceived(String receive, TransporterListener callback) {
 
-                            }
+								}
 
-                            @Override
-                            public void onResponse(String response) {
-                                PrintStream printStream = null;
-                                try {
-                                    OutputStream outputStream = hostThreadSocket.getOutputStream();
-                                    printStream = new PrintStream(outputStream);
-                                    printStream.print(response);
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                } finally {
-                                    try {
-                                        printStream.close();
-                                    } catch (Exception e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            }
-                        });
-                    }
-                }
+								@Override
+								public void onResponse(String response) {
+									sendRespone(hostThreadSocket, response);
+								}
+							});
+						}
+					}
+				} else {
+					sendRespone(hostThreadSocket, "Ping \n");
+				}
 //				outputStream = hostThreadSocket.getOutputStream();
 //				PrintStream printStream = new PrintStream(outputStream);
 //				printStream.print(message);
@@ -169,6 +160,33 @@ public class Server {
 		}
 
 	}
+
+
+	private boolean sendRespone (Socket socket, String response) {
+		PrintStream printStream = null;
+		try {
+			OutputStream outputStream = socket.getOutputStream();
+			printStream = new PrintStream(outputStream);
+//			printStream.print(response);
+			printStream.println("HTTP/1.1 200 OK");
+			printStream.println("Content-Type: text/html");
+			printStream.println("\r\n");
+			printStream.println(response);
+			printStream.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				printStream.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+				return false;
+			}
+		}
+		return true;
+	}
+
 	private static String getStringFromInputStream(InputStream is) {
 
 		BufferedReader br = null;

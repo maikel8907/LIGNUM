@@ -63,18 +63,18 @@
                 android:text="@string/password_too_short"
                 android:visibility="gone" />
 
-            <EditText
-                android:id="@+id/edit_text_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:gravity="center"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in"
-                android:imeOptions="actionUnspecified"
-                android:inputType="numberPassword" />
+            <!--<EditText-->
+                <!--android:id="@+id/edit_text_password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ems="10"-->
+                <!--android:focusable="false"-->
+                <!--android:focusableInTouchMode="false"-->
+                <!--android:gravity="center"-->
+                <!--android:imeActionId="@+id/login"-->
+                <!--android:imeActionLabel="@string/action_sign_in"-->
+                <!--android:imeOptions="actionUnspecified"-->
+                <!--android:inputType="numberPassword" />-->
         </LinearLayout>
 
         <com.bachduong.bitwallet.ui2.customview.PasswordInputView
@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/action_sign_in" />
+            android:text="test" />
     </LinearLayout>
 
 </FrameLayout>

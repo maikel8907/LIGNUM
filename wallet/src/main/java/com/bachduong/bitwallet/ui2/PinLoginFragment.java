@@ -31,7 +31,7 @@ public class PinLoginFragment extends Fragment {
     public static final int TYPE_SET_PASSWORD_STEP_2 = 2;
 
     private View convertView;
-    private EditText editTextPin;
+//    private EditText editTextPin;
     private TextView errorPassword;
     private TextView textViewLabel;
 
@@ -76,16 +76,16 @@ public class PinLoginFragment extends Fragment {
         convertView = inflater.inflate(R.layout.fragment_pin_login, container, false);
         passwordQualityChecker = new PasswordQualityChecker(getActivity());
 
-        editTextPin = (EditText) convertView.findViewById(R.id.edit_text_password);
+//        editTextPin = (EditText) convertView.findViewById(R.id.edit_text_password);
         errorPassword = (TextView) convertView.findViewById(R.id.password_error);
         passwordView = (PasswordInputView) convertView.findViewById(R.id.password_view);
-        passwordView.setEditText(editTextPin);
-        passwordView.setOnTextChangeListener(new PasswordInputView.Listener() {
-            @Override
-            public void onTextChanged() {
-                clearError(errorPassword);
-            }
-        });
+//        passwordView.setEditText(editTextPin);
+//        passwordView.setOnTextChangeListener(new PasswordInputView.Listener() {
+//            @Override
+//            public void onTextChanged() {
+//                clearError(errorPassword);
+//            }
+//        });
 
         textViewLabel = (TextView) convertView.findViewById(R.id.text_view_label);
         switch (mType) {
@@ -151,73 +151,77 @@ public class PinLoginFragment extends Fragment {
 
     private void setPasswordStep1() {
 
-        String pin = editTextPin.getText().toString();
-        if (!checkPasswordQuality(pin)) {
-            editTextPin.setText("");
-            return;
-        }
-
+//        String pin = editTextPin.getText().toString();
+//        if (!checkPasswordQuality(pin)) {
+//            editTextPin.setText("");
+//            return;
+//        }
+//
+//        if (listener != null) {
+//            listener.onPasswordSetStep1(pin);
+//        }
         if (listener != null) {
-            listener.onPasswordSetStep1(pin);
+            listener.onPasswordSetStep1("");
         }
-
     }
 
     private void setPasswordStep2() {
 
-        String pin = editTextPin.getText().toString();
-        if (!checkPasswordQuality(pin)) {
-            editTextPin.setText("");
-            return;
-        }
-        if (!pin.equals(prevStepPassword)) {
-            editTextPin.setText("");
-            setError(errorPassword, R.string.passwords_mismatch);
-            return;
-        }
-
+//        String pin = editTextPin.getText().toString();
+//        if (!checkPasswordQuality(pin)) {
+//            editTextPin.setText("");
+//            return;
+//        }
+//        if (!pin.equals(prevStepPassword)) {
+//            editTextPin.setText("");
+//            setError(errorPassword, R.string.passwords_mismatch);
+//            return;
+//        }
+//
+//        if (listener != null) {
+//            listener.onPasswordSetFinal(pin);
+//        }
         if (listener != null) {
-            listener.onPasswordSetFinal(pin);
+            listener.onPasswordSetFinal("");
         }
-
     }
 
     private void attemptLogin() {
-        String pin = editTextPin.getText().toString();
-
-
-//        //This toast just for test
-        Toast.makeText(getActivity(), "Input pin is " + pin, Toast.LENGTH_SHORT).show();
-//        startActivity(new Intent(PinLoginActivity.this, WalletActivity.class));
-        if (!checkPasswordQuality(pin)) {
-            editTextPin.setText("");
-            return;
-        }
-        if (WalletUtils.checkWalletPassword(getActivity(), pin)) {
-            //startWallet();
-        } else {
-            //Tung Duong todo: need to put all string in to Strings Resource
-            if (maxWrongPin == 0) {
-                new AlertDialog.Builder(getActivity())
-                        .setTitle("Wrong password !")
-                        .setMessage("You already input 3 times wrong password.")
-                        .setNeutralButton(R.string.button_ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                getActivity().finish();
-                            }
-                        }).create().show();
-            } else {
-
-                editTextPin.setText("");
-//                Toast.makeText(
-//                        PinLoginActivity.this,
-//                        "Wrong PIN, you can try in " + maxWrongPin + " times more",
-//                        Toast.LENGTH_SHORT).show();
-                setError(errorPassword, "Wrong PIN, you can try in " + maxWrongPin + " times more." + "\n Please enter test pass 2409");
-                maxWrongPin--;
-            }
-        }
+//        String pin = editTextPin.getText().toString();
+//
+//
+////        //This toast just for test
+//        Toast.makeText(getActivity(), "Input pin is " + pin, Toast.LENGTH_SHORT).show();
+////        startActivity(new Intent(PinLoginActivity.this, WalletActivity.class));
+//        if (!checkPasswordQuality(pin)) {
+//            editTextPin.setText("");
+//            return;
+//        }
+//        if (WalletUtils.checkWalletPassword(getActivity(), pin)) {
+//            //startWallet();
+//        } else {
+//            //Tung Duong todo: need to put all string in to Strings Resource
+//            if (maxWrongPin == 0) {
+//                new AlertDialog.Builder(getActivity())
+//                        .setTitle("Wrong password !")
+//                        .setMessage("You already input 3 times wrong password.")
+//                        .setNeutralButton(R.string.button_ok, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                getActivity().finish();
+//                            }
+//                        }).create().show();
+//            } else {
+//
+//                editTextPin.setText("");
+////                Toast.makeText(
+////                        PinLoginActivity.this,
+////                        "Wrong PIN, you can try in " + maxWrongPin + " times more",
+////                        Toast.LENGTH_SHORT).show();
+//                setError(errorPassword, "Wrong PIN, you can try in " + maxWrongPin + " times more." + "\n Please enter test pass 2409");
+//                maxWrongPin--;
+//            }
+//        }
 
     }
 

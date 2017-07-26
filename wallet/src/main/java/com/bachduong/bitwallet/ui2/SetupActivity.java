@@ -12,6 +12,10 @@ import android.widget.Toast;
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.service.Server;
 import com.bachduong.bitwallet.ui.AbstractWalletFragmentActivity;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+import com.squareup.okhttp.internal.http.HttpConnection;
+import com.squareup.okhttp.internal.http.HttpTransport;
 
 public class SetupActivity extends AbstractWalletFragmentActivity implements SplashFragment.Listener, PinLoginFragment.Listener, ShowSeedFragment.Listener{
 
@@ -21,8 +25,28 @@ public class SetupActivity extends AbstractWalletFragmentActivity implements Spl
     private Server.TransporterListener transporterListener = new Server.TransporterListener() {
         @Override
         public void onReceived(String receive, Server.TransporterListener callback) {
-            receive = "Ping back after received \n" + receive;
-            callback.onResponse(receive);
+            receive =  receive + "\r\nPing back after received \n";
+            String response = "<!DOCTYPE html>\n" +
+                    "<html lang=\"en\" dir=\"ltr\" class=\"sid-plesk\">\n" +
+                    "<head>\n" +
+                    "    <title>Domain Default page</title>\n" +
+                    "    <meta name='copyright' content='All Rights Reserved.'>\n" +
+                    "    <meta charset=\"utf-8\">\n" +
+                    "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n" +
+                    "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0\">\n" +
+                    "    <meta http-equiv=\"Cache-Control\" content=\"no-cache\">\n" +
+                    "    <link rel=\"shortcut icon\" href=\"favicon.ico\">\n" +
+                    "    <link rel=\"stylesheet\" href=\"css/style.css\">\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "\n" +
+                    "<div class=\"page-container\">\n" +
+                    "Ping back after received" +
+                    "</div>\n" +
+                    "\n" +
+                    "</body>\n" +
+                    "</html>";
+            callback.onResponse(response);
         }
 
         @Override
@@ -65,6 +89,7 @@ public class SetupActivity extends AbstractWalletFragmentActivity implements Spl
         super.onDestroy();
         if (server != null) {
             server.removeListener(transporterListener);
+            server.onDestroy();
         }
     }
 

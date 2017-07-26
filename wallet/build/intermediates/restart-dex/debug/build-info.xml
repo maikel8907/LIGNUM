@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="26"
+    abi="x86_64,x86"
+    api-level="23"
     build-mode="COLD"
-    density="420dpi"
+    density="hdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1500975408239"
+    timestamp="1501095579360"
     token="-3061159477837256648"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="2034" />
+        duration="380" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3" />
+        duration="2" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
 
     <artifact
-        location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/outputs/apk/wallet-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1500973786618"
+        timestamp="1501095484333"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
@@ -62,6 +62,9 @@
             location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
@@ -70,19 +73,14 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1500975182623"
+        timestamp="1501095579360"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1500975408239"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
+            location="/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/outputs/apk/wallet-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
