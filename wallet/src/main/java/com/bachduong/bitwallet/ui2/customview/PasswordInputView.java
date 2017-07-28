@@ -4,8 +4,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.support.v7.widget.GridLayout;
 import android.util.AttributeSet;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +18,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.zip.Inflater;
 
 /**
  * Created by duongtung on 7/17/17.
@@ -31,8 +28,8 @@ public class PasswordInputView extends GridLayout {
 
     private Context context;
     private EditText editText;
-//    private String[] keys = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-    private String[] keys = { "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    //    private String[] keys = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    private String[] keys = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
     private List<String> keyList = new ArrayList<>(Arrays.asList(keys));
     private Listener listener;
     private LayoutInflater inflater;
@@ -99,7 +96,7 @@ public class PasswordInputView extends GridLayout {
 
                     String text = editText.getText().toString() + keyNum;
                     editText.setText(text);
-                    if (listener!= null) {
+                    if (listener != null) {
                         listener.onTextChanged();
                     }
                 }
@@ -146,8 +143,8 @@ public class PasswordInputView extends GridLayout {
 //                Button button = getButton(keyList.get(i));
 //                addView(button);
 //            } else {
-                Button button = getButton(keyList.get(i));
-                addView(button);
+            Button button = getButton(keyList.get(i));
+            addView(button);
 //            }
         }
     }

@@ -47,7 +47,7 @@ public class CoinServiceImpl extends Service implements CoinService {
     private static final int IDLE_TRANSACTION_TIMEOUT_MIN = 9;
     private static final int MAX_HISTORY_SIZE = Math.max(IDLE_TRANSACTION_TIMEOUT_MIN, IDLE_BLOCK_TIMEOUT_MIN);
 
-//    private PowerManager.WakeLock wakeLock;
+    //    private PowerManager.WakeLock wakeLock;
     private static final long APPWIDGET_THROTTLE_MS = DateUtils.SECOND_IN_MILLIS;
     private static final Logger log = LoggerFactory.getLogger(CoinService.class);
     private final List<AbstractAddress> notificationAddresses = new LinkedList<>();
@@ -124,7 +124,7 @@ public class CoinServiceImpl extends Service implements CoinService {
 //        }
 //    };
 
-//    private void notifyCoinsReceived(@Nullable final Address from, @Nonnull final BigInteger amount)
+    //    private void notifyCoinsReceived(@Nullable final Address from, @Nonnull final BigInteger amount)
 //    {
 //        if (notificationCount == 1)
 //            nm.cancel(NOTIFICATION_ID_COINS_RECEIVED);

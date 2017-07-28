@@ -11,8 +11,6 @@ import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.service.ServicePrefs;
 import com.bachduong.bitwallet.util.WalletUtils;
 
-import org.bitcoinj.core.WalletExtension;
-
 public class IntroActivity extends AbstractWalletFragmentActivity
         implements WelcomeFragment.Listener, PasswordConfirmationFragment.Listener,
         SetPasswordFragment.Listener, SelectCoinsFragment.Listener {

@@ -1,23 +1,17 @@
 package com.bachduong.bitwallet.ui2;
 
 import android.content.DialogInterface;
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.service.Server;
 import com.bachduong.bitwallet.ui.AbstractWalletFragmentActivity;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
-import com.squareup.okhttp.internal.http.HttpConnection;
-import com.squareup.okhttp.internal.http.HttpTransport;
 
-public class SetupActivity extends AbstractWalletFragmentActivity implements SplashFragment.Listener, PinLoginFragment.Listener, ShowSeedFragment.Listener{
+public class SetupActivity extends AbstractWalletFragmentActivity implements SplashFragment.Listener, PinLoginFragment.Listener, ShowSeedFragment.Listener {
 
     private int backPressedNum;
     private Server server;
@@ -25,7 +19,7 @@ public class SetupActivity extends AbstractWalletFragmentActivity implements Spl
     private Server.TransporterListener transporterListener = new Server.TransporterListener() {
         @Override
         public void onReceived(String receive, Server.TransporterListener callback) {
-            receive =  receive + "\r\nPing back after received \n";
+            receive = receive + "\r\nPing back after received \n";
             String response = "<!DOCTYPE html>\n" +
                     "<html lang=\"en\" dir=\"ltr\" class=\"sid-plesk\">\n" +
                     "<head>\n" +
@@ -121,7 +115,7 @@ public class SetupActivity extends AbstractWalletFragmentActivity implements Spl
 
     @Override
     public void onSplashFinish(Bundle args) {
-        replaceFragment(PinLoginFragment.newInstance(PinLoginFragment.TYPE_SET_PASSWORD_STEP_1 ,args));
+        replaceFragment(PinLoginFragment.newInstance(PinLoginFragment.TYPE_SET_PASSWORD_STEP_1, args));
     }
 
     @Override

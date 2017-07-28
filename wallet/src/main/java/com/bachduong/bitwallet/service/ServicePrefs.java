@@ -33,7 +33,7 @@ public class ServicePrefs {
     }
 
     public void saveBoolean(String key, Boolean value) {
-        this.sharedPrefs.edit().putBoolean(key,value).commit();
+        this.sharedPrefs.edit().putBoolean(key, value).commit();
     }
 
     public Boolean getBoolean(String key) {
@@ -45,7 +45,7 @@ public class ServicePrefs {
     }
 
     public String getString(String key) {
-        return this.sharedPrefs.getString(key,"");
+        return this.sharedPrefs.getString(key, "");
     }
 
 

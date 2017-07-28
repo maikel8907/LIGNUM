@@ -92,7 +92,7 @@ public class CheckSeedFragment extends Fragment {
     }
 
     private void setUI(int currentPosition) {
-        String label = String.format(getString(R.string.check_seed_label_number), intToPos(currentPosition+1));
+        String label = String.format(getString(R.string.check_seed_label_number), intToPos(currentPosition + 1));
         textViewNumber.setText(label);
         editTextWord.setText("");
     }
@@ -139,6 +139,7 @@ public class CheckSeedFragment extends Fragment {
         errorView.setText(message);
         showError(errorView);
     }
+
     private void showError(TextView errorView) {
         errorView.setVisibility(View.VISIBLE);
     }

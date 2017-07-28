@@ -1,42 +1,28 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.bachduong.bitwallet.ui2.PinLoginFragment"
-    android:background="@color/color_background">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context="com.bachduong.bitwallet.ui2.PinLoginFragment">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:gravity="center_vertical" android:orientation="vertical">
 
         <LinearLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" android:gravity="center_horizontal"
+            android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_pin_horizontal_margin"
             android:paddingRight="@dimen/activity_pin_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="@dimen/pin_login_logo_with"
+            <ImageView android:id="@+id/imageView" android:layout_width="@dimen/pin_login_logo_with"
                 android:layout_height="@dimen/pin_login_logo_height"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal" android:layout_marginBottom="10dp"
                 android:src="@drawable/ic_app_logo_icellet_light" />
 
 
-            <TextView
-                android:id="@+id/text_view_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+            <TextView android:id="@+id/text_view_label" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
                 android:text="@string/pin_login_activity_enter_pin"
                 android:textAppearance="@style/NormalBoldText" />
@@ -53,47 +39,34 @@
             <!--app:digitTextSize="16dp"-->
             <!--app:digitElevation="10dp" />-->
 
-            <TextView
-                android:id="@+id/password_error"
-                style="@style/ErrorText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/amount_margin_bottom"
-                android:gravity="center"
-                android:text="@string/password_too_short"
-                android:visibility="gone" />
+            <TextView android:id="@+id/password_error" style="@style/ErrorText"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="@dimen/amount_margin_bottom" android:gravity="center"
+                android:text="@string/password_too_short" android:visibility="gone" />
 
             <!--<EditText-->
-                <!--android:id="@+id/edit_text_password"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:ems="10"-->
-                <!--android:focusable="false"-->
-                <!--android:focusableInTouchMode="false"-->
-                <!--android:gravity="center"-->
-                <!--android:imeActionId="@+id/login"-->
-                <!--android:imeActionLabel="@string/action_sign_in"-->
-                <!--android:imeOptions="actionUnspecified"-->
-                <!--android:inputType="numberPassword" />-->
+            <!--android:id="@+id/edit_text_password"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:gravity="center"-->
+            <!--android:imeActionId="@+id/login"-->
+            <!--android:imeActionLabel="@string/action_sign_in"-->
+            <!--android:imeOptions="actionUnspecified"-->
+            <!--android:inputType="numberPassword" />-->
         </LinearLayout>
 
-        <com.bachduong.bitwallet.ui2.customview.PasswordInputView
-            android:id="@+id/password_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            app:useDefaultMargins="false"
-            android:layout_margin="10dp"
-            app:columnCount="3">
+        <com.bachduong.bitwallet.ui2.customview.PasswordInputView android:id="@+id/password_view"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_margin="10dp"
+            app:columnCount="3" app:useDefaultMargins="false">
 
         </com.bachduong.bitwallet.ui2.customview.PasswordInputView>
-        <Button
-            android:id="@+id/button_sign_in"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="test" />
+        <Button android:id="@+id/button_sign_in" style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:text="test" />
     </LinearLayout>
 
 </FrameLayout>

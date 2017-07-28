@@ -20,7 +20,7 @@ import com.bachduong.bitwallet.util.PasswordQualityChecker;
 import com.bachduong.bitwallet.util.WalletUtils;
 
 
-public class PinLoginActivity extends BaseWalletActivity implements SplashFragment.Listener{
+public class PinLoginActivity extends BaseWalletActivity implements SplashFragment.Listener {
     private static final String LOG_TAG = PinLoginActivity.class.getSimpleName();
 
     private EditText editTextPin;
@@ -174,6 +174,7 @@ public class PinLoginActivity extends BaseWalletActivity implements SplashFragme
         errorView.setText(message);
         showError(errorView);
     }
+
     private void showError(TextView errorView) {
         errorView.setVisibility(View.VISIBLE);
     }
@@ -181,6 +182,7 @@ public class PinLoginActivity extends BaseWalletActivity implements SplashFragme
     private void clearError(TextView errorView) {
         errorView.setVisibility(View.GONE);
     }
+
     private void startIntro() {
         Intent introIntent = new Intent(this, IntroActivity.class);
         startActivity(introIntent);

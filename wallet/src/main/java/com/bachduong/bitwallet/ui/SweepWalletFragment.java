@@ -87,6 +87,7 @@ public class SweepWalletFragment extends Fragment {
     private SerializedKey serializedKey;
     private Error error = Error.NONE;
     private TxStatus status = TxStatus.INITIAL;
+
     public SweepWalletFragment() {
     }
 

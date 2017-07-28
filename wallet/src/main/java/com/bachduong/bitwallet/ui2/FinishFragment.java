@@ -32,6 +32,7 @@ public class FinishFragment extends Fragment {
 
         return view;
     }
+
     public void onAttach(final Context context) {
         super.onAttach(context);
         try {

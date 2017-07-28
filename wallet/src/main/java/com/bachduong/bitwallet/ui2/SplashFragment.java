@@ -37,7 +37,7 @@ public class SplashFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        convertView =  inflater.inflate(R.layout.fragment_splash, container, false);
+        convertView = inflater.inflate(R.layout.fragment_splash, container, false);
 
         (new Handler()).postDelayed(new Runnable() {
             @Override

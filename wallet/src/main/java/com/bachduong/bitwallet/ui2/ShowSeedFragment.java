@@ -96,16 +96,18 @@ public class ShowSeedFragment extends Fragment {
             }
         };
     }
+
     private View.OnClickListener getButtonPreviousListener() {
         return new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (currentStep >= STEP) {
-                    showSeed(currentStep - STEP, currentStep - STEP*2);
+                    showSeed(currentStep - STEP, currentStep - STEP * 2);
                 }
             }
         };
     }
+
     private View.OnClickListener getButtonNextListener() {
         return new View.OnClickListener() {
             @Override
@@ -133,6 +135,7 @@ public class ShowSeedFragment extends Fragment {
             }
         };
     }
+
     public void onAttach(final Context context) {
         super.onAttach(context);
         try {
@@ -192,6 +195,7 @@ public class ShowSeedFragment extends Fragment {
 
     public interface Listener {
         void onNextScreenSeed(String[] seeds);
+
         void onCancelSeed();
     }
 }

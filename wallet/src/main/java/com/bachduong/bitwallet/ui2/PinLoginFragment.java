@@ -1,25 +1,18 @@
 package com.bachduong.bitwallet.ui2;
 
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.ui2.customview.PasswordInputView;
 import com.bachduong.bitwallet.util.PasswordQualityChecker;
-import com.bachduong.bitwallet.util.WalletUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,7 +24,7 @@ public class PinLoginFragment extends Fragment {
     public static final int TYPE_SET_PASSWORD_STEP_2 = 2;
 
     private View convertView;
-//    private EditText editTextPin;
+    //    private EditText editTextPin;
     private TextView errorPassword;
     private TextView textViewLabel;
 
@@ -134,6 +127,7 @@ public class PinLoginFragment extends Fragment {
         clearError(errorPassword);
         return convertView;
     }
+
     public void onAttach(final Context context) {
         super.onAttach(context);
         try {
@@ -250,6 +244,7 @@ public class PinLoginFragment extends Fragment {
         errorView.setText(message);
         showError(errorView);
     }
+
     private void showError(TextView errorView) {
         errorView.setVisibility(View.VISIBLE);
     }
