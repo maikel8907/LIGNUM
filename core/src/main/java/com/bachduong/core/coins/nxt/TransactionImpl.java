@@ -49,6 +49,7 @@ public final class TransactionImpl implements Transaction {
     private volatile long senderId;
     private volatile String fullHash;
     private int confirmations = 0;
+
     private TransactionImpl(BuilderImpl builder) throws NxtException.NotValidException {
 
         this.timestamp = builder.timestamp;

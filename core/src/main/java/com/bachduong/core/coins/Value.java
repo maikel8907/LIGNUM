@@ -80,12 +80,12 @@ public class Value implements Monetary, Comparable<Value>, Serializable {
 
     /**
      * Parses an amount expressed in the way humans are used to.
-     *
+     * <p>
      * This takes string in a format understood by {@link BigDecimal#BigDecimal(String)},
      * for example "0", "1", "0.10", "1.23E3", "1234.5E-5".
      *
      * @throws IllegalArgumentException if you try to specify fractional units, or a value out of
-     * range.
+     *                                  range.
      */
     public static Value parse(final ValueType type, final String str) {
         return parse(type, new BigDecimal(str));
@@ -95,7 +95,7 @@ public class Value implements Monetary, Comparable<Value>, Serializable {
      * Parses a {@link BigDecimal} amount expressed in the way humans are used to.
      *
      * @throws IllegalArgumentException if you try to specify fractional units, or a value out of
-     * range.
+     *                                  range.
      */
     public static Value parse(final ValueType type, final BigDecimal decimal) {
         return Value.valueOf(type, decimal.movePointRight(type.getUnitExponent())

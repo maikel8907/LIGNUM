@@ -1,10 +1,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.bachduong.bitwallet.ui2.PinLoginFragment"
-    android:background="@color/color_background">
+    android:background="@color/color_background"
+    tools:context="com.bachduong.bitwallet.ui2.PinLoginFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -64,17 +65,17 @@
                 android:visibility="gone" />
 
             <!--<EditText-->
-                <!--android:id="@+id/edit_text_password"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:ems="10"-->
-                <!--android:focusable="false"-->
-                <!--android:focusableInTouchMode="false"-->
-                <!--android:gravity="center"-->
-                <!--android:imeActionId="@+id/login"-->
-                <!--android:imeActionLabel="@string/action_sign_in"-->
-                <!--android:imeOptions="actionUnspecified"-->
-                <!--android:inputType="numberPassword" />-->
+            <!--android:id="@+id/edit_text_password"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:gravity="center"-->
+            <!--android:imeActionId="@+id/login"-->
+            <!--android:imeActionLabel="@string/action_sign_in"-->
+            <!--android:imeOptions="actionUnspecified"-->
+            <!--android:inputType="numberPassword" />-->
         </LinearLayout>
 
         <com.bachduong.bitwallet.ui2.customview.PasswordInputView
@@ -82,11 +83,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:useDefaultMargins="false"
             android:layout_margin="10dp"
-            app:columnCount="3">
+            app:columnCount="3"
+            app:useDefaultMargins="false">
 
         </com.bachduong.bitwallet.ui2.customview.PasswordInputView>
+
         <Button
             android:id="@+id/button_sign_in"
             style="@style/Widget.AppCompat.Button"

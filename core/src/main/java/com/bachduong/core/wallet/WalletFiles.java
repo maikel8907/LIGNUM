@@ -95,7 +95,9 @@ public class WalletFiles {
         this.vListener = checkNotNull(listener, "Cannot set a null listener");
     }
 
-    /** Actually write the wallet file to disk, using an atomic rename when possible. Runs on the current thread. */
+    /**
+     * Actually write the wallet file to disk, using an atomic rename when possible. Runs on the current thread.
+     */
     public void saveNow() throws IOException {
         // Can be called by any thread. However the wallet is locked whilst saving, so we can have two saves in flight
         // but they will serialize (using different temp files).
@@ -116,14 +118,18 @@ public class WalletFiles {
         log.info("Save completed in {}msec", System.currentTimeMillis() - now);
     }
 
-    /** Queues up a save in the background. Useful for not very important wallet changes. */
+    /**
+     * Queues up a save in the background. Useful for not very important wallet changes.
+     */
     public void saveLater() {
         if (savePending.getAndSet(true))
             return;   // Already pending.
         executor.schedule(saver, delay, delayTimeUnit);
     }
 
-    /** Shut down auto-saving. */
+    /**
+     * Shut down auto-saving.
+     */
     public void shutdownAndWait() {
         executor.shutdown();
         try {

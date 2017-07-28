@@ -12,6 +12,7 @@ final public class SignedMessage {
     final String address;
     String signature;
     Status status = Status.Unknown;
+
     public SignedMessage(String address, String message, String signature) {
         this.address = checkNotNull(address);
         this.message = checkNotNull(message);

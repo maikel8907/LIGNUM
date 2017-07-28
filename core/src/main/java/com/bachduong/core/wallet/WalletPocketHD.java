@@ -55,8 +55,6 @@ import static org.bitcoinj.wallet.KeyChain.KeyPurpose.REFUND;
 
 /**
  * @author John L. Jegutanis
- *
- *
  */
 public class WalletPocketHD extends BitWalletBase {
     private static final Logger log = LoggerFactory.getLogger(WalletPocketHD.class);
@@ -171,7 +169,7 @@ public class WalletPocketHD extends BitWalletBase {
      * {@link org.bitcoinj.crypto.KeyCrypterScrypt}.
      *
      * @throws org.bitcoinj.crypto.KeyCrypterException Thrown if the wallet encryption fails for some reason,
-     *         leaving the group unchanged.
+     *                                                 leaving the group unchanged.
      */
     @Override
     public void encrypt(KeyCrypter keyCrypter, KeyParameter aesKey) {
@@ -244,6 +242,7 @@ public class WalletPocketHD extends BitWalletBase {
 
     /**
      * Locates a keypair from the basicKeyChain given the raw public key bytes.
+     *
      * @return ECKey or null if no such key was found.
      */
     @Nullable

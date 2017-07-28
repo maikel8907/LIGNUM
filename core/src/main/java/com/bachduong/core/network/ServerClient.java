@@ -91,6 +91,27 @@ public class ServerClient implements BitBlockchainConnection {
             }
         }
     };
+    private Runnable reconnectTask = new Runnable() {
+        @Override
+        public void run() {
+            if (!stopped) {
+                long reconnectIn = Math.max(reconnectAt - System.currentTimeMillis(), 0);
+                // Check if we must reconnect in the next second
+                if (reconnectIn < 1000) {
+                    if (connectivityHelper.isConnected()) {
+                        createStratumClient().startAsync();
+                    } else {
+                        // Start polling for connection to become available
+                        reschedule(reconnectTask, 1, TimeUnit.SECONDS);
+                    }
+                } else {
+                    reschedule(reconnectTask, reconnectIn, TimeUnit.MILLISECONDS);
+                }
+            } else {
+                log.info("{} client stopped, aborting reconnect.", type.getName());
+            }
+        }
+    };
     private Service.Listener serviceListener = new Service.Listener() {
         @Override
         public void running() {
@@ -122,27 +143,6 @@ public class ServerClient implements BitBlockchainConnection {
                 } else {
                     connectionExec.execute(reconnectTask);
                 }
-            }
-        }
-    };
-    private Runnable reconnectTask = new Runnable() {
-        @Override
-        public void run() {
-            if (!stopped) {
-                long reconnectIn = Math.max(reconnectAt - System.currentTimeMillis(), 0);
-                // Check if we must reconnect in the next second
-                if (reconnectIn < 1000) {
-                    if (connectivityHelper.isConnected()) {
-                        createStratumClient().startAsync();
-                    } else {
-                        // Start polling for connection to become available
-                        reschedule(reconnectTask, 1, TimeUnit.SECONDS);
-                    }
-                } else {
-                    reschedule(reconnectTask, reconnectIn, TimeUnit.MILLISECONDS);
-                }
-            } else {
-                log.info("{} client stopped, aborting reconnect.", type.getName());
             }
         }
     };

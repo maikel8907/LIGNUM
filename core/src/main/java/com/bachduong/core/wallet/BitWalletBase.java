@@ -43,8 +43,6 @@ import static com.bachduong.core.util.BitAddressUtils.isP2SHAddress;
 
 /**
  * @author John L. Jegutanis
- *
- *
  */
 abstract public class BitWalletBase extends TransactionWatcherWallet implements KeyBag {
     private static final Logger log = LoggerFactory.getLogger(BitWalletBase.class);
@@ -212,7 +210,7 @@ abstract public class BitWalletBase extends TransactionWatcherWallet implements 
      * according to the instructions in the request. The transaction in the request is modified by this method.
      *
      * @param req a BitSendRequest that contains the incomplete transaction and details for how to make it valid.
-     * @throws WalletAccountException if the request could not be completed due to not enough balance.
+     * @throws WalletAccountException   if the request could not be completed due to not enough balance.
      * @throws IllegalArgumentException if you try and complete the same SendRequest twice
      */
     public void completeTransaction(BitSendRequest req) throws WalletAccountException {

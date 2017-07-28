@@ -87,6 +87,7 @@ public interface Appendix {
 
         private final byte[] message;
         private final boolean isText;
+
         Message(ByteBuffer buffer, byte transactionVersion) throws NxtException.NotValidException {
             super(buffer, transactionVersion);
             int messageLength = buffer.getInt();

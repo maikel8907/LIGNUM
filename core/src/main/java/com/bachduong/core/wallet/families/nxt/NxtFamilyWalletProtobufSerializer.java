@@ -207,7 +207,7 @@ final public class NxtFamilyWalletProtobufSerializer {
      * <p>Loads wallet data from the given protocol buffer and inserts it into the given Wallet object. This is primarily
      * useful when you wish to pre-register extension objects. Note that if loading fails the provided Wallet object
      * may be in an indeterminate state and should be thrown away.</p>
-     *
+     * <p>
      * <p>A wallet can be unreadable for various reasons, such as inability to open the file, corrupt data, internally
      * inconsistent data, a wallet extension marked as mandatory that cannot be handled and so on. You should always
      * handle {@link UnreadableWalletException} and communicate failure to the user in an appropriate manner.</p>

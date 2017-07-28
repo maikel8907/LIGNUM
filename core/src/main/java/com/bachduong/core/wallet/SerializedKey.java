@@ -45,6 +45,7 @@ public class SerializedKey implements Serializable {
     private boolean hasLotAndSequence;
     private byte[] addressHash;
     private byte[] content;
+
     public SerializedKey(String key) throws KeyFormatException {
         if (PATTERN_WIF_PRIVATE_KEY.matcher(key).matches()) {
             parseWif(key);

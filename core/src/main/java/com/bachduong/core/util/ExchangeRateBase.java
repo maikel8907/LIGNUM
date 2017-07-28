@@ -39,7 +39,9 @@ public class ExchangeRateBase implements ExchangeRate {
     public final Value value1;
     public final Value value2;
 
-    /** Construct exchange rate. This amount of coin is worth that amount of fiat. */
+    /**
+     * Construct exchange rate. This amount of coin is worth that amount of fiat.
+     */
     public ExchangeRateBase(Value value1, Value value2) {
         this.value1 = checkNonZero(value1);
         this.value2 = checkNonZero(value2);

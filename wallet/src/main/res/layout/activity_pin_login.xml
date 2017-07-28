@@ -200,92 +200,92 @@
     <!--</TableLayout>-->
 
     <!--<android.support.v7.widget.GridLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--app:columnCount="3">-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--app:columnCount="3">-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_1"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_1" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_1"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_1" />-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_2"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_2" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_2"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_2" />-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_3"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_3" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_3"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_3" />-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_4"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_4" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_4"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_4" />-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_5"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_5" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_5"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_5" />-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_6"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_6" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_6"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_6" />-->
 
 
-        <!--<Button-->
-            <!--android:id="@+id/button_7"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_7" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_7"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_7" />-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_8"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_8" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_8"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_8" />-->
 
-        <!--<Button-->
-            <!--android:id="@+id/button_9"-->
-            <!--style="@style/VirtualKeyboardStyle"-->
-            <!--android:layout_width="@dimen/key_board_size"-->
-            <!--android:layout_height="@dimen/key_board_size"-->
-            <!--android:gravity="center"-->
-            <!--android:onClick="onClick"-->
-            <!--android:text="@string/digit_9" />-->
+    <!--<Button-->
+    <!--android:id="@+id/button_9"-->
+    <!--style="@style/VirtualKeyboardStyle"-->
+    <!--android:layout_width="@dimen/key_board_size"-->
+    <!--android:layout_height="@dimen/key_board_size"-->
+    <!--android:gravity="center"-->
+    <!--android:onClick="onClick"-->
+    <!--android:text="@string/digit_9" />-->
 
     <!--</android.support.v7.widget.GridLayout>-->
 
@@ -297,6 +297,7 @@
         app:columnCount="3">
 
     </com.bachduong.bitwallet.ui2.customview.PasswordInputView>
+
     <Button
         android:id="@+id/button_sign_in"
         style="@style/Widget.AppCompat.Button"

@@ -70,11 +70,11 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
      * is how mining is incentivized in later years of the Bitcoin system when inflation drops. It also provides
      * a way for people to prioritize their transactions over others and is used as a way to make denial of service
      * attacks expensive.</p>
-     *
+     * <p>
      * <p>This is a constant fee (in satoshis) which will be added to the transaction. It is recommended that it be
      * at least {@link Transaction#REFERENCE_DEFAULT_MIN_TX_FEE} if it is set, as default reference clients will
      * otherwise simply treat the transaction as if there were no fee at all.</p>
-     *
+     * <p>
      * <p>You might also consider adding a {@link SendRequest#feePerTxSize} to set the fee per kb of transaction size
      * (rounded down to the nearest kb) as that is how transactions are sorted when added to a block by miners.</p>
      */
@@ -86,12 +86,12 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
      * is how mining is incentivized in later years of the Bitcoin system when inflation drops. It also provides
      * a way for people to prioritize their transactions over others and is used as a way to make denial of service
      * attacks expensive.</p>
-     *
+     * <p>
      * <p>This is a dynamic fee (in satoshis) which will be added to the transaction for each kilobyte in size
      * including the first. This is useful as as miners usually sort pending transactions by their fee per unit size
      * when choosing which transactions to add to a block. Note that, to keep this equivalent to the reference
      * client definition, a kilobyte is defined as 1000 bytes, not 1024.</p>
-     *
+     * <p>
      * <p>You might also consider using a {@link SendRequest#fee} to set the fee added for the first kb of size.</p>
      */
     public Value feePerTxSize;
@@ -100,7 +100,7 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
      * <p>Requires that there be enough fee for a default reference client to at least relay the transaction.
      * (ie ensure the transaction will not be outright rejected by the network). Defaults to true, you should
      * only set this to false if you know what you're doing.</p>
-     *
+     * <p>
      * <p>Note that this does not enforce certain fee rules that only apply to transactions which are larger than
      * 26,000 bytes. If you get a transaction which is that large, you should set a fee and feeValue of at least
      * {@link Transaction#REFERENCE_DEFAULT_MIN_TX_FEE}.</p>
@@ -146,6 +146,7 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
     /**
      * Specifies what to do with missing signatures left after completing this request. Default strategy is to
      * throw an exception on missing signature ({@link MissingSigsMode#THROW}).
+     *
      * @see MissingSigsMode
      */
     transient public MissingSigsMode missingSigsMode = MissingSigsMode.THROW;

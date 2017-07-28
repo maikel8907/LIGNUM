@@ -259,6 +259,7 @@ public final class Protos {
     getDescriptor() {
         return descriptor;
     }
+
     public interface PeerAddressOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.PeerAddress)
             com.google.protobuf.MessageOrBuilder {
@@ -293,6 +294,7 @@ public final class Protos {
          */
         long getServices();
     }
+
     public interface EncryptedDataOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.EncryptedData)
             com.google.protobuf.MessageOrBuilder {
@@ -333,6 +335,7 @@ public final class Protos {
          */
         com.google.protobuf.ByteString getEncryptedPrivateKey();
     }
+
     public interface DeterministicKeyOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.DeterministicKey)
             com.google.protobuf.MessageOrBuilder {
@@ -447,6 +450,7 @@ public final class Protos {
          */
         boolean getIsFollowing();
     }
+
     public interface KeyOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.Key)
             com.google.protobuf.MessageOrBuilder {
@@ -571,6 +575,7 @@ public final class Protos {
          */
         com.bachduong.core.protos.Protos.DeterministicKeyOrBuilder getDeterministicKeyOrBuilder();
     }
+
     public interface TransactionInputOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.TransactionInput)
             com.google.protobuf.MessageOrBuilder {
@@ -665,6 +670,7 @@ public final class Protos {
          */
         long getValue();
     }
+
     public interface TransactionOutputOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.TransactionOutput)
             com.google.protobuf.MessageOrBuilder {
@@ -769,6 +775,7 @@ public final class Protos {
          */
         int getIndex();
     }
+
     public interface UnspentOutputOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.UnspentOutput)
             com.google.protobuf.MessageOrBuilder {
@@ -863,6 +870,7 @@ public final class Protos {
          */
         boolean getIsGenerated();
     }
+
     public interface TransactionConfidenceOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.TransactionConfidence)
             com.google.protobuf.MessageOrBuilder {
@@ -983,6 +991,7 @@ public final class Protos {
          */
         com.bachduong.core.protos.Protos.TransactionConfidence.Source getSource();
     }
+
     public interface TransactionOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.Transaction)
             com.google.protobuf.MessageOrBuilder {
@@ -1331,6 +1340,7 @@ public final class Protos {
          */
         long getFee();
     }
+
     public interface AddressStatusOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.AddressStatus)
             com.google.protobuf.MessageOrBuilder {
@@ -1391,6 +1401,7 @@ public final class Protos {
         com.google.protobuf.ByteString
         getStatusBytes();
     }
+
     public interface WalletPocketOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.WalletPocket)
             com.google.protobuf.MessageOrBuilder {
@@ -1625,6 +1636,7 @@ public final class Protos {
         com.bachduong.core.protos.Protos.UnspentOutputOrBuilder getUnspentOutputOrBuilder(
                 int index);
     }
+
     public interface ScryptParametersOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.ScryptParameters)
             com.google.protobuf.MessageOrBuilder {
@@ -1701,6 +1713,7 @@ public final class Protos {
          */
         int getP();
     }
+
     public interface WalletOrBuilder extends
             // @@protoc_insertion_point(interface_extends:com.coinomi.core.protos.Wallet)
             com.google.protobuf.MessageOrBuilder {
@@ -1853,6 +1866,7 @@ public final class Protos {
         private long services_;
         private byte memoizedIsInitialized = -1;
         private int memoizedSerializedSize = -1;
+
         // Use PeerAddress.newBuilder() to construct.
         private PeerAddress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
             super(builder);
@@ -2447,9 +2461,11 @@ public final class Protos {
             super(builder);
             this.unknownFields = builder.getUnknownFields();
         }
+
         private EncryptedData(boolean noInit) {
             this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
+
         private EncryptedData(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3011,6 +3027,7 @@ public final class Protos {
         private boolean isFollowing_;
         private byte memoizedIsInitialized = -1;
         private int memoizedSerializedSize = -1;
+
         // Use DeterministicKey.newBuilder() to construct.
         private DeterministicKey(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
             super(builder);
@@ -4979,13 +4996,15 @@ public final class Protos {
              * If the secret data is encrypted, then secret_bytes is missing and this field is set.
              * </pre>
              */
-            public Builder setEncryptedData(
-                    com.bachduong.core.protos.Protos.EncryptedData.Builder builderForValue) {
+            public Builder setEncryptedData(com.bachduong.core.protos.Protos.EncryptedData value) {
                 if (encryptedDataBuilder_ == null) {
-                    encryptedData_ = builderForValue.build();
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    encryptedData_ = value;
                     onChanged();
                 } else {
-                    encryptedDataBuilder_.setMessage(builderForValue.build());
+                    encryptedDataBuilder_.setMessage(value);
                 }
                 bitField0_ |= 0x00000004;
                 return this;
@@ -4998,15 +5017,13 @@ public final class Protos {
              * If the secret data is encrypted, then secret_bytes is missing and this field is set.
              * </pre>
              */
-            public Builder setEncryptedData(com.bachduong.core.protos.Protos.EncryptedData value) {
+            public Builder setEncryptedData(
+                    com.bachduong.core.protos.Protos.EncryptedData.Builder builderForValue) {
                 if (encryptedDataBuilder_ == null) {
-                    if (value == null) {
-                        throw new NullPointerException();
-                    }
-                    encryptedData_ = value;
+                    encryptedData_ = builderForValue.build();
                     onChanged();
                 } else {
-                    encryptedDataBuilder_.setMessage(value);
+                    encryptedDataBuilder_.setMessage(builderForValue.build());
                 }
                 bitField0_ |= 0x00000004;
                 return this;
@@ -5285,21 +5302,6 @@ public final class Protos {
             /**
              * <code>optional .com.coinomi.core.protos.DeterministicKey deterministic_key = 6;</code>
              */
-            public Builder setDeterministicKey(
-                    com.bachduong.core.protos.Protos.DeterministicKey.Builder builderForValue) {
-                if (deterministicKeyBuilder_ == null) {
-                    deterministicKey_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    deterministicKeyBuilder_.setMessage(builderForValue.build());
-                }
-                bitField0_ |= 0x00000020;
-                return this;
-            }
-
-            /**
-             * <code>optional .com.coinomi.core.protos.DeterministicKey deterministic_key = 6;</code>
-             */
             public Builder setDeterministicKey(com.bachduong.core.protos.Protos.DeterministicKey value) {
                 if (deterministicKeyBuilder_ == null) {
                     if (value == null) {
@@ -5309,6 +5311,21 @@ public final class Protos {
                     onChanged();
                 } else {
                     deterministicKeyBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000020;
+                return this;
+            }
+
+            /**
+             * <code>optional .com.coinomi.core.protos.DeterministicKey deterministic_key = 6;</code>
+             */
+            public Builder setDeterministicKey(
+                    com.bachduong.core.protos.Protos.DeterministicKey.Builder builderForValue) {
+                if (deterministicKeyBuilder_ == null) {
+                    deterministicKey_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    deterministicKeyBuilder_.setMessage(builderForValue.build());
                 }
                 bitField0_ |= 0x00000020;
                 return this;
@@ -5429,6 +5446,7 @@ public final class Protos {
         private long value_;
         private byte memoizedIsInitialized = -1;
         private int memoizedSerializedSize = -1;
+
         // Use TransactionInput.newBuilder() to construct.
         private TransactionInput(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
             super(builder);
@@ -6300,6 +6318,7 @@ public final class Protos {
         private TransactionOutput(boolean noInit) {
             this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
+
         private TransactionOutput(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7212,6 +7231,7 @@ public final class Protos {
         private boolean isGenerated_;
         private byte memoizedIsInitialized = -1;
         private int memoizedSerializedSize = -1;
+
         // Use UnspentOutput.newBuilder() to construct.
         private UnspentOutput(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
             super(builder);
@@ -8088,6 +8108,7 @@ public final class Protos {
         private com.bachduong.core.protos.Protos.TransactionConfidence.Source source_;
         private byte memoizedIsInitialized = -1;
         private int memoizedSerializedSize = -1;
+
         // Use TransactionConfidence.newBuilder() to construct.
         private TransactionConfidence(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
             super(builder);
@@ -9613,6 +9634,7 @@ public final class Protos {
         private Transaction(boolean noInit) {
             this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
+
         private Transaction(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12199,13 +12221,15 @@ public final class Protos {
              * Data describing where the transaction is in the chain.
              * </pre>
              */
-            public Builder setConfidence(
-                    com.bachduong.core.protos.Protos.TransactionConfidence.Builder builderForValue) {
+            public Builder setConfidence(com.bachduong.core.protos.Protos.TransactionConfidence value) {
                 if (confidenceBuilder_ == null) {
-                    confidence_ = builderForValue.build();
+                    if (value == null) {
+                        throw new NullPointerException();
+                    }
+                    confidence_ = value;
                     onChanged();
                 } else {
-                    confidenceBuilder_.setMessage(builderForValue.build());
+                    confidenceBuilder_.setMessage(value);
                 }
                 bitField0_ |= 0x00000800;
                 return this;
@@ -12218,15 +12242,13 @@ public final class Protos {
              * Data describing where the transaction is in the chain.
              * </pre>
              */
-            public Builder setConfidence(com.bachduong.core.protos.Protos.TransactionConfidence value) {
+            public Builder setConfidence(
+                    com.bachduong.core.protos.Protos.TransactionConfidence.Builder builderForValue) {
                 if (confidenceBuilder_ == null) {
-                    if (value == null) {
-                        throw new NullPointerException();
-                    }
-                    confidence_ = value;
+                    confidence_ = builderForValue.build();
                     onChanged();
                 } else {
-                    confidenceBuilder_.setMessage(value);
+                    confidenceBuilder_.setMessage(builderForValue.build());
                 }
                 bitField0_ |= 0x00000800;
                 return this;
@@ -12638,9 +12660,11 @@ public final class Protos {
             super(builder);
             this.unknownFields = builder.getUnknownFields();
         }
+
         private AddressStatus(boolean noInit) {
             this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
+
         private AddressStatus(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16018,6 +16042,7 @@ public final class Protos {
         private ScryptParameters(boolean noInit) {
             this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
+
         private ScryptParameters(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16779,6 +16804,7 @@ public final class Protos {
         private Wallet(boolean noInit) {
             this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance();
         }
+
         private Wallet(
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17755,21 +17781,6 @@ public final class Protos {
             /**
              * <code>optional .com.coinomi.core.protos.Key seed = 2;</code>
              */
-            public Builder setSeed(
-                    com.bachduong.core.protos.Protos.Key.Builder builderForValue) {
-                if (seedBuilder_ == null) {
-                    seed_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    seedBuilder_.setMessage(builderForValue.build());
-                }
-                bitField0_ |= 0x00000002;
-                return this;
-            }
-
-            /**
-             * <code>optional .com.coinomi.core.protos.Key seed = 2;</code>
-             */
             public Builder setSeed(com.bachduong.core.protos.Protos.Key value) {
                 if (seedBuilder_ == null) {
                     if (value == null) {
@@ -17779,6 +17790,21 @@ public final class Protos {
                     onChanged();
                 } else {
                     seedBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000002;
+                return this;
+            }
+
+            /**
+             * <code>optional .com.coinomi.core.protos.Key seed = 2;</code>
+             */
+            public Builder setSeed(
+                    com.bachduong.core.protos.Protos.Key.Builder builderForValue) {
+                if (seedBuilder_ == null) {
+                    seed_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    seedBuilder_.setMessage(builderForValue.build());
                 }
                 bitField0_ |= 0x00000002;
                 return this;
@@ -17910,21 +17936,6 @@ public final class Protos {
             /**
              * <code>required .com.coinomi.core.protos.Key master_key = 3;</code>
              */
-            public Builder setMasterKey(
-                    com.bachduong.core.protos.Protos.Key.Builder builderForValue) {
-                if (masterKeyBuilder_ == null) {
-                    masterKey_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    masterKeyBuilder_.setMessage(builderForValue.build());
-                }
-                bitField0_ |= 0x00000008;
-                return this;
-            }
-
-            /**
-             * <code>required .com.coinomi.core.protos.Key master_key = 3;</code>
-             */
             public Builder setMasterKey(com.bachduong.core.protos.Protos.Key value) {
                 if (masterKeyBuilder_ == null) {
                     if (value == null) {
@@ -17934,6 +17945,21 @@ public final class Protos {
                     onChanged();
                 } else {
                     masterKeyBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000008;
+                return this;
+            }
+
+            /**
+             * <code>required .com.coinomi.core.protos.Key master_key = 3;</code>
+             */
+            public Builder setMasterKey(
+                    com.bachduong.core.protos.Protos.Key.Builder builderForValue) {
+                if (masterKeyBuilder_ == null) {
+                    masterKey_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    masterKeyBuilder_.setMessage(builderForValue.build());
                 }
                 bitField0_ |= 0x00000008;
                 return this;
@@ -18068,21 +18094,6 @@ public final class Protos {
             /**
              * <code>optional .com.coinomi.core.protos.ScryptParameters encryption_parameters = 5;</code>
              */
-            public Builder setEncryptionParameters(
-                    com.bachduong.core.protos.Protos.ScryptParameters.Builder builderForValue) {
-                if (encryptionParametersBuilder_ == null) {
-                    encryptionParameters_ = builderForValue.build();
-                    onChanged();
-                } else {
-                    encryptionParametersBuilder_.setMessage(builderForValue.build());
-                }
-                bitField0_ |= 0x00000020;
-                return this;
-            }
-
-            /**
-             * <code>optional .com.coinomi.core.protos.ScryptParameters encryption_parameters = 5;</code>
-             */
             public Builder setEncryptionParameters(com.bachduong.core.protos.Protos.ScryptParameters value) {
                 if (encryptionParametersBuilder_ == null) {
                     if (value == null) {
@@ -18092,6 +18103,21 @@ public final class Protos {
                     onChanged();
                 } else {
                     encryptionParametersBuilder_.setMessage(value);
+                }
+                bitField0_ |= 0x00000020;
+                return this;
+            }
+
+            /**
+             * <code>optional .com.coinomi.core.protos.ScryptParameters encryption_parameters = 5;</code>
+             */
+            public Builder setEncryptionParameters(
+                    com.bachduong.core.protos.Protos.ScryptParameters.Builder builderForValue) {
+                if (encryptionParametersBuilder_ == null) {
+                    encryptionParameters_ = builderForValue.build();
+                    onChanged();
+                } else {
+                    encryptionParametersBuilder_.setMessage(builderForValue.build());
                 }
                 bitField0_ |= 0x00000020;
                 return this;

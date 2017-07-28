@@ -8,6 +8,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 public abstract class WalletTransaction<T extends AbstractTransaction> {
     private final T transaction;
     private final Pool pool;
+
     public WalletTransaction(Pool pool, T transaction) {
         this.pool = checkNotNull(pool);
         this.transaction = transaction;
