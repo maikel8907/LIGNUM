@@ -247,7 +247,7 @@
         </activity>
         <activity android:name=".ui.PairUsbPinActivity" />
         <activity
-            android:name=".ui2.SetupActivity"
+            android:name=".ui2.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

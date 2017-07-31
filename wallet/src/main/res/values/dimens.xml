@@ -128,4 +128,8 @@
     <dimen name="logo_big_width">100dp</dimen>
     <dimen name="logo_big_height">100dp</dimen>
     <dimen name="text_padding">16dp</dimen>
+    <dimen name="logo_width">140dp</dimen>
+    <dimen name="logo_height">140dp</dimen>
+    <dimen name="status_padding">5dp</dimen>
+    <dimen name="progress_bar_size">80dp</dimen>
 </resources>

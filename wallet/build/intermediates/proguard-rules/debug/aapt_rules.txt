@@ -1,7 +1,10 @@
 # view res/layout/activity_pair_usb_pin.xml #generated:2
 # view res/layout/fragment_check_seed.xml #generated:8
+# view res/layout/fragment_choose_mode.xml #generated:1
 # view res/layout/fragment_finish.xml #generated:1
+# view res/layout/fragment_setup_welcome.xml #generated:1
 # view res/layout/fragment_show_seed_ui2.xml #generated:8
+# view res/layout/fragment_status_loading.xml #generated:8
 # view res/layout/fragment_status_show.xml #generated:8
 -keep class android.support.constraint.ConstraintLayout { <init>(...); }
 
@@ -71,9 +74,6 @@
 # view res/layout/abc_screen_simple.xml #generated:25
 # view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:32
 -keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
-
-# view AndroidManifest.xml #generated:275
--keep class com.android.tools.fd.runtime.InstantRunContentProvider { <init>(...); }
 
 # view AndroidManifest.xml #generated:234
 -keep class com.bachduong.bitwallet.AddressBookProvider { <init>(...); }
@@ -207,14 +207,23 @@
 # view res/layout/fragment_make_transaction.xml #generated:34
 -keep class com.bachduong.bitwallet.ui.widget.TransactionAmountVisualizer { <init>(...); }
 
+# view AndroidManifest.xml #generated:254
+-keep class com.bachduong.bitwallet.ui2.MainActivity { <init>(...); }
+
 # view AndroidManifest.xml #generated:248
 -keep class com.bachduong.bitwallet.ui2.PinLoginActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:254
--keep class com.bachduong.bitwallet.ui2.SetupActivity { <init>(...); }
+# view res/layout/fragment_finish.xml #generated:33
+# view res/layout/fragment_setup_welcome.xml #generated:29
+# view res/layout/fragment_show_seed_ui2.xml #generated:36
+# view res/layout/fragment_status_loading.xml #generated:35
+# view res/layout/fragment_status_loading.xml #generated:67
+# view res/layout/fragment_status_show.xml #generated:35
+# view res/layout/fragment_status_show.xml #generated:54
+-keep class com.bachduong.bitwallet.ui2.customview.AvenirTextView { <init>(...); }
 
 # view res/layout/activity_pin_login.xml #generated:292
-# view res/layout/fragment_pin_login.xml #generated:80
+# view res/layout/fragment_pin_login.xml #generated:81
 -keep class com.bachduong.bitwallet.ui2.customview.PasswordInputView { <init>(...); }
 
 # view AndroidManifest.xml #generated:263
@@ -223,6 +232,6 @@
 # view AndroidManifest.xml #generated:270
 -keep class org.acra.sender.SenderService { <init>(...); }
 
-# onClick res/layout/activity_pin_login.xml #generated:300
+# onClick res/layout/activity_pin_login.xml #generated:301
 -keepclassmembers class * { *** onClickSignIn(...); }
 

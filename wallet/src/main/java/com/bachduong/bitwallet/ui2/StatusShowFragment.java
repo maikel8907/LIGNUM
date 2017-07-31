@@ -49,8 +49,16 @@ public class StatusShowFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+
         textViewTitle.setText(title);
         textViewContent.setText(content);
+        if (title.isEmpty()) {
+            textViewTitle.setVisibility(View.GONE);
+        }
+        if (content.isEmpty()) {
+            textViewContent.setVisibility(View.GONE);
+        }
+
     }
 
 }

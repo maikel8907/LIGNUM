@@ -11,8 +11,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="@dimen/logo_big_width"
-            android:layout_height="@dimen/logo_big_height"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_app_logo_icellet_light"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -33,7 +33,7 @@
         <!--app:layout_constraintRight_toRightOf="parent"-->
         <!--app:layout_constraintTop_toTopOf="parent" />-->
 
-        <TextView
+        <com.bachduong.bitwallet.ui2.customview.AvenirTextView
             android:id="@+id/text_view_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,8 +44,13 @@
             android:layout_marginStart="@dimen/activity_pin_horizontal_margin"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
+            android:lineSpacingExtra="8sp"
+            android:paddingLeft="@dimen/status_padding"
+            android:paddingRight="@dimen/status_padding"
             android:text="@string/seed_show_label"
+            android:textAlignment="center"
             android:textAppearance="@style/NormalBoldText"
+            android:textColor="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -67,7 +72,8 @@
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_title">
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+            android:id="@+id/linearLayout">
 
             <LinearLayout
                 android:id="@+id/linearLayoutSeed"
@@ -79,42 +85,27 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="23dp"
-            android:layout_marginEnd="@dimen/activity_pin_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_pin_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_pin_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_pin_horizontal_margin"
-            android:gravity="center_horizontal"
-            android:text="@string/seed_show_bottom_label"
-            android:textAppearance="@style/NormalText"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
-
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:gravity="center_horizontal"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <Button
                 android:id="@+id/button_prev"
                 style="@style/BorderlessButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/action_back"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -123,8 +114,9 @@
             <Button
                 android:id="@+id/button_confirm"
                 style="@style/BorderlessButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="@string/action_next"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"

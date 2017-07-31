@@ -16,7 +16,9 @@ import com.bachduong.bitwallet.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -72,22 +74,6 @@ public class PasswordInputView extends GridLayout {
 
     private Button getButton(final String keyNum) {
         Button button = (Button) inflater.inflate(R.layout.keyboard_button, this, false);
-//        Button button = new Button(context);
-//        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(context.getResources().getDimensionPixelSize(R.dimen.key_board_size),
-//                context.getResources().getDimensionPixelSize(R.dimen.key_board_size));
-//        layoutParams.setMargins(context.getResources().getDimensionPixelOffset(R.dimen.key_board_margin),
-//                context.getResources().getDimensionPixelOffset(R.dimen.key_board_margin),
-//                context.getResources().getDimensionPixelOffset(R.dimen.key_board_margin),
-//                context.getResources().getDimensionPixelOffset(R.dimen.key_board_margin));
-//        button.setLayoutParams(layoutParams);
-//        //button.setGravity(Gravity.CENTER);
-//        button.setBackgroundResource(R.drawable.key_board_background);
-//        button.setTextColor(context.getResources().getColor(R.color.gray_87_text));
-//        //button.setTextSize(TypedValue.COMPLEX_UNIT_SP , R.dimen.key_board_text_size);
-//        button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
-//        button.setPadding(0, 0, 0, 0);
-//
-//        button.setGravity(Gravity.CENTER);
         button.setText(String.valueOf(keyNum));
         button.setOnClickListener(new OnClickListener() {
             @Override
@@ -138,17 +124,19 @@ public class PasswordInputView extends GridLayout {
         Collections.shuffle(keyList, new Random(seed));
         int size = keyList.size();
         for (int i = 0; i < size; i++) {
-//            if (i == (size - 1)) {
-//                addView(getBackSpace());
-//                Button button = getButton(keyList.get(i));
-//                addView(button);
-//            } else {
             Button button = getButton(keyList.get(i));
             addView(button);
-//            }
         }
     }
 
+    public Map<String, String> getKeyMap() {
+        Map<String, String> map = new HashMap<>();
+        int size = keyList.size();
+        for (int i = 0; i< size; i++) {
+            map.put(String.valueOf(i), keyList.get(i));
+        }
+        return map;
+    }
     public interface Listener {
         void onTextChanged();
     }

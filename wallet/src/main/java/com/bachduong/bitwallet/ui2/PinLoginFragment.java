@@ -28,7 +28,7 @@ public class PinLoginFragment extends Fragment {
     private TextView errorPassword;
     private TextView textViewLabel;
 
-    private Button buttonLogin;
+//    private Button buttonLogin;
     private int maxWrongPin = 3;
     private PasswordQualityChecker passwordQualityChecker;
     private PasswordInputView passwordView;
@@ -93,38 +93,38 @@ public class PinLoginFragment extends Fragment {
                 break;
         }
 
-        buttonLogin = (Button) convertView.findViewById(R.id.button_sign_in);
-
-        switch (mType) {
-            case 0:
-                buttonLogin.setText(R.string.action_sign_in);
-                break;
-            case 1:
-                buttonLogin.setText(R.string.action_next);
-                break;
-            case 2:
-                buttonLogin.setText(R.string.action_confirm);
-                break;
-        }
-
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switch (mType) {
-                    case 0:
-                        attemptLogin();
-                        break;
-                    case 1:
-                        setPasswordStep1();
-                        break;
-                    case 2:
-                        setPasswordStep2();
-                        break;
-                }
-            }
-        });
-
-        clearError(errorPassword);
+//        buttonLogin = (Button) convertView.findViewById(R.id.button_sign_in);
+//
+//        switch (mType) {
+//            case 0:
+//                buttonLogin.setText(R.string.action_sign_in);
+//                break;
+//            case 1:
+//                buttonLogin.setText(R.string.action_next);
+//                break;
+//            case 2:
+//                buttonLogin.setText(R.string.action_confirm);
+//                break;
+//        }
+//
+//        buttonLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                switch (mType) {
+//                    case 0:
+//                        attemptLogin();
+//                        break;
+//                    case 1:
+//                        setPasswordStep1();
+//                        break;
+//                    case 2:
+//                        setPasswordStep2();
+//                        break;
+//                }
+//            }
+//        });
+//
+//        clearError(errorPassword);
         return convertView;
     }
 

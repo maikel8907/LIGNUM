@@ -1,462 +1,474 @@
 [
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_pin_login.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_pin_login.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_coin_for_address.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/select_coin_for_address.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/get_password_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/get_password_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_fees_settings_list.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_fees_settings_list.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_account.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_account.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_password_confirmation.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_password_confirmation.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_popup_menu_item_layout.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_history.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_exchange_history.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/support_simple_spinner_dropdown_item.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_dialog_title_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_alert_dialog_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_splash.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_splash.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_rates.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_exchange_rates.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_previous_addresses.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_previous_addresses.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_seed.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_seed.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_media_action.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_separator.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/nav_drawer_separator.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/amount.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/amount.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/exchange_rates_content.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/exchange_rates_content.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_layout.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_item_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/amount_edit.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/amount_edit.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_overview.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_overview.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_account_details.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_account_details.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/address.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/address.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_multichoice_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_toolbar.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_expanded_menu_layout.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_footer.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_transaction_details_footer.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_send.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_send.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_radio.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_output.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_output.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/edit_fee_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/edit_fee_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/new_address_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/new_address_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_menu_layout.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed_ui2.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_show_seed_ui2.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/email_receipt_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/email_receipt_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_part_chronometer.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_details_output_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_details_output_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_show_seed.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_media_cancel_action.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_mode_bar.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/keyboard_button.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/keyboard_button.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_setup.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_setup.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_menu_item_layout.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/powered_by_shapeshift.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/powered_by_shapeshift.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/address_book_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/address_book_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/wallet_locked.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/wallet_locked.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/edit_account_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/edit_account_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_balance_header.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_balance_header.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_activity_chooser_view.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_check_seed.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_check_seed.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_bar_up_container.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_singlechoice_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_transaction_details.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_big_media.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_icon.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_select_dialog_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_navigation_drawer.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_navigation_drawer.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_search_view.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_finish.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_finish.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_sign_message.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_sign_message.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_pin_login.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_pin_login.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/account_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/account_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_debugging.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_debugging.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_checkbox.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_balance.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_balance.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/edit_address_book_entry_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/edit_address_book_entry_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_select.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_trade_select.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_mode_close_item_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/add_account_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/add_account_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_lines.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/skip_seed_dialog.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/skip_seed_dialog.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_alert_dialog_button_bar_material.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_about.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_about.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/header_with_font_icon.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/header_with_font_icon.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_pay_with.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/select_pay_with.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/exchange_rate_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/exchange_rate_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/item_simple.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/item_simple.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_simple.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_select_coins_list.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_select_coins_list.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_big_media_narrow.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_sweep.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_sweep.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_header.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_transaction_details_header.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_request.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_request.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_make_transaction.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_make_transaction.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/coin_list_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/coin_list_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_item.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/nav_drawer_item.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_amount_visualizer.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_amount_visualizer.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/preference_list_fragment.xml",
-    "source": "/Users/duongtung/.android/build-cache/1ec12b5c73ba83d14c1a20e9babbe6c2eca2937c/output/res/layout/preference_list_fragment.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_section_title.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/nav_drawer_section_title.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_media.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_pair_usb_pin.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_pair_usb_pin.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_bar_title_item.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_welcome.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_welcome.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_status_show.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_status_show.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/dialog_title.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/dialog_title.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/scan_activity.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/scan_activity.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_status.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_trade_status.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/address_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/address_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_activity_chooser_view_list_item.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_fragment_wrapper.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_fragment_wrapper.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_wallet.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_wallet.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_overview_header.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_overview_header.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_notice.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_notice.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_finalize_wallet_restoration.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_finalize_wallet_restoration.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/exchange_status_row.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/exchange_status_row.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_set_password.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_set_password.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_part_time.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_restore.xml",
-    "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_restore.xml"
-  },
-  {
-    "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-    "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_content_include.xml"
-  }
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_pin_login.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_pin_login.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_coin_for_address.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/select_coin_for_address.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/get_password_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/get_password_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_account.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_account.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_fees_settings_list.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_fees_settings_list.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_password_confirmation.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_password_confirmation.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_history.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_exchange_history.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_splash.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_exchange_rates.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_exchange_rates.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_previous_addresses.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_previous_addresses.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_seed.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_seed.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_separator.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/nav_drawer_separator.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/amount.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/amount.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/exchange_rates_content.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/exchange_rates_content.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_overview.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_overview.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/amount_edit.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/amount_edit.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_account_details.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_account_details.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/address.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/address.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_footer.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_transaction_details_footer.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_send.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_send.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_output.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_output.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/edit_fee_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/edit_fee_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/new_address_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/new_address_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed_ui2.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_show_seed_ui2.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/email_receipt_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/email_receipt_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_details_output_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_details_output_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_show_seed.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_show_seed.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/keyboard_button.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/keyboard_button.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/powered_by_shapeshift.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/powered_by_shapeshift.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/address_book_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/address_book_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_setup_welcome.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_setup_welcome.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/wallet_locked.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/wallet_locked.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/edit_account_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/edit_account_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_balance_header.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_balance_header.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_check_seed.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_check_seed.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_status_loading.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_status_loading.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_choose_mode.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_choose_mode.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_transaction_details.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_navigation_drawer.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_navigation_drawer.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_finish.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_finish.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_sign_message.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_sign_message.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_pin_login.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_pin_login.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/account_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/account_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_debugging.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_debugging.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_balance.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_balance.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/edit_address_book_entry_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/edit_address_book_entry_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_select.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_trade_select.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/add_account_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/add_account_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/skip_seed_dialog.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/skip_seed_dialog.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_about.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_about.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/header_with_font_icon.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/header_with_font_icon.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/select_pay_with.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/select_pay_with.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/exchange_rate_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/exchange_rate_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/item_simple.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/item_simple.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_select_coins_list.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_select_coins_list.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_sweep.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_sweep.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_transaction_details_header.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_transaction_details_header.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_request.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_request.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_make_transaction.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_make_transaction.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/coin_list_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/coin_list_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_item.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/nav_drawer_item.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/transaction_amount_visualizer.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/transaction_amount_visualizer.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/preference_list_fragment.xml",
+        "source": "/Users/duongtung/.android/build-cache/1ec12b5c73ba83d14c1a20e9babbe6c2eca2937c/output/res/layout/preference_list_fragment.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/nav_drawer_section_title.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/nav_drawer_section_title.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_pair_usb_pin.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_pair_usb_pin.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_welcome.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_welcome.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_status_show.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_status_show.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/dialog_title.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/dialog_title.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/scan_activity.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/scan_activity.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_trade_status.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_trade_status.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/address_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/address_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_fragment_wrapper.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_fragment_wrapper.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/activity_wallet.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/activity_wallet.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_overview_header.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_overview_header.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_notice.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_notice.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_finalize_wallet_restoration.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_finalize_wallet_restoration.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/exchange_status_row.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/exchange_status_row.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_set_password.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_set_password.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/fragment_restore.xml",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/layout/fragment_restore.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/layout/abc_screen_content_include.xml"
+    }
 ]

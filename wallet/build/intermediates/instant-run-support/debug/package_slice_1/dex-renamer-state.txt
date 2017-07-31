@@ -1,4 +1,0 @@
-#Wed Jul 26 09:16:32 ICT 2017
-base.0=/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1
-renamed.0=classes.dex
-file.0=/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex

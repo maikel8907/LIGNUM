@@ -458,6 +458,7 @@ This disclaimer was amended for the last time on January 1st, 2016.</string>
     <string name="action_next">Next</string>
     <string name="action_previous">Previous</string>
     <string name="action_confirm">Confirm</string>
+    <string name="action_finish">Finish</string>
     <string name="digit_1">1</string>
     <string name="digit_2">2</string>
     <string name="digit_3">3</string>
@@ -483,4 +484,9 @@ This disclaimer was amended for the last time on January 1st, 2016.</string>
     <string name="setup_activity_back_press_toast">Press back again for exit.</string>
     <string name="finish_fragment_label_finish">Your device is ready \n Now you can start using Wallet</string>
     <string name="action_back">Back</string>
+    <string name="welcome_setup_label"><b>Welcome to ICELLET Setup</b>\n Please Connect the\nDevice to the computer</string>
+    <string name="btn_configure_device">Configure Device</string>
+    <string name="btn_restore_device">Restore Device</string>
+    <string name="status_loading_label">Please wait a few second while your \ndevice is being configurated</string>
+    <string name="status_loading_warning">Do not Power Off your device</string>
 </resources>

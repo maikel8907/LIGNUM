@@ -178,7 +178,7 @@ public class ShowSeedFragment extends Fragment {
             this.currentStep = nextStep;
         }
         if (nextStep >= seeds.length) {
-            buttonNext.setText(R.string.action_confirm);
+            buttonNext.setText(R.string.action_finish);
             isConfirm = true;
             buttonNext.setOnClickListener(getButtonConfirmListener());
         } else {
