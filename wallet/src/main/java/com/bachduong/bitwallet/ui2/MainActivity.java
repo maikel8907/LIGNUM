@@ -12,6 +12,8 @@ import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.service.Server;
 import com.bachduong.bitwallet.ui.AbstractWalletFragmentActivity;
 
+import java.util.Map;
+
 public class MainActivity extends AbstractWalletFragmentActivity implements SplashFragment.Listener,
         PinLoginFragment.Listener,
         ShowSeedFragment.Listener,
@@ -137,6 +139,11 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
     }
 
     @Override
+    public void onFinishLoadKeyMap(Map<Integer, String> keyMap) {
+        processCommand.setCurrentKeyMap(keyMap);
+    }
+
+    @Override
     public void onNextScreenSeed(String[] seeds) {
         replaceFragment(StatusShowFragment.newInstance("Configuring Device", "Confirmation"));
 
@@ -163,6 +170,11 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
     @Override
     public void onCancelSeed() {
 
+    }
+
+    @Override
+    public void onSeedGenerated(String[] seeds) {
+        processCommand.setSeeds(seeds);
     }
 
     @Override

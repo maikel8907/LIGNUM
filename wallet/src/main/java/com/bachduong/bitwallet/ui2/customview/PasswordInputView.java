@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.TreeMap;
 
 /**
  * Created by duongtung on 7/17/17.
@@ -129,13 +130,14 @@ public class PasswordInputView extends GridLayout {
         }
     }
 
-    public Map<String, String> getKeyMap() {
-        Map<String, String> map = new HashMap<>();
+    public Map<Integer, String> getKeyMap() {
+        Map<Integer, String> map = new HashMap<>();
         int size = keyList.size();
         for (int i = 0; i< size; i++) {
-            map.put(String.valueOf(i), keyList.get(i));
+            map.put(i, keyList.get(i));
         }
-        return map;
+        Map<Integer, String> treeMap = new TreeMap<Integer, String>(map);
+        return treeMap;
     }
     public interface Listener {
         void onTextChanged();

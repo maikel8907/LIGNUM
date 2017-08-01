@@ -156,7 +156,9 @@ public class ShowSeedFragment extends Fragment {
         String mnemonic;
         mnemonic = Wallet.generateMnemonicString(Constants.SEED_ENTROPY_DEFAULT);
         seeds = mnemonic.split(" ");
-
+        if ( listener != null) {
+            listener.onSeedGenerated(seeds);
+        }
     }
 
     private void showSeed(int currentStep, int nextStep) {
@@ -197,5 +199,7 @@ public class ShowSeedFragment extends Fragment {
         void onNextScreenSeed(String[] seeds);
 
         void onCancelSeed();
+
+        void onSeedGenerated(String[] seeds);
     }
 }

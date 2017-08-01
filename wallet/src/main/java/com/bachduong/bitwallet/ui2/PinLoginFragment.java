@@ -14,6 +14,8 @@ import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.ui2.customview.PasswordInputView;
 import com.bachduong.bitwallet.util.PasswordQualityChecker;
 
+import java.util.Map;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -125,6 +127,9 @@ public class PinLoginFragment extends Fragment {
 //        });
 //
 //        clearError(errorPassword);
+        if (listener != null) {
+            listener.onFinishLoadKeyMap(passwordView.getKeyMap());
+        }
         return convertView;
     }
 
@@ -259,5 +264,7 @@ public class PinLoginFragment extends Fragment {
         void onPasswordSetFinal(String password);
 
         void onLoginSuccess(Bundle agrs);
+
+        void onFinishLoadKeyMap(Map<Integer, String> keyMap);
     }
 }
