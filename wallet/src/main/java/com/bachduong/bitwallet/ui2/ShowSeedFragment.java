@@ -201,5 +201,7 @@ public class ShowSeedFragment extends Fragment {
         void onCancelSeed();
 
         void onSeedGenerated(String[] seeds);
+
+
     }
 }

@@ -1,5 +1,6 @@
 package com.bachduong.bitwallet.ui2;
 
+import android.os.Handler;
 import android.util.Log;
 
 import com.bachduong.bitwallet.service.Server;
@@ -24,6 +25,7 @@ public class ProcessCommand implements Server.TransporterListener {
     private Gson gson = new Gson();
     private Map<Integer, String> currentKeyMap;
     private String[] seeds;
+    public boolean isSeedGenerated = false;
 
     Pattern mPattern = Pattern.compile("content-custom: (.*)");
 
@@ -44,11 +46,13 @@ public class ProcessCommand implements Server.TransporterListener {
             callback.onResponse(process(dataCommand));
         } else {
             //receive = receive + "\r\nPing back after received \n";
-            String response =
-                    "<p>\n" +
-                            "{status : true; data : {})" +
-                            "</p>\n";
-            callback.onResponse(response);
+//            String response =
+//                    "<p>\n" +
+//                            "{status : true; data : {})" +
+//                            "</p>\n";
+//            callback.onResponse(response);
+            DataCommand dataCommand = new DataCommand();
+            callback.onResponse(process(dataCommand));
         }
     }
 
@@ -63,17 +67,24 @@ public class ProcessCommand implements Server.TransporterListener {
 
     private String process(DataCommand dataCommand) {
         DataResponse response = new DataResponse();
+        if (dataCommand == null || dataCommand.getCommand() == null) {
+            response.status = false;
+            response.data = "Invalid command format";
+            return gson.toJson(response);
+        }
         switch (dataCommand.getCommand()) {
 
             case "check-is-setup":
                 Map<String, Boolean> map = new HashMap<>();
                 map.put("is-setup", false);
                 response.data = map;
+                activity.showChooseModeFragment();
                 break;
             case "set-device-name":
 
                 break;
             case "get-keyboard-map":
+                activity.showPinFragment();
                 if (currentKeyMap != null) {
                     response.data = currentKeyMap;
                 } else {
@@ -83,10 +94,19 @@ public class ProcessCommand implements Server.TransporterListener {
             case "set-pin":
 
                 break;
-            case "set-recovery-phase":
-
+            case "check-recovery-phase-1":
+                activity.showStatusFragment("Configuring Device", "Confirmation");
+                break;
+            case "check-recovery-phase-2":
+                activity.showStatusFragment("Confirmation", "Confirm in your computer the order of the words as you wrote on the seed");
+                break;
+            case "check-recovery-phase-finish":
+                activity.showLoadingFragment(true);
                 break;
             case "get-recovery-phase":
+                if (!isSeedGenerated) {
+                    activity.showSeedFragment();
+                }
                 if (seeds != null && seeds.length > 0) {
                     response.data = getSeeds();
                 } else {

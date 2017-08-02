@@ -65,20 +65,53 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
             processCommand = new ProcessCommand(this);
             server.addListener(processCommand);
             if (savedInstanceState == null) {
-                getSupportFragmentManager().beginTransaction()
-                        .add(R.id.container, new WelcomeFragment())
-                        .commit();
 
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        replaceFragment(new ChooseModeFragment());
-                    }
-                }, 5000);
+                showWelcomeFragment();
+
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        replaceFragment(new ChooseModeFragment());
+//                    }
+//                }, 5000);
             }
         }
     }
 
+    public void showWelcomeFragment() {
+        replaceFragment(new WelcomeFragment());
+    }
+
+    public void showChooseModeFragment() {
+        replaceFragment(new ChooseModeFragment());
+    }
+
+    public void showPinFragment() {
+        replaceFragment(new PinLoginFragment());
+    }
+
+    public void showStatusFragment(String title, String content) {
+        replaceFragment(StatusShowFragment.newInstance(title, content));
+    }
+    public void showSeedFragment() {
+        replaceFragment(ShowSeedFragment.newInstance());
+    }
+
+    public void showLoadingFragment(final boolean showFinishAfter) {
+        replaceFragment(new StatusLoadingFragment());
+        if (showFinishAfter) {
+//            new Handler().postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    showFinishFragment();
+//                }
+//            }, 6000);
+        }
+    }
+
+    public void showFinishFragment() {
+        replaceFragment(new FinishFragment());
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -145,6 +178,8 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
 
     @Override
     public void onNextScreenSeed(String[] seeds) {
+        processCommand.setSeeds(seeds);
+
         replaceFragment(StatusShowFragment.newInstance("Configuring Device", "Confirmation"));
 
         new Handler().postDelayed(new Runnable() {
@@ -174,7 +209,8 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
 
     @Override
     public void onSeedGenerated(String[] seeds) {
-        processCommand.setSeeds(seeds);
+        //processCommand.setSeeds(seeds);
+        processCommand.isSeedGenerated = true;
     }
 
     @Override
@@ -183,32 +219,32 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
             // Enter config screen
             replaceFragment(StatusShowFragment.newInstance("Welcome to Icellet Setup", "Setting up device"));
 
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    replaceFragment(new PinLoginFragment());
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            replaceFragment(new PinLoginFragment());
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    replaceFragment(StatusShowFragment.newInstance("Configuring Device", ""));
-
-                                    new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            replaceFragment(ShowSeedFragment.newInstance());
-                                        }
-                                    }, 6000);
-                                }
-                            }, 6000);
-                        }
-                    }, 6000);
-                }
-            }, 6000);
+//            new Handler().postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    replaceFragment(new PinLoginFragment());
+//
+//                    new Handler().postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            replaceFragment(new PinLoginFragment());
+//                            new Handler().postDelayed(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    replaceFragment(StatusShowFragment.newInstance("Configuring Device", ""));
+//
+//                                    new Handler().postDelayed(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//                                            replaceFragment(ShowSeedFragment.newInstance());
+//                                        }
+//                                    }, 6000);
+//                                }
+//                            }, 6000);
+//                        }
+//                    }, 6000);
+//                }
+//            }, 6000);
         } else if  (mode == ChooseModeFragment.MODE_RESTORE) {
             // Enter restore screen
 
