@@ -1,22 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".TradeSelectFragment">
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".TradeSelectFragment">
 
-    <item
-        android:id="@+id/action_swap_coins"
-        android:icon="@drawable/swap_menu"
-        android:title="@string/action_swap_coins"
-        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_swap_coins" android:icon="@drawable/swap_menu"
+        android:title="@string/action_swap_coins" app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/action_refresh"
-        android:icon="@drawable/refresh_menu"
-        android:title="@string/action_refresh"
-        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_refresh" android:icon="@drawable/refresh_menu"
+        android:title="@string/action_refresh" app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/action_exchange_history"
-        android:title="@string/action_exchange_history"
+    <item android:id="@+id/action_exchange_history" android:title="@string/action_exchange_history"
         app:showAsAction="never" />
 </menu>

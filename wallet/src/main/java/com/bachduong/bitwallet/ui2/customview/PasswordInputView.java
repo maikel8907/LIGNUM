@@ -133,12 +133,13 @@ public class PasswordInputView extends GridLayout {
     public Map<Integer, String> getKeyMap() {
         Map<Integer, String> map = new HashMap<>();
         int size = keyList.size();
-        for (int i = 0; i< size; i++) {
+        for (int i = 0; i < size; i++) {
             map.put(i, keyList.get(i));
         }
         Map<Integer, String> treeMap = new TreeMap<Integer, String>(map);
         return treeMap;
     }
+
     public interface Listener {
         void onTextChanged();
     }

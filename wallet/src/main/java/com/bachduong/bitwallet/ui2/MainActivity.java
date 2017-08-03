@@ -18,7 +18,7 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
         PinLoginFragment.Listener,
         ShowSeedFragment.Listener,
         ChooseModeFragment.Listener,
-        FinishFragment.Listener{
+        FinishFragment.Listener {
 
     private int backPressedNum;
     private Server server;
@@ -30,8 +30,8 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
             receive = receive + "\r\nPing back after received \n";
             String response =
                     "<p>\n" +
-                    "{status : true; data : {})" +
-                    "</p>\n";
+                            "{status : true; data : {})" +
+                            "</p>\n";
             //callback.onResponse(response);
         }
 
@@ -86,13 +86,14 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
         replaceFragment(new ChooseModeFragment());
     }
 
-    public void showPinFragment() {
-        replaceFragment(new PinLoginFragment());
+    public void showPinFragment(PinLoginFragment.Listener callback) {
+        replaceFragment(PinLoginFragment.newInstance(callback));
     }
 
     public void showStatusFragment(String title, String content) {
         replaceFragment(StatusShowFragment.newInstance(title, content));
     }
+
     public void showSeedFragment() {
         replaceFragment(ShowSeedFragment.newInstance());
     }
@@ -112,6 +113,7 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
     public void showFinishFragment() {
         replaceFragment(new FinishFragment());
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -210,7 +212,11 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
     @Override
     public void onSeedGenerated(String[] seeds) {
         //processCommand.setSeeds(seeds);
-        processCommand.isSeedGenerated = true;
+        if (seeds != null && seeds.length > 0) {
+            processCommand.isSeedGenerated = true;
+        } else {
+            processCommand.isSeedGenerated = false;
+        }
     }
 
     @Override
@@ -245,7 +251,7 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
 //                    }, 6000);
 //                }
 //            }, 6000);
-        } else if  (mode == ChooseModeFragment.MODE_RESTORE) {
+        } else if (mode == ChooseModeFragment.MODE_RESTORE) {
             // Enter restore screen
 
         }

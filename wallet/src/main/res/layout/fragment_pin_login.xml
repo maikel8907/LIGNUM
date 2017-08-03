@@ -17,8 +17,8 @@
             android:layout_width="@dimen/logo_width"
             android:layout_height="@dimen/logo_height"
             android:layout_gravity="center_horizontal"
-            android:scaleType="fitCenter"
             android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_app_logo_icellet_light" />
 
         <LinearLayout
@@ -90,12 +90,12 @@
         </com.bachduong.bitwallet.ui2.customview.PasswordInputView>
 
         <!--<Button-->
-            <!--android:id="@+id/button_sign_in"-->
-            <!--style="@style/Widget.AppCompat.Button"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:text="test" />-->
+        <!--android:id="@+id/button_sign_in"-->
+        <!--style="@style/Widget.AppCompat.Button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="test" />-->
     </LinearLayout>
 
 </FrameLayout>

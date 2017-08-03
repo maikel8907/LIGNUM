@@ -148,6 +148,9 @@ public class ShowSeedFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        if (listener != null) {
+            listener.onSeedGenerated(null);
+        }
         listener = null;
     }
 
@@ -156,7 +159,7 @@ public class ShowSeedFragment extends Fragment {
         String mnemonic;
         mnemonic = Wallet.generateMnemonicString(Constants.SEED_ENTROPY_DEFAULT);
         seeds = mnemonic.split(" ");
-        if ( listener != null) {
+        if (listener != null) {
             listener.onSeedGenerated(seeds);
         }
     }

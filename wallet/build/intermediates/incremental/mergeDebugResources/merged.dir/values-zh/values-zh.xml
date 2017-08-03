@@ -10,22 +10,35 @@
         <item quantity="other">%d 秒</item>
     </plurals>
     <string name="about_credits_bitcoinj">使用Bitcoinj库\nhttp://bitcoinj.github.io/</string>
-    <string name="about_credits_crypto_icons">图标由 Chris Shepherd设计 \nhttps://github.com/shphrd/crypto-icons</string>
+    <string name="about_credits_crypto_icons">图标由 Chris Shepherd设计
+        \nhttps://github.com/shphrd/crypto-icons
+    </string>
     <string name="about_credits_electrum">使用Electrum 服务器软件\nhttps://electrum.org/</string>
-    <string name="about_credits_exchange_rates">交易汇率由以下网站提供：\nhttp://www.cryptocoincharts.info/\nhttps://bitcoinaverage.com/</string>
-    <string name="about_credits_font_icons">字体图标 由 Daniel Bruce设计 \nFont-icons by Daniel Bruce</string>
-    <string name="about_credits_nubits">服务器由Nubits提供-NBT是世界上首个价格稳定的数字货币\nhttps://nubits.com/</string>
-    <string name="about_credits_schildbach">" Andreas Schildbach有贡献\nhttps://github.com/schildbach/bitcoin-wallet/"</string>
+    <string name="about_credits_exchange_rates">
+        交易汇率由以下网站提供：\nhttp://www.cryptocoincharts.info/\nhttps://bitcoinaverage.com/
+    </string>
+    <string name="about_credits_font_icons">字体图标 由 Daniel Bruce设计 \nFont-icons by Daniel Bruce
+    </string>
+    <string name="about_credits_nubits">服务器由Nubits提供-NBT是世界上首个价格稳定的数字货币\nhttps://nubits.com/
+    </string>
+    <string name="about_credits_schildbach">" Andreas
+        Schildbach有贡献\nhttps://github.com/schildbach/bitcoin-wallet/"
+    </string>
     <string name="about_credits_translations">翻译者：</string>
     <string name="about_credits_zxing">QR-code由 ZXing开发\nhttps://github.com/zxing/zxing</string>
-    <string name="about_licence">开源项目\nhttps://github.com/Coinomi/coinomi-android\n源码基于 GNU普通公众许可3开源</string>
-    <string name="about_shapeshift_message">shapeshift.io是一个即时加密货币交易所，提供比特币与竞争币的即时兑换。此平台（可通过网页及API交易）采用了比特币与竞争币之间最快且最有效的兑换方式，无需注册即可使用。</string>
+    <string name="about_licence">开源项目\nhttps://github.com/Coinomi/coinomi-android\n源码基于
+        GNU普通公众许可3开源
+    </string>
+    <string name="about_shapeshift_message">
+        shapeshift.io是一个即时加密货币交易所，提供比特币与竞争币的即时兑换。此平台（可通过网页及API交易）采用了比特币与竞争币之间最快且最有效的兑换方式，无需注册即可使用。
+    </string>
     <string name="about_shapeshift_title">关于shapeshift.io</string>
     <string name="account_description_label">描述</string>
     <string name="account_extended_private_key_label">延展私钥</string>
     <string name="account_extended_public_key_label">延展公钥</string>
     <string name="account_private_key_label">私钥</string>
-    <string name="account_private_key_warning">私钥可以让你从此帐户中发送资金。没有必要备份这个私钥，因为其可以通过  <i>恢复钱包密码</i> 重新生成。</string>
+    <string name="account_private_key_warning">私钥可以让你从此帐户中发送资金。没有必要备份这个私钥，因为其可以通过  <i>恢复钱包密码</i> 重新生成。
+    </string>
     <string name="account_public_key_label">公钥</string>
     <string name="account_public_key_warning">分享公钥可以让其他人查看你的帐户余额及交易历史</string>
     <string name="action_about">关于</string>
@@ -110,7 +123,9 @@
     <string name="get_tx_broadcast_error">广播交易时出错</string>
     <string name="get_tx_info_error">无法获取交易信息</string>
     <string name="history_empty">目前未收到币！\n\n可以从交易所购买，或出售商品、服务或出售劳务。</string>
-    <string name="incompatible_device_warning_message">由于软件或硬件原因，此设备无法执行某些加密功能。\n可以通过设备生产商发布的更新来解决。\n\n如果有任何疑问，欢迎和我们联系：support@coinomi.com</string>
+    <string name="incompatible_device_warning_message">
+        由于软件或硬件原因，此设备无法执行某些加密功能。\n可以通过设备生产商发布的更新来解决。\n\n如果有任何疑问，欢迎和我们联系：support@coinomi.com
+    </string>
     <string name="incompatible_device_warning_title">设备不匹配</string>
     <string name="internal_transfer">内部转移</string>
     <string name="message_signed">消息已被签署</string>
@@ -157,7 +172,8 @@
     <string name="restore_wallet">恢复钱包</string>
     <string name="scan_error">扫描时出现错误： %1$s</string>
     <string name="scan_qr_code">扫描二维码</string>
-    <string name="seed_info">这是你的<i>恢复种子密码</i>，请将其记录在纸上并妥善保管，请注意任何得到这张纸的人就能够控制相应钱包内的资金。\n如果你丢失这个密码，我们没有办法恢复你的钱包。</string>
+    <string name="seed_info">这是你的<i>恢复种子密码</i>，请将其记录在纸上并妥善保管，请注意任何得到这张纸的人就能够控制相应钱包内的资金。\n如果你丢失这个密码，我们没有办法恢复你的钱包。
+    </string>
     <string name="seed_not_available">你的恢复密码没有保存在这个设备上。\n尝试恢复钱包以解决这个问题。</string>
     <string name="seed_not_available_title">没有找到恢复密码</string>
     <string name="seed_password_protected">恢复密码有加密保护 (BIP39)</string>
@@ -192,7 +208,9 @@
     <string name="status_pending">等待交易确认</string>
     <string name="status_unknown">交易状态未知</string>
     <string name="test_wallet">测试钱包</string>
-    <string name="test_wallet_message">此为测试钱包，你可以发送及接受测试网络上的比特币、莱特币及狗狗币。\n\n如果你想使用主网上的币，请移步: <b>设置 > 恢复钱包 > 创建新钱包</b>.</string>
+    <string name="test_wallet_message">此为测试钱包，你可以发送及接受测试网络上的比特币、莱特币及狗狗币。\n\n如果你想使用主网上的币，请移步: <b>设置 >
+        恢复钱包 > 创建新钱包</b>.
+    </string>
     <string name="title_activity_about">关于我们</string>
     <string name="title_activity_account_details">帐户详细信息</string>
     <string name="title_activity_add_coins">添加币种</string>
@@ -214,7 +232,9 @@
     <string name="trade_error_min_limit">最低金额至少为%1$s。</string>
     <string name="trade_error_no_supported_source_accounts">没有找到支持的帐户</string>
     <string name="trade_error_service_not_available">服务暂时中断，请稍后再试</string>
-    <string name="trade_error_sign_tx_message">签署及广播交易时出错。\n\n技术细节：\n\n<b>%1$s</b></string>
+    <string name="trade_error_sign_tx_message">签署及广播交易时出错。\n\n技术细节：\n\n
+        <b>%1$s</b>
+    </string>
     <string name="trade_expired">交易过期</string>
     <string name="trade_from_coin_label">兑换</string>
     <string name="trade_info">选择要兑换的币种。\n换到的币将自动添加到你的钱包。</string>

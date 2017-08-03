@@ -75,6 +75,9 @@
 # view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:32
 -keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
 
+# view AndroidManifest.xml #generated:275
+-keep class com.android.tools.fd.runtime.InstantRunContentProvider { <init>(...); }
+
 # view AndroidManifest.xml #generated:234
 -keep class com.bachduong.bitwallet.AddressBookProvider { <init>(...); }
 

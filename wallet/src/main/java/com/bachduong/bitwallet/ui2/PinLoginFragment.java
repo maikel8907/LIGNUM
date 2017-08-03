@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.bachduong.bitwallet.R;
@@ -30,7 +29,7 @@ public class PinLoginFragment extends Fragment {
     private TextView errorPassword;
     private TextView textViewLabel;
 
-//    private Button buttonLogin;
+    //    private Button buttonLogin;
     private int maxWrongPin = 3;
     private PasswordQualityChecker passwordQualityChecker;
     private PasswordInputView passwordView;
@@ -38,6 +37,7 @@ public class PinLoginFragment extends Fragment {
 
     private int mType;
     private Listener listener;
+    private Listener listenerKeyMap;
 
     public PinLoginFragment() {
         // Required empty public constructor
@@ -61,6 +61,12 @@ public class PinLoginFragment extends Fragment {
         fragment.setArguments(args);
         fragment.mType = type;
         fragment.prevStepPassword = step1Password;
+        return fragment;
+    }
+
+    public static PinLoginFragment newInstance(Listener listenerKeyMap) {
+        PinLoginFragment fragment = new PinLoginFragment();
+        fragment.listenerKeyMap = listenerKeyMap;
         return fragment;
     }
 
@@ -130,6 +136,9 @@ public class PinLoginFragment extends Fragment {
         if (listener != null) {
             listener.onFinishLoadKeyMap(passwordView.getKeyMap());
         }
+        if (listenerKeyMap != null) {
+            listenerKeyMap.onFinishLoadKeyMap(passwordView.getKeyMap());
+        }
         return convertView;
     }
 
@@ -146,6 +155,7 @@ public class PinLoginFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         listener = null;
+        listenerKeyMap = null;
     }
 
     private void setPasswordStep1() {

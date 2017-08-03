@@ -1,11 +1,10 @@
 package com.bachduong.bitwallet.ui2;
 
-import android.os.Handler;
+import android.os.Bundle;
 import android.util.Log;
 
 import com.bachduong.bitwallet.service.Server;
 import com.google.gson.Gson;
-import com.google.gson.internal.Streams;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,14 +19,12 @@ import java.util.regex.Pattern;
 
 public class ProcessCommand implements Server.TransporterListener {
     private static final String LOG_TAG = ProcessCommand.class.getSimpleName();
-
+    public boolean isSeedGenerated = false;
+    Pattern mPattern = Pattern.compile("content-custom: (.*)");
     private MainActivity activity;
     private Gson gson = new Gson();
     private Map<Integer, String> currentKeyMap;
     private String[] seeds;
-    public boolean isSeedGenerated = false;
-
-    Pattern mPattern = Pattern.compile("content-custom: (.*)");
 
     public ProcessCommand(MainActivity activity) {
         this.activity = activity;
@@ -35,24 +32,31 @@ public class ProcessCommand implements Server.TransporterListener {
 
     @Override
     public void onReceived(String receive, Server.TransporterListener callback) {
-
-        String data;
-        Matcher matcher = mPattern.matcher(receive);
-        if(matcher.find())
-        {
-            data = matcher.group(1); // dont know what to place
-            DataCommand dataCommand = gson.fromJson(data, DataCommand.class);
-            Log.d(LOG_TAG, "get data:" + dataCommand.getCommand());
-            callback.onResponse(process(dataCommand));
-        } else {
-            //receive = receive + "\r\nPing back after received \n";
-//            String response =
-//                    "<p>\n" +
-//                            "{status : true; data : {})" +
-//                            "</p>\n";
-//            callback.onResponse(response);
-            DataCommand dataCommand = new DataCommand();
-            callback.onResponse(process(dataCommand));
+        try {
+            String data;
+            Matcher matcher = mPattern.matcher(receive);
+            if (matcher.find()) {
+                data = matcher.group(1); // dont know what to place
+                DataCommand dataCommand = gson.fromJson(data, DataCommand.class);
+                Log.d(LOG_TAG, "get data:" + dataCommand.getCommand());
+                //callback.onResponse(process(dataCommand));
+                process(dataCommand, callback);
+            } else {
+                //receive = receive + "\r\nPing back after received \n";
+                //            String response =
+                //                    "<p>\n" +
+                //                            "{status : true; data : {})" +
+                //                            "</p>\n";
+                //            callback.onResponse(response);
+                DataCommand dataCommand = new DataCommand();
+                process(dataCommand, callback);
+                //callback.onResponse(process(dataCommand));
+            }
+        } catch (Exception e) {
+            DataResponse response = new DataResponse();
+            response.status = false;
+            response.data = (new HashMap<>()).put("error", e.getMessage());
+            callback.onResponse(response.toJson());
         }
     }
 
@@ -65,12 +69,14 @@ public class ProcessCommand implements Server.TransporterListener {
         this.currentKeyMap = currentKeyMap;
     }
 
-    private String process(DataCommand dataCommand) {
-        DataResponse response = new DataResponse();
+    private void process(DataCommand dataCommand, final Server.TransporterListener callback) {
+        final DataResponse response = new DataResponse();
         if (dataCommand == null || dataCommand.getCommand() == null) {
             response.status = false;
             response.data = "Invalid command format";
-            return gson.toJson(response);
+            //return gson.toJson(response);
+            callback.onResponse(response.toJson());
+            return;
         }
         switch (dataCommand.getCommand()) {
 
@@ -79,30 +85,62 @@ public class ProcessCommand implements Server.TransporterListener {
                 map.put("is-setup", false);
                 response.data = map;
                 activity.showChooseModeFragment();
-                break;
+                callback.onResponse(response.toJson());
+                return;
             case "set-device-name":
 
-                break;
+                callback.onResponse(response.toJson());
+                return;
             case "get-keyboard-map":
-                activity.showPinFragment();
-                if (currentKeyMap != null) {
-                    response.data = currentKeyMap;
-                } else {
-                    response.status = false;
-                }
-                break;
+                activity.showPinFragment(new PinLoginFragment.Listener() {
+                    @Override
+                    public void onPasswordSetStep1(String password) {
+
+                    }
+
+                    @Override
+                    public void onPasswordSetFinal(String password) {
+
+                    }
+
+                    @Override
+                    public void onLoginSuccess(Bundle agrs) {
+
+                    }
+
+                    @Override
+                    public void onFinishLoadKeyMap(Map<Integer, String> keyMap) {
+                        if (keyMap != null) {
+                            response.data = keyMap;
+                        } else {
+                            response.status = false;
+                        }
+                        callback.onResponse(response.toJson());
+                    }
+                });
+                return;
+//                if (currentKeyMap != null) {
+//                    response.data = currentKeyMap;
+//                } else {
+//                    response.status = false;
+//                }
+
             case "set-pin":
 
-                break;
+                callback.onResponse(response.toJson());
+                return;
             case "check-recovery-phase-1":
                 activity.showStatusFragment("Configuring Device", "Confirmation");
-                break;
+                callback.onResponse(response.toJson());
+                return;
             case "check-recovery-phase-2":
                 activity.showStatusFragment("Confirmation", "Confirm in your computer the order of the words as you wrote on the seed");
-                break;
+                callback.onResponse(response.toJson());
+                return;
             case "check-recovery-phase-finish":
                 activity.showLoadingFragment(true);
-                break;
+                callback.onResponse(response.toJson());
+                return;
             case "get-recovery-phase":
                 if (!isSeedGenerated) {
                     activity.showSeedFragment();
@@ -112,35 +150,41 @@ public class ProcessCommand implements Server.TransporterListener {
                 } else {
                     response.status = false;
                 }
-
-                break;
+                callback.onResponse(response.toJson());
+                return;
+            case "show-finish":
+                activity.showFinishFragment();
+                callback.onResponse(response.toJson());
+                return;
 
             default:
                 response.status = false;
                 response.data = "Nothing here";
-
+                callback.onResponse(response.toJson());
+                return;
         }
-
-        return gson.toJson(response);
-    }
-
-    public void setSeeds(String[] seeds) {
-        this.seeds = seeds;
     }
 
     private Map<Integer, String> getSeeds() {
         Map<Integer, String> map = new HashMap<>();
         int size = seeds.length;
-        for (int i = 0; i< size; i++) {
+        for (int i = 0; i < size; i++) {
             map.put(i, seeds[i]);
         }
         Map<Integer, String> treeMap = new TreeMap<Integer, String>(map);
         return treeMap;
     }
 
+    public void setSeeds(String[] seeds) {
+        this.seeds = seeds;
+    }
 
     public class DataResponse {
         public boolean status = true;
         public Object data;
+
+        public String toJson() {
+            return gson.toJson(this);
+        }
     }
 }

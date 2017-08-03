@@ -1,52 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:scrollbars="none">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:scrollbars="none">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/dialog_margin"
-        android:paddingLeft="@dimen/dialog_margin"
-        android:paddingRight="@dimen/dialog_margin"
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingBottom="@dimen/dialog_margin"
+        android:paddingLeft="@dimen/dialog_margin" android:paddingRight="@dimen/dialog_margin"
         android:paddingTop="@dimen/dialog_margin">
 
-        <TextView
-            android:id="@+id/pay_with_title"
-            style="@style/NormalText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <TextView android:id="@+id/pay_with_title" style="@style/NormalText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dialog_title_margin_bottom"
             android:text="@string/pay_with" />
 
-        <LinearLayout
-            android:id="@+id/pay_with_layout"
-            android:layout_width="match_parent"
+        <LinearLayout android:id="@+id/pay_with_layout" android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:orientation="vertical" />
 
-        <TextView
-            android:id="@+id/exchange_and_pay_title"
-            style="@style/NormalText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <TextView android:id="@+id/exchange_and_pay_title" style="@style/NormalText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dialog_title_margin_bottom"
             android:text="@string/exchange_and_pay_title" />
 
-        <LinearLayout
-            android:id="@+id/exchange_and_pay_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+        <LinearLayout android:id="@+id/exchange_and_pay_layout" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" />
 
-        <include
-            layout="@layout/powered_by_shapeshift"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end" />
+        <include layout="@layout/powered_by_shapeshift" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="end" />
     </LinearLayout>
 </ScrollView>
