@@ -1,12 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/action_settings" android:orderInCategory="103"
-        android:title="@string/action_settings" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="103"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
 
-    <item android:id="@+id/action_support" android:orderInCategory="104"
-        android:title="@string/action_support" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_support"
+        android:orderInCategory="104"
+        android:title="@string/action_support"
+        app:showAsAction="never" />
 
-    <item android:id="@+id/action_about" android:orderInCategory="200"
-        android:title="@string/action_about" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="200"
+        android:title="@string/action_about"
+        app:showAsAction="never" />
 </menu>

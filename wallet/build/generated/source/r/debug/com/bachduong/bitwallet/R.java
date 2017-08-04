@@ -2770,8 +2770,8 @@ containing a value of this type.
         public static final int left=0x7f0d002f;
         public static final int line1=0x7f0d013a;
         public static final int line3=0x7f0d013e;
-        public static final int linearLayout=0x7f0d00ff;
-        public static final int linearLayout2=0x7f0d00fe;
+        public static final int linearLayout=0x7f0d00fe;
+        public static final int linearLayout2=0x7f0d00ff;
         public static final int linearLayout3=0x7f0d010d;
         public static final int linearLayoutSeed=0x7f0d0100;
         public static final int listMode=0x7f0d0012;

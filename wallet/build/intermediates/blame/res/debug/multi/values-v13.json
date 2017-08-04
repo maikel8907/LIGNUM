@@ -1,26 +1,26 @@
 [
-  {
-    "outputFile": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v13/values-v13.xml",
-    "map": [
-      {
-        "to": {
-          "startLine": 2,
-          "startColumn": 4,
-          "startOffset": 55,
-          "endColumn": 58,
-          "endOffset": 109
-        },
-        "from": {
-          "file": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/values-v13/values-v13.xml",
-          "position": {
-            "startLine": 2,
-            "startColumn": 4,
-            "startOffset": 55,
-            "endColumn": 58,
-            "endOffset": 109
-          }
-        }
-      }
-    ]
-  }
+    {
+        "outputFile": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v13/values-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/values-v13/values-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 58,
+                        "endOffset": 109
+                    }
+                }
+            }
+        ]
+    }
 ]

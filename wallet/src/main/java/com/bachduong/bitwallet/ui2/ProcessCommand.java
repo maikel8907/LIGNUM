@@ -36,21 +36,16 @@ public class ProcessCommand implements Server.TransporterListener {
             String data;
             Matcher matcher = mPattern.matcher(receive);
             if (matcher.find()) {
-                data = matcher.group(1); // dont know what to place
+                data = matcher.group(1);
                 DataCommand dataCommand = gson.fromJson(data, DataCommand.class);
                 Log.d(LOG_TAG, "get data:" + dataCommand.getCommand());
-                //callback.onResponse(process(dataCommand));
+
                 process(dataCommand, callback);
             } else {
-                //receive = receive + "\r\nPing back after received \n";
-                //            String response =
-                //                    "<p>\n" +
-                //                            "{status : true; data : {})" +
-                //                            "</p>\n";
-                //            callback.onResponse(response);
+
                 DataCommand dataCommand = new DataCommand();
                 process(dataCommand, callback);
-                //callback.onResponse(process(dataCommand));
+
             }
         } catch (Exception e) {
             DataResponse response = new DataResponse();
@@ -119,12 +114,27 @@ public class ProcessCommand implements Server.TransporterListener {
                     }
                 });
                 return;
-//                if (currentKeyMap != null) {
-//                    response.data = currentKeyMap;
-//                } else {
-//                    response.status = false;
-//                }
+            case "show-status":
+                HashMap<String, String> data;
+                try {
+                    data = dataCommand.getData();
+                    if (data != null) {
+                        String title = data.get("title");
+                        String content = data.get("content");
+                        activity.showStatusFragment(title, content);
+                    } else {
+                        response.status = false;
+                    }
+                } catch (Exception e) {
+                    response.status = false;
+                    response.data = (new HashMap<>()).put("error", e.getMessage());
+                    callback.onResponse(response.toJson());
+                } finally {
 
+                    callback.onResponse(response.toJson());
+                }
+
+                return;
             case "set-pin":
 
                 callback.onResponse(response.toJson());

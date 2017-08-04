@@ -1,14 +1,19 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bachduong.bitwallet.ui2.ShowSeedFragment">
 
-    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView android:id="@+id/imageView3" android:layout_width="100dp"
-            android:layout_height="100dp" android:layout_marginTop="16dp"
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
             android:src="@drawable/ic_app_logo_icellet_light"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -28,28 +33,40 @@
         <!--app:layout_constraintRight_toRightOf="parent"-->
         <!--app:layout_constraintTop_toTopOf="parent" />-->
 
-        <com.bachduong.bitwallet.ui2.customview.AvenirTextView android:id="@+id/text_view_title"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <com.bachduong.bitwallet.ui2.customview.AvenirTextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="@dimen/activity_pin_horizontal_margin"
             android:layout_marginLeft="@dimen/activity_pin_horizontal_margin"
             android:layout_marginRight="@dimen/activity_pin_horizontal_margin"
             android:layout_marginStart="@dimen/activity_pin_horizontal_margin"
-            android:layout_marginTop="16dp" android:gravity="center_horizontal"
-            android:lineSpacingExtra="8sp" android:paddingLeft="@dimen/status_padding"
-            android:paddingRight="@dimen/status_padding" android:text="@string/seed_show_label"
-            android:textAlignment="center" android:textAppearance="@style/NormalBoldText"
-            android:textColor="@color/white" app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="8sp"
+            android:paddingLeft="@dimen/status_padding"
+            android:paddingRight="@dimen/status_padding"
+            android:text="@string/seed_show_label"
+            android:textAlignment="center"
+            android:textAppearance="@style/NormalBoldText"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <LinearLayout
 
-            android:id="@+id/linearLayout" android:layout_width="0dp"
-            android:layout_height="wrap_content" android:layout_marginBottom="24dp"
-            android:layout_marginEnd="8dp" android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp" android:gravity="center_vertical"
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingLeft="@dimen/activity_pin_horizontal_margin"
             android:paddingRight="@dimen/activity_pin_horizontal_margin"
@@ -58,34 +75,49 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_view_title">
 
-            <LinearLayout android:id="@+id/linearLayoutSeed" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:layout_gravity="center"
+            <LinearLayout
+                android:id="@+id/linearLayoutSeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical">
 
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/linearLayout2" android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-            <Button android:id="@+id/button_prev" style="@style/BorderlessButton"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_weight="1" android:text="@string/action_back"
+            <Button
+                android:id="@+id/button_prev"
+                style="@style/BorderlessButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_back"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/primary_600" />
 
-            <Button android:id="@+id/button_confirm" style="@style/BorderlessButton"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_weight="1" android:text="@string/action_next"
+            <Button
+                android:id="@+id/button_confirm"
+                style="@style/BorderlessButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_next"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/primary_600" />

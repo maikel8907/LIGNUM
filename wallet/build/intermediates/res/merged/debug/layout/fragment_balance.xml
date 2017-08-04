@@ -1,12 +1,19 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context=".ui.InfoFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.InfoFragment">
 
-    <com.bachduong.bitwallet.ui.widget.SwipeRefreshLayout android:id="@+id/swipeContainer"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.bachduong.bitwallet.ui.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <ListView android:id="@+id/transaction_rows" android:layout_width="match_parent"
-            android:layout_height="match_parent" android:divider="@null"
+        <ListView
+            android:id="@+id/transaction_rows"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
             android:dividerHeight="0dp" />
 
     </com.bachduong.bitwallet.ui.widget.SwipeRefreshLayout>

@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:gravity="center_vertical"
-    android:orientation="horizontal" android:paddingBottom="2dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="2dp"
     android:paddingEnd="@dimen/half_standard_margin"
     android:paddingLeft="@dimen/half_standard_margin"
     android:paddingRight="@dimen/half_standard_margin"
-    android:paddingStart="@dimen/half_standard_margin" android:paddingTop="2dp">
+    android:paddingStart="@dimen/half_standard_margin"
+    android:paddingTop="2dp">
 
-    <ImageView android:id="@+id/item_icon" android:layout_width="@dimen/generic_icon_size"
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="@dimen/generic_icon_size"
         android:layout_height="@dimen/generic_icon_size"
         android:layout_marginEnd="@dimen/half_standard_margin"
         android:layout_marginRight="@dimen/half_standard_margin"
         android:src="@drawable/ic_launcher" />
 
-    <TextView android:id="@+id/item_text" style="@style/NormalText"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/item_text"
+        style="@style/NormalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         tools:text="Coin name" />
 </LinearLayout>

@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:coinomi="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:orientation="vertical"
+    xmlns:coinomi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/transaction_row_padding_vertical"
     android:paddingTop="@dimen/overview_amount_margin_top">
 
 
-    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" android:orientation="vertical"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
         android:paddingEnd="@dimen/activity_horizontal_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingStart="@dimen/activity_horizontal_margin">
 
-        <com.bachduong.bitwallet.ui.widget.Amount android:id="@+id/account_balance"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <com.bachduong.bitwallet.ui.widget.Amount
+            android:id="@+id/account_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/amount_margin_bottom"
-            android:gravity="center_horizontal" coinomi:show_big="true" />
+            android:gravity="center_horizontal"
+            coinomi:show_big="true" />
     </LinearLayout>
 </LinearLayout>

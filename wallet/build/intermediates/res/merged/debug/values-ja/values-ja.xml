@@ -9,70 +9,44 @@
     <plurals name="tx_confirm_timer_second">
         <item quantity="other">%d 秒</item>
     </plurals>
-    <string name="abc_action_bar_home_description" msgid="4600421777120114993">"ホームへ移動"</string>
-    <string name="abc_action_bar_home_description_format" msgid="1397052879051804371">"%1$s、%2$s"
-    </string>
-    <string name="abc_action_bar_home_subtitle_description_format" msgid="6623331958280229229">
-        "%1$s、%2$s、%3$s"
-    </string>
-    <string name="abc_action_bar_up_description" msgid="1594238315039666878">"上へ移動"</string>
-    <string name="abc_action_menu_overflow_description" msgid="3588849162933574182">"その他のオプション"
-    </string>
-    <string name="abc_action_mode_done" msgid="4076576682505996667">"完了"</string>
-    <string name="abc_activity_chooser_view_see_all" msgid="7468859129482906941">"すべて表示"</string>
-    <string name="abc_activitychooserview_choose_application" msgid="2031811694353399454">"アプリの選択"
-    </string>
-    <string name="abc_capital_off" msgid="121134116657445385">"OFF"</string>
-    <string name="abc_capital_on" msgid="3405795526292276155">"ON"</string>
-    <string name="abc_search_hint" msgid="7723749260725869598">"検索…"</string>
-    <string name="abc_searchview_description_clear" msgid="3691816814315814921">"検索キーワードを削除"
-    </string>
-    <string name="abc_searchview_description_query" msgid="2550479030709304392">"検索キーワード"</string>
-    <string name="abc_searchview_description_search" msgid="8264924765203268293">"検索"</string>
-    <string name="abc_searchview_description_submit" msgid="8928215447528550784">"検索キーワードを送信"
-    </string>
-    <string name="abc_searchview_description_voice" msgid="893419373245838918">"音声検索"</string>
-    <string name="abc_shareactionprovider_share_with" msgid="3421042268587513524">"共有"</string>
-    <string name="abc_shareactionprovider_share_with_application" msgid="7165123711973476752">
-        "%sと共有"
-    </string>
-    <string name="abc_toolbar_collapse_description" msgid="1603543279005712093">"折りたたむ"</string>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"ホームへ移動"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s、%2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s、%2$s、%3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"上へ移動"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"その他のオプション"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"完了"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"すべて表示"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"アプリの選択"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"OFF"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ON"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"検索…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"検索キーワードを削除"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"検索キーワード"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"検索"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"検索キーワードを送信"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"音声検索"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"共有"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%sと共有"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"折りたたむ"</string>
     <string name="about_credits_bitcoinj">Bitcoinjライブラリを使用しています\nhttp://bitcoinj.github.io/</string>
-    <string name="about_credits_crypto_icons">暗号通貨のアイコンはChris
-        Shepherd氏によるものです\nhttps://github.com/shphrd/crypto-icons
-    </string>
+    <string name="about_credits_crypto_icons">暗号通貨のアイコンはChris Shepherd氏によるものです\nhttps://github.com/shphrd/crypto-icons</string>
     <string name="about_credits_electrum">Electrumのサーバソフトウェアを使用しています\nhttps://electrum.org/</string>
-    <string name="about_credits_exchange_rates">
-        為替レートは以下により提供されています\nhttp://www.cryptocoincharts.info/\nhttps://bitcoinaverage.com/
-    </string>
-    <string name="about_credits_font_icons">フォントのアイコンはDaniel Bruce氏によるものです\nhttp://www.entypo.com
-    </string>
-    <string name="about_credits_nubits">サーバのインフラはNuBits - 世界初の安定したデジタル通貨 -
-        の寄付により成り立っています\nhttps://nubits.com/
-    </string>
-    <string name="about_credits_schildbach">Andreas
-        Schildbach氏の影響を受けています\nhttps://github.com/schildbach/bitcoin-wallet/
-    </string>
+    <string name="about_credits_exchange_rates">為替レートは以下により提供されています\nhttp://www.cryptocoincharts.info/\nhttps://bitcoinaverage.com/</string>
+    <string name="about_credits_font_icons">フォントのアイコンはDaniel Bruce氏によるものです\nhttp://www.entypo.com</string>
+    <string name="about_credits_nubits">サーバのインフラはNuBits - 世界初の安定したデジタル通貨 - の寄付により成り立っています\nhttps://nubits.com/</string>
+    <string name="about_credits_schildbach">Andreas Schildbach氏の影響を受けています\nhttps://github.com/schildbach/bitcoin-wallet/</string>
     <string name="about_credits_translations">翻訳提供者:</string>
-    <string name="about_credits_zxing">QRコードの機能はZXing氏によるものです\nhttps://github.com/zxing/zxing
-    </string>
-    <string name="about_licence">
-        オープンソース・プロジェクト\nhttps://github.com/Coinomi/coinomi-android\nソースコードはGNU General Public
-        License 3のもとでライセンスされています
-    </string>
-    <string name="about_shapeshift_message">
-        ShapeShift.ioは、Bitcoinとオルトコインの変換サービスを提供する、即時オルトコイン両替所です。Bitcoinの生態系の中で、Bitcoinと数多のオルトコインの変換を行う、最も高速で、最も効率的なプラットフォーム（ウェブおよびAPI経由で利用可能）の代表格です。アカウントの作成は必要ありません。
-    </string>
+    <string name="about_credits_zxing">QRコードの機能はZXing氏によるものです\nhttps://github.com/zxing/zxing</string>
+    <string name="about_licence">オープンソース・プロジェクト\nhttps://github.com/Coinomi/coinomi-android\nソースコードはGNU General Public License 3のもとでライセンスされています</string>
+    <string name="about_shapeshift_message">ShapeShift.ioは、Bitcoinとオルトコインの変換サービスを提供する、即時オルトコイン両替所です。Bitcoinの生態系の中で、Bitcoinと数多のオルトコインの変換を行う、最も高速で、最も効率的なプラットフォーム（ウェブおよびAPI経由で利用可能）の代表格です。アカウントの作成は必要ありません。</string>
     <string name="about_shapeshift_title">ShapeShift.ioについて</string>
     <string name="account_description_label">説明</string>
     <string name="account_extended_private_key_label">拡張秘密鍵</string>
     <string name="account_extended_public_key_label">拡張公開鍵</string>
     <string name="account_private_key_label">秘密鍵</string>
-    <string name="account_private_key_warning">秘密鍵があればこのアカウントからコインを送金できます。この鍵は<i>復元フレーズ</i>から計算することができますので、この鍵をバックアップする必要はありません。
-    </string>
+    <string name="account_private_key_warning">秘密鍵があればこのアカウントからコインを送金できます。この鍵は<i>復元フレーズ</i>から計算することができますので、この鍵をバックアップする必要はありません。</string>
     <string name="account_public_key_label">公開鍵</string>
-    <string name="account_public_key_warning">公開鍵を共有すると、共有した相手があなたの残高やトランザクション履歴を閲覧できるようになります。
-    </string>
+    <string name="account_public_key_warning">公開鍵を共有すると、共有した相手があなたの残高やトランザクション履歴を閲覧できるようになります。</string>
     <string name="action_about">Coinomiについて</string>
     <string name="action_account_details">アカウント詳細</string>
     <string name="action_change_address_type">アドレスタイプ変更</string>
@@ -154,12 +128,8 @@
     <string name="fee">トランザクション手数料</string>
     <string name="get_tx_broadcast_error">トランザクションのブロードキャストに失敗しました</string>
     <string name="get_tx_info_error">トランザクションの情報を取得できませんでした</string>
-    <string name="history_empty">コインの受け取り履歴は\nありません！\n\n交換所やトレード経由、もしくは品物やサービスを売ったりしてコインを入手しましょう。
-    </string>
-    <string name="incompatible_device_warning_message">
-        この端末はソフトウェアもしくはハードウェアのバグにより、いくつかの暗号機能を実行できません。\nこれは端末の製造元によるアップデートにより解決できるかもしれません。\n\n何かご質問があれば
-        support@coinomi.com までお問い合わせください。
-    </string>
+    <string name="history_empty">コインの受け取り履歴は\nありません！\n\n交換所やトレード経由、もしくは品物やサービスを売ったりしてコインを入手しましょう。</string>
+    <string name="incompatible_device_warning_message">この端末はソフトウェアもしくはハードウェアのバグにより、いくつかの暗号機能を実行できません。\nこれは端末の製造元によるアップデートにより解決できるかもしれません。\n\n何かご質問があれば support@coinomi.com までお問い合わせください。</string>
     <string name="incompatible_device_warning_title">互換性のない端末</string>
     <string name="internal_transfer">ウォレット内部の送金</string>
     <string name="message_signed">メッセージの署名を行いました</string>
@@ -170,9 +140,7 @@
     <string name="navigation_drawer_open">ナビゲーション・ドロワーを開く</string>
     <string name="navigation_drawer_services">サービス</string>
     <string name="navigation_drawer_wallet">ウォレット</string>
-    <string name="no_such_pocket_error">
-        ウォレットアカウントへのアクセスの際にエラーが発生しました。問題が継続する場合には、復元フレーズを用いてウォレットを復旧してください。
-    </string>
+    <string name="no_such_pocket_error">ウォレットアカウントへのアクセスの際にエラーが発生しました。問題が継続する場合には、復元フレーズを用いてウォレットを復旧してください。</string>
     <string name="no_wallet_pocket_selected">ウォレットのアカウントが選択されていません</string>
     <string name="password_add_coin">ウォレットの中に %1$s のアカウントを作成しようとしています。</string>
     <string name="password_error">パスワードに関するエラーを検知したため、処理を継続できません。</string>
@@ -180,9 +148,7 @@
     <string name="password_skip_warn">パスワードを設定しないと、認証なしでウォレットにアクセスできるようになります。</string>
     <string name="password_too_common_error">パスワード \"%1$s\" は一般的なため、安全ではありません。</string>
     <string name="password_too_short_error">パスワードが短すぎます。最低でも %1$d 文字以上にしてください。</string>
-    <string name="password_wallet_recovery">
-        ウォレットを復旧するためには、保護された復元フレーズを作成した際に用いたパスワードと全く同じものを入力してください。\n異なるパスワードを入力した場合には、新しい空のウォレットが作成されます。
-    </string>
+    <string name="password_wallet_recovery">ウォレットを復旧するためには、保護された復元フレーズを作成した際に用いたパスワードと全く同じものを入力してください。\n異なるパスワードを入力した場合には、新しい空のウォレットが作成されます。</string>
     <string name="passwords_mismatch">パスワードが一致しません</string>
     <string name="pay_to_label">支払い先</string>
     <string name="pay_with">次のもので送金する：</string>
@@ -210,10 +176,8 @@
     <string name="restore_wallet">ウォレットを復旧する</string>
     <string name="scan_error">スキャン中に問題が発生しました: %1$s</string>
     <string name="scan_qr_code">QRコードをスキャン</string>
-    <string name="seed_info">これはウォレットの秘密鍵を生成するのに利用される<i>復元フレーズ</i>です。紙に書きとめたうえで、紙幣と同様に安全な場所に保管をしておいてください。この復元フレーズを知ることができる人は誰でもウォレットの残高にアクセスできます。復元フレーズを紛失してしまった場合には、ウォレットの復旧はできなくなります。
-    </string>
-    <string name="seed_not_available">復元フレーズはこのデバイスに保存されていません。\nこの問題を解決するためには、ウォレットの復旧を行ってください。
-    </string>
+    <string name="seed_info">これはウォレットの秘密鍵を生成するのに利用される<i>復元フレーズ</i>です。紙に書きとめたうえで、紙幣と同様に安全な場所に保管をしておいてください。この復元フレーズを知ることができる人は誰でもウォレットの残高にアクセスできます。復元フレーズを紛失してしまった場合には、ウォレットの復旧はできなくなります。</string>
+    <string name="seed_not_available">復元フレーズはこのデバイスに保存されていません。\nこの問題を解決するためには、ウォレットの復旧を行ってください。</string>
     <string name="seed_not_available_title">復元フレーズが見つかりませんでした</string>
     <string name="seed_password_protected">この復元フレーズはパスワードにより保護されています (BIP39)</string>
     <string name="seed_regenerate_title">タッチして新しい復元フレーズを生成する</string>
@@ -243,15 +207,12 @@
     <string name="signature_label">署名</string>
     <string name="signing_address_label">署名を行うアドレス</string>
     <string name="signing_info">アドレスを使用することでメッセージの署名や検証ができます。</string>
-    <string name="status_bar_notification_info_overflow" msgid="2869576371154716097">"999+"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="status_label">状態</string>
     <string name="status_pending">トランザクションの検証を待っています</string>
     <string name="status_unknown">トランザクションの状態は未知です</string>
     <string name="test_wallet">ウォレットをテストする</string>
-    <string name="test_wallet_message">
-        これはテストウォレットです。テストネットのBitcoin、Litecoin、Dogecoinを送ったり受け取ったりできます。\n\n本物のおかねを扱うことのできるウォレットを使いたい場合には、<b>
-        設定 > ウォレットを復旧する > 新しいウォレットを作成する</b>を選択してください。
-    </string>
+    <string name="test_wallet_message">これはテストウォレットです。テストネットのBitcoin、Litecoin、Dogecoinを送ったり受け取ったりできます。\n\n本物のおかねを扱うことのできるウォレットを使いたい場合には、<b>設定 > ウォレットを復旧する > 新しいウォレットを作成する</b>を選択してください。</string>
     <string name="title_activity_about">Coinomiについて</string>
     <string name="title_activity_account_details">アカウント詳細</string>
     <string name="title_activity_add_coins">コインを追加する</string>
@@ -264,9 +225,7 @@
     <string name="title_activity_sign_verify_message">メッセージの署名と検証</string>
     <string name="title_activity_trade">両替所</string>
     <string name="title_activity_transaction_details">トランザクション詳細</string>
-    <string name="too_many_unused_addresses">
-        未使用のアドレスが多すぎます。新しいアドレスを作成する前に、以前のアドレスのうちどれかひとつを使用してみてください。
-    </string>
+    <string name="too_many_unused_addresses">未使用のアドレスが多すぎます。新しいアドレスを作成する前に、以前のアドレスのうちどれかひとつを使用してみてください。</string>
     <string name="touch_to_decrypt_wallet">タッチしてロックを解除</string>
     <string name="trade">両替</string>
     <string name="trade_error">両替エラー</string>
@@ -275,9 +234,7 @@
     <string name="trade_error_min_limit">最小の金額は少なくとも %1$s です</string>
     <string name="trade_error_no_supported_source_accounts">サポートされているアカウントがみつかりません</string>
     <string name="trade_error_service_not_available">サービスが一時的に利用できません。数分後に再度お試しください</string>
-    <string name="trade_error_sign_tx_message">トランザクションの署名とブロードキャストを行う際にエラーが発生しました。\n\n技術的な詳細:\n\n
-        <b>%1$s</b>
-    </string>
+    <string name="trade_error_sign_tx_message">トランザクションの署名とブロードキャストを行う際にエラーが発生しました。\n\n技術的な詳細:\n\n<b>%1$s</b></string>
     <string name="trade_expired">両替の有効期限が切れました</string>
     <string name="trade_from_coin_label">支払うコイン</string>
     <string name="trade_info">両替を行いたいコインを選択してください。\n両替されたコインは自動的にウォレットに追加されます。</string>
@@ -313,9 +270,7 @@
     <string name="tx_message_public_remove">公開メッセージの削除</string>
     <string name="tx_message_subject">件名</string>
     <string name="unlock_wallet_title">ウォレットのロックを解除する</string>
-    <string name="unlocking_wallet_error_detail">
-        パスワードは正しいですか？パスワードが正しく入力されていることをご確認ください。何度やってもこのエラーが表示されてしまう場合には、復元フレーズを用いた復旧をお試しください。
-    </string>
+    <string name="unlocking_wallet_error_detail">パスワードは正しいですか？パスワードが正しく入力されていることをご確認ください。何度やってもこのエラーが表示されてしまう場合には、復元フレーズを用いた復旧をお試しください。</string>
     <string name="unlocking_wallet_error_title">ウォレットのロックを解除できませんでした</string>
     <string name="unlocking_wallet_working">ウォレットのロックを解除しています…</string>
     <string name="unsupported_coin">コインはサポートされていません: %1$s</string>

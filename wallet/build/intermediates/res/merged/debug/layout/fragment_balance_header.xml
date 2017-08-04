@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:coinomi="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:orientation="vertical">
+    xmlns:coinomi="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" android:orientation="vertical"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/amount_margin_bottom"
         android:paddingEnd="@dimen/activity_horizontal_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -13,32 +18,48 @@
         android:paddingStart="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/amount_margin_top">
 
-        <com.bachduong.bitwallet.ui.widget.Amount android:id="@+id/account_exchanged_balance"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <com.bachduong.bitwallet.ui.widget.Amount
+            android:id="@+id/account_exchanged_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             coinomi:single_line="true" />
 
-        <com.bachduong.bitwallet.ui.widget.Amount android:id="@+id/account_balance"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:gravity="center_horizontal" coinomi:show_big="true" />
+        <com.bachduong.bitwallet.ui.widget.Amount
+            android:id="@+id/account_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            coinomi:show_big="true" />
     </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" android:orientation="vertical"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
         android:paddingEnd="@dimen/activity_horizontal_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingStart="@dimen/activity_horizontal_margin">
 
-        <TextView android:id="@+id/connection_label" style="@style/ErrorText"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/connection_label"
+            style="@style/ErrorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/amount_margin_bottom"
             android:text="@string/disconnected_label" />
 
-        <TextView android:id="@+id/history_empty" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginBottom="32dp"
-            android:layout_marginTop="32dp" android:gravity="center"
-            android:text="@string/history_empty" android:textColor="@color/gray_26_hint_text"
+        <TextView
+            android:id="@+id/history_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="@string/history_empty"
+            android:textColor="@color/gray_26_hint_text"
             android:textSize="@dimen/history_empty" />
     </LinearLayout>
 </LinearLayout>

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Button xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/key_board_size" android:layout_height="@dimen/key_board_size"
+    android:layout_width="@dimen/key_board_size"
+    android:layout_height="@dimen/key_board_size"
     android:layout_margin="@dimen/key_board_margin"
-    android:background="@drawable/key_board_background" android:gravity="center"
-    android:padding="0dp" android:textColor="@color/primary_800" android:textSize="30dp">
+    android:background="@drawable/key_board_background"
+    android:gravity="center"
+    android:padding="0dp"
+    android:textColor="@color/primary_800"
+    android:textSize="30dp">
 
 </Button>

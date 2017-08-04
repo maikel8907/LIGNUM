@@ -926,8 +926,8 @@ int id layout_pair_pin 0x7f0d0077
 int id left 0x7f0d002f
 int id line1 0x7f0d013a
 int id line3 0x7f0d013e
-int id linearLayout 0x7f0d00ff
-int id linearLayout2 0x7f0d00fe
+int id linearLayout 0x7f0d00fe
+int id linearLayout2 0x7f0d00ff
 int id linearLayout3 0x7f0d010d
 int id linearLayoutSeed 0x7f0d0100
 int id listMode 0x7f0d0012

@@ -1,51 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <TextView android:id="@+id/send_output_type_text" style="@style/SendOutputTypeText"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical" android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp" tools:text="Send" />
+    <TextView
+        android:id="@+id/send_output_type_text"
+        style="@style/SendOutputTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        tools:text="Send" />
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:baselineAligned="true" android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:orientation="horizontal">
 
-        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-            android:layout_weight="1" android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-            <TextView android:id="@+id/amount" style="@style/SendOutputAmount"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical" android:layout_marginEnd="2dp"
-                android:layout_marginRight="2dp" tools:text="100.1223" />
+            <TextView
+                android:id="@+id/amount"
+                style="@style/SendOutputAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                tools:text="100.1223" />
 
-            <TextView android:id="@+id/symbol" style="@style/AmountSymbol"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="bottom" android:paddingBottom="2dp" tools:text="SYMBOL" />
+            <TextView
+                android:id="@+id/symbol"
+                style="@style/AmountSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingBottom="2dp"
+                tools:text="SYMBOL" />
         </LinearLayout>
 
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_gravity="bottom" android:orientation="horizontal"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
             android:paddingBottom="2dp">
 
-            <TextView android:id="@+id/local_amount" style="@style/Amount"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical" android:layout_marginEnd="2dp"
-                android:layout_marginRight="2dp" tools:text="101.12" />
+            <TextView
+                android:id="@+id/local_amount"
+                style="@style/Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                tools:text="101.12" />
 
-            <TextView android:id="@+id/local_symbol" style="@style/AmountSymbol"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/local_symbol"
+                style="@style/AmountSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 tools:text="SYMBOL" />
         </LinearLayout>
     </LinearLayout>
 
-    <TextView android:id="@+id/output_label" style="@style/NormalText"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:paddingTop="4dp" tools:text="Address label" />
+    <TextView
+        android:id="@+id/output_label"
+        style="@style/NormalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        tools:text="Address label" />
 
-    <TextView android:id="@+id/output_address" style="@style/SmallHelpText"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:typeface="monospace" tools:text="nUdHX BSBY QPJR EXZM BUdu 8ARn WM2m z3XQp" />
+    <TextView
+        android:id="@+id/output_address"
+        style="@style/SmallHelpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="monospace"
+        tools:text="nUdHX BSBY QPJR EXZM BUdu 8ARn WM2m z3XQp" />
 
 </LinearLayout>

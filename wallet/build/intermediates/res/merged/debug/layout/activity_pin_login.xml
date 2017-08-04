@@ -1,25 +1,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:gravity="center_vertical"
-    android:orientation="vertical" tools:context=".ui2.PinLoginActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".ui2.PinLoginActivity">
 
     <LinearLayout
 
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical" android:gravity="center_horizontal"
-        android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_pin_horizontal_margin"
         android:paddingRight="@dimen/activity_pin_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
-        <ImageView android:id="@+id/imageView" android:layout_width="@dimen/pin_login_logo_with"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/pin_login_logo_with"
             android:layout_height="@dimen/pin_login_logo_height"
-            android:layout_gravity="center_horizontal" android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
             android:src="@drawable/intro_logo" />
 
 
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/pin_login_activity_enter_pin"
             android:textAppearance="@style/NormalBoldText" />
@@ -36,16 +47,28 @@
         <!--app:digitTextSize="16dp"-->
         <!--app:digitElevation="10dp" />-->
 
-        <TextView android:id="@+id/password_error" style="@style/ErrorText"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_margin="@dimen/amount_margin_bottom" android:gravity="center"
-            android:text="@string/password_too_short" android:visibility="gone" />
+        <TextView
+            android:id="@+id/password_error"
+            style="@style/ErrorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/amount_margin_bottom"
+            android:gravity="center"
+            android:text="@string/password_too_short"
+            android:visibility="gone" />
 
-        <EditText android:id="@+id/edit_text_password" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:ems="10" android:focusable="false"
-            android:focusableInTouchMode="false" android:gravity="center"
-            android:imeActionId="@+id/login" android:imeActionLabel="@string/action_sign_in"
-            android:imeOptions="actionUnspecified" android:inputType="numberPassword" />
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/action_sign_in"
+            android:imeOptions="actionUnspecified"
+            android:inputType="numberPassword" />
     </LinearLayout>
 
     <!--<TableLayout-->
@@ -266,14 +289,22 @@
 
     <!--</android.support.v7.widget.GridLayout>-->
 
-    <com.bachduong.bitwallet.ui2.customview.PasswordInputView android:id="@+id/password_view"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" app:columnCount="3">
+    <com.bachduong.bitwallet.ui2.customview.PasswordInputView
+        android:id="@+id/password_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:columnCount="3">
 
     </com.bachduong.bitwallet.ui2.customview.PasswordInputView>
 
-    <Button android:id="@+id/button_sign_in" style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_column="1" android:layout_gravity="center_horizontal"
-        android:onClick="onClickSignIn" android:text="@string/action_sign_in" />
+    <Button
+        android:id="@+id/button_sign_in"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickSignIn"
+        android:text="@string/action_sign_in" />
 </LinearLayout>
