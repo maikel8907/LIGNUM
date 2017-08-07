@@ -16,12 +16,12 @@
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_button_config.png"
     },
     {
-        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/refresh_menu.png",
-        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/refresh_menu.png"
-    },
-    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/ic_logo_icellet.png",
         "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/ic_logo_icellet.png"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/refresh_menu.png",
+        "source": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/res/drawable-xhdpi/refresh_menu.png"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/drawable-xhdpi/parkbyte.png",

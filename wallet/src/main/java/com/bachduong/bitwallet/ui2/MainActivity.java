@@ -184,24 +184,24 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
 
         replaceFragment(StatusShowFragment.newInstance("Configuring Device", "Confirmation"));
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                replaceFragment(StatusShowFragment.newInstance("Confirmation", "Confirm in your computer the order of the words as you wrote on the seed"));
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        replaceFragment(new StatusLoadingFragment());
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                replaceFragment(new FinishFragment());
-                            }
-                        }, 6000);
-                    }
-                }, 6000);
-            }
-        }, 6000);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                replaceFragment(StatusShowFragment.newInstance("Confirmation", "Confirm in your computer the order of the words as you wrote on the seed"));
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        replaceFragment(new StatusLoadingFragment());
+//                        new Handler().postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                replaceFragment(new FinishFragment());
+//                            }
+//                        }, 6000);
+//                    }
+//                }, 6000);
+//            }
+//        }, 6000);
     }
 
     @Override

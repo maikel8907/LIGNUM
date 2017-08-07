@@ -1,11 +1,13 @@
 package com.bachduong.bitwallet.ui2;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 
 import com.bachduong.bitwallet.service.Server;
 import com.google.gson.Gson;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -25,6 +27,10 @@ public class ProcessCommand implements Server.TransporterListener {
     private Gson gson = new Gson();
     private Map<Integer, String> currentKeyMap;
     private String[] seeds;
+    private int currentStep = 0;
+    private String devicePin = "";
+    private String walletPin = "";
+    private String deviceName = "";
 
     public ProcessCommand(MainActivity activity) {
         this.activity = activity;
@@ -38,7 +44,8 @@ public class ProcessCommand implements Server.TransporterListener {
             if (matcher.find()) {
                 data = matcher.group(1);
                 DataCommand dataCommand = gson.fromJson(data, DataCommand.class);
-                Log.d(LOG_TAG, "get data:" + dataCommand.getCommand());
+                Log.d(LOG_TAG, "Command received:" + dataCommand.getCommand());
+                Log.d(LOG_TAG, "Command data:" + dataCommand.getData());
 
                 process(dataCommand, callback);
             } else {
@@ -149,6 +156,8 @@ public class ProcessCommand implements Server.TransporterListener {
                 return;
             case "check-recovery-phase-finish":
                 activity.showLoadingFragment(true);
+                this.seeds = null;
+                this.isSeedGenerated = false;
                 callback.onResponse(response.toJson());
                 return;
             case "get-recovery-phase":
@@ -167,6 +176,30 @@ public class ProcessCommand implements Server.TransporterListener {
                 callback.onResponse(response.toJson());
                 return;
 
+            case "get-device-status":
+                response.status = true;
+                callback.onResponse(response.toJson());
+                return;
+
+            case "get-device-data":
+                Log.d(LOG_TAG, "I'm here");
+                try {
+                    response.status = true;
+                    Map<String, Object> dataDevice = new HashMap<>();
+                    dataDevice.put("currentStep", currentStep);
+                    dataDevice.put("devicePin", devicePin);
+                    dataDevice.put("walletPin", walletPin);
+                    dataDevice.put("recoveryWordList", getSeeds());
+                    dataDevice.put("deviceName", deviceName);
+                    response.data = dataDevice;
+                    callback.onResponse(response.toJson());
+                } catch (Exception e) {
+                    response.status = false;
+                    response.data = e.getMessage();
+                    e.printStackTrace();
+                    callback.onResponse(response.toJson());
+                }
+                return;
             default:
                 response.status = false;
                 response.data = "Nothing here";
@@ -176,10 +209,13 @@ public class ProcessCommand implements Server.TransporterListener {
     }
 
     private Map<Integer, String> getSeeds() {
+        if (seeds == null || seeds.length ==0 ) {
+            return new HashMap<>();
+        }
         Map<Integer, String> map = new HashMap<>();
         int size = seeds.length;
         for (int i = 0; i < size; i++) {
-            map.put(i, seeds[i]);
+            map.put(i+1, seeds[i]);
         }
         Map<Integer, String> treeMap = new TreeMap<Integer, String>(map);
         return treeMap;
@@ -187,6 +223,15 @@ public class ProcessCommand implements Server.TransporterListener {
 
     public void setSeeds(String[] seeds) {
         this.seeds = seeds;
+    }
+
+    private HashMap<String, Object> getDeviceData() {
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("devicePin", devicePin);
+        data.put("walletPin", walletPin);
+        data.put("recoveryWordList", getSeeds());
+        data.put("deviceName", deviceName);
+        return data;
     }
 
     public class DataResponse {

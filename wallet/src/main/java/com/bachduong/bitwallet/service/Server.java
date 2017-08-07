@@ -93,9 +93,12 @@ public class Server {
 //			printStream.print(response);
             printStream.println("HTTP/1.1 200 OK");
             printStream.println("Content-Type: text/html");
+            printStream.println("Access-Control-Allow-Origin: *");
+            printStream.println("Access-Control-Allow-Headers: content-custom");
             printStream.println("\r\n");
             printStream.println(response);
             printStream.flush();
+            Log.d(TAG, "Response: " + response);
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -162,7 +165,7 @@ public class Server {
                             + socket.getInetAddress() + ":"
                             + socket.getPort() + "\n";
 
-                    Log.d(TAG, message);
+                    //Log.d(TAG, message);
                     SocketServerReplyThread socketServerReplyThread = new SocketServerReplyThread(
                             socket, count);
                     socketServerReplyThread.run();
@@ -238,7 +241,7 @@ public class Server {
 //				PrintStream printStream = new PrintStream(outputStream);
 //				printStream.print(message);
 //				printStream.close();
-                Log.d(TAG, message);
+//                Log.d(TAG, message);
 
             } catch (IOException e) {
                 // TODO Auto-generated catch block
@@ -246,7 +249,7 @@ public class Server {
                 message += "Something wrong! " + e.toString() + "\n";
             }
 
-            Log.d(TAG, message);
+            //Log.d(TAG, message);
         }
 
     }
