@@ -4,17 +4,17 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.service.Server;
-import com.bachduong.bitwallet.ui.AbstractWalletFragmentActivity;
 
 import java.util.Map;
 
-public class MainActivity extends AbstractWalletFragmentActivity implements SplashFragment.Listener,
+public class MainActivity extends FragmentActivity implements SplashFragment.Listener,
         PinLoginFragment.Listener,
         ShowSeedFragment.Listener,
         ChooseModeFragment.Listener,
@@ -47,19 +47,19 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
         setContentView(R.layout.activity_main);
 
         // If we detected that this device is incompatible
-        if (!getWalletApplication().getConfiguration().isDeviceCompatible()) {
-            new AlertDialog.Builder(this)
-                    .setTitle(R.string.incompatible_device_warning_title)
-                    .setMessage(R.string.incompatible_device_warning_message)
-                    .setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setCancelable(false)
-                    .create().show();
-        } else {
+//        if (!getWalletApplication().getConfiguration().isDeviceCompatible()) {
+//            new AlertDialog.Builder(this)
+//                    .setTitle(R.string.incompatible_device_warning_title)
+//                    .setMessage(R.string.incompatible_device_warning_message)
+//                    .setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            finish();
+//                        }
+//                    })
+//                    .setCancelable(false)
+//                    .create().show();
+//        } else {
             server = new Server();
             server.addListener(transporterListener);
             processCommand = new ProcessCommand(this);
@@ -75,7 +75,7 @@ public class MainActivity extends AbstractWalletFragmentActivity implements Spla
 //                    }
 //                }, 5000);
             }
-        }
+//        }
     }
 
     public void showWelcomeFragment() {

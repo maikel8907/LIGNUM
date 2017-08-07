@@ -85,32 +85,34 @@ public class Server {
         listeners.remove(transporterListener);
     }
 
-    private boolean sendRespone(Socket socket, String response) {
-        PrintStream printStream = null;
-        try {
-            OutputStream outputStream = socket.getOutputStream();
-            printStream = new PrintStream(outputStream);
+    private void sendRespone(final Socket socket, final String response) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PrintStream printStream = null;
+                try {
+                    OutputStream outputStream = socket.getOutputStream();
+                    printStream = new PrintStream(outputStream);
 //			printStream.print(response);
-            printStream.println("HTTP/1.1 200 OK");
-            printStream.println("Content-Type: text/html");
-            printStream.println("Access-Control-Allow-Origin: *");
-            printStream.println("Access-Control-Allow-Headers: content-custom");
-            printStream.println("\r\n");
-            printStream.println(response);
-            printStream.flush();
-            Log.d(TAG, "Response: " + response);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        } finally {
-            try {
-                printStream.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-                return false;
+                    printStream.println("HTTP/1.1 200 OK");
+                    printStream.println("Content-Type: text/html");
+                    printStream.println("Access-Control-Allow-Origin: *");
+                    printStream.println("Access-Control-Allow-Headers: content-custom");
+                    printStream.println("\r\n");
+                    printStream.println(response);
+                    printStream.flush();
+                    Log.d(TAG, "Response: " + response);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        printStream.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-        }
-        return true;
+        }).start();
     }
 
     public String getIpAddress() {

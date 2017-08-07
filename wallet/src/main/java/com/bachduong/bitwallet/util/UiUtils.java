@@ -20,9 +20,6 @@ import android.widget.Toast;
 import com.bachduong.bitwallet.AddressBookProvider;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
-import com.bachduong.bitwallet.ui.AccountDetailsActivity;
-import com.bachduong.bitwallet.ui.EditAccountFragment;
-import com.bachduong.bitwallet.ui.EditAddressBookEntryFragment;
 import com.bachduong.core.uri.CoinURI;
 import com.bachduong.core.uri.CoinURIParseException;
 import com.bachduong.core.util.GenericUtils;
@@ -164,7 +161,7 @@ public class UiUtils {
         public boolean onActionItemClicked(ActionMode mode, MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.action_edit_label:
-                    EditAddressBookEntryFragment.edit(fragmentManager, address);
+
                     mode.finish();
                     return true;
                 case R.id.action_copy:
@@ -252,13 +249,11 @@ public class UiUtils {
         public boolean onActionItemClicked(ActionMode mode, MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.action_edit_description:
-                    EditAccountFragment.edit(fragmentManager, account);
+
                     mode.finish();
                     return true;
                 case R.id.action_account_details:
-                    Intent intent = new Intent(activity, AccountDetailsActivity.class);
-                    intent.putExtra(Constants.ARG_ACCOUNT_ID, account.getId());
-                    activity.startActivity(intent);
+
                     mode.finish();
                     return true;
                 case R.id.action_delete:
@@ -272,10 +267,7 @@ public class UiUtils {
                                 public void onClick(DialogInterface dialog, int which) {
                                     Wallet wallet = account.getWallet();
                                     wallet.deleteAccount(account.getId());
-                                    if (activity instanceof EditAccountFragment.Listener) {
-                                        ((EditAccountFragment.Listener) activity)
-                                                .onAccountModified(account);
-                                    }
+
                                 }
                             })
                             .create().show();
