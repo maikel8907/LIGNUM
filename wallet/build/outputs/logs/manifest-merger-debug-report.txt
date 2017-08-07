@@ -17,6 +17,10 @@ ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/Androi
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:4:5-43
 uses-permission#android.permission.INTERNET
 ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:6:5-67
+MERGED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.1] /Users/duongtung/.android/build-cache/df5f384d383f364b98e992a95c514dac5db88353/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:20:5-66
 	android:name
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -41,6 +45,9 @@ ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/Androi
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:11:22-63
 uses-permission#android.permission.WAKE_LOCK
 ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:12:5-68
+MERGED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.1] /Users/duongtung/.android/build-cache/df5f384d383f364b98e992a95c514dac5db88353/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:21:5-67
 	android:name
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:12:22-65
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
@@ -53,6 +60,9 @@ ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/Androi
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:14:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:15:5-79
+MERGED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.1] /Users/duongtung/.android/build-cache/df5f384d383f364b98e992a95c514dac5db88353/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:19:5-78
 	android:name
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:15:22-76
 uses-feature#android.hardware.touchscreen
@@ -117,12 +127,20 @@ ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/Androi
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:43:9-34
 application
 ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:49:5-258:19
+MERGED from [com.google.firebase:firebase-core:9.6.1] /Users/duongtung/.android/build-cache/d9e3a938ecc11006fd98deae505391adecf19a49/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:22:5-28:19
+MERGED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.1] /Users/duongtung/.android/build-cache/df5f384d383f364b98e992a95c514dac5db88353/output/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:9.6.1] /Users/duongtung/.android/build-cache/7bbb77f86aa4c44a1fcb73e64c2d4788fe7fda33/output/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:9.6.1] /Users/duongtung/.android/build-cache/6f24a65c69e87943b597dc78185b68f9af0557ea/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.6.1] /Users/duongtung/.android/build-cache/8481d7d06c79ffc8a65baceb2d07a9d3e4f2cda5/output/AndroidManifest.xml:19:5-21:19
 MERGED from [com.android.support:gridlayout-v7:23.3.0] /Users/duongtung/.android/build-cache/96946fc1401344862472bda702fbb5dccbe8d011/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/4e981089f2cb91d86a24311e6078bc299c02352f/output/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/3d3cd279e13aceafe17417f27c7a5a4165858790/output/AndroidManifest.xml:7:5-20
 MERGED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:39:5-43:19
-MERGED from [com.android.support:support-v4:23.3.0] /Users/duongtung/.android/build-cache/de919753c566a46ab08927f4f3240d9356c72112/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/duongtung/.android/build-cache/5b0e742419e35fa0bd145385fc8d853790618e54/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/duongtung/.android/build-cache/0ce9f859f141cf546cc0b20935c3d0e7705f1b67/output/AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:54:9-41
@@ -398,12 +416,20 @@ ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/Androi
 		ADDED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml:255:27-74
 uses-sdk
 INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.firebase:firebase-core:9.6.1] /Users/duongtung/.android/build-cache/d9e3a938ecc11006fd98deae505391adecf19a49/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:20:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.1] /Users/duongtung/.android/build-cache/df5f384d383f364b98e992a95c514dac5db88353/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-common:9.6.1] /Users/duongtung/.android/build-cache/7bbb77f86aa4c44a1fcb73e64c2d4788fe7fda33/output/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.6.1] /Users/duongtung/.android/build-cache/6f24a65c69e87943b597dc78185b68f9af0557ea/output/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.6.1] /Users/duongtung/.android/build-cache/8481d7d06c79ffc8a65baceb2d07a9d3e4f2cda5/output/AndroidManifest.xml:17:5-42
 MERGED from [com.android.support:gridlayout-v7:23.3.0] /Users/duongtung/.android/build-cache/96946fc1401344862472bda702fbb5dccbe8d011/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/4e981089f2cb91d86a24311e6078bc299c02352f/output/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/duongtung/.android/build-cache/3d3cd279e13aceafe17417f27c7a5a4165858790/output/AndroidManifest.xml:5:5-43
 MERGED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:37:5-72
-MERGED from [com.android.support:support-v4:23.3.0] /Users/duongtung/.android/build-cache/de919753c566a46ab08927f4f3240d9356c72112/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/duongtung/.android/build-cache/5b0e742419e35fa0bd145385fc8d853790618e54/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-v4-preferencefragment:1.0.0] /Users/duongtung/.android/build-cache/1ec12b5c73ba83d14c1a20e9babbe6c2eca2937c/output/AndroidManifest.xml:15:5-72
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/duongtung/.android/build-cache/0ce9f859f141cf546cc0b20935c3d0e7705f1b67/output/AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
@@ -414,6 +440,122 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/duon
 	android:minSdkVersion
 		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
 		INJECTED from /Users/duongtung/Freelancer/leopedia/bitwallet/wallet/src/main/AndroidManifest.xml
+service#com.google.firebase.crash.internal.service.FirebaseCrashReceiverService
+ADDED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:24:9-117
+	android:process
+		ADDED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:24:80-115
+	android:name
+		ADDED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:24:18-79
+service#com.google.firebase.crash.internal.service.FirebaseCrashSenderService
+ADDED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:26:9-115
+	android:process
+		ADDED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:26:78-113
+	android:name
+		ADDED from [com.google.firebase:firebase-crash:9.6.1] /Users/duongtung/.android/build-cache/b6626351a0bbbceeed53f4203f75247ef4ae3bd6/output/AndroidManifest.xml:26:18-77
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.1] /Users/duongtung/.android/build-cache/df5f384d383f364b98e992a95c514dac5db88353/output/AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.1] /Users/duongtung/.android/build-cache/df5f384d383f364b98e992a95c514dac5db88353/output/AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:9.6.1] /Users/duongtung/.android/build-cache/8b32b46de0dc78ecc2328f797f3bfccf4173899a/output/AndroidManifest.xml:32:16-87
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:22:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:30:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:31:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:32:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:33:17-85
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:33:25-83
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:34:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:40:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:40:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:40:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:44:9-48:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:44:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:44:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:45:13-47:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:45:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:46:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:9.6.1] /Users/duongtung/.android/build-cache/022a3cec549a35de8deeb0283057a5791c3575a1/output/AndroidManifest.xml:46:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.6.1] /Users/duongtung/.android/build-cache/7bbb77f86aa4c44a1fcb73e64c2d4788fe7fda33/output/AndroidManifest.xml:6:9-175
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.6.1] /Users/duongtung/.android/build-cache/7bbb77f86aa4c44a1fcb73e64c2d4788fe7fda33/output/AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.6.1] /Users/duongtung/.android/build-cache/7bbb77f86aa4c44a1fcb73e64c2d4788fe7fda33/output/AndroidManifest.xml:6:125-149
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:9.6.1] /Users/duongtung/.android/build-cache/7bbb77f86aa4c44a1fcb73e64c2d4788fe7fda33/output/AndroidManifest.xml:6:150-173
+	android:name
+		ADDED from [com.google.firebase:firebase-common:9.6.1] /Users/duongtung/.android/build-cache/7bbb77f86aa4c44a1fcb73e64c2d4788fe7fda33/output/AndroidManifest.xml:6:79-124
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.6.1] /Users/duongtung/.android/build-cache/8481d7d06c79ffc8a65baceb2d07a9d3e4f2cda5/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.6.1] /Users/duongtung/.android/build-cache/8481d7d06c79ffc8a65baceb2d07a9d3e4f2cda5/output/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.6.1] /Users/duongtung/.android/build-cache/8481d7d06c79ffc8a65baceb2d07a9d3e4f2cda5/output/AndroidManifest.xml:20:20-65
 activity#org.acra.dialog.CrashReportDialog
 ADDED from [ch.acra:acra:4.8.5] /Users/duongtung/.android/build-cache/62f869f31f4f3d55586a43b15036452673d42b85/output/AndroidManifest.xml:40:9-217
 	android:excludeFromRecents

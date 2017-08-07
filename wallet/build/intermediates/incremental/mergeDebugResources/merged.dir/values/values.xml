@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <attr format="reference" name="constraintSet"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -235,6 +235,7 @@
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
+    <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
@@ -426,6 +427,7 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="crash_reporting_present" type="id"/>
     <item name="home" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
@@ -435,6 +437,7 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="google_play_services_version">9683000</integer>
     <integer name="preference_fragment_scrollbarStyle">0x02000000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <plurals name="status_building">
@@ -565,6 +568,7 @@
     <string name="coin_already_added">Additional accounts are not yet supported</string>
     <string name="coin_already_added_title">%1$s already added</string>
     <string name="coinomi_website" translatable="false">https://coinomi.com</string>
+    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. If the problem persists, please contact the developer for assistance.</string>
     <string name="contacting_exchange">Contacting exchange…</string>
     <string name="copied_to_clipboard">Copied to clipboard</string>
     <string name="create_new_address">Create a new address?</string>
@@ -574,6 +578,7 @@
     <string name="debugging_info">You can use a collection of tools to debug various issues with your wallet.</string>
     <string name="debugging_test_wallet_password">Wallet unlocking tests</string>
     <string name="debugging_test_wallet_password_results">Unlocked wallet: %1$s\n\nFingerprints\nInput: %2$s\nKey: %3$s</string>
+    <string name="default_web_client_id" translatable="false">4528405219-6pv820q1af0csv94s74epdb41gkae449.apps.googleusercontent.com</string>
     <string name="digit_0">0</string>
     <string name="digit_1">1</string>
     <string name="digit_2">2</string>
@@ -608,6 +613,7 @@
     <string name="extra_entropy">Extra entropy</string>
     <string name="fee">Transaction fee</string>
     <string name="finish_fragment_label_finish">Your device is ready \n Now you can start using Wallet</string>
+    <string name="firebase_database_url" translatable="false">https://level-approach-133618.firebaseio.com</string>
     <string name="font_icon_arrow_down" translatable="false"></string>
     <string name="font_icon_arrow_left" translatable="false"></string>
     <string name="font_icon_arrow_right" translatable="false"></string>
@@ -648,8 +654,13 @@
     <string name="font_icon_v_card" translatable="false"></string>
     <string name="font_icon_wallet" translatable="false"></string>
     <string name="font_icon_warning" translatable="false"></string>
+    <string name="gcm_defaultSenderId" translatable="false">4528405219</string>
     <string name="get_tx_broadcast_error">Transaction broadcast error</string>
     <string name="get_tx_info_error">Could not get transaction information</string>
+    <string name="google_api_key" translatable="false">AIzaSyA1KtKQmt_QUZCcnRUzbGlI00XFm6lpLBw</string>
+    <string name="google_app_id" translatable="false">1:4528405219:android:bf69c62bc9434bc9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA1KtKQmt_QUZCcnRUzbGlI00XFm6lpLBw</string>
+    <string name="google_storage_bucket" translatable="false">level-approach-133618.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="history_empty">No coins received so far!\n\nYou can get some through an exchange, trading and selling goods or services.</string>
     <string name="incompatible_device_warning_message">This device cannot perform certain cryptographic functions due to software or hardware bugs.\nThis could be solved with an update from the device manufacturer.\n\nContact us if you have any questions: support@coinomi.com</string>
@@ -693,6 +704,7 @@
     <string name="preparing_transaction">Please wait while your transaction is being prepared and sent.</string>
     <string name="previous_addresses_unused">Unused address</string>
     <string name="previous_addresses_used">Used address</string>
+    <string name="project_id" translatable="false">level-approach-133618</string>
     <string name="receive">Receive</string>
     <string name="receive_address_label">My address</string>
     <string name="received">Received</string>

@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 249,
+                    "endOffset": 350
+                },
+                "from": {
+                    "file": "/Users/duongtung/.android/build-cache/8481d7d06c79ffc8a65baceb2d07a9d3e4f2cda5/output/res/values-ka/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 343,
+                        "endColumn": 249,
+                        "endOffset": 588
+                    }
+                }
+            }
+        ]
+    }
+]

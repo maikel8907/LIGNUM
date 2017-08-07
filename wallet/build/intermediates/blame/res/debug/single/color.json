@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/duongtung/.android/build-cache/cc9e926ce2ff7669210c4107f3cf9a8b088c6f3c/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/duongtung/.android/build-cache/cc9e926ce2ff7669210c4107f3cf9a8b088c6f3c/output/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
         "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/color/abc_primary_text_material_light.xml"
     },
@@ -18,6 +26,14 @@
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
         "source": "/Users/duongtung/.android/build-cache/605cdfda2d2f32c93c999e8543a959d7a066ea10/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_dark.xml",
+        "source": "/Users/duongtung/.android/build-cache/cc9e926ce2ff7669210c4107f3cf9a8b088c6f3c/output/res/color/common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_light.xml",
+        "source": "/Users/duongtung/.android/build-cache/cc9e926ce2ff7669210c4107f3cf9a8b088c6f3c/output/res/color/common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/duongtung/Freelancer/leopedia/bitwallet/wallet/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",

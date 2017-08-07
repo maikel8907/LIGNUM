@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "4528405219",
+    "firebase_url": "https://level-approach-133618.firebaseio.com",
+    "project_id": "level-approach-133618",
+    "storage_bucket": "level-approach-133618.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4528405219:android:bf69c62bc9434bc9",
+        "android_client_info": {
+          "package_name": "com.bachduong.bitwallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4528405219-6pv820q1af0csv94s74epdb41gkae449.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1KtKQmt_QUZCcnRUzbGlI00XFm6lpLBw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
