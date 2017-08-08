@@ -104,6 +104,8 @@ com.bachduong.bitwallet.ExchangeRatesProvider:
     133:150:public static java.util.Map getRates(android.content.Context,java.lang.String)
     154:154:public static java.lang.String getCurrencyCodeId(android.database.Cursor)
     158:166:public static com.bachduong.bitwallet.ExchangeRatesProvider$ExchangeRate getExchangeRate(android.database.Cursor)
+com.bachduong.bitwallet.Manifest
+com.bachduong.bitwallet.Manifest$permission
 com.bachduong.bitwallet.R
 com.bachduong.bitwallet.R$anim
 com.bachduong.bitwallet.R$attr
@@ -828,6 +830,675 @@ com.bachduong.stratumj.messages.BaseMessage
 com.bachduong.stratumj.messages.CallMessage
 com.bachduong.stratumj.messages.MessageException
 com.bachduong.stratumj.messages.ResultMessage
+com.google.android.gms.R:
+    9:9:public R()
+com.google.android.gms.R$attr
+com.google.android.gms.R$id
+com.google.android.gms.R$integer
+com.google.android.gms.R$string:
+    32:32:public R$string()
+com.google.android.gms.R$styleable
+com.google.android.gms.actions.ItemListIntents
+com.google.android.gms.actions.NoteIntents
+com.google.android.gms.actions.ReserveIntents
+com.google.android.gms.actions.SearchIntents
+com.google.android.gms.ads.identifier.AdvertisingIdClient:
+    public AdvertisingIdClient(android.content.Context)
+    public void start()
+com.google.android.gms.common.AccountPicker
+com.google.android.gms.common.ConnectionResult:
+    public static final int SUCCESS
+    public static final int SERVICE_MISSING
+    public static final int SERVICE_VERSION_UPDATE_REQUIRED
+    public static final int SERVICE_DISABLED
+    public static final int SIGN_IN_REQUIRED
+    public static final int INVALID_ACCOUNT
+    public static final int RESOLUTION_REQUIRED
+    public static final int NETWORK_ERROR
+    public static final int INTERNAL_ERROR
+    public static final int SERVICE_INVALID
+    public static final int DEVELOPER_ERROR
+    public static final int LICENSE_CHECK_FAILED
+    public static final int CANCELED
+    public static final int TIMEOUT
+    public static final int INTERRUPTED
+    public static final int API_UNAVAILABLE
+    public static final int SIGN_IN_FAILED
+    public static final int SERVICE_UPDATING
+    public static final int SERVICE_MISSING_PERMISSION
+    public static final int RESTRICTED_PROFILE
+    public static final int DRIVE_EXTERNAL_STORAGE_REQUIRED
+    public void startResolutionForResult(android.app.Activity,int)
+    public boolean hasResolution()
+com.google.android.gms.common.GooglePlayServicesRepairableException:
+    private final int fF
+    GooglePlayServicesRepairableException(int,java.lang.String,android.content.Intent)
+    public int getConnectionStatusCode()
+com.google.android.gms.common.Scopes
+com.google.android.gms.common.UserRecoverableException:
+    private final android.content.Intent mIntent
+    public UserRecoverableException(java.lang.String,android.content.Intent)
+    public android.content.Intent getIntent()
+com.google.android.gms.common.api.CommonStatusCodes:
+    public static final int SUCCESS_CACHE
+    public static final int SUCCESS
+    public static final int SERVICE_VERSION_UPDATE_REQUIRED
+    public static final int SERVICE_DISABLED
+    public static final int SIGN_IN_REQUIRED
+    public static final int INVALID_ACCOUNT
+    public static final int RESOLUTION_REQUIRED
+    public static final int NETWORK_ERROR
+    public static final int INTERNAL_ERROR
+    public static final int DEVELOPER_ERROR
+    public static final int ERROR
+    public static final int INTERRUPTED
+    public static final int TIMEOUT
+    public static final int CANCELED
+    public static final int API_NOT_CONNECTED
+    public static final int DEAD_CLIENT
+    public CommonStatusCodes()
+com.google.android.gms.common.api.Releasable
+com.google.android.gms.common.api.ResolvingResultCallbacks
+com.google.android.gms.common.api.Result
+com.google.android.gms.common.api.ResultCallback
+com.google.android.gms.common.api.ResultCallbacks
+com.google.android.gms.common.api.Scope:
+    public Scope(java.lang.String)
+com.google.android.gms.common.api.Status:
+    public Status(int,java.lang.String,android.app.PendingIntent)
+    public void startResolutionForResult(android.app.Activity,int)
+    public boolean hasResolution()
+    public boolean isCanceled()
+    public boolean isInterrupted()
+    public android.app.PendingIntent getResolution()
+    public com.google.android.gms.common.api.Status getStatus()
+com.google.android.gms.common.api.zza
+com.google.android.gms.common.api.zze
+com.google.android.gms.common.internal.BinderWrapper
+com.google.android.gms.common.internal.BinderWrapper$1
+com.google.android.gms.common.internal.DowngradeableSafeParcel
+com.google.android.gms.common.internal.safeparcel.zza:
+    public static java.lang.Boolean zzd(android.os.Parcel,int)
+    public static byte zze(android.os.Parcel,int)
+    public static short zzf(android.os.Parcel,int)
+    public static java.lang.Integer zzh(android.os.Parcel,int)
+    public static java.math.BigInteger zzk(android.os.Parcel,int)
+    public static float zzl(android.os.Parcel,int)
+    public static double zzn(android.os.Parcel,int)
+    public static java.math.BigDecimal zzp(android.os.Parcel,int)
+    public static byte[] zzt(android.os.Parcel,int)
+    public static byte[][] zzu(android.os.Parcel,int)
+    public static boolean[] zzv(android.os.Parcel,int)
+    public static int[] zzw(android.os.Parcel,int)
+    public static long[] zzx(android.os.Parcel,int)
+    public static java.math.BigInteger[] zzy(android.os.Parcel,int)
+    public static float[] zzz(android.os.Parcel,int)
+    public static double[] zzaa(android.os.Parcel,int)
+    public static java.math.BigDecimal[] zzab(android.os.Parcel,int)
+    public static java.lang.String[] zzac(android.os.Parcel,int)
+    public static java.util.ArrayList zzad(android.os.Parcel,int)
+    public static java.util.ArrayList zzae(android.os.Parcel,int)
+    public static java.util.ArrayList zzc(android.os.Parcel,int,android.os.Parcelable$Creator)
+    public static android.os.Parcel zzaf(android.os.Parcel,int)
+    public static android.os.Parcel[] zzag(android.os.Parcel,int)
+    public static void zza(android.os.Parcel,int,java.util.List,java.lang.ClassLoader)
+com.google.android.gms.common.internal.safeparcel.zzb:
+    public static void zza(android.os.Parcel,int,java.lang.Boolean,boolean)
+    public static void zza(android.os.Parcel,int,byte)
+    public static void zza(android.os.Parcel,int,short)
+    public static void zza(android.os.Parcel,int,java.lang.Integer,boolean)
+    public static void zza(android.os.Parcel,int,float)
+    public static void zza(android.os.Parcel,int,double)
+    public static void zza(android.os.Parcel,int,byte[],boolean)
+    public static void zza(android.os.Parcel,int,byte[][],boolean)
+    public static void zza(android.os.Parcel,int,boolean[],boolean)
+    public static void zza(android.os.Parcel,int,int[],boolean)
+    public static void zza(android.os.Parcel,int,long[],boolean)
+    public static void zza(android.os.Parcel,int,float[],boolean)
+    public static void zza(android.os.Parcel,int,java.lang.String[],boolean)
+    public static void zza(android.os.Parcel,int,java.util.List,boolean)
+    public static void zzb(android.os.Parcel,int,java.util.List,boolean)
+    public static void zzc(android.os.Parcel,int,java.util.List,boolean)
+    public static void zza(android.os.Parcel,int,android.os.Parcel,boolean)
+    public static void zzd(android.os.Parcel,int,java.util.List,boolean)
+com.google.android.gms.common.internal.safeparcel.zzc
+com.google.android.gms.common.internal.zzac:
+    public static int zza(int,java.lang.Object)
+    public static int zzgq(int)
+    public static long zza(long,java.lang.Object)
+    public static varargs void zza(boolean,java.lang.String,java.lang.Object[])
+    public static varargs void zzb(boolean,java.lang.String,java.lang.Object[])
+    public static void zzavb()
+com.google.android.gms.common.internal.zzal
+com.google.android.gms.common.internal.zzc
+com.google.android.gms.common.internal.zze:
+    public void disconnect()
+    public void zza(com.google.android.gms.common.internal.zze$zzf,com.google.android.gms.common.ConnectionResult)
+    public final android.content.Context getContext()
+    public final android.os.Looper getLooper()
+    public boolean zzapr()
+    public boolean zzahs()
+    public android.content.Intent zzaht()
+    public void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
+    public android.os.IBinder zzaps()
+com.google.android.gms.common.internal.zzn:
+    public abstract boolean zza(android.content.ComponentName,android.content.ServiceConnection,java.lang.String)
+    public abstract void zzb(android.content.ComponentName,android.content.ServiceConnection,java.lang.String)
+com.google.android.gms.common.internal.zzo:
+    public boolean zza(android.content.ComponentName,android.content.ServiceConnection,java.lang.String)
+    public void zzb(android.content.ComponentName,android.content.ServiceConnection,java.lang.String)
+com.google.android.gms.common.internal.zzo$zza:
+    public zzo$zza(android.content.ComponentName)
+com.google.android.gms.common.internal.zzp
+com.google.android.gms.common.internal.zzq
+com.google.android.gms.common.internal.zzs
+com.google.android.gms.common.internal.zzs$zza
+com.google.android.gms.common.internal.zzs$zza$zza
+com.google.android.gms.common.internal.zzt$zza:
+    public static com.google.android.gms.common.internal.zzt zzdt(android.os.IBinder)
+com.google.android.gms.common.internal.zzt$zza$zza
+com.google.android.gms.common.internal.zzw
+com.google.android.gms.common.internal.zzw$zza
+com.google.android.gms.common.internal.zzw$zza$zza
+com.google.android.gms.common.internal.zzz
+com.google.android.gms.common.server.FavaDiagnosticsEntity
+com.google.android.gms.common.server.converter.ConverterWrapper
+com.google.android.gms.common.server.converter.StringToIntConverter
+com.google.android.gms.common.server.converter.StringToIntConverter$Entry
+com.google.android.gms.common.server.converter.zza
+com.google.android.gms.common.server.converter.zzb
+com.google.android.gms.common.server.converter.zzc
+com.google.android.gms.common.server.response.FastJsonResponse
+com.google.android.gms.common.server.response.FastJsonResponse$Field
+com.google.android.gms.common.server.response.FastJsonResponse$zza
+com.google.android.gms.common.server.response.FastSafeParcelableJsonResponse
+com.google.android.gms.common.server.response.FieldMappingDictionary
+com.google.android.gms.common.server.response.FieldMappingDictionary$Entry
+com.google.android.gms.common.server.response.FieldMappingDictionary$FieldMapPair
+com.google.android.gms.common.server.response.SafeParcelResponse
+com.google.android.gms.common.server.response.zza
+com.google.android.gms.common.server.response.zzb
+com.google.android.gms.common.server.response.zzc
+com.google.android.gms.common.server.response.zzd
+com.google.android.gms.common.server.response.zze
+com.google.android.gms.common.server.zza
+com.google.android.gms.common.stats.WakeLockEvent
+com.google.android.gms.common.stats.zzc$zzb
+com.google.android.gms.common.stats.zzf
+com.google.android.gms.common.stats.zzg
+com.google.android.gms.common.stats.zzh
+com.google.android.gms.common.util.zza
+com.google.android.gms.common.util.zzb
+com.google.android.gms.common.util.zzc
+com.google.android.gms.common.util.zzd:
+    public static int zzv(android.content.Context,java.lang.String)
+    public static int zza(android.content.pm.PackageInfo)
+    public static android.content.pm.PackageInfo zzw(android.content.Context,java.lang.String)
+com.google.android.gms.common.util.zzf:
+    public static java.util.List zzc(java.lang.Object,java.lang.Object)
+    public static java.util.Set zzaxh()
+    public static java.util.Set zzaa(java.lang.Object)
+    public static java.util.Set zzd(java.lang.Object,java.lang.Object)
+    public static java.util.Set zza(java.lang.Object,java.lang.Object,java.lang.Object)
+    public static java.util.Set zza(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+    public static varargs java.util.Set zzc(java.lang.Object[])
+    public static java.util.Map zza(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+com.google.android.gms.common.util.zzg
+com.google.android.gms.common.util.zzi:
+    private static java.lang.Boolean EL
+    private static java.lang.Boolean EM
+    private static java.lang.Boolean EO
+    public static boolean zzb(android.content.res.Resources)
+    private static boolean zzc(android.content.res.Resources)
+    public static boolean zzcm(android.content.Context)
+com.google.android.gms.common.util.zzj
+com.google.android.gms.common.util.zzk
+com.google.android.gms.common.util.zzn
+com.google.android.gms.common.util.zzo
+com.google.android.gms.common.util.zzp
+com.google.android.gms.common.util.zzq
+com.google.android.gms.common.util.zzr
+com.google.android.gms.common.util.zzs:
+    public static boolean zzaxk()
+    public static boolean zzaxm()
+    public static boolean zzaxo()
+    public static boolean zzaxp()
+    public static boolean zzaxt()
+    public static boolean zzaxv()
+com.google.android.gms.common.util.zzu
+com.google.android.gms.common.util.zzv
+com.google.android.gms.common.util.zzz
+com.google.android.gms.common.zza:
+    public android.os.IBinder zzapc()
+com.google.android.gms.common.zzc:
+    public static final java.lang.String GOOGLE_PLAY_SERVICES_PACKAGE
+    public void zzbp(android.content.Context)
+    public boolean isUserResolvableError(int)
+    public android.content.Intent zzfl(int)
+    public android.content.Intent zza(android.content.Context,int,java.lang.String)
+    public android.app.PendingIntent getErrorResolutionPendingIntent(android.content.Context,int,int)
+    public android.app.PendingIntent zza(android.content.Context,int,int,java.lang.String)
+    public void zzbq(android.content.Context)
+    public java.lang.String getOpenSourceSoftwareLicenseInfo(android.content.Context)
+    public int zzbo(android.content.Context)
+    public boolean zzd(android.content.Context,int)
+    public boolean zzs(android.content.Context,java.lang.String)
+    public java.lang.String getErrorString(int)
+    private java.lang.String zzt(android.content.Context,java.lang.String)
+com.google.android.gms.common.zzd:
+    private static com.google.android.gms.common.internal.zzw uO
+    private static java.util.Set uQ
+    private static java.util.Set uR
+    private static boolean zzape()
+    private static java.util.Set zza(android.os.IBinder[])
+    static synchronized java.util.Set zzapf()
+    static synchronized java.util.Set zzapg()
+com.google.android.gms.common.zze:
+    public static final java.lang.String GOOGLE_PLAY_SERVICES_PACKAGE
+    public static final java.lang.String GOOGLE_PLAY_STORE_PACKAGE
+    zze()
+    public static java.lang.String getErrorString(int)
+    public static void zzbc(android.content.Context)
+    public static android.content.Intent zzfm(int)
+    static boolean zzfn(int)
+    public static android.app.PendingIntent getErrorPendingIntent(int,android.content.Context,int)
+    public static void zzbq(android.content.Context)
+    public static boolean isUserRecoverableError(int)
+    public static java.lang.String getOpenSourceSoftwareLicenseInfo(android.content.Context)
+    public static android.content.res.Resources getRemoteResource(android.content.Context)
+    public static android.content.Context getRemoteContext(android.content.Context)
+    public static int zzbo(android.content.Context)
+    public static boolean zze(android.content.Context,int)
+com.google.android.gms.common.zzf:
+    public boolean zzb(android.content.pm.PackageManager,java.lang.String)
+    public boolean zza(android.content.pm.PackageManager,android.content.pm.PackageInfo)
+    private boolean zzb(android.content.pm.PackageInfo,boolean)
+com.google.android.gms.dynamic.LifecycleDelegate
+com.google.android.gms.dynamic.zzb
+com.google.android.gms.dynamic.zzc
+com.google.android.gms.dynamic.zzc$zza
+com.google.android.gms.dynamic.zzc$zza$zza
+com.google.android.gms.dynamic.zzf
+com.google.android.gms.dynamic.zzg
+com.google.android.gms.dynamic.zzg$zza
+com.google.android.gms.dynamic.zzh
+com.google.android.gms.internal.zza
+com.google.android.gms.internal.zzaa
+com.google.android.gms.internal.zzab
+com.google.android.gms.internal.zzac
+com.google.android.gms.internal.zzad
+com.google.android.gms.internal.zzad$zza
+com.google.android.gms.internal.zzae
+com.google.android.gms.internal.zzae$zza
+com.google.android.gms.internal.zzae$zza$zza
+com.google.android.gms.internal.zzae$zza$zzb
+com.google.android.gms.internal.zzae$zzb
+com.google.android.gms.internal.zzae$zzc
+com.google.android.gms.internal.zzae$zzd
+com.google.android.gms.internal.zzae$zze
+com.google.android.gms.internal.zzae$zzf
+com.google.android.gms.internal.zzaf
+com.google.android.gms.internal.zzafz
+com.google.android.gms.internal.zzafz$1
+com.google.android.gms.internal.zzafz$1$1
+com.google.android.gms.internal.zzag
+com.google.android.gms.internal.zzamz:
+    public static com.google.android.gms.internal.zzamz L()
+    public boolean M()
+com.google.android.gms.internal.zzana:
+    public static com.google.android.gms.internal.zzana N()
+    public java.util.Set O()
+    public com.google.firebase.FirebaseOptions zzua(java.lang.String)
+com.google.android.gms.internal.zzanb
+com.google.android.gms.internal.zzanc
+com.google.android.gms.internal.zzand
+com.google.android.gms.internal.zzanw
+com.google.android.gms.internal.zzanx
+com.google.android.gms.internal.zzany
+com.google.android.gms.internal.zzanz
+com.google.android.gms.internal.zzanz$1
+com.google.android.gms.internal.zzanz$2
+com.google.android.gms.internal.zzanz$3
+com.google.android.gms.internal.zzanz$4
+com.google.android.gms.internal.zzanz$5
+com.google.android.gms.internal.zzaoa
+com.google.android.gms.internal.zzaob
+com.google.android.gms.internal.zzaob$1
+com.google.android.gms.internal.zzaob$2
+com.google.android.gms.internal.zzaob$3
+com.google.android.gms.internal.zzaob$4
+com.google.android.gms.internal.zzaob$5
+com.google.android.gms.internal.zzaob$zza
+com.google.android.gms.internal.zzaoc
+com.google.android.gms.internal.zzaod
+com.google.android.gms.internal.zzaoe
+com.google.android.gms.internal.zzaof
+com.google.android.gms.internal.zzaog
+com.google.android.gms.internal.zzaoh
+com.google.android.gms.internal.zzaoi
+com.google.android.gms.internal.zzaoj
+com.google.android.gms.internal.zzaok
+com.google.android.gms.internal.zzaol
+com.google.android.gms.internal.zzaom
+com.google.android.gms.internal.zzaon
+com.google.android.gms.internal.zzaoo
+com.google.android.gms.internal.zzaop
+com.google.android.gms.internal.zzaoq
+com.google.android.gms.internal.zzaor
+com.google.android.gms.internal.zzaor$1
+com.google.android.gms.internal.zzaor$2
+com.google.android.gms.internal.zzaos
+com.google.android.gms.internal.zzaos$1
+com.google.android.gms.internal.zzaos$zza
+com.google.android.gms.internal.zzaot
+com.google.android.gms.internal.zzaou
+com.google.android.gms.internal.zzaov
+com.google.android.gms.internal.zzaow
+com.google.android.gms.internal.zzaox
+com.google.android.gms.internal.zzaoy
+com.google.android.gms.internal.zzaoz
+com.google.android.gms.internal.zzapa
+com.google.android.gms.internal.zzapa$zza
+com.google.android.gms.internal.zzapa$zzb
+com.google.android.gms.internal.zzapa$zzc
+com.google.android.gms.internal.zzapb
+com.google.android.gms.internal.zzapb$1
+com.google.android.gms.internal.zzapb$10
+com.google.android.gms.internal.zzapb$11
+com.google.android.gms.internal.zzapb$12
+com.google.android.gms.internal.zzapb$2
+com.google.android.gms.internal.zzapb$3
+com.google.android.gms.internal.zzapb$4
+com.google.android.gms.internal.zzapb$5
+com.google.android.gms.internal.zzapb$6
+com.google.android.gms.internal.zzapb$7
+com.google.android.gms.internal.zzapb$8
+com.google.android.gms.internal.zzapb$9
+com.google.android.gms.internal.zzapc
+com.google.android.gms.internal.zzapc$1
+com.google.android.gms.internal.zzapd
+com.google.android.gms.internal.zzape
+com.google.android.gms.internal.zzapf
+com.google.android.gms.internal.zzapf$1
+com.google.android.gms.internal.zzapf$zza
+com.google.android.gms.internal.zzapf$zza$1
+com.google.android.gms.internal.zzapf$zzb
+com.google.android.gms.internal.zzapf$zzb$1
+com.google.android.gms.internal.zzapf$zzc
+com.google.android.gms.internal.zzapf$zzd
+com.google.android.gms.internal.zzapg
+com.google.android.gms.internal.zzaph
+com.google.android.gms.internal.zzapi
+com.google.android.gms.internal.zzapi$1
+com.google.android.gms.internal.zzapi$zza
+com.google.android.gms.internal.zzapi$zza$zza
+com.google.android.gms.internal.zzapj
+com.google.android.gms.internal.zzapj$1
+com.google.android.gms.internal.zzapj$2
+com.google.android.gms.internal.zzapj$3
+com.google.android.gms.internal.zzapj$4
+com.google.android.gms.internal.zzapk
+com.google.android.gms.internal.zzapk$1
+com.google.android.gms.internal.zzapl
+com.google.android.gms.internal.zzapl$zza
+com.google.android.gms.internal.zzapm
+com.google.android.gms.internal.zzapm$1
+com.google.android.gms.internal.zzapn
+com.google.android.gms.internal.zzapo
+com.google.android.gms.internal.zzapo$1
+com.google.android.gms.internal.zzapp
+com.google.android.gms.internal.zzapp$1
+com.google.android.gms.internal.zzapq
+com.google.android.gms.internal.zzapq$zza
+com.google.android.gms.internal.zzapr
+com.google.android.gms.internal.zzapr$1
+com.google.android.gms.internal.zzapr$2
+com.google.android.gms.internal.zzaps
+com.google.android.gms.internal.zzaps$1
+com.google.android.gms.internal.zzaps$zza
+com.google.android.gms.internal.zzaps$zzb
+com.google.android.gms.internal.zzapt
+com.google.android.gms.internal.zzapt$1
+com.google.android.gms.internal.zzapu
+com.google.android.gms.internal.zzapu$1
+com.google.android.gms.internal.zzapv
+com.google.android.gms.internal.zzapw
+com.google.android.gms.internal.zzapw$1
+com.google.android.gms.internal.zzapw$10
+com.google.android.gms.internal.zzapw$11
+com.google.android.gms.internal.zzapw$12
+com.google.android.gms.internal.zzapw$13
+com.google.android.gms.internal.zzapw$14
+com.google.android.gms.internal.zzapw$15
+com.google.android.gms.internal.zzapw$15$1
+com.google.android.gms.internal.zzapw$16
+com.google.android.gms.internal.zzapw$17
+com.google.android.gms.internal.zzapw$18
+com.google.android.gms.internal.zzapw$19
+com.google.android.gms.internal.zzapw$2
+com.google.android.gms.internal.zzapw$20
+com.google.android.gms.internal.zzapw$21
+com.google.android.gms.internal.zzapw$22
+com.google.android.gms.internal.zzapw$23
+com.google.android.gms.internal.zzapw$24
+com.google.android.gms.internal.zzapw$25
+com.google.android.gms.internal.zzapw$26
+com.google.android.gms.internal.zzapw$27
+com.google.android.gms.internal.zzapw$28
+com.google.android.gms.internal.zzapw$29
+com.google.android.gms.internal.zzapw$3
+com.google.android.gms.internal.zzapw$30
+com.google.android.gms.internal.zzapw$31
+com.google.android.gms.internal.zzapw$32
+com.google.android.gms.internal.zzapw$4
+com.google.android.gms.internal.zzapw$5
+com.google.android.gms.internal.zzapw$6
+com.google.android.gms.internal.zzapw$7
+com.google.android.gms.internal.zzapw$8
+com.google.android.gms.internal.zzapw$9
+com.google.android.gms.internal.zzapw$zza
+com.google.android.gms.internal.zzapx
+com.google.android.gms.internal.zzapy
+com.google.android.gms.internal.zzapy$1
+com.google.android.gms.internal.zzapz
+com.google.android.gms.internal.zzaqa
+com.google.android.gms.internal.zzaqb
+com.google.android.gms.internal.zzarc:
+    public long cB()
+    public void zza(com.google.android.gms.internal.zzark,int)
+    public byte[] readBytes()
+    public int cD()
+    public long cE()
+    public static int zzahb(int)
+    public static long zzcv(long)
+    public byte[] zzad(int,int)
+com.google.android.gms.internal.zzard:
+    public void zzc(int,long)
+    public void zza(int,byte[])
+    public void zzaf(int,int)
+    public void zzd(int,long)
+    public void zzcy(long)
+    public void zzb(com.google.android.gms.internal.zzark)
+    public void zzbf(byte[])
+    public void zzahh(int)
+    public void zzcz(long)
+    public static int zze(int,long)
+    public static int zzg(int,long)
+    public static int zzb(int,com.google.android.gms.internal.zzark)
+    public static int zzb(int,byte[])
+    public static int zzah(int,int)
+    public static int zzh(int,long)
+    public static int zzdc(long)
+    public static int zzd(com.google.android.gms.internal.zzark)
+    public static int zzbg(byte[])
+    public static int zzahj(int)
+    public static int zzdd(long)
+    public void zzbh(byte[])
+    public void zzd(byte[],int,int)
+    public static int zzahp(int)
+    public static long zzdh(long)
+com.google.android.gms.internal.zzare
+com.google.android.gms.internal.zzarf
+com.google.android.gms.internal.zzarg
+com.google.android.gms.internal.zzarh
+com.google.android.gms.internal.zzari:
+    public static boolean equals(int[],int[])
+    public static boolean equals(float[],float[])
+    public static boolean zza(byte[][],byte[][])
+    public static int hashCode(int[])
+    public static int hashCode(float[])
+    public static int zzb(byte[][])
+    public static void zza(com.google.android.gms.internal.zzare,com.google.android.gms.internal.zzare)
+com.google.android.gms.internal.zzark:
+    public static final byte[] zzf(com.google.android.gms.internal.zzark)
+    public static final void zza(com.google.android.gms.internal.zzark,byte[],int,int)
+    public static final com.google.android.gms.internal.zzark zza(com.google.android.gms.internal.zzark,byte[])
+    public static final com.google.android.gms.internal.zzark zzb(com.google.android.gms.internal.zzark,byte[],int,int)
+com.google.android.gms.internal.zzarm
+com.google.android.gms.internal.zzb
+com.google.android.gms.internal.zzb$zza
+com.google.android.gms.internal.zzc
+com.google.android.gms.internal.zzc$1
+com.google.android.gms.internal.zzd
+com.google.android.gms.internal.zze
+com.google.android.gms.internal.zze$1
+com.google.android.gms.internal.zze$zza
+com.google.android.gms.internal.zzf
+com.google.android.gms.internal.zzg
+com.google.android.gms.internal.zzh
+com.google.android.gms.internal.zzi
+com.google.android.gms.internal.zzj
+com.google.android.gms.internal.zzk
+com.google.android.gms.internal.zzk$1
+com.google.android.gms.internal.zzk$zza
+com.google.android.gms.internal.zzl
+com.google.android.gms.internal.zzl$zza
+com.google.android.gms.internal.zzm
+com.google.android.gms.internal.zzm$zza
+com.google.android.gms.internal.zzm$zzb
+com.google.android.gms.internal.zzn
+com.google.android.gms.internal.zzo
+com.google.android.gms.internal.zzp
+com.google.android.gms.internal.zzq
+com.google.android.gms.internal.zzqz
+com.google.android.gms.internal.zzr
+com.google.android.gms.internal.zzra
+com.google.android.gms.internal.zzrb
+com.google.android.gms.internal.zzrc
+com.google.android.gms.internal.zzrc$1
+com.google.android.gms.internal.zzrn
+com.google.android.gms.internal.zzrn$1
+com.google.android.gms.internal.zzrs:
+    public static com.google.android.gms.internal.zzrs zza(java.lang.String,java.lang.Float)
+com.google.android.gms.internal.zzrs$4
+com.google.android.gms.internal.zzrs$zza:
+    public abstract java.lang.Float zzb(java.lang.String,java.lang.Float)
+com.google.android.gms.internal.zzs
+com.google.android.gms.internal.zzs$zza
+com.google.android.gms.internal.zzs$zza$zza
+com.google.android.gms.internal.zzse
+com.google.android.gms.internal.zzsf
+com.google.android.gms.internal.zzsg
+com.google.android.gms.internal.zzsh:
+    public int checkPermission(java.lang.String,java.lang.String)
+    public java.lang.CharSequence zzik(java.lang.String)
+com.google.android.gms.internal.zzsu:
+    public static int zzab(android.content.Context,java.lang.String)
+    public android.content.Context zzbdy()
+com.google.android.gms.internal.zzt
+com.google.android.gms.internal.zzu
+com.google.android.gms.internal.zzu$1
+com.google.android.gms.internal.zzv
+com.google.android.gms.internal.zzv$1
+com.google.android.gms.internal.zzv$zza
+com.google.android.gms.internal.zzv$zzb
+com.google.android.gms.internal.zzw
+com.google.android.gms.internal.zzw$zza
+com.google.android.gms.internal.zzx
+com.google.android.gms.internal.zzxb
+com.google.android.gms.internal.zzy
+com.google.android.gms.internal.zzz
+com.google.android.gms.internal.zzz$zza
+com.google.android.gms.location.places.PlaceReport
+com.google.android.gms.location.places.zzi
+com.google.android.gms.measurement.AppMeasurement:
+    public void logEvent(java.lang.String,android.os.Bundle)
+    public void setUserProperty(java.lang.String,java.lang.String)
+    public void setMeasurementEnabled(boolean)
+    public void setUserId(java.lang.String)
+    public void setMinimumSessionDuration(long)
+    public void setSessionTimeoutDuration(long)
+    public void zza(java.lang.String,java.lang.String,android.os.Bundle,long)
+    public void zzb(java.lang.String,java.lang.String,java.lang.Object)
+    private void zzc(java.lang.String,java.lang.String,java.lang.Object)
+    public java.util.Map zzce(boolean)
+    public void zza(com.google.android.gms.measurement.AppMeasurement$zzb)
+    public void zza(com.google.android.gms.measurement.AppMeasurement$zzc)
+com.google.android.gms.measurement.AppMeasurementContentProvider
+com.google.android.gms.measurement.R
+com.google.android.gms.measurement.impl.R
+com.google.android.gms.measurement.internal.zzac:
+    public void setMeasurementEnabled(boolean)
+    public void setMinimumSessionDuration(long)
+    public void setSessionTimeoutDuration(long)
+    public void zza(java.lang.String,java.lang.String,android.os.Bundle,boolean)
+    public void zzd(java.lang.String,java.lang.String,android.os.Bundle,long)
+    public java.util.List zzci(boolean)
+    public void zza(com.google.android.gms.measurement.AppMeasurement$zzb)
+    public void zza(com.google.android.gms.measurement.AppMeasurement$zzc)
+com.google.android.gms.measurement.internal.zzac$1:
+    zzac$1(com.google.android.gms.measurement.internal.zzac,boolean)
+com.google.android.gms.measurement.internal.zzac$2
+com.google.android.gms.measurement.internal.zzac$3
+com.google.android.gms.measurement.internal.zzac$6
+com.google.android.gms.measurement.internal.zzad:
+    protected void zza(java.util.concurrent.atomic.AtomicReference,boolean)
+com.google.android.gms.measurement.internal.zzad$6
+com.google.android.gms.measurement.internal.zzal:
+    public int zzmy(java.lang.String)
+    public int zzna(java.lang.String)
+com.google.android.gms.measurement.internal.zzx:
+    public com.google.firebase.analytics.FirebaseAnalytics zzbwz()
+com.google.android.gms.phenotype.Configuration
+com.google.android.gms.phenotype.Flag
+com.google.android.gms.phenotype.Flag$zza
+com.google.android.gms.phenotype.zza
+com.google.android.gms.phenotype.zzb
+com.google.android.gms.playlog.internal.PlayLoggerContext
+com.google.android.gms.playlog.internal.zza
+com.google.android.gms.security.ProviderInstaller
+com.google.android.gms.security.ProviderInstaller$1
+com.google.android.gms.security.ProviderInstaller$ProviderInstallListener
+com.google.android.gms.tasks.Continuation
+com.google.android.gms.tasks.OnCompleteListener
+com.google.android.gms.tasks.OnFailureListener
+com.google.android.gms.tasks.OnSuccessListener
+com.google.android.gms.tasks.R
+com.google.android.gms.tasks.RuntimeExecutionException
+com.google.android.gms.tasks.Task
+com.google.android.gms.tasks.TaskCompletionSource
+com.google.android.gms.tasks.TaskExecutors
+com.google.android.gms.tasks.TaskExecutors$1
+com.google.android.gms.tasks.TaskExecutors$zza
+com.google.android.gms.tasks.Tasks
+com.google.android.gms.tasks.Tasks$1
+com.google.android.gms.tasks.Tasks$zza
+com.google.android.gms.tasks.Tasks$zzb
+com.google.android.gms.tasks.Tasks$zzc
+com.google.android.gms.tasks.zza
+com.google.android.gms.tasks.zza$1
+com.google.android.gms.tasks.zzb
+com.google.android.gms.tasks.zzb$1
+com.google.android.gms.tasks.zzc
+com.google.android.gms.tasks.zzc$1
+com.google.android.gms.tasks.zzd
+com.google.android.gms.tasks.zzd$1
+com.google.android.gms.tasks.zze
+com.google.android.gms.tasks.zze$1
+com.google.android.gms.tasks.zzf
+com.google.android.gms.tasks.zzg
+com.google.android.gms.tasks.zzh
+com.google.android.gms.tasks.zzh$zza
 com.google.common.annotations.Beta
 com.google.common.annotations.GwtCompatible
 com.google.common.annotations.GwtIncompatible
@@ -3165,6 +3836,137 @@ com.google.common.util.concurrent.WrappingScheduledExecutorService
 com.google.common.util.concurrent.package-info
 com.google.common.xml.XmlEscapers
 com.google.common.xml.package-info
+com.google.firebase.FirebaseApiNotAvailableException
+com.google.firebase.FirebaseApp:
+    public static final java.lang.String DEFAULT_APP_NAME
+    private com.google.android.gms.internal.zzanb aSS
+    public static java.util.List getApps(android.content.Context)
+    public static com.google.firebase.FirebaseApp getInstance(java.lang.String)
+    public void zza(com.google.android.gms.internal.zzanb)
+    public com.google.android.gms.tasks.Task getToken(boolean)
+    public void zza(com.google.android.gms.internal.zzanc)
+    public void zza(com.google.firebase.FirebaseApp$zza)
+    public void zza(com.google.firebase.FirebaseApp$zzb)
+    public java.lang.String zzcnv()
+    private static java.util.List zzcnw()
+com.google.firebase.FirebaseApp$zza
+com.google.firebase.FirebaseException
+com.google.firebase.FirebaseNetworkException
+com.google.firebase.FirebaseOptions:
+    public java.lang.String getDatabaseUrl()
+    public java.lang.String getStorageBucket()
+    static synthetic java.lang.String zza(com.google.firebase.FirebaseOptions)
+    static synthetic java.lang.String zzb(com.google.firebase.FirebaseOptions)
+    static synthetic java.lang.String zzc(com.google.firebase.FirebaseOptions)
+    static synthetic java.lang.String zzd(com.google.firebase.FirebaseOptions)
+    static synthetic java.lang.String zze(com.google.firebase.FirebaseOptions)
+    static synthetic java.lang.String zzf(com.google.firebase.FirebaseOptions)
+    synthetic FirebaseOptions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.firebase.FirebaseOptions$1)
+com.google.firebase.FirebaseOptions$1
+com.google.firebase.FirebaseOptions$Builder
+com.google.firebase.FirebaseTooManyRequestsException
+com.google.firebase.R
+com.google.firebase.analytics.FirebaseAnalytics:
+    public static com.google.firebase.analytics.FirebaseAnalytics getInstance(android.content.Context)
+    public void logEvent(java.lang.String,android.os.Bundle)
+    public void setUserProperty(java.lang.String,java.lang.String)
+    public void setAnalyticsCollectionEnabled(boolean)
+    public void setUserId(java.lang.String)
+    public void setMinimumSessionDuration(long)
+    public void setSessionTimeoutDuration(long)
+com.google.firebase.analytics.FirebaseAnalytics$Event:
+    public static final java.lang.String ADD_PAYMENT_INFO
+    public static final java.lang.String ADD_TO_CART
+    public static final java.lang.String ADD_TO_WISHLIST
+    public static final java.lang.String APP_OPEN
+    public static final java.lang.String BEGIN_CHECKOUT
+    public static final java.lang.String ECOMMERCE_PURCHASE
+    public static final java.lang.String GENERATE_LEAD
+    public static final java.lang.String JOIN_GROUP
+    public static final java.lang.String LEVEL_UP
+    public static final java.lang.String LOGIN
+    public static final java.lang.String POST_SCORE
+    public static final java.lang.String PRESENT_OFFER
+    public static final java.lang.String PURCHASE_REFUND
+    public static final java.lang.String SEARCH
+    public static final java.lang.String SELECT_CONTENT
+    public static final java.lang.String SHARE
+    public static final java.lang.String SIGN_UP
+    public static final java.lang.String SPEND_VIRTUAL_CURRENCY
+    public static final java.lang.String TUTORIAL_BEGIN
+    public static final java.lang.String TUTORIAL_COMPLETE
+    public static final java.lang.String UNLOCK_ACHIEVEMENT
+    public static final java.lang.String VIEW_ITEM
+    public static final java.lang.String VIEW_ITEM_LIST
+    public static final java.lang.String VIEW_SEARCH_RESULTS
+    public static final java.lang.String EARN_VIRTUAL_CURRENCY
+    protected FirebaseAnalytics$Event()
+com.google.firebase.analytics.FirebaseAnalytics$Param:
+    public static final java.lang.String ACHIEVEMENT_ID
+    public static final java.lang.String CHARACTER
+    public static final java.lang.String TRAVEL_CLASS
+    public static final java.lang.String CONTENT_TYPE
+    public static final java.lang.String CURRENCY
+    public static final java.lang.String COUPON
+    public static final java.lang.String START_DATE
+    public static final java.lang.String END_DATE
+    public static final java.lang.String FLIGHT_NUMBER
+    public static final java.lang.String GROUP_ID
+    public static final java.lang.String ITEM_CATEGORY
+    public static final java.lang.String ITEM_ID
+    public static final java.lang.String ITEM_LOCATION_ID
+    public static final java.lang.String ITEM_NAME
+    public static final java.lang.String LOCATION
+    public static final java.lang.String LEVEL
+    public static final java.lang.String SIGN_UP_METHOD
+    public static final java.lang.String NUMBER_OF_NIGHTS
+    public static final java.lang.String NUMBER_OF_PASSENGERS
+    public static final java.lang.String NUMBER_OF_ROOMS
+    public static final java.lang.String DESTINATION
+    public static final java.lang.String ORIGIN
+    public static final java.lang.String PRICE
+    public static final java.lang.String QUANTITY
+    public static final java.lang.String SCORE
+    public static final java.lang.String SHIPPING
+    public static final java.lang.String TRANSACTION_ID
+    public static final java.lang.String SEARCH_TERM
+    public static final java.lang.String TAX
+    public static final java.lang.String VALUE
+    public static final java.lang.String VIRTUAL_CURRENCY_NAME
+    protected FirebaseAnalytics$Param()
+com.google.firebase.analytics.FirebaseAnalytics$UserProperty:
+    public static final java.lang.String SIGN_UP_METHOD
+    protected FirebaseAnalytics$UserProperty()
+com.google.firebase.auth.FirebaseAuthException
+com.google.firebase.auth.GetTokenResult
+com.google.firebase.crash.FirebaseCrash:
+    public static com.google.firebase.crash.FirebaseCrash zzcqj()
+    public static void log(java.lang.String)
+    public static void logcat(int,java.lang.String,java.lang.String)
+    public static void report(java.lang.Throwable)
+    public void zze(int,java.lang.String,java.lang.String)
+    public void zzrz(java.lang.String)
+    public void zzh(java.lang.Throwable)
+    public static boolean isSingletonInitialized()
+com.google.firebase.crash.R
+com.google.firebase.firebase_core.R
+com.google.firebase.iid.FirebaseInstanceId:
+    public long getCreationTime()
+    public void deleteInstanceId()
+    public void deleteToken(java.lang.String,java.lang.String)
+    public void zztr(java.lang.String)
+com.google.firebase.iid.FirebaseInstanceIdInternalReceiver:
+    public static android.content.Intent zzh(android.content.Context,android.content.Intent)
+    public static android.content.Intent G()
+com.google.firebase.iid.R
+com.google.firebase.iid.zzc:
+    public java.lang.String getToken()
+com.google.firebase.iid.zzd:
+    public long getCreationTime()
+com.google.firebase.iid.zze:
+    void zztr(java.lang.String)
+com.google.firebase.iid.zzg:
+    public synchronized long zztw(java.lang.String)
 com.google.gson.DefaultDateTypeAdapter
 com.google.gson.FieldAttributes:
     53:53:public java.lang.Class getDeclaringClass()

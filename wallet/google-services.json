@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "4528405219",
-    "firebase_url": "https://level-approach-133618.firebaseio.com",
-    "project_id": "level-approach-133618",
-    "storage_bucket": "level-approach-133618.appspot.com"
+    "project_number": "701536550481",
+    "firebase_url": "https://lignum-app.firebaseio.com",
+    "project_id": "lignum-app",
+    "storage_bucket": "lignum-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:4528405219:android:bf69c62bc9434bc9",
+        "mobilesdk_app_id": "1:701536550481:android:a4bd02051288904b",
         "android_client_info": {
           "package_name": "com.bachduong.bitwallet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "4528405219-6pv820q1af0csv94s74epdb41gkae449.apps.googleusercontent.com",
+          "client_id": "701536550481-qdkiutnp4qprbkgmj9q87g7g0ikqbopm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA1KtKQmt_QUZCcnRUzbGlI00XFm6lpLBw"
+          "current_key": "AIzaSyBl3Vkai9UXBiMoVNk9gnBJS2jerovYEjI"
         }
       ],
       "services": {

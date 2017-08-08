@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.bachduong.bitwallet.R;
 import com.bachduong.bitwallet.service.Server;
+import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.Map;
 
@@ -45,7 +46,6 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // If we detected that this device is incompatible
 //        if (!getWalletApplication().getConfiguration().isDeviceCompatible()) {
 //            new AlertDialog.Builder(this)
