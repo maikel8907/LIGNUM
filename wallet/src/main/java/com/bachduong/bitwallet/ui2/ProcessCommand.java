@@ -31,6 +31,7 @@ public class ProcessCommand implements Server.TransporterListener {
     private String devicePin = "";
     private String walletPin = "";
     private String deviceName = "";
+    public int chooseMode = 0;
 
     public ProcessCommand(MainActivity activity) {
         this.activity = activity;
@@ -182,7 +183,6 @@ public class ProcessCommand implements Server.TransporterListener {
                 return;
 
             case "get-device-data":
-                Log.d(LOG_TAG, "I'm here");
                 try {
                     response.status = true;
                     Map<String, Object> dataDevice = new HashMap<>();
@@ -199,6 +199,17 @@ public class ProcessCommand implements Server.TransporterListener {
                     e.printStackTrace();
                     callback.onResponse(response.toJson());
                 }
+                return;
+            case "get-mode":
+                if (chooseMode > 0) {
+                    response.status = true;
+                    Map<String, Object> chooseMode = new HashMap<>();
+                    chooseMode.put("mode", this.chooseMode);
+                    response.data = chooseMode;
+                } else {
+                    response.status =false;
+                }
+                callback.onResponse(response.toJson());
                 return;
             default:
                 response.status = false;

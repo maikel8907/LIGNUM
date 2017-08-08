@@ -142,11 +142,11 @@ com.bachduong.bitwallet.ui2.DataCommand:
 com.bachduong.bitwallet.ui2.FinishFragment$Listener:
     public abstract void onFinish()
 com.bachduong.bitwallet.ui2.MainActivity:
-    161:162:public void onPasswordSetStep1(java.lang.String)
-    167:169:public void onPasswordSetFinal(java.lang.String)
-    174:174:public void onLoginSuccess(android.os.Bundle)
-    210:210:public void onCancelSeed()
-    263:263:public void onFinish()
+    181:182:public void onPasswordSetStep1(java.lang.String)
+    187:189:public void onPasswordSetFinal(java.lang.String)
+    194:194:public void onLoginSuccess(android.os.Bundle)
+    230:230:public void onCancelSeed()
+    257:257:public void onFinish()
 com.bachduong.bitwallet.ui2.NoticeFragment
 com.bachduong.bitwallet.ui2.PinLoginFragment:
     public static final int TYPE_LOGIN
@@ -169,11 +169,11 @@ com.bachduong.bitwallet.ui2.PinLoginFragment$Listener:
     public abstract void onPasswordSetFinal(java.lang.String)
     public abstract void onLoginSuccess(android.os.Bundle)
 com.bachduong.bitwallet.ui2.ProcessCommand:
-    229:234:private java.util.HashMap getDeviceData()
+    240:245:private java.util.HashMap getDeviceData()
 com.bachduong.bitwallet.ui2.ProcessCommand$1:
-    101:101:public void onPasswordSetStep1(java.lang.String)
-    106:106:public void onPasswordSetFinal(java.lang.String)
-    111:111:public void onLoginSuccess(android.os.Bundle)
+    102:102:public void onPasswordSetStep1(java.lang.String)
+    107:107:public void onPasswordSetFinal(java.lang.String)
+    112:112:public void onLoginSuccess(android.os.Bundle)
 com.bachduong.bitwallet.ui2.ShowSeedFragment:
     public static final int STEP
     private android.widget.Button buttonCancel

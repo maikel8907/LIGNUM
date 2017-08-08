@@ -1,6 +1,7 @@
 package com.bachduong.bitwallet.ui2;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -76,8 +77,27 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
 //                }, 5000);
             }
 //        }
+        addShortcut();
     }
+    private void addShortcut() {
+        Intent shortcutIntent = new Intent(getApplicationContext(),
+                MainActivity.class);
 
+        shortcutIntent.setAction(Intent.ACTION_MAIN);
+
+        Intent addIntent = new Intent();
+        addIntent
+                .putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
+        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, getString(R.string.app_name));
+        addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+                Intent.ShortcutIconResource.fromContext(getApplicationContext(),
+                        R.drawable.ic_launcher_dev));
+
+        addIntent
+                .setAction("com.android.launcher.action.INSTALL_SHORTCUT");
+        addIntent.putExtra("duplicate", false);  //may it's already there so don't duplicate
+        getApplicationContext().sendBroadcast(addIntent);
+    }
     public void showWelcomeFragment() {
         replaceFragment(new WelcomeFragment());
     }
@@ -224,36 +244,10 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
         if (mode == ChooseModeFragment.MODE_CONFIG) {
             // Enter config screen
             replaceFragment(StatusShowFragment.newInstance("Welcome to Icellet Setup", "Setting up device"));
-
-//            new Handler().postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    replaceFragment(new PinLoginFragment());
-//
-//                    new Handler().postDelayed(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            replaceFragment(new PinLoginFragment());
-//                            new Handler().postDelayed(new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    replaceFragment(StatusShowFragment.newInstance("Configuring Device", ""));
-//
-//                                    new Handler().postDelayed(new Runnable() {
-//                                        @Override
-//                                        public void run() {
-//                                            replaceFragment(ShowSeedFragment.newInstance());
-//                                        }
-//                                    }, 6000);
-//                                }
-//                            }, 6000);
-//                        }
-//                    }, 6000);
-//                }
-//            }, 6000);
+            processCommand.chooseMode = 1;
         } else if (mode == ChooseModeFragment.MODE_RESTORE) {
             // Enter restore screen
-
+            processCommand.chooseMode = 2;
         }
     }
 
