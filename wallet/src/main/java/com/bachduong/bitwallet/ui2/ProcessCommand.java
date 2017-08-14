@@ -4,11 +4,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
+import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.service.Server;
+import com.bachduong.core.coins.BitcoinMain;
+import com.bachduong.core.wallet.WalletAccount;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
@@ -46,7 +51,7 @@ public class ProcessCommand implements Server.TransporterListener {
                 data = matcher.group(1);
                 DataCommand dataCommand = gson.fromJson(data, DataCommand.class);
                 Log.d(LOG_TAG, "Command received:" + dataCommand.getCommand());
-                Log.d(LOG_TAG, "Command data:" + dataCommand.getData());
+//                Log.d(LOG_TAG, "Command data:" + dataCommand.getData());
 
                 process(dataCommand, callback);
             } else {
@@ -157,8 +162,8 @@ public class ProcessCommand implements Server.TransporterListener {
                 return;
             case "check-recovery-phase-finish":
                 activity.showLoadingFragment(true);
-                this.seeds = null;
-                this.isSeedGenerated = false;
+//                this.seeds = null;
+//                this.isSeedGenerated = false;
                 callback.onResponse(response.toJson());
                 return;
             case "get-recovery-phase":
@@ -173,8 +178,15 @@ public class ProcessCommand implements Server.TransporterListener {
                 callback.onResponse(response.toJson());
                 return;
             case "show-finish":
+                Log.d(LOG_TAG, "show-finish called");
+                this.deviceName = "test";
+                this.devicePin = "1111";
+                this.walletPin = "1111";
                 activity.showFinishFragment();
+                activity.createWallet(seeds, walletPin, devicePin);
                 callback.onResponse(response.toJson());
+                this.seeds = null;
+                this.isSeedGenerated = false;
                 return;
 
             case "get-device-status":
@@ -200,6 +212,33 @@ public class ProcessCommand implements Server.TransporterListener {
                     callback.onResponse(response.toJson());
                 }
                 return;
+
+
+            case "get-wallet":
+                if (activity.getWalletApplication().getWallet() != null) {
+                    HashMap<String, String> data1;
+                    try {
+                        response.status = true;
+                        data1 = dataCommand.getData();
+                        String type = data1.get("type");
+                        Map<String, Object> dataDevice = new HashMap<>();
+
+                        dataDevice.put("wallet", activity.getWalletApplication().getWallet().getAccountIds());
+                        List<WalletAccount> accounts = activity.getWalletApplication().getWallet().getAccounts(Constants.SUPPORTED_COINS);
+                        response.data = convertToResponeWallet(accounts);
+                        callback.onResponse(response.toJson());
+                    } catch (Exception e) {
+                        response.status = false;
+                        response.data = e.getMessage();
+                        e.printStackTrace();
+                        callback.onResponse(response.toJson());
+                    }
+                } else {
+                    response.status = false;
+                    callback.onResponse(response.toJson());
+                }
+                return;
+
             case "get-mode":
                 if (chooseMode > 0) {
                     response.status = true;
@@ -217,6 +256,19 @@ public class ProcessCommand implements Server.TransporterListener {
                 callback.onResponse(response.toJson());
                 return;
         }
+    }
+
+    private List<ResponseWallet> convertToResponeWallet(List<WalletAccount> accounts) {
+        List<ResponseWallet> responseWallets = new ArrayList<>();
+        for (WalletAccount account : accounts) {
+            ResponseWallet wallet = new ResponseWallet();
+            wallet.address = account.getReceiveAddress().toString();
+            wallet.type = account.getCoinType().getSymbol();
+            wallet.value = account.getBalance().toString();
+            wallet.name = account.getDescriptionOrCoinName();
+            responseWallets.add(wallet);
+        }
+        return responseWallets;
     }
 
     private Map<Integer, String> getSeeds() {
@@ -252,5 +304,12 @@ public class ProcessCommand implements Server.TransporterListener {
         public String toJson() {
             return gson.toJson(this);
         }
+    }
+
+    public class ResponseWallet {
+        public Object type;
+        public String name;
+        public String address;
+        public Object value;
     }
 }

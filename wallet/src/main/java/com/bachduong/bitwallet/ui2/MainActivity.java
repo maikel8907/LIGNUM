@@ -2,19 +2,37 @@ package com.bachduong.bitwallet.ui2;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
+import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.R;
+import com.bachduong.bitwallet.WalletApplication;
+import com.bachduong.bitwallet.service.CoinService;
+import com.bachduong.bitwallet.service.CoinServiceImpl;
 import com.bachduong.bitwallet.service.Server;
+import com.bachduong.bitwallet.util.WeakHandler;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.wallet.Wallet;
 import com.google.firebase.crash.FirebaseCrash;
 
+import org.bitcoinj.crypto.KeyCrypterScrypt;
+import org.spongycastle.crypto.params.KeyParameter;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
+
+import javax.annotation.Nullable;
 
 public class MainActivity extends FragmentActivity implements SplashFragment.Listener,
         PinLoginFragment.Listener,
@@ -22,9 +40,19 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
         ChooseModeFragment.Listener,
         FinishFragment.Listener {
 
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();
+
+    private static final int RESTORE_STATUS_UPDATE = 0;
+    private static final int RESTORE_FINISHED = 1;
+
     private int backPressedNum;
     private Server server;
     private ProcessCommand processCommand;
+
+
+    private final Handler handler = new MyHandler(this);
+
+    private static WalletFromSeedTask walletFromSeedTask;
 
     private Server.TransporterListener transporterListener = new Server.TransporterListener() {
         @Override
@@ -42,6 +70,10 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
 
         }
     };
+
+    protected WalletApplication getWalletApplication() {
+        return (WalletApplication) getApplication();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -254,5 +286,123 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
     @Override
     public void onFinish() {
 
+    }
+
+    public void createWallet(String[] seeds, String walletPassword, String seedPassword) {
+        Log.d(LOG_TAG, "create wallet called");
+        String seed = TextUtils.join(" ", seeds);
+        List<CoinType> coinsToCreate = Constants.SUPPORTED_COINS;
+
+        if (walletFromSeedTask == null) {
+            walletFromSeedTask = new WalletFromSeedTask(handler, getWalletApplication(), coinsToCreate, seed, walletPassword, seedPassword);
+            walletFromSeedTask.execute();
+        } else {
+            switch (walletFromSeedTask.getStatus()) {
+                case FINISHED:
+                    handler.sendEmptyMessage(RESTORE_FINISHED);
+                    break;
+                case RUNNING:
+                case PENDING:
+                    walletFromSeedTask.handler = handler;
+            }
+        }
+    }
+
+    static class WalletFromSeedTask extends AsyncTask<Void, String, Wallet> {
+        Wallet wallet;
+        String errorMessage = "";
+        private final String seed;
+        private final String password;
+        @Nullable
+        private final String seedPassword;
+        Handler handler;
+        private final WalletApplication walletApplication;
+        private final List<CoinType> coinsToCreate;
+
+        public WalletFromSeedTask(Handler handler, WalletApplication walletApplication, List<CoinType> coinsToCreate, String seed, String password, @Nullable String seedPassword) {
+            this.handler = handler;
+            this.walletApplication = walletApplication;
+            this.coinsToCreate = coinsToCreate;
+            this.seed = seed;
+            this.password = password;
+            this.seedPassword = seedPassword;
+        }
+
+        protected Wallet doInBackground(Void... params) {
+            Intent intent = new Intent(CoinService.ACTION_CLEAR_CONNECTIONS, null,
+                    walletApplication, CoinServiceImpl.class);
+            walletApplication.startService(intent);
+
+            ArrayList<String> seedWords = new ArrayList<String>();
+            for (String word : seed.trim().split(" ")) {
+                if (word.isEmpty()) continue;
+                seedWords.add(word);
+            }
+
+            try {
+                this.publishProgress("");
+                walletApplication.setEmptyWallet();
+                wallet = new Wallet(seedWords, seedPassword);
+                KeyParameter aesKey = null;
+                if (password != null && !password.isEmpty()) {
+                    KeyCrypterScrypt crypter = new KeyCrypterScrypt();
+                    aesKey = crypter.deriveKey(password);
+                    wallet.encrypt(crypter, aesKey);
+                }
+
+                for (CoinType type : coinsToCreate) {
+                    this.publishProgress(type.getName());
+                    wallet.createAccount(type, false, aesKey);
+                }
+
+                walletApplication.setWallet(wallet);
+                walletApplication.saveWalletNow();
+            } catch (Exception e) {
+                Log.e("Error creating a wallet", e.getMessage());
+                errorMessage = e.getMessage();
+            }
+            return wallet;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... values) {
+            handler.sendMessage(handler.obtainMessage(RESTORE_STATUS_UPDATE, values[0]));
+        }
+
+        protected void onPostExecute(Wallet wallet) {
+            handler.sendEmptyMessage(RESTORE_FINISHED);
+        }
+    }
+
+    private static class MyHandler extends WeakHandler<MainActivity> {
+        public MyHandler(MainActivity ref) { super(ref); }
+
+        @Override
+        protected void weakHandleMessage(MainActivity ref, Message msg) {
+            switch (msg.what) {
+                case RESTORE_STATUS_UPDATE:
+                    String workingOn = (String) msg.obj;
+                    if (workingOn.isEmpty()) {
+                        Log.d(LOG_TAG, "Status: " + ref.getString(R.string.wallet_restoration_master_key));
+                        //ref.status.setText(ref.getString(R.string.wallet_restoration_master_key));
+                    } else {
+                        //ref.status.setText(ref.getString(R.string.wallet_restoration_coin, workingOn));
+                        Log.d(LOG_TAG, "Status: " + ref.getString(R.string.wallet_restoration_master_key));
+                    }
+                    break;
+                case RESTORE_FINISHED:
+                    WalletFromSeedTask task = walletFromSeedTask;
+                    walletFromSeedTask = null;
+                    if (task.wallet != null) {
+                        //ref.startWalletActivity();
+                        Log.d(LOG_TAG, "Status: startWalletActivity()");
+                    } else {
+                        String errorMessage = ref.getResources().getString(
+                                R.string.wallet_restoration_error, task.errorMessage);
+                        //ref.showErrorAndStartIntroActivity(errorMessage);
+                        Log.d(LOG_TAG, "Error: " + errorMessage);
+                    }
+            }
+        }
     }
 }
