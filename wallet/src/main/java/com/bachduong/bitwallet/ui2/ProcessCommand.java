@@ -216,14 +216,8 @@ public class ProcessCommand implements Server.TransporterListener {
 
             case "get-wallet":
                 if (activity.getWalletApplication().getWallet() != null) {
-                    HashMap<String, String> data1;
                     try {
                         response.status = true;
-                        data1 = dataCommand.getData();
-                        String type = data1.get("type");
-                        Map<String, Object> dataDevice = new HashMap<>();
-
-                        dataDevice.put("wallet", activity.getWalletApplication().getWallet().getAccountIds());
                         List<WalletAccount> accounts = activity.getWalletApplication().getWallet().getAccounts(Constants.SUPPORTED_COINS);
                         response.data = convertToResponeWallet(accounts);
                         callback.onResponse(response.toJson());
