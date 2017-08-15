@@ -5,8 +5,17 @@ import android.os.Handler;
 import android.util.Log;
 
 import com.bachduong.bitwallet.Constants;
+import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.service.Server;
 import com.bachduong.core.coins.BitcoinMain;
+import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.coins.ValueType;
+import com.bachduong.core.coins.families.NxtFamily;
+import com.bachduong.core.exceptions.AddressMalformedException;
+import com.bachduong.core.util.GenericUtils;
+import com.bachduong.core.util.MonetaryFormat;
+import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.WalletAccount;
 import com.google.gson.Gson;
 
@@ -37,6 +46,7 @@ public class ProcessCommand implements Server.TransporterListener {
     private String walletPin = "";
     private String deviceName = "";
     public int chooseMode = 0;
+    private MonetaryFormat format = new MonetaryFormat().noCode();
 
     public ProcessCommand(MainActivity activity) {
         this.activity = activity;
@@ -244,6 +254,31 @@ public class ProcessCommand implements Server.TransporterListener {
                 }
                 callback.onResponse(response.toJson());
                 return;
+
+            case "make-transaction":
+                if (activity.getWalletApplication().getWallet() != null) {
+                    try {
+                        HashMap<String, String> data1 = new HashMap<>();
+                        data1 = dataCommand.getData();
+                        String accId = data1.get("accountId");
+                        final WalletAccount walletAccount = activity.getWalletApplication().getAccount(accId);
+//                        Value amount = Value.valueOf( walletAccount.getCoinType() ,data1.get("amount"));
+                        Value amount = getAmount(walletAccount.getCoinType(), data1.get("amount"));
+//                        final String toAddress = data1.get("toAddress");
+                        AbstractAddress toAddress = parseAddress(walletAccount, activity.getWalletApplication(),GenericUtils.fixAddress(data1.get("toAddress")));
+                        activity.onMakeTransaction(walletAccount, toAddress, amount, null);
+                        response.status = true;
+                        callback.onResponse(response.toJson());
+                    } catch (Exception e){
+                        response.status = false;
+                        response.data = e.getMessage();
+                        callback.onResponse(response.toJson());
+                    }
+                } else {
+                    response.status = false;
+                    callback.onResponse(response.toJson());
+                }
+                return;
             default:
                 response.status = false;
                 response.data = "Nothing here";
@@ -256,10 +291,11 @@ public class ProcessCommand implements Server.TransporterListener {
         List<ResponseWallet> responseWallets = new ArrayList<>();
         for (WalletAccount account : accounts) {
             ResponseWallet wallet = new ResponseWallet();
-            wallet.address = account.getReceiveAddress().toString();
+            wallet.address = account.getReceiveAddress(false).toString();
             wallet.type = account.getCoinType().getSymbol();
             wallet.value = account.getBalance().toString();
             wallet.name = account.getDescriptionOrCoinName();
+            wallet.accountId = account.getId();
             responseWallets.add(wallet);
         }
         return responseWallets;
@@ -280,6 +316,53 @@ public class ProcessCommand implements Server.TransporterListener {
 
     public void setSeeds(String[] seeds) {
         this.seeds = seeds;
+    }
+
+    public Value getAmount(ValueType type, String amountIn) {
+        final String str = amountIn.trim();
+        Value amount = null;
+
+        try {
+            if (!str.isEmpty()) {
+                if (type != null) {
+                    amount = format.parse(type, str);
+                }
+            }
+        } catch (final Exception x) { /* ignored */ }
+
+        return amount;
+    }
+
+    private AbstractAddress parseAddress(WalletAccount account, WalletApplication application, String addressStr) throws AddressMalformedException {
+
+        if (account.getCoinType() instanceof NxtFamily) {
+            return account.getCoinType().newAddress(addressStr);
+
+        }
+        List<CoinType> possibleTypes = GenericUtils.getPossibleTypes(addressStr);
+
+        if (possibleTypes.size() == 1) {
+            return possibleTypes.get(0).newAddress(addressStr);
+        } else {
+            // This address string could be more that one coin type so first check if this address
+            // comes from an account to determine the type.
+            List<WalletAccount> possibleAccounts = application.getAccounts(possibleTypes);
+            AbstractAddress addressOfAccount = null;
+            for (WalletAccount account1 : possibleAccounts) {
+                AbstractAddress testAddress = account1.getCoinType().newAddress(addressStr);
+                if (account1.isAddressMine(testAddress)) {
+                    addressOfAccount = testAddress;
+                    break;
+                }
+            }
+
+            if (addressOfAccount != null) {
+                // If address is from another account don't show a dialog. The type should not
+                // change as we know 100% that is correct one.
+                return addressOfAccount;
+            }
+        }
+        return null;
     }
 
     private HashMap<String, Object> getDeviceData() {
@@ -305,5 +388,6 @@ public class ProcessCommand implements Server.TransporterListener {
         public String name;
         public String address;
         public Object value;
+        public String accountId;
     }
 }

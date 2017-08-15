@@ -22,7 +22,12 @@ import com.bachduong.bitwallet.service.CoinServiceImpl;
 import com.bachduong.bitwallet.service.Server;
 import com.bachduong.bitwallet.util.WeakHandler;
 import com.bachduong.core.coins.CoinType;
+import com.bachduong.core.coins.Value;
+import com.bachduong.core.coins.nxt.Account;
+import com.bachduong.core.messages.TxMessage;
+import com.bachduong.core.wallet.AbstractAddress;
 import com.bachduong.core.wallet.Wallet;
+import com.bachduong.core.wallet.WalletAccount;
 import com.google.firebase.crash.FirebaseCrash;
 
 import org.bitcoinj.crypto.KeyCrypterScrypt;
@@ -33,6 +38,8 @@ import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Nullable;
+
+import static com.bachduong.core.coins.Value.canCompare;
 
 public class MainActivity extends FragmentActivity implements SplashFragment.Listener,
         PinLoginFragment.Listener,
@@ -285,6 +292,23 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
 
     @Override
     public void onFinish() {
+
+    }
+
+    public void onMakeTransaction(WalletAccount account, AbstractAddress toAddress, Value amount, @Nullable TxMessage txMessage) {
+        Intent intent = new Intent(this, SignTransactionActivity.class);
+
+        // Decide if emptying wallet or not
+//        if (canCompare(lastBalance, amount) && amount.compareTo(lastBalance) == 0) {
+//            intent.putExtra(Constants.ARG_EMPTY_WALLET, true);
+//        } else {
+            intent.putExtra(Constants.ARG_SEND_VALUE, amount);
+//        }
+        intent.putExtra(Constants.ARG_ACCOUNT_ID, account.getId());
+        intent.putExtra(Constants.ARG_SEND_TO_ADDRESS, toAddress);
+        if (txMessage != null) intent.putExtra(Constants.ARG_TX_MESSAGE, txMessage);
+
+        startActivity(intent);
 
     }
 
