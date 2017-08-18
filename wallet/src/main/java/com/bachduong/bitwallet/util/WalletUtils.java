@@ -171,7 +171,7 @@ public class WalletUtils {
         try {
             ServicePrefs servicePrefs = new ServicePrefs(context);
             password = Crypto.encrypt(password, Constants.ARG_PASSWORD.toCharArray());
-            servicePrefs.setPassword(password);
+            servicePrefs.setWalletPassword(password);
         } catch (IOException e) {
             e.printStackTrace();
             return false; // unsuccess
@@ -185,7 +185,7 @@ public class WalletUtils {
 
             // TODO: 7/17/17  need to change back after test
             //return servicePrefs.getPassword().equals(checkPass);
-            String originalPass = Crypto.decrypt(servicePrefs.getPassword(), Constants.ARG_PASSWORD.toCharArray());
+            String originalPass = Crypto.decrypt(servicePrefs.getWalletPassword(), Constants.ARG_PASSWORD.toCharArray());
             String dummyPass = "2409";
             return dummyPass.equals(checkPass);
         } catch (IOException e) {

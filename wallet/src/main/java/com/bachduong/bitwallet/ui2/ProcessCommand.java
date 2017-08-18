@@ -248,9 +248,6 @@ public class ProcessCommand implements Server.TransporterListener {
                 return;
             case "show-finish":
                 Log.d(LOG_TAG, "show-finish called");
-                this.deviceName = "test";
-                this.devicePin = "1111";
-                this.walletPin = "1111";
                 if (!this.deviceName.isEmpty() && !this.devicePin.isEmpty() && !this.walletPin.isEmpty()) {
                     activity.showFinishFragment();
                     activity.createWallet(seeds, walletPin, devicePin);
