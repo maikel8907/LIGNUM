@@ -55,7 +55,7 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
     private int backPressedNum;
     private Server server;
     private ProcessCommand processCommand;
-
+    private Intent connectAllCoinIntent;
 
     private final Handler handler = new MyHandler(this);
 
@@ -118,6 +118,22 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
 //        }
         addShortcut();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getWalletApplication().startBlockchainService(CoinService.ServiceMode.CANCEL_COINS_RECEIVED);
+        connectAllCoinService();
+    }
+
+    private void connectAllCoinService() {
+        if (connectAllCoinIntent == null) {
+            connectAllCoinIntent = new Intent(CoinService.ACTION_CONNECT_ALL_COIN, null,
+                    getWalletApplication(), CoinServiceImpl.class);
+        }
+        getWalletApplication().startService(connectAllCoinIntent);
+    }
+
     private void addShortcut() {
         Intent shortcutIntent = new Intent(getApplicationContext(),
                 MainActivity.class);

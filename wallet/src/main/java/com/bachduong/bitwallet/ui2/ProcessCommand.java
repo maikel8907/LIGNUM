@@ -7,7 +7,9 @@ import android.util.Log;
 import com.bachduong.bitwallet.Constants;
 import com.bachduong.bitwallet.WalletApplication;
 import com.bachduong.bitwallet.service.Server;
+import com.bachduong.bitwallet.service.ServicePrefs;
 import com.bachduong.core.coins.BitcoinMain;
+import com.bachduong.core.coins.BitcoinTest;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.Value;
 import com.bachduong.core.coins.ValueType;
@@ -46,10 +48,17 @@ public class ProcessCommand implements Server.TransporterListener {
     private String walletPin = "";
     private String deviceName = "";
     public int chooseMode = 0;
+
+    private ServicePrefs servicePrefs;
     private MonetaryFormat format = new MonetaryFormat().noCode();
 
     public ProcessCommand(MainActivity activity) {
         this.activity = activity;
+        servicePrefs = new ServicePrefs(activity);
+
+        devicePin = servicePrefs.getDevicePassword();
+        walletPin = servicePrefs.getWalletPassword();
+        deviceName = servicePrefs.getDeviceName();
     }
 
     @Override
@@ -106,8 +115,24 @@ public class ProcessCommand implements Server.TransporterListener {
                 callback.onResponse(response.toJson());
                 return;
             case "set-device-name":
+                HashMap<String, String> dataDeviceName;
+                try {
+                    dataDeviceName = dataCommand.getData();
+                    if (dataDeviceName != null) {
+                        String name = dataDeviceName.get("deviceName");
+                        this.deviceName = name;
+                        servicePrefs.setDeviceName(name);
+                    } else {
+                        response.status = false;
+                    }
+                } catch (Exception e) {
+                    response.status = false;
+                    response.data = (new HashMap<>()).put("error", e.getMessage());
+                    callback.onResponse(response.toJson());
+                } finally {
+                    callback.onResponse(response.toJson());
+                }
 
-                callback.onResponse(response.toJson());
                 return;
             case "get-keyboard-map":
                 activity.showPinFragment(new PinLoginFragment.Listener() {
@@ -158,9 +183,43 @@ public class ProcessCommand implements Server.TransporterListener {
                 }
 
                 return;
-            case "set-pin":
-
-                callback.onResponse(response.toJson());
+            case "set-device-pin":
+                HashMap<String, String> dataDevicePin;
+                try {
+                    dataDeviceName = dataCommand.getData();
+                    if (dataDeviceName != null) {
+                        String str = dataDeviceName.get("devicePin");
+                        this.devicePin = str;
+                        servicePrefs.setDevicePassword(str);
+                    } else {
+                        response.status = false;
+                    }
+                } catch (Exception e) {
+                    response.status = false;
+                    response.data = (new HashMap<>()).put("error", e.getMessage());
+                    callback.onResponse(response.toJson());
+                } finally {
+                    callback.onResponse(response.toJson());
+                }
+                return;
+            case "set-wallet-pin":
+                HashMap<String, String> dataWalletPin;
+                try {
+                    dataDeviceName = dataCommand.getData();
+                    if (dataDeviceName != null) {
+                        String str = dataDeviceName.get("walletPin");
+                        this.walletPin = str;
+                        servicePrefs.setWalletPassword(str);
+                    } else {
+                        response.status = false;
+                    }
+                } catch (Exception e) {
+                    response.status = false;
+                    response.data = (new HashMap<>()).put("error", e.getMessage());
+                    callback.onResponse(response.toJson());
+                } finally {
+                    callback.onResponse(response.toJson());
+                }
                 return;
             case "check-recovery-phase-1":
                 activity.showStatusFragment("Configuring Device", "Confirmation");
@@ -192,11 +251,17 @@ public class ProcessCommand implements Server.TransporterListener {
                 this.deviceName = "test";
                 this.devicePin = "1111";
                 this.walletPin = "1111";
-                activity.showFinishFragment();
-                activity.createWallet(seeds, walletPin, devicePin);
-                callback.onResponse(response.toJson());
-                this.seeds = null;
-                this.isSeedGenerated = false;
+                if (!this.deviceName.isEmpty() && !this.devicePin.isEmpty() && !this.walletPin.isEmpty()) {
+                    activity.showFinishFragment();
+                    activity.createWallet(seeds, walletPin, devicePin);
+                    callback.onResponse(response.toJson());
+                    this.seeds = null;
+                    this.isSeedGenerated = false;
+                } else {
+                    response.status = false;
+                    response.data = "Missing some info";
+                    callback.onResponse(response.toJson());
+                }
                 return;
 
             case "get-device-status":
@@ -231,6 +296,11 @@ public class ProcessCommand implements Server.TransporterListener {
                         List<WalletAccount> accounts = activity.getWalletApplication().getWallet().getAccounts(Constants.SUPPORTED_COINS);
                         response.data = convertToResponeWallet(accounts);
                         callback.onResponse(response.toJson());
+                        for (WalletAccount account : accounts) {
+//                            if (account.getCoinType() == BitcoinTest.get()) {
+                                Log.d(LOG_TAG, account.getCoinType().toString() +": " + account.getReceiveAddress() + " lastConnectivity: " + account.getConnectivityStatus().toString());
+//                            }
+                        }
                     } catch (Exception e) {
                         response.status = false;
                         response.data = e.getMessage();
