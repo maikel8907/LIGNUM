@@ -251,6 +251,15 @@ public class ProcessCommand implements Server.TransporterListener {
 //                this.deviceName = "test";
 //                this.devicePin = "1111";
 //                this.walletPin = "1111";
+                if (this.deviceName.isEmpty()) {
+                    this.deviceName = "test";
+                }
+                if (this.devicePin.isEmpty()) {
+                    this.devicePin = "1111";
+                }
+                if (this.walletPin.isEmpty()) {
+                    this.walletPin = "1111";
+                }
                 if (!this.deviceName.isEmpty() && !this.devicePin.isEmpty() && !this.walletPin.isEmpty()) {
                     activity.showFinishFragment();
                     activity.createWallet(seeds, walletPin, devicePin);
