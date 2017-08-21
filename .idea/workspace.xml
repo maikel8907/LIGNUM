@@ -21,7 +21,35 @@
     <bookmark url="file://$PROJECT_DIR$/../../glowdawn/glowdawn/src/main/java/com/glowdawn/conversations/utils/UIHelper.java" line="218" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf65973-8d90-4989-b277-39bc1716b2c6" name="Default" comment="some change">
+    <list default="true" id="bdf65973-8d90-4989-b277-39bc1716b2c6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/AddCoinTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/CheckUpdateTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/ExchangeCheckSupportedCoinsTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/MarketInfoPollTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/SignVerifyMessageTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AddressView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/Amount.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AmountEditView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/BakedBezierInterpolator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/CurrencyTextView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/FontFitTextView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SendOutput.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SwipeProgressBar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SwipeRefreshLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/TransactionAmountVisualizer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AccountFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AddressRequestFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/BalanceFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/CurrencyCalculatorLink.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/OverviewFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SendFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/TransactionsListAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WalletFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/AccountListAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/AvailableAccountsAdaptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/dialogs/CreateNewAddressDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
@@ -29,10 +57,47 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_wallet_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v4/preferencefragment/R.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v4/preferencefragment/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/com/bachduong/bitwallet/R.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/com/bachduong/bitwallet/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/wallet/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/wallet/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/proguard-rules/debug/aapt_rules.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/proguard-rules/debug/aapt_rules.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/account_row.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/account_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/amount.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/amount.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_balance.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_balance.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_balance_header.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_balance_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_choose_mode.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_choose_mode.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_overview.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_overview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_overview_header.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_overview_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_request.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_request.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_send.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_setup_welcome.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_setup_welcome.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_welcome.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/layout/fragment_welcome.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/wallet/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/wallet/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ChooseModeFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ChooseModeFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WelcomeFragment.java" afterPath="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WelcomeFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/account_row.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/account_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/amount.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/amount.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance_header.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_choose_mode.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_choose_mode.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview_header.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_request.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_request.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_send.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_send.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_setup_welcome.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_setup_welcome.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_welcome.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_welcome.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wallet/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/wallet/src/main/res/values/strings.xml" />
     </list>
     <ignored path="coinomi-android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,95 +146,44 @@
       <file leaf-file-name="ProcessCommand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="281" column="51" selection-start-line="281" selection-start-column="51" selection-end-line="281" selection-end-column="51" />
+            <state relative-caret-position="39">
+              <caret line="297" column="0" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WalletUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java">
+      <file leaf-file-name="AmountEditView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/AmountEditView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="187" column="81" selection-start-line="187" selection-start-column="81" selection-end-line="187" selection-end-column="81" />
+            <state relative-caret-position="2820">
+              <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServicePrefs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/ServicePrefs.java">
+      <file leaf-file-name="ChooseModeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ChooseModeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+            <state relative-caret-position="765">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
-                <element signature="e#1106#1107#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1325#1326#0" expanded="true" />
-                <element signature="e#1362#1363#0" expanded="true" />
-                <element signature="e#1403#1404#0" expanded="true" />
-                <element signature="e#1440#1441#0" expanded="true" />
+                <element signature="e#1850#2087#0" expanded="true" />
+                <element signature="e#2086#2087#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="186" column="70" selection-start-line="155" selection-start-column="97" selection-end-line="186" selection-end-column="70" />
-              <folding />
-            </state>
+      <file leaf-file-name="fragment_choose_mode.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_choose_mode.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WalletTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/WalletTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradle-wrapper.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wallet/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="331">
+              <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -178,13 +192,75 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+            <state relative-caret-position="206">
+              <caret line="166" column="12" selection-start-line="166" selection-start-column="12" selection-end-line="166" selection-end-column="46" />
+              <folding>
+                <element signature="e#6262#6292#0" expanded="true" />
+                <element signature="e#15435#15436#0" expanded="true" />
+                <element signature="e#15473#15474#0" expanded="true" />
+                <marker date="1503326861000" expanded="false" signature="3482:3524" ph="&quot;Incompatible device&quot;" />
+                <marker date="1503326861000" expanded="false" signature="3560:3604" ph="&quot;This device cannot perform certain cryptographic functi...&quot;" />
+                <marker date="1503326861000" expanded="false" signature="3647:3665" ph="&quot;OK&quot;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SendFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7575">
+              <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MakeTransactionFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MakeTransactionFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1920">
+              <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1503053286000" expanded="false" signature="3181:3223" ph="&quot;Incompatible device&quot;" />
-                <marker date="1503053286000" expanded="false" signature="3259:3303" ph="&quot;This device cannot perform certain cryptographic functi...&quot;" />
-                <marker date="1503053286000" expanded="false" signature="3346:3364" ph="&quot;OK&quot;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WelcomeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WelcomeFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <element signature="e#958#1186#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_setup_welcome.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_setup_welcome.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+              <folding>
+                <element signature="e#2174#2203#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2464,38 +2540,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wallet/src/main/res/drawable/key_board_background.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_status_loading.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_status_show.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_finish.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_show_seed_ui2.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/customview/PasswordInputView.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/PinLoginFragment.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/DataCommand.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/Server.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AbstractWalletFragmentActivity.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/PinLoginActivity.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/UiUtils.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/wallet/google-services.json" />
-        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/CoinService.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/WalletApplication.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/CoinServiceImpl.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/TradeStatusFragment.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SignTransactionActivity.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/Dialogs.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ExchangeRateLoader.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MakeTransactionFragment.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/DialogBuilder.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/FontFitTextView.java" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/SendOutput.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/AddressView.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/Amount.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/AmountEditView.java" />
@@ -2509,11 +2553,43 @@
         <option value="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/eth/CallTransaction.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/eth/Transaction.java" />
         <option value="$PROJECT_DIR$/wallet/build.gradle" />
-        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Constants.java" />
         <option value="$PROJECT_DIR$/wallet/src/test/java/com/bachduong/bitwallet/ui2/MainActivityTest.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/ServicePrefs.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/AvailableAccountsAdaptor.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/AccountListAdapter.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/OverviewFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/FeesListAdapter.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview_header.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/account_row.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/amount.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AccountFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/dialogs/CreateNewAddressDialog.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/AddCoinTask.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/ExchangeCheckSupportedCoinsTask.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/MarketInfoPollTask.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/SignVerifyMessageTask.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/CheckUpdateTask.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WalletFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/TransactionsListAdapter.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/CurrencyCalculatorLink.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AddressRequestFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SendFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_send.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance_header.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/BalanceFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_request.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_choose_mode.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ChooseModeFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_welcome.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/res/layout/fragment_setup_welcome.xml" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WelcomeFragment.java" />
+        <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java" />
         <option value="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java" />
       </list>
     </option>
@@ -2558,6 +2634,74 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Gradle Scripts" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2624,7 +2768,55 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitwallet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widget" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2650,8 +2842,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2672,6 +2862,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -2706,11 +2898,13 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bachduong.bitwallet.ui2" />
+      <recent name="com.bachduong.bitwallet.ui2.dialogs" />
       <recent name="com.bachduong.bitwallet.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2" />
       <recent name="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet" />
+      <recent name="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui" />
+      <recent name="$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.wallet">
@@ -3071,12 +3265,19 @@
       <option name="project" value="LOCAL" />
       <updated>1503072237534</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="some change">
+      <created>1503074251526</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1503074251526</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
@@ -3085,9 +3286,10 @@
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47632712" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7517934" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32424676" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3097,8 +3299,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7187948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7187948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3106,7 +3308,6 @@
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -3114,25 +3315,25 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6984127" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6676136" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7517934" sideWeight="0.49427754" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32323232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7187948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252841" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.49427754" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32424676" sideWeight="0.49427754" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -3206,43 +3407,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java</url>
-          <line>403</line>
+          <line>519</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java</url>
-          <line>335</line>
+          <line>356</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java</url>
-          <line>252</line>
+          <line>255</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java</url>
-          <line>412</line>
+          <line>528</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java</url>
-          <line>293</line>
+          <line>297</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java</url>
-          <line>289</line>
+          <line>293</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java</url>
-          <line>307</line>
+          <line>311</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
@@ -3252,341 +3453,391 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/AvailableAccountsAdaptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-1665">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/CoinServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/CoinService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/WalletApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="298" column="16" selection-start-line="298" selection-start-column="16" selection-end-line="298" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-23/android.jar!/android/os/MessageQueue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ExchangeHistoryProvider.java">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/FeesListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/Wallet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="136" column="14" selection-start-line="136" selection-start-column="14" selection-end-line="136" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ShowSeedFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2535">
-          <caret line="184" column="0" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/Dialogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ExchangeRateLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/DialogBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SignTransactionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/TradeStatusFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="69" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/WalletAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/wallet/AbstractTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/CoreUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="76" column="57" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview_header.xml">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/AddressView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+        <state relative-caret-position="315">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_overview.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/account_row.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/Amount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        <state relative-caret-position="40">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/AmountEditView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="172" column="47" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/amount.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/BakedBezierInterpolator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/CoinListItem.java" />
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/CurrencyTextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="101" column="47" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
+        <state relative-caret-position="300">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/FontFitTextView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/HeaderWithFontIcon.java">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/adaptors/AccountListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        <state relative-caret-position="720">
+          <caret line="93" column="68" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/NavDrawerItemView.java">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/dialogs/CreateNewAddressDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        <state relative-caret-position="390">
+          <caret line="73" column="78" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2909#2931#0" expanded="false" />
+            <element signature="e#2993#3011#0" expanded="false" />
+            <element signature="e#3527#3561#0" expanded="false" />
+            <element signature="e#3606#3624#0" expanded="false" />
+            <element signature="e#3831#3853#0" expanded="false" />
+            <element signature="e#3894#3912#0" expanded="false" />
+            <element signature="e#5057#5091#0" expanded="false" />
+            <element signature="e#5192#5226#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/SwipeRefreshLayout.java">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SendOutput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/TransactionAmountVisualizer.java">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/NavDrawerItemView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/transaction_amount_visualizer.xml">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/Amount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AddressView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/SwipeProgressBar.java">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/BakedBezierInterpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/CurrencyTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/SwipeRefreshLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/AmountEditView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/FontFitTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/MarketInfoPollTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/SendOutput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2910">
-          <caret line="198" column="29" selection-start-line="198" selection-start-column="29" selection-end-line="198" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/eth/Transaction.java" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/eth/CallTransaction.java" />
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MakeTransactionFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#11848#11849#0" expanded="false" />
-            <element signature="e#11914#11915#0" expanded="false" />
-            <element signature="e#13264#13265#0" expanded="false" />
-            <element signature="e#13320#13321#0" expanded="false" />
-            <element signature="e#15919#15920#0" expanded="false" />
-            <element signature="e#15990#15991#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/bachduong/core/coins/Value.java">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/AddCoinTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#3966#3967#0" expanded="false" />
-            <element signature="e#4011#4012#0" expanded="false" />
-            <element signature="e#4130#4131#0" expanded="false" />
-            <element signature="e#4158#4159#0" expanded="false" />
-            <element signature="e#4186#4187#0" expanded="false" />
-            <element signature="e#4228#4229#0" expanded="false" />
-            <element signature="e#5103#5104#0" expanded="false" />
-            <element signature="e#5151#5152#0" expanded="false" />
-            <element signature="e#5464#5465#0" expanded="false" />
-            <element signature="e#5529#5530#0" expanded="false" />
-            <element signature="e#6084#6085#0" expanded="false" />
-            <element signature="e#6120#6121#0" expanded="false" />
-            <element signature="e#6288#6289#0" expanded="false" />
-            <element signature="e#6325#6326#0" expanded="false" />
-            <element signature="e#6477#6478#0" expanded="false" />
-            <element signature="e#6513#6514#0" expanded="false" />
-            <element signature="e#6720#6721#0" expanded="false" />
-            <element signature="e#6763#6764#0" expanded="false" />
-            <element signature="e#6964#6965#0" expanded="false" />
-            <element signature="e#7007#7008#0" expanded="false" />
-            <element signature="e#7050#7051#0" expanded="false" />
-            <element signature="e#7110#7111#0" expanded="false" />
-            <element signature="e#7154#7155#0" expanded="false" />
-            <element signature="e#7214#7215#0" expanded="false" />
-            <element signature="e#7381#7382#0" expanded="false" />
-            <element signature="e#7437#7438#0" expanded="false" />
-            <element signature="e#7643#7644#0" expanded="false" />
-            <element signature="e#7714#7715#0" expanded="false" />
-            <element signature="e#7998#7999#0" expanded="false" />
-            <element signature="e#8066#8067#0" expanded="false" />
-            <element signature="e#8112#8113#0" expanded="false" />
-            <element signature="e#8169#8170#0" expanded="false" />
-            <element signature="e#8267#8268#0" expanded="false" />
-            <element signature="e#8326#8327#0" expanded="false" />
-            <element signature="e#8719#8720#0" expanded="false" />
-            <element signature="e#8758#8759#0" expanded="false" />
-            <element signature="e#9058#9059#0" expanded="false" />
-            <element signature="e#9116#9117#0" expanded="false" />
-            <element signature="e#9168#9169#0" expanded="false" />
-            <element signature="e#9213#9214#0" expanded="false" />
-            <element signature="e#9262#9263#0" expanded="false" />
-            <element signature="e#9313#9314#0" expanded="false" />
-            <element signature="e#9548#9549#0" expanded="false" />
-            <element signature="e#9594#9595#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_make_transaction.xml">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/ExchangeCheckSupportedCoinsTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/SignVerifyMessageTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/tasks/CheckUpdateTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/TransactionsListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4943">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+          <folding>
+            <element signature="e#3853#3905#0" expanded="false" />
+            <element signature="e#3931#3971#0" expanded="false" />
+            <element signature="e#3995#4026#0" expanded="false" />
+            <element signature="e#4053#4097#0" expanded="false" />
+            <element signature="e#4127#4164#0" expanded="false" />
+            <element signature="e#4194#4231#0" expanded="false" />
+            <element signature="e#4264#4311#0" expanded="false" />
+            <element signature="e#10352#10400#0" expanded="false" />
+            <element signature="e#10625#10671#0" expanded="false" />
+            <element signature="e#10806#10852#0" expanded="false" />
+            <element signature="e#10987#11034#0" expanded="false" />
+            <element signature="e#13042#13083#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui/widget/HeaderWithFontIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/OverviewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AbstractWalletFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/CurrencyCalculatorLink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/24.0.0/support-v4-24.0.0-sources.jar!/android/support/v4/app/FragmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="1038" column="0" selection-start-line="1038" selection-start-column="0" selection-end-line="1038" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AccountFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2760">
+          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/AddressRequestFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2340">
+          <caret line="179" column="62" selection-start-line="179" selection-start-column="46" selection-end-line="179" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/build.gradle">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_send.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-1635">
+          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_balance_header.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/BalanceFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding>
+            <element signature="e#4909#4938#0" expanded="false" />
+            <element signature="e#6600#6828#0" expanded="false" />
+            <element signature="e#6827#6828#0" expanded="false" />
+            <element signature="e#7607#7677#0" expanded="false" />
+            <element signature="e#8871#8908#0" expanded="false" />
+            <element signature="e#10844#11103#0" expanded="false" />
+            <element signature="e#11102#11103#0" expanded="false" />
+            <element signature="e#13081#13243#0" expanded="false" />
+            <element signature="e#13242#13243#0" expanded="false" />
+            <element signature="e#13895#14303#0" expanded="false" />
+            <element signature="e#14302#14303#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_request.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_splash.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3594,7 +3845,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_welcome.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WalletFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_setup_welcome.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding>
+            <element signature="e#2174#2203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/layout/fragment_choose_mode.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/widget/AmountEditView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/WelcomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#958#1186#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3602,86 +3917,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/SendFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-7575">
+          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/build.gradle">
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MakeTransactionFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="1920">
+          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ChooseModeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="e#1850#2087#0" expanded="true" />
+            <element signature="e#2086#2087#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+        <state relative-caret-position="206">
+          <caret line="166" column="12" selection-start-line="166" selection-start-column="12" selection-end-line="166" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1503053286000" expanded="false" signature="3181:3223" ph="&quot;Incompatible device&quot;" />
-            <marker date="1503053286000" expanded="false" signature="3259:3303" ph="&quot;This device cannot perform certain cryptographic functi...&quot;" />
-            <marker date="1503053286000" expanded="false" signature="3346:3364" ph="&quot;OK&quot;" />
+            <element signature="e#6262#6292#0" expanded="true" />
+            <element signature="e#15435#15436#0" expanded="true" />
+            <element signature="e#15473#15474#0" expanded="true" />
+            <marker date="1503326861000" expanded="false" signature="3482:3524" ph="&quot;Incompatible device&quot;" />
+            <marker date="1503326861000" expanded="false" signature="3560:3604" ph="&quot;This device cannot perform certain cryptographic functi...&quot;" />
+            <marker date="1503326861000" expanded="false" signature="3647:3665" ph="&quot;OK&quot;" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="186" column="70" selection-start-line="155" selection-start-column="97" selection-end-line="186" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/test/java/com/bachduong/bitwallet/ui2/MainActivityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/test/java/com/bachduong/core/wallet/WalletTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/service/ServicePrefs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-          <folding>
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1403#1404#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/util/WalletUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="187" column="81" selection-start-line="187" selection-start-column="81" selection-end-line="187" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wallet/src/main/java/com/bachduong/bitwallet/ui2/ProcessCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="281" column="51" selection-start-line="281" selection-start-column="51" selection-end-line="281" selection-end-column="51" />
+        <state relative-caret-position="39">
+          <caret line="297" column="0" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
           <folding />
         </state>
       </provider>

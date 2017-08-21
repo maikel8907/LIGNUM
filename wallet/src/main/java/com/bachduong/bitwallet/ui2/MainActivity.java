@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.view.ActionMode;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -30,6 +31,7 @@ import com.bachduong.core.wallet.Wallet;
 import com.bachduong.core.wallet.WalletAccount;
 import com.google.firebase.crash.FirebaseCrash;
 
+import org.bitcoinj.core.Transaction;
 import org.bitcoinj.crypto.KeyCrypterScrypt;
 import org.spongycastle.crypto.params.KeyParameter;
 
@@ -45,7 +47,10 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
         PinLoginFragment.Listener,
         ShowSeedFragment.Listener,
         ChooseModeFragment.Listener,
-        FinishFragment.Listener {
+        FinishFragment.Listener,
+        OverviewFragment.Listener,
+        AccountFragment.Listener,
+        WelcomeFragment.Listener {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
@@ -77,6 +82,9 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
 
         }
     };
+    private AccountFragment accountFragment;
+    private String lastAccountId;
+    private Intent connectCoinIntent;
 
     protected WalletApplication getWalletApplication() {
         return (WalletApplication) getApplication();
@@ -107,7 +115,7 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
             if (savedInstanceState == null) {
 
                 showWelcomeFragment();
-
+//                showOverviewFragment();
 //                new Handler().postDelayed(new Runnable() {
 //                    @Override
 //                    public void run() {
@@ -152,7 +160,17 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
                 .setAction("com.android.launcher.action.INSTALL_SHORTCUT");
         addIntent.putExtra("duplicate", false);  //may it's already there so don't duplicate
         getApplicationContext().sendBroadcast(addIntent);
+
     }
+
+    public void showOverviewFragment() {
+        if (getWalletApplication().getWallet() != null) {
+            replaceFragment(new OverviewFragment());
+        } else {
+            Toast.makeText(this, R.string.wallet_did_not_create, Toast.LENGTH_SHORT).show();
+        }
+    }
+
     public void showWelcomeFragment() {
         replaceFragment(new WelcomeFragment());
     }
@@ -303,6 +321,9 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
         } else if (mode == ChooseModeFragment.MODE_RESTORE) {
             // Enter restore screen
             processCommand.chooseMode = 2;
+        } else if (mode == ChooseModeFragment.MODE_OFFLINE) {
+            processCommand.chooseMode = 3;
+            showOverviewFragment();
         }
     }
 
@@ -346,6 +367,101 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
                     walletFromSeedTask.handler = handler;
             }
         }
+    }
+
+    public void registerActionMode(ActionMode actionMode) {
+
+    }
+
+    @Override
+    public void onReceiveSelected() {
+
+    }
+
+    @Override
+    public void onBalanceSelected() {
+
+    }
+
+    @Override
+    public void onSendSelected() {
+
+    }
+
+    @Override
+    public void onLocalAmountClick() {
+
+    }
+
+    @Override
+    public void onAccountSelected(String accountId) {
+        openAccount(accountId);
+    }
+
+    @Override
+    public void onRefresh() {
+
+    }
+
+    private void openAccount(String accountId) {
+        openAccount(getAccount(accountId));
+    }
+
+    private void openAccount(WalletAccount account) {
+        if (account != null ) {
+            if (isAccountVisible(account)) return;
+
+            // If this account fragment is hidden, show it
+            if (accountFragment != null && account.getId().equals(lastAccountId)) {
+                replaceFragment(accountFragment);
+            } else {
+                // Else create a new fragment for the new account
+                lastAccountId = account.getId();
+                accountFragment = AccountFragment.getInstance(lastAccountId);
+                replaceFragment(accountFragment);
+                getWalletApplication().getConfiguration().touchLastAccountId(lastAccountId);
+            }
+
+            connectCoinService(lastAccountId);
+
+        }
+    }
+    public WalletAccount getAccount(String accountId) {
+        return getWalletApplication().getAccount(accountId);
+    }
+    private void connectCoinService(String accountId) {
+        if (connectCoinIntent == null) {
+            connectCoinIntent = new Intent(CoinService.ACTION_CONNECT_COIN, null,
+                    getWalletApplication(), CoinServiceImpl.class);
+        }
+        // Open connection if needed or possible
+        connectCoinIntent.putExtra(Constants.ARG_ACCOUNT_ID, accountId);
+        getWalletApplication().startService(connectCoinIntent);
+    }
+
+    private boolean isAccountVisible(WalletAccount account) {
+        return account != null && accountFragment != null &&
+                accountFragment.isVisible() && account.equals(accountFragment.getAccount());
+    }
+
+    @Override
+    public void onTransactionBroadcastSuccess(WalletAccount pocket, Transaction transaction) {
+
+    }
+
+    @Override
+    public void onTransactionBroadcastFailure(WalletAccount pocket, Transaction transaction) {
+
+    }
+
+    @Override
+    public void showPayToDialog(String addressStr) {
+
+    }
+
+    @Override
+    public void onClickOfflineMode() {
+        showOverviewFragment();
     }
 
     static class WalletFromSeedTask extends AsyncTask<Void, String, Wallet> {

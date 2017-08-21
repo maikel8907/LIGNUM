@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AddressRequestFragment">
+    tools:context=".ui2.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -112,13 +112,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.bachduong.bitwallet.ui.widget.AmountEditView
+                    <com.bachduong.bitwallet.ui2.widget.AmountEditView
                         android:id="@+id/request_coin_amount"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5" />
 
-                    <com.bachduong.bitwallet.ui.widget.AmountEditView
+                    <com.bachduong.bitwallet.ui2.widget.AmountEditView
                         android:id="@+id/request_local_amount"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

@@ -18,9 +18,11 @@ public class ChooseModeFragment extends Fragment {
 
     public static final int MODE_CONFIG = 0;
     public static final int MODE_RESTORE = 1;
+    public static final int MODE_OFFLINE = 2;
     private Listener listener;
 
     private Button buttonConfig, buttonRestore;
+    private Button buttonOfflineMode;
 
     public ChooseModeFragment() {
         // Required empty public constructor
@@ -33,6 +35,7 @@ public class ChooseModeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_choose_mode, container, false);
         buttonConfig = (Button) view.findViewById(R.id.button_config);
         buttonRestore = (Button) view.findViewById(R.id.button_restore);
+        buttonOfflineMode = (Button) view.findViewById(R.id.button_offline_mode);
         buttonConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,6 +49,14 @@ public class ChooseModeFragment extends Fragment {
             public void onClick(View view) {
                 if (listener != null) {
                     listener.onButtonClicked(MODE_RESTORE);
+                }
+            }
+        });
+        buttonOfflineMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (listener != null) {
+                    listener.onButtonClicked(MODE_OFFLINE);
                 }
             }
         });

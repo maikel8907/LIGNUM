@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.WalletSendCoins">
+    tools:context=".ui2.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/address_error" />
 
-                        <com.bachduong.bitwallet.ui.widget.AddressView
+                        <com.bachduong.bitwallet.ui2.widget.AddressView
                             android:id="@+id/send_to_address_static"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -125,13 +125,13 @@
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
-                    <com.bachduong.bitwallet.ui.widget.AmountEditView
+                    <com.bachduong.bitwallet.ui2.widget.AmountEditView
                         android:id="@+id/send_coin_amount"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5" />
 
-                    <com.bachduong.bitwallet.ui.widget.AmountEditView
+                    <com.bachduong.bitwallet.ui2.widget.AmountEditView
                         android:id="@+id/send_local_amount"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
