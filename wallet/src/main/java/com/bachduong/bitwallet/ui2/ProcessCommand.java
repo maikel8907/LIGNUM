@@ -229,12 +229,37 @@ public class ProcessCommand implements Server.TransporterListener {
                 activity.showStatusFragment("Confirmation", "Confirm in your computer the order of the words as you wrote on the seed");
                 callback.onResponse(response.toJson());
                 return;
-            case "check-recovery-phase-finish":
-                activity.showLoadingFragment(true);
-//                this.seeds = null;
-//                this.isSeedGenerated = false;
-                callback.onResponse(response.toJson());
-                return;
+//            case "check-recovery-phase-finish":
+//                activity.showLoadingFragment(true);
+////                this.seeds = null;
+////                this.isSeedGenerated = false;
+//
+//                        if (this.deviceName.isEmpty()) {
+//                            this.deviceName = "test";
+//                        }
+//                        if (this.devicePin.isEmpty()) {
+//                            this.devicePin = "1111";
+//                        }
+//                        if (this.walletPin.isEmpty()) {
+//                            ProcessCommand.this.walletPin = "1111";
+//                        }
+//                        if (!ProcessCommand.this.deviceName.isEmpty() && !ProcessCommand.this.devicePin.isEmpty() && !ProcessCommand.this.walletPin.isEmpty()) {
+//                            activity.showFinishFragment();
+//                            activity.createWallet(seeds, walletPin, devicePin);
+////                            response.status = true;
+////                            callback.onResponse(response.toJson());
+//                            ProcessCommand.this.seeds = null;
+//                            ProcessCommand.this.isSeedGenerated = false;
+//                        } else {
+////                            response.status = false;
+////                            response.data = "Missing some info";
+////                            callback.onResponse(response.toJson());
+//                        }
+//
+//
+//                callback.onResponse(response.toJson());
+//
+//                return;
             case "get-recovery-phase":
                 if (!isSeedGenerated) {
                     activity.showSeedFragment();
@@ -246,6 +271,7 @@ public class ProcessCommand implements Server.TransporterListener {
                 }
                 callback.onResponse(response.toJson());
                 return;
+            case "check-recovery-phase-finish":
             case "show-finish":
                 Log.d(LOG_TAG, "show-finish called");
 //                this.deviceName = "test";

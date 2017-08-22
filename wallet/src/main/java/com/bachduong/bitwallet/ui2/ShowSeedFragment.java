@@ -167,14 +167,14 @@ public class ShowSeedFragment extends Fragment {
     private void showSeed(int currentStep, int nextStep) {
         mSeedListLayout.removeAllViews();
         for (int i = currentStep; i < currentStep + STEP; i++) {
-            TextView textview = new TextView(getActivity());
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            textview.setLayoutParams(layoutParams);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                textview.setTextAppearance(R.style.TextAppearance_AppCompat_Medium);
-            }
-            textview.setTextColor(getResources().getColor(R.color.primary_500));
-            textview.setTextSize(TypedValue.COMPLEX_UNIT_SP, 26);
+            TextView textview = (TextView) getActivity().getLayoutInflater().inflate(R.layout.seed_text_view, null);
+//            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//            textview.setLayoutParams(layoutParams);
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                textview.setTextAppearance(R.style.TextAppearance_AppCompat_Medium);
+//            }
+//            textview.setTextColor(getResources().getColor(R.color.primary_500));
+//            textview.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
             String s = String.valueOf(i + 1) + ". " + seeds[i];
             textview.setText(s);
             mSeedListLayout.addView(textview);

@@ -8,8 +8,8 @@ package android.support.v4.preferencefragment;
 
 public final class R {
     public static final class dimen {
-        public static final int preference_fragment_padding_bottom = 0x7f090084;
-        public static final int preference_fragment_padding_side = 0x7f090085;
+        public static final int preference_fragment_padding_bottom = 0x7f0900a2;
+        public static final int preference_fragment_padding_side = 0x7f0900a3;
     }
     public static final class id {
         public static final int back_button = 0x7f0d0147;
