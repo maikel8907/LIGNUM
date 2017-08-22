@@ -186,9 +186,9 @@ public class ProcessCommand implements Server.TransporterListener {
             case "set-device-pin":
                 HashMap<String, String> dataDevicePin;
                 try {
-                    dataDeviceName = dataCommand.getData();
-                    if (dataDeviceName != null) {
-                        String str = dataDeviceName.get("devicePin");
+                    dataDevicePin = dataCommand.getData();
+                    if (dataDevicePin != null) {
+                        String str = dataDevicePin.get("devicePin");
                         this.devicePin = str;
                         servicePrefs.setDevicePassword(str);
                     } else {
@@ -205,9 +205,9 @@ public class ProcessCommand implements Server.TransporterListener {
             case "set-wallet-pin":
                 HashMap<String, String> dataWalletPin;
                 try {
-                    dataDeviceName = dataCommand.getData();
-                    if (dataDeviceName != null) {
-                        String str = dataDeviceName.get("walletPin");
+                    dataWalletPin = dataCommand.getData();
+                    if (dataWalletPin != null) {
+                        String str = dataWalletPin.get("walletPin");
                         this.walletPin = str;
                         servicePrefs.setWalletPassword(str);
                     } else {

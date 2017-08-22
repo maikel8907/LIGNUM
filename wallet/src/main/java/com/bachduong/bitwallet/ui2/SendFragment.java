@@ -921,14 +921,14 @@ public class SendFragment extends WalletFragment {
 
             try {
                 if (!input.isEmpty()) {
-                    if (account.getCoinType() instanceof NxtFamily) {
-                        //TODO validate NXT address
-                        if (processInput(input)) return;
-                        parseAddress(GenericUtils.fixAddress(input));
-                        updateView();
-                        addressError.setVisibility(View.GONE);
-                        return;
-                    }
+//                    if (account.getCoinType() instanceof NxtFamily) {
+//                        //TODO validate NXT address
+//                        if (processInput(input)) return;
+//                        parseAddress(GenericUtils.fixAddress(input));
+//                        updateView();
+//                        addressError.setVisibility(View.GONE);
+//                        return;
+//                    }
                     // Process fast the input string
                     if (processInput(input)) return;
 
@@ -946,6 +946,9 @@ public class SendFragment extends WalletFragment {
                     addressError.setText(R.string.address_error);
                     addressError.setVisibility(View.VISIBLE);
                 }
+                x.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             updateView();
         }
