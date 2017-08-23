@@ -94,6 +94,17 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState == null) {
+
+            showWelcomeFragment();
+//                showOverviewFragment();
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        replaceFragment(new ChooseModeFragment());
+//                    }
+//                }, 5000);
+        }
         // If we detected that this device is incompatible
 //        if (!getWalletApplication().getConfiguration().isDeviceCompatible()) {
 //            new AlertDialog.Builder(this)
@@ -112,17 +123,7 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
             server.addListener(transporterListener);
             processCommand = new ProcessCommand(this);
             server.addListener(processCommand);
-            if (savedInstanceState == null) {
 
-                showWelcomeFragment();
-//                showOverviewFragment();
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        replaceFragment(new ChooseModeFragment());
-//                    }
-//                }, 5000);
-            }
 //        }
         addShortcut();
     }
@@ -218,28 +219,37 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
     }
 
     private void replaceFragment(Fragment fragment) {
+        replaceFragment(fragment , false);
+    }
+
+    private void replaceFragment(Fragment fragment, boolean addToBackStack) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         // Replace whatever is in the fragment_container view with this fragment,
         // and add the transaction to the back stack so the user can navigate back
         transaction.replace(R.id.container, fragment);
-        transaction.addToBackStack(null);
-
+        String backStateName = fragment.getClass().getName();
+        if (addToBackStack) {
+            transaction.addToBackStack(backStateName);
+        } else {
+            transaction.addToBackStack(null);
+        }
         // Commit the transaction
         transaction.commit();
+
     }
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
-        if (backPressedNum == 1) {
-            finish();
-        } else {
-
-            Toast.makeText(this, R.string.setup_activity_back_press_toast, Toast.LENGTH_SHORT).show();
-            backPressedNum++;
-
-        }
+        super.onBackPressed();
+//        if (backPressedNum == 1) {
+//            finish();
+//        } else {
+//
+//            Toast.makeText(this, R.string.setup_activity_back_press_toast, Toast.LENGTH_SHORT).show();
+//            backPressedNum++;
+//
+//        }
 
     }
 
@@ -332,20 +342,26 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
 
     }
 
-    public void onMakeTransaction(WalletAccount account, AbstractAddress toAddress, Value amount, @Nullable TxMessage txMessage) {
-        Intent intent = new Intent(this, SignTransactionActivity.class);
-
-        // Decide if emptying wallet or not
-//        if (canCompare(lastBalance, amount) && amount.compareTo(lastBalance) == 0) {
-//            intent.putExtra(Constants.ARG_EMPTY_WALLET, true);
-//        } else {
-            intent.putExtra(Constants.ARG_SEND_VALUE, amount);
-//        }
-        intent.putExtra(Constants.ARG_ACCOUNT_ID, account.getId());
-        intent.putExtra(Constants.ARG_SEND_TO_ADDRESS, toAddress);
-        if (txMessage != null) intent.putExtra(Constants.ARG_TX_MESSAGE, txMessage);
-
-        startActivity(intent);
+    public void onMakeTransaction(final WalletAccount account, final AbstractAddress toAddress, final Value amount, @Nullable TxMessage txMessage) {
+//        Intent intent = new Intent(this, SignTransactionActivity.class);
+//
+//        // Decide if emptying wallet or not
+////        if (canCompare(lastBalance, amount) && amount.compareTo(lastBalance) == 0) {
+////            intent.putExtra(Constants.ARG_EMPTY_WALLET, true);
+////        } else {
+//            intent.putExtra(Constants.ARG_SEND_VALUE, amount);
+////        }
+//        intent.putExtra(Constants.ARG_ACCOUNT_ID, account.getId());
+//        intent.putExtra(Constants.ARG_SEND_TO_ADDRESS, toAddress);
+//        if (txMessage != null) intent.putExtra(Constants.ARG_TX_MESSAGE, txMessage);
+//
+//        startActivity(intent);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                replaceFragment(SendFragment.newInstance(account.getId(),toAddress,amount));
+            }
+        });
 
     }
 
@@ -413,12 +429,12 @@ public class MainActivity extends FragmentActivity implements SplashFragment.Lis
 
             // If this account fragment is hidden, show it
             if (accountFragment != null && account.getId().equals(lastAccountId)) {
-                replaceFragment(accountFragment);
+                replaceFragment(accountFragment, true);
             } else {
                 // Else create a new fragment for the new account
                 lastAccountId = account.getId();
                 accountFragment = AccountFragment.getInstance(lastAccountId);
-                replaceFragment(accountFragment);
+                replaceFragment(accountFragment, true);
                 getWalletApplication().getConfiguration().touchLastAccountId(lastAccountId);
             }
 

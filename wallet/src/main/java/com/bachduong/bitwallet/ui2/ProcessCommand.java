@@ -371,7 +371,8 @@ public class ProcessCommand implements Server.TransporterListener {
 //                        Value amount = Value.valueOf( walletAccount.getCoinType() ,data1.get("amount"));
                         Value amount = getAmount(walletAccount.getCoinType(), data1.get("amount"));
 //                        final String toAddress = data1.get("toAddress");
-                        AbstractAddress toAddress = parseAddress(walletAccount, activity.getWalletApplication(),GenericUtils.fixAddress(data1.get("toAddress")));
+                        String strToAddress = data1.get("toAddress");
+                        AbstractAddress toAddress = parseAddress(walletAccount, activity.getWalletApplication(),GenericUtils.fixAddress(strToAddress));
                         activity.onMakeTransaction(walletAccount, toAddress, amount, null);
                         response.status = true;
                         callback.onResponse(response.toJson());
@@ -379,6 +380,7 @@ public class ProcessCommand implements Server.TransporterListener {
                         response.status = false;
                         response.data = e.getMessage();
                         callback.onResponse(response.toJson());
+                        e.printStackTrace();
                     }
                 } else {
                     response.status = false;
@@ -441,34 +443,14 @@ public class ProcessCommand implements Server.TransporterListener {
 
     private AbstractAddress parseAddress(WalletAccount account, WalletApplication application, String addressStr) throws AddressMalformedException {
 
-        if (account.getCoinType() instanceof NxtFamily) {
-            return account.getCoinType().newAddress(addressStr);
+//        if (account.getCoinType() instanceof NxtFamily) {
+//            return account.getCoinType().newAddress(addressStr);
+//
+//        }
 
-        }
-        List<CoinType> possibleTypes = GenericUtils.getPossibleTypes(addressStr);
+        return account.getCoinType().newAddress(addressStr);
 
-        if (possibleTypes.size() == 1) {
-            return possibleTypes.get(0).newAddress(addressStr);
-        } else {
-            // This address string could be more that one coin type so first check if this address
-            // comes from an account to determine the type.
-            List<WalletAccount> possibleAccounts = application.getAccounts(possibleTypes);
-            AbstractAddress addressOfAccount = null;
-            for (WalletAccount account1 : possibleAccounts) {
-                AbstractAddress testAddress = account1.getCoinType().newAddress(addressStr);
-                if (account1.isAddressMine(testAddress)) {
-                    addressOfAccount = testAddress;
-                    break;
-                }
-            }
-
-            if (addressOfAccount != null) {
-                // If address is from another account don't show a dialog. The type should not
-                // change as we know 100% that is correct one.
-                return addressOfAccount;
-            }
-        }
-        return null;
+//        return null;
     }
 
     private HashMap<String, Object> getDeviceData() {

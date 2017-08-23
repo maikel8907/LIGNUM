@@ -31,6 +31,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bachduong.bitwallet.util.WalletUtils;
 import com.bachduong.core.coins.CoinID;
 import com.bachduong.core.coins.CoinType;
 import com.bachduong.core.coins.FiatType;
@@ -182,6 +183,15 @@ public class SendFragment extends WalletFragment {
         return fragment;
     }
 
+    public static SendFragment newInstance(String accountId, AbstractAddress toAddress, Value amount) {
+        SendFragment fragment = new SendFragment();
+        Bundle args = new Bundle();
+        args.putSerializable(Constants.ARG_ACCOUNT_ID, accountId);
+        fragment.setArguments(args);
+        fragment.address = toAddress;
+        fragment.sendAmount = amount;
+        return fragment;
+    }
     /**
      * Use this factory method to create a new instance of
      * this fragment using a URI.
@@ -225,6 +235,7 @@ public class SendFragment extends WalletFragment {
                     ACRA.getErrorReporter().handleException(e);
                 }
             }
+
 
             // TODO review the following code. This is used when a user clicks on a URI.
 
@@ -322,6 +333,13 @@ public class SendFragment extends WalletFragment {
         amountWarning.setVisibility(View.GONE);
 
         setupTxMessage();
+
+        if (address != null) {
+            sendToAddressView.setText(address.getType().getName() + ":" + address.toString());
+        }
+        if (sendAmount != null) {
+            sendCoinAmountView.setAmount(sendAmount,false);
+        }
 
         return view;
     }

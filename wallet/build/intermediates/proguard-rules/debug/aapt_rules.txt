@@ -87,6 +87,9 @@
 # view AndroidManifest.xml #generated:64
 -keep class com.bachduong.bitwallet.WalletApplication { <init>(...); }
 
+# view AndroidManifest.xml #generated:101
+-keep class com.bachduong.bitwallet.receiver.BootUpReceiver { <init>(...); }
+
 # view AndroidManifest.xml #generated:84
 -keep class com.bachduong.bitwallet.service.CoinServiceImpl { <init>(...); }
 
@@ -168,37 +171,37 @@
 # view res/layout/fragment_make_transaction.xml #generated:34
 -keep class com.bachduong.bitwallet.ui2.widget.TransactionAmountVisualizer { <init>(...); }
 
-# view AndroidManifest.xml #generated:113
+# view AndroidManifest.xml #generated:123
 -keep class com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:108
+# view AndroidManifest.xml #generated:118
 -keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:122
+# view AndroidManifest.xml #generated:132
 -keep class com.google.android.gms.measurement.AppMeasurementService { <init>(...); }
 
-# view AndroidManifest.xml #generated:101
+# view AndroidManifest.xml #generated:111
 -keep class com.google.firebase.crash.internal.service.FirebaseCrashReceiverService { <init>(...); }
 
-# view AndroidManifest.xml #generated:104
+# view AndroidManifest.xml #generated:114
 -keep class com.google.firebase.crash.internal.service.FirebaseCrashSenderService { <init>(...); }
 
-# view AndroidManifest.xml #generated:142
+# view AndroidManifest.xml #generated:152
 -keep class com.google.firebase.iid.FirebaseInstanceIdInternalReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:127
+# view AndroidManifest.xml #generated:137
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:149
+# view AndroidManifest.xml #generated:159
 -keep class com.google.firebase.iid.FirebaseInstanceIdService { <init>(...); }
 
-# view AndroidManifest.xml #generated:157
+# view AndroidManifest.xml #generated:167
 -keep class com.google.firebase.provider.FirebaseInitProvider { <init>(...); }
 
-# view AndroidManifest.xml #generated:167
+# view AndroidManifest.xml #generated:177
 -keep class org.acra.dialog.CrashReportDialog { <init>(...); }
 
-# view AndroidManifest.xml #generated:174
+# view AndroidManifest.xml #generated:184
 -keep class org.acra.sender.SenderService { <init>(...); }
 
 # onClick res/layout/activity_pin_login.xml #generated:301
